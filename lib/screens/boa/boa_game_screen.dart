@@ -339,27 +339,36 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
               decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(12),
                  color: Colors.white, // WHITE CARD
-                 image: song.artworkUrl != null ? DecorationImage(image: NetworkImage(song.artworkUrl!), fit: BoxFit.cover) : null,
                  boxShadow: [
                    BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(4, 4)), // 3D Shadow
                    BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 2, offset: const Offset(-1, -1))
                  ]
               ),
               child: Column(
-                 mainAxisAlignment: MainAxisAlignment.end,
                  children: [
-                     Container(
+                   // SQUARE IMAGE
+                   Container(
+                     width: 140, height: 140,
+                     decoration: BoxDecoration(
+                       borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                       color: Colors.grey[300],
+                       image: song.artworkUrl != null ? DecorationImage(image: NetworkImage(song.artworkUrl!), fit: BoxFit.cover) : null,
+                     ),
+                   ),
+                   // TEXT INFO
+                   Expanded(
+                     child: Container(
                         width: double.infinity,
-                        padding: const EdgeInsets.all(8),
-                        decoration: const BoxDecoration(
-                          color: Colors.white, // White Info Box
-                          borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
-                        ),
-                        child: Column(children: [
-                           Text(song.artist, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w900)), // BLACK Name
+                        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                           Text(song.artist, maxLines: 2, textAlign: TextAlign.center, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w900, height: 1.1)), // BLACK Name
+                           const SizedBox(height: 2),
                            Text(song.title, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.grey[700], fontSize: 11)), // GREY Title
                         ])
-                     )
+                     ),
+                   )
                  ],
               ),
             ),
