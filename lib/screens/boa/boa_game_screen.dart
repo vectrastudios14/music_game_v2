@@ -413,7 +413,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
       fit: BoxFit.scaleDown,
       child: Container(
       width: 300,
-      height: 100,
+      
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(color: Theme.of(context).primaryColor.withOpacity(0.4), blurRadius: 30, spreadRadius: 5)
