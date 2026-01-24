@@ -264,18 +264,57 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
            // TIMELINE
            Expanded(
              flex: 2,
-             child: SingleChildScrollView(
-               scrollDirection: Axis.horizontal,
-               padding: const EdgeInsets.symmetric(horizontal: 20),
-               child: Row(
-                  children: [
-                     for (int i = 0; i <= timeline!.length; i++) ...[
-                        _buildDropZone(i),
-                        if (i < timeline.length)
-                           _buildTimelineCard(timeline[i])
-                     ]
-                  ],
-               ),
+             child: Stack(
+               children: [
+                 // BACKGROUND DROP ZONES (Layer 0)
+                 Row(
+                   crossAxisAlignment: CrossAxisAlignment.stretch,
+                   children: [
+                     Expanded(
+                       child: DragTarget<Song>(
+                         onWillAccept: (data) => !_isRoundResultShowing,
+                         onAccept: (data) => _handleCardDrop(0), // Drop at Start
+                         builder: (context, candidateData, rejectedData) {
+                           return Container(
+                             color: candidateData.isNotEmpty ? Theme.of(context).primaryColor.withOpacity(0.1) : Colors.transparent,
+                           );
+                         },
+                       ),
+                     ),
+                     const Spacer(flex: 2), // Keep center clear for cards to be visible/dropped precisely
+                     Expanded(
+                       child: DragTarget<Song>(
+                         onWillAccept: (data) => !_isRoundResultShowing,
+                         onAccept: (data) => _handleCardDrop(timeline!.length), // Drop at End
+                         builder: (context, candidateData, rejectedData) {
+                           return Container(
+                             color: candidateData.isNotEmpty ? Theme.of(context).primaryColor.withOpacity(0.1) : Colors.transparent,
+                           );
+                         },
+                       ),
+                     ),
+                   ],
+                 ),
+                 
+                 // FOREGROUND CARDS (Layer 1)
+                 Center( // Center the scrollview so it floats in the middle
+                   child: SingleChildScrollView(
+                     scrollDirection: Axis.horizontal,
+                     physics: const BouncingScrollPhysics(),
+                     padding: const EdgeInsets.symmetric(horizontal: 20),
+                     child: Row(
+                        mainAxisSize: MainAxisSize.min, // Hug content
+                        children: [
+                           for (int i = 0; i <= timeline!.length; i++) ...[
+                              _buildDropZone(i),
+                              if (i < timeline.length)
+                                 _buildTimelineCard(timeline[i])
+                           ]
+                        ],
+                     ),
+                   ),
+                 ),
+               ],
              ),
            ),
            // MYSTERY / CONTROLS
