@@ -246,7 +246,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
     final timeline = _timelines[currentPlayer];
 
     return Scaffold(
-      backgroundColor: Colors.grey[900], // Dark background for contrast
+      backgroundColor: Colors.white, // WHITE BACKGROUND
       appBar: AppBar(
         backgroundColor: Colors.white, // WHITE APPBAR
         title: Text("Turn: $currentPlayer", style: GoogleFonts.outfit(color: Colors.black, fontWeight: FontWeight.bold)), 
@@ -337,7 +337,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
                image: song.artworkUrl != null ? DecorationImage(image: NetworkImage(song.artworkUrl!), fit: BoxFit.cover) : null,
                boxShadow: [
                  BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(4, 4)), // 3D Shadow
-                 BoxShadow(color: Colors.white.withOpacity(0.1), blurRadius: 2, offset: const Offset(-1, -1))
+                 BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 2, offset: const Offset(-1, -1))
                ]
             ),
             child: Column(
@@ -360,9 +360,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
           ),
           SizedBox(
             height: 40, width: 140, 
-            child: Center(child: Container(width: 4, height: 40, color: Colors.white)) // White line
+            child: Center(child: Container(width: 4, height: 40, color: Colors.black)) // BLACK connector line
           ),
-          Text(song.year, style: GoogleFonts.outfit(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+          Text(song.year, style: GoogleFonts.outfit(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black)), // BLACK Year
           const SizedBox(height: 10),
         ],
       ),
