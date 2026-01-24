@@ -396,17 +396,22 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
       ),
     );
 
-    return Draggable<Song>(
-      data: _currentMysteryCard,
-      feedback: Material(color: Colors.transparent, child: Transform.scale(scale: 1.1, child: cardContent)),
-      childWhenDragging: Opacity(opacity: 0.5, child: cardContent),
-      child: cardContent,
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Draggable<Song>(
+        data: _currentMysteryCard,
+        feedback: Material(color: Colors.transparent, child: Transform.scale(scale: 1.1, child: cardContent)),
+        childWhenDragging: Opacity(opacity: 0.5, child: cardContent),
+        child: cardContent,
+      ),
     );
   }
 
   Widget _buildStartTurnButton() {
     final currentPlayer = widget.playerNames[_currentPlayerIndex];
-    return Container(
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Container(
       width: 300,
       height: 100,
       decoration: BoxDecoration(
@@ -430,13 +435,17 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
           ],
         ),
       ),
+    ),
     );
   }
 
   Widget _buildResultFeedback() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min, // Added min size
+        children: [
         AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           child: Text(
@@ -461,7 +470,8 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
           ),
           child: const Text("NEXT PLAYER")
         )
-      ]
-    );
+      ],
+    ), // Close Column
+    ); // Close FittedBox
   }
 }
