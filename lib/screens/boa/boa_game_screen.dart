@@ -302,69 +302,75 @@ class _BoaGameScreenState extends State<BoaGameScreen> {
       onAccept: (data) => _handleCardDrop(index),
       builder: (context, candidateData, rejectedData) {
         bool isHovered = candidateData.isNotEmpty;
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          width: isHovered ? 160.0 : 40.0, 
-          height: 280, 
-          margin: const EdgeInsets.symmetric(horizontal: 4),
-          child: isHovered
-             ? Center(child: Container(
-                 width: 60, height: 60,
-                 decoration: BoxDecoration(
-                   color: Theme.of(context).primaryColor.withOpacity(0.2), 
-                   shape: BoxShape.circle, 
-                   border: Border.all(color: Theme.of(context).primaryColor, width: 2)
-                 ),
-                 child: Icon(Icons.add, color: Theme.of(context).primaryColor, size: 30)
-               ))
-             : null,
+        return FittedBox( // ADDED FITTEDBOX
+          fit: BoxFit.scaleDown,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: isHovered ? 160.0 : 40.0, 
+            height: 280, 
+            margin: const EdgeInsets.symmetric(horizontal: 4),
+            child: isHovered
+               ? Center(child: Container(
+                   width: 60, height: 60,
+                   decoration: BoxDecoration(
+                     color: Theme.of(context).primaryColor.withOpacity(0.2), 
+                     shape: BoxShape.circle, 
+                     border: Border.all(color: Theme.of(context).primaryColor, width: 2)
+                   ),
+                   child: Icon(Icons.add, color: Theme.of(context).primaryColor, size: 30)
+                 ))
+               : null,
+          ),
         );
       },
     );
   }
 
   Widget _buildTimelineCard(Song song) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 8),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Container(
-            width: 140, height: 200,
-            decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(12),
-               color: Colors.white, // WHITE CARD
-               image: song.artworkUrl != null ? DecorationImage(image: NetworkImage(song.artworkUrl!), fit: BoxFit.cover) : null,
-               boxShadow: [
-                 BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(4, 4)), // 3D Shadow
-                 BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 2, offset: const Offset(-1, -1))
-               ]
+    return FittedBox( // ADDED FITTEDBOX
+      fit: BoxFit.scaleDown,
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              width: 140, height: 200,
+              decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(12),
+                 color: Colors.white, // WHITE CARD
+                 image: song.artworkUrl != null ? DecorationImage(image: NetworkImage(song.artworkUrl!), fit: BoxFit.cover) : null,
+                 boxShadow: [
+                   BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 10, offset: const Offset(4, 4)), // 3D Shadow
+                   BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 2, offset: const Offset(-1, -1))
+                 ]
+              ),
+              child: Column(
+                 mainAxisAlignment: MainAxisAlignment.end,
+                 children: [
+                     Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                          color: Colors.white, // White Info Box
+                          borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
+                        ),
+                        child: Column(children: [
+                           Text(song.artist, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w900)), // BLACK Name
+                           Text(song.title, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.grey[700], fontSize: 11)), // GREY Title
+                        ])
+                     )
+                 ],
+              ),
             ),
-            child: Column(
-               mainAxisAlignment: MainAxisAlignment.end,
-               children: [
-                   Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(8),
-                      decoration: const BoxDecoration(
-                        color: Colors.white, // White Info Box
-                        borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
-                      ),
-                      child: Column(children: [
-                         Text(song.artist, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.black, fontSize: 13, fontWeight: FontWeight.w900)), // BLACK Name
-                         Text(song.title, maxLines: 1, overflow: TextOverflow.ellipsis, style: GoogleFonts.outfit(color: Colors.grey[700], fontSize: 11)), // GREY Title
-                      ])
-                   )
-               ],
+            SizedBox(
+              height: 40, width: 140, 
+              child: Center(child: Container(width: 4, height: 40, color: Colors.black)) // BLACK connector line
             ),
-          ),
-          SizedBox(
-            height: 40, width: 140, 
-            child: Center(child: Container(width: 4, height: 40, color: Colors.black)) // BLACK connector line
-          ),
-          Text(song.year, style: GoogleFonts.outfit(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black)), // BLACK Year
-          const SizedBox(height: 10),
-        ],
+            Text(song.year, style: GoogleFonts.outfit(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black)), // BLACK Year
+            const SizedBox(height: 10),
+          ],
+        ),
       ),
     );
   }
