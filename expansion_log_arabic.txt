@@ -1,0 +1,1115 @@
+
+--- Starting Arabic Music Library Expansion 2026-01-29 17:38:35.372835 ---
+[17:38:35] --- Expanding Arabic Music Library ---
+[17:38:35] Year 1970: 0 songs. Need 18 more.
+[17:38:35]   Searching albums for 'Arabic Hits 1970' in SA...
+[17:38:37]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:38:39]     Checking album: NAKAMURA (Deluxe Edition)
+[17:38:42]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:38:45]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:38:47]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:38:49]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:38:52]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:38:56]     Checking album: Christmas (Instrumental Piano Music)
+[17:38:58]     Checking album: Let's Get It On (Remastered 2003)
+[17:39:02]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:39:05]   Searching albums for 'Arabic Hits 1970' in EG...
+[17:39:07]   Searching albums for 'Arabic Hits 1970' in LB...
+[17:39:09]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:39:13]     Checking album: NAKAMURA (Deluxe Edition)
+[17:39:16]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[17:39:19]     Checking album: Firm Foundation (He Won't) - Single
+[17:39:22]     Checking album: One Love (Original Motion Picture Soundtrack)
+[17:39:25]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[17:39:27]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:39:29]     Checking album: Let's Get It On (Remastered 2003)
+[17:39:31]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:39:34]     Checking album: Greatest Hits
+[17:39:36]   Searching albums for 'Arabic Hits 1970' in AE...
+[17:39:38]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:39:40]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:39:43]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:39:45]     Checking album: Christmas (Instrumental Piano Music)
+[17:39:47]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:39:51]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:39:54]     Checking album: Firm Foundation (He Won't) - Single
+[17:39:55]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:39:58]     Checking album: NAKAMURA (Deluxe Edition)
+[17:40:01]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:40:03]   Searching albums for 'Best Arabic 1970' in SA...
+[17:40:06]     Checking album: NAKAMURA (Deluxe Edition)
+[17:40:07]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:40:10]     Checking album: Harem
+[17:40:13]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:40:15]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:40:17]     Checking album: Best of the Doobies (Remastered)
+[17:40:20]   Searching albums for 'Best Arabic 1970' in EG...
+[17:40:22]   Searching albums for 'Best Arabic 1970' in LB...
+[17:40:25]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:40:28]     Checking album: NAKAMURA (Deluxe Edition)
+[17:40:31]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:40:33]     Checking album: Harem
+[17:40:37]     Checking album: Best of the Doobies (Remastered)
+[17:40:40]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:40:42]   Searching albums for 'Best Arabic 1970' in AE...
+[17:40:44] 
+[SAFETY] Taking a long break for 50.2s...
+[17:41:35]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:41:38]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:41:41]     Checking album: NAKAMURA (Deluxe Edition)
+[17:41:44]     Checking album: Harem
+[17:41:47]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:41:49]     Checking album: Best of the Doobies (Remastered)
+[17:41:51]   Searching albums for 'Top Arabic 1970' in SA...
+[17:41:53]     Checking album: NAKAMURA (Deluxe Edition)
+[17:41:55]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:41:58]   Searching albums for 'Top Arabic 1970' in EG...
+[17:42:00]   Searching albums for 'Top Arabic 1970' in LB...
+[17:42:03]     Checking album: NAKAMURA (Deluxe Edition)
+[17:42:05]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:42:08]   Searching albums for 'Top Arabic 1970' in AE...
+[17:42:12]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:42:14]     Checking album: NAKAMURA (Deluxe Edition)
+
+--- Starting Arabic Music Library Expansion 2026-01-29 17:45:53.333344 ---
+[17:45:53] --- Expanding Arabic Music Library ---
+[17:45:53] Year 1970: 0 songs. Need 18 more.
+[17:45:53]   Searching albums for 'Arabic Hits 1970' in SA...
+[17:45:54]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:45:56]     Checking album: NAKAMURA (Deluxe Edition)
+[17:45:59]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:46:00]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:46:03]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:46:05]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:46:08]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:46:11]     Checking album: Christmas (Instrumental Piano Music)
+[17:46:14]     Checking album: Let's Get It On (Remastered 2003)
+[17:46:16]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:46:19]   Searching albums for 'Arabic Hits 1970' in EG...
+[17:46:20]   Searching albums for 'Arabic Hits 1970' in LB...
+[17:46:24]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:46:26]     Checking album: NAKAMURA (Deluxe Edition)
+[17:46:29]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[17:46:31]     Checking album: Firm Foundation (He Won't) - Single
+[17:46:32]     Checking album: One Love (Original Motion Picture Soundtrack)
+[17:46:35]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[17:46:37]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:46:39]     Checking album: Let's Get It On (Remastered 2003)
+[17:46:40]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:46:43]     Checking album: Greatest Hits
+[17:46:45]   Searching albums for 'Arabic Hits 1970' in AE...
+[17:46:48]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:46:50]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:46:51]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:46:53]     Checking album: Christmas (Instrumental Piano Music)
+[17:46:56]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:46:59]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:47:01]     Checking album: Firm Foundation (He Won't) - Single
+[17:47:03]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:47:04]     Checking album: NAKAMURA (Deluxe Edition)
+[17:47:08]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:47:10]   Searching albums for 'Best Arabic 1970' in SA...
+[17:47:12]     Checking album: NAKAMURA (Deluxe Edition)
+[17:47:14]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:47:16]     Checking album: Harem
+[17:47:18]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:47:20]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:47:22]     Checking album: Best of the Doobies (Remastered)
+[17:47:25]   Searching albums for 'Best Arabic 1970' in EG...
+[17:47:28]   Searching albums for 'Best Arabic 1970' in LB...
+[17:47:30]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:47:32]     Checking album: NAKAMURA (Deluxe Edition)
+[17:47:34]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:47:36]     Checking album: Harem
+[17:47:39]     Checking album: Best of the Doobies (Remastered)
+[17:47:42]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:47:44]   Searching albums for 'Best Arabic 1970' in AE...
+[17:47:47] 
+[SAFETY] Taking a long break for 52.8s...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 17:48:15.546433 ---
+[17:48:15] --- Expanding Arabic Music Library ---
+[17:48:15] Year 1970: 0 songs. Need 18 more.
+[17:48:15]   Searching albums for 'Arabic Hits 1970' in SA...
+[17:48:18]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:48:20]     Checking album: NAKAMURA (Deluxe Edition)
+[17:48:23]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:48:26]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:48:29]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:48:31]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:48:33]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:48:35]     Checking album: Christmas (Instrumental Piano Music)
+[17:48:38]     Checking album: Let's Get It On (Remastered 2003)
+[17:48:41]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:48:42]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:48:43]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:48:43]   Searching albums for 'Arabic Hits 1970' in EG...
+[17:48:46]   Searching albums for 'Arabic Hits 1970' in LB...
+[17:48:46]     Checking album: NAKAMURA (Deluxe Edition)
+[17:48:49]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:48:50]     Checking album: Harem
+[17:48:51]     Checking album: NAKAMURA (Deluxe Edition)
+[17:48:52]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:48:54]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[17:48:55]     Checking album: Best of the Doobies (Remastered)
+[17:48:56]     Checking album: Firm Foundation (He Won't) - Single
+[17:48:58]     Checking album: One Love (Original Motion Picture Soundtrack)
+[17:48:58]   Searching albums for 'Top Arabic 1970' in SA...
+[17:49:00]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:00]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[17:49:02]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:49:02]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:49:04]     Checking album: Let's Get It On (Remastered 2003)
+[17:49:05]   Searching albums for 'Top Arabic 1970' in EG...
+[17:49:05]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:49:08]   Searching albums for 'Top Arabic 1970' in LB...
+[17:49:08]     Checking album: Greatest Hits
+[17:49:09]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:10]   Searching albums for 'Arabic Hits 1970' in AE...
+[17:49:11]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:49:13]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:49:13]   Searching albums for 'Top Arabic 1970' in AE...
+[17:49:14]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[17:49:15]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:49:16]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[17:49:17]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:19]     Checking album: Christmas (Instrumental Piano Music)
+[17:49:20]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[17:49:23]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[17:49:24]     Checking album: Firm Foundation (He Won't) - Single
+[17:49:27]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:49:28]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:31]     Checking album: CoComelon Kids Hits, Vol. 3
+[17:49:34]   Searching albums for 'Best Arabic 1970' in SA...
+[17:49:36]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:39]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:49:41]     Checking album: Harem
+[17:49:44]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:49:45]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:49:47]     Checking album: Best of the Doobies (Remastered)
+[17:49:49]   Searching albums for 'Best Arabic 1970' in EG...
+[17:49:52]   Searching albums for 'Best Arabic 1970' in LB...
+[17:49:53]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:49:55]     Checking album: NAKAMURA (Deluxe Edition)
+[17:49:57]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:50:00]     Checking album: Harem
+[17:50:03]     Checking album: Best of the Doobies (Remastered)
+[17:50:04]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:50:06]   Searching albums for 'Best Arabic 1970' in AE...
+[17:50:09] 
+[SAFETY] Taking a long break for 49.0s...
+[17:50:58]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:51:00]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[17:51:02]     Checking album: NAKAMURA (Deluxe Edition)
+[17:51:05]     Checking album: Harem
+[17:51:07]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[17:51:09]     Checking album: Best of the Doobies (Remastered)
+[17:51:10]   Searching albums for 'Top Arabic 1970' in SA...
+[17:51:13]     Checking album: NAKAMURA (Deluxe Edition)
+[17:51:15]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:51:18]   Searching albums for 'Top Arabic 1970' in EG...
+[17:51:20]   Searching albums for 'Top Arabic 1970' in LB...
+[17:51:23]     Checking album: NAKAMURA (Deluxe Edition)
+[17:51:25]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:51:27]   Searching albums for 'Top Arabic 1970' in AE...
+[17:51:30]     Checking album: Arabic Kuthu (From "Beast") - Single
+[17:51:33]     Checking album: NAKAMURA (Deluxe Edition)
+[17:51:35]   Searching albums for 'أغاني 1970' in SA...
+[17:51:38]   Searching albums for 'أغاني 1970' in EG...
+[17:51:41]   Searching albums for 'أغاني 1970' in LB...
+[17:51:43]   Searching albums for 'أغاني 1970' in AE...
+[17:51:47]   Searching albums for 'هيتس 1970' in SA...
+[17:52:10] Error fetching https://itunes.apple.com/search?term=%D9%87%D9%8A%D8%AA%D8%B3+1970&media=music&entity=album&country=SA&limit=10: <urlopen error [WinError 10065] A socket operation was attempted to an unreachable host>
+[17:52:10]   Searching albums for 'هيتس 1970' in EG...
+[17:52:11] Error fetching https://itunes.apple.com/search?term=%D9%87%D9%8A%D8%AA%D8%B3+1970&media=music&entity=album&country=EG&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:11]   Searching albums for 'هيتس 1970' in LB...
+[17:52:13] Error fetching https://itunes.apple.com/search?term=%D9%87%D9%8A%D8%AA%D8%B3+1970&media=music&entity=album&country=LB&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:13]   Searching albums for 'هيتس 1970' in AE...
+[17:52:15] Error fetching https://itunes.apple.com/search?term=%D9%87%D9%8A%D8%AA%D8%B3+1970&media=music&entity=album&country=AE&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:15]   Saved progress. Total added so far: 0
+[17:52:15] Year 1971: 0 songs. Need 18 more.
+[17:52:15]   Searching albums for 'Arabic Hits 1971' in SA...
+[17:52:18] Error fetching https://itunes.apple.com/search?term=Arabic+Hits+1971&media=music&entity=album&country=SA&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:18]   Searching albums for 'Arabic Hits 1971' in EG...
+[17:52:19] Error fetching https://itunes.apple.com/search?term=Arabic+Hits+1971&media=music&entity=album&country=EG&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:19]   Searching albums for 'Arabic Hits 1971' in LB...
+[17:52:22] Error fetching https://itunes.apple.com/search?term=Arabic+Hits+1971&media=music&entity=album&country=LB&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:22]   Searching albums for 'Arabic Hits 1971' in AE...
+[17:52:24] Error fetching https://itunes.apple.com/search?term=Arabic+Hits+1971&media=music&entity=album&country=AE&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:24]   Searching albums for 'Best Arabic 1971' in SA...
+[17:52:26] Error fetching https://itunes.apple.com/search?term=Best+Arabic+1971&media=music&entity=album&country=SA&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:26]   Searching albums for 'Best Arabic 1971' in EG...
+[17:52:29] Error fetching https://itunes.apple.com/search?term=Best+Arabic+1971&media=music&entity=album&country=EG&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:29]   Searching albums for 'Best Arabic 1971' in LB...
+[17:52:30] Error fetching https://itunes.apple.com/search?term=Best+Arabic+1971&media=music&entity=album&country=LB&limit=10: <urlopen error [Errno 11001] getaddrinfo failed>
+[17:52:30]   Searching albums for 'Best Arabic 1971' in AE...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 17:59:41.302699 ---
+[17:59:41] --- Expanding Arabic Music Library ---
+[17:59:41] Year 1970: 0 songs. Need 18 more.
+[17:59:41]   Searching albums for 'Arabic Hits 1970' in SA...
+[18:00:00]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[18:00:02]     Checking album: NAKAMURA (Deluxe Edition)
+[18:00:05]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:00:08]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:00:10]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[18:00:15]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[18:00:18]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:00:21]     Checking album: Christmas (Instrumental Piano Music)
+[18:00:24]     Checking album: Let's Get It On (Remastered 2003)
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:00:25.159154 ---
+[18:00:25] --- Expanding Arabic Music Library ---
+[18:00:25] Year 1970: 0 songs. Need 18 more.
+[18:00:25]   Searching albums for 'Arabic Hits 1970' in SA...
+[18:00:28]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[18:00:29]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:00:31]     Checking album: NAKAMURA (Deluxe Edition)
+[18:00:32]   Searching albums for 'Arabic Hits 1970' in EG...
+[18:00:33]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:00:34]   Searching albums for 'Arabic Hits 1970' in LB...
+[18:00:36]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:00:37]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:00:39]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[18:00:40]     Checking album: NAKAMURA (Deluxe Edition)
+[18:00:42]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[18:00:43]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[18:00:44]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:00:45]     Checking album: Firm Foundation (He Won't) - Single
+[18:00:47]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:00:48]     Checking album: Christmas (Instrumental Piano Music)
+[18:00:49]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:00:52]     Checking album: Let's Get It On (Remastered 2003)
+[18:00:53]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:00:54]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:00:55]     Checking album: Let's Get It On (Remastered 2003)
+[18:00:57]   Searching albums for 'Arabic Hits 1970' in EG...
+[18:00:59]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:01:00]   Searching albums for 'Arabic Hits 1970' in LB...
+[18:01:02]     Checking album: Greatest Hits
+[18:01:03]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:01:04]   Searching albums for 'Arabic Hits 1970' in AE...
+[18:01:07]     Checking album: NAKAMURA (Deluxe Edition)
+[18:01:11]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[18:01:15]     Checking album: Firm Foundation (He Won't) - Single
+[18:01:17]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:01:20]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:01:22]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:01:24]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:01:25]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:01:27]     Checking album: Let's Get It On (Remastered 2003)
+[18:01:30]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:01:34]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[18:01:36]     Checking album: Christmas (Instrumental Piano Music)
+[18:01:41]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[18:01:44]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[18:01:45]     Checking album: Greatest Hits
+[18:01:46]     Checking album: Firm Foundation (He Won't) - Single
+[18:01:47]   Searching albums for 'Arabic Hits 1970' in AE...
+[18:01:52]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:01:52]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:01:54]     Checking album: Aashiqui 2 (Original Motion Picture Soundtrack)
+[18:01:57]     Checking album: Dhurandhar (Original Motion Picture Soundtrack)
+[18:01:59]     Checking album: Christmas (Instrumental Piano Music)
+[18:02:02]     Checking album: NAKAMURA (Deluxe Edition)
+[18:02:05]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:02:07]   Searching albums for 'Best Arabic 1970' in SA...
+[18:02:11]     Checking album: NAKAMURA (Deluxe Edition)
+[18:02:15]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:02:16]     Checking album: Tauba Tauba (From "Bad Newz") - Single
+[18:02:17]     Checking album: Harem
+[18:02:20]     Checking album: Ishq Jalakar - Karvaan (From "Dhurandhar") - Single
+[18:02:25]     Checking album: Firm Foundation (He Won't) - Single
+[18:02:25]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:02:28]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:02:29]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:02:33]     Checking album: Best of the Doobies (Remastered)
+[18:02:35]   Searching albums for 'Best Arabic 1970' in EG...
+[18:02:37]   Searching albums for 'Best Arabic 1970' in LB...
+[18:02:39]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:02:42]     Checking album: NAKAMURA (Deluxe Edition)
+[18:02:44]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:02:46]     Checking album: NAKAMURA (Deluxe Edition)
+[18:02:47]     Checking album: Harem
+[18:02:49]     Checking album: CoComelon Kids Hits, Vol. 3
+[18:02:49]     Checking album: Best of the Doobies (Remastered)
+[18:02:50]   Searching albums for 'Best Arabic 1970' in SA...
+[18:02:52]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:02:52]     Checking album: NAKAMURA (Deluxe Edition)
+[18:02:55]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:02:55]   Searching albums for 'Best Arabic 1970' in AE...
+[18:02:58]     Checking album: Harem
+[18:02:58] 
+[SAFETY] Taking a long break for 34.9s...
+[18:03:00]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:03:04]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:03:07]     Checking album: Best of the Doobies (Remastered)
+[18:03:10]   Searching albums for 'Best Arabic 1970' in EG...
+[18:03:13]   Searching albums for 'Best Arabic 1970' in LB...
+[18:03:15]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:03:21]     Checking album: NAKAMURA (Deluxe Edition)
+[18:03:23]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:03:26]     Checking album: Harem
+[18:03:30]     Checking album: Best of the Doobies (Remastered)
+[18:03:35]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:03:37]   Searching albums for 'Best Arabic 1970' in AE...
+[18:03:39] 
+[SAFETY] Taking a long break for 59.2s...
+[18:03:49]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:03:51]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:03:53]     Checking album: NAKAMURA (Deluxe Edition)
+[18:04:17]     Checking album: Harem
+[18:04:20]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:04:22]     Checking album: Best of the Doobies (Remastered)
+[18:04:24]   Searching albums for 'Top Arabic 1970' in SA...
+[18:04:27]     Checking album: NAKAMURA (Deluxe Edition)
+[18:04:30]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:04:32]   Searching albums for 'Top Arabic 1970' in EG...
+[18:04:36]   Searching albums for 'Top Arabic 1970' in LB...
+[18:04:39]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:04:42]     Checking album: NAKAMURA (Deluxe Edition)
+[18:04:43]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:04:44]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:04:46]     Checking album: NAKAMURA (Deluxe Edition)
+[18:04:47]   Searching albums for 'Top Arabic 1970' in AE...
+[18:04:49]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:04:49]     Checking album: Harem
+[18:04:52]     Checking album: NAKAMURA (Deluxe Edition)
+[18:04:55]   Searching albums for 'أغاني 1970' in SA...
+[18:04:57]   Searching albums for 'أغاني 1970' in EG...
+[18:04:58]   Searching albums for 'أغاني 1970' in LB...
+[18:05:00]   Searching albums for 'أغاني 1970' in AE...
+[18:05:03]   Searching albums for 'هيتس 1970' in SA...
+[18:05:06]     Checking album: (It Goes Like) Nanana [Edit] - Single
+[18:05:10]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:05:12]     Checking album: Greatest Hits
+[18:05:14]     Checking album: Peppa Pig Best Nursery Rhymes, Vol. 1
+[18:05:15]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:05:17]     Checking album: The Very Best of Louis Armstrong
+[18:05:17]     Checking album: Best of the Doobies (Remastered)
+[18:05:19]   Searching albums for 'Top Arabic 1970' in SA...
+[18:05:21]     Checking album: Saturday Night Fever (The Original Movie Soundtrack) [Deluxe Edition]
+[18:05:23]     Checking album: NAKAMURA (Deluxe Edition)
+[18:05:24]     Checking album: Kenny G: Greatest Hits
+[18:05:24]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:05:26]   Searching albums for 'Top Arabic 1970' in EG...
+[18:05:27]     Checking album: Hannah Montana 2 (Original Soundtrack)
+[18:05:28]   Searching albums for 'Top Arabic 1970' in LB...
+[18:05:30]     Checking album: NAKAMURA (Deluxe Edition)
+[18:05:30]     Checking album: Live at the Cellar Door (1970)
+[18:05:32]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:05:33]     Checking album: The Beatles 1967-1970 (The Blue Album)
+[18:05:36]   Searching albums for 'Top Arabic 1970' in AE...
+[18:05:37]       [AR] Let It Be - The Beatles
+[18:05:37]       [+] Added: Let It Be - The Beatles
+[18:05:40]       [AR] The Long and Winding Road - The Beatles
+[18:05:40]       [+] Added: The Long and Winding Road - The Beatles
+[18:05:40]   Searching albums for 'هيتس 1970' in EG...
+[18:05:41]     Checking album: Arabic Kuthu (From "Beast") - Single
+[18:05:43]     Checking album: NAKAMURA (Deluxe Edition)
+[18:05:43]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[18:05:44]   Searching albums for 'أغاني 1970' in SA...
+[18:05:46]   Searching albums for 'أغاني 1970' in EG...
+[18:05:47]     Checking album: Super Hits of the 1970s
+[18:05:48]   Searching albums for 'أغاني 1970' in LB...
+[18:05:51]     Checking album: Hits from the 1960s and 1970s - Instrumental Music
+[18:05:52]   Searching albums for 'أغاني 1970' in AE...
+[18:05:53]     Checking album: Romancing the 70's: Instrumental Hits of the 1970's
+[18:05:55]   Searching albums for 'هيتس 1970' in SA...
+[18:05:56]     Checking album: Tim Maia 1970
+[18:05:58]     Checking album: (It Goes Like) Nanana [Edit] - Single
+[18:06:01]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:06:03]     Checking album: Greatest Hits
+[18:06:04]       [AR] Coroné Antonio Bento - Tim Maia
+[18:06:04]       [+] Added: Coroné Antonio Bento - Tim Maia
+[18:06:05]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:06:07]       [AR] Cristina - Tim Maia
+[18:06:07]       [+] Added: Cristina - Tim Maia
+[18:06:08]     Checking album: The Very Best of Louis Armstrong
+[18:06:13]     Checking album: Saturday Night Fever (The Original Movie Soundtrack) [Deluxe Edition]
+[18:06:17]       [AR] Jurema - Tim Maia
+[18:06:17]       [+] Added: Jurema - Tim Maia
+[18:06:20]       [AR] Padre Cícero - Tim Maia
+[18:06:20]       [+] Added: Padre Cícero - Tim Maia
+[18:06:21]       [AR] Flamengo - Tim Maia
+[18:06:21]       [+] Added: Flamengo - Tim Maia
+[18:06:26]       [AR] Você Fingiu - Tim Maia
+[18:06:26]       [+] Added: Você Fingiu - Tim Maia
+[18:06:28]       [AR] Eu Amo Você - Tim Maia
+[18:06:28]       [+] Added: Eu Amo Você - Tim Maia
+[18:06:31]       [AR] Primavera (Vai Chuva) - Tim Maia
+[18:06:31]       [+] Added: Primavera (Vai Chuva) - Tim Maia
+[18:06:36]       [AR] Risos - Tim Maia
+[18:06:36]       [+] Added: Risos - Tim Maia
+[18:06:37]     Checking album: Kenny G: Greatest Hits
+[18:06:39]     Checking album: Hannah Montana 2 (Original Soundtrack)
+[18:06:41]     Checking album: Live at the Cellar Door (1970)
+[18:06:42]       [AR] Azul Da Cor Do Mar - Tim Maia
+[18:06:42]       [+] Added: Azul Da Cor Do Mar - Tim Maia
+[18:06:43]     Checking album: The Beatles 1967-1970 (The Blue Album)
+[18:06:45] 
+[SAFETY] Taking a long break for 42.3s...
+[18:06:49]       [AR] Let It Be - The Beatles
+[18:06:49]       [+] Added: Let It Be - The Beatles
+[18:06:51]       [AR] The Long and Winding Road - The Beatles
+[18:06:51]       [+] Added: The Long and Winding Road - The Beatles
+[18:06:51]   Searching albums for 'هيتس 1970' in EG...
+[18:06:54]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[18:07:11]     Checking album: Super Hits of the 1970s
+[18:07:14]     Checking album: Hits from the 1960s and 1970s - Instrumental Music
+[18:07:16]     Checking album: Romancing the 70's: Instrumental Hits of the 1970's
+[18:07:18]     Checking album: Tim Maia 1970
+[18:07:25]       [AR] Coroné Antonio Bento - Tim Maia
+[18:07:25]       [+] Added: Coroné Antonio Bento - Tim Maia
+[18:07:28]       [AR] Cristina Nº 2 - Tim Maia
+[18:07:28]       [+] Added: Cristina Nº 2 - Tim Maia
+[18:07:28]       [AR] Cristina - Tim Maia
+[18:07:28]       [+] Added: Cristina - Tim Maia
+[18:07:30]       [AR] Tributo À Booker Pittman - Tim Maia
+[18:07:30]       [+] Added: Tributo À Booker Pittman - Tim Maia
+[18:07:30]     Checking album: 20th Century Masters - The Millennium Collection: The Best of Edwin Starr
+[18:07:32]       [AR] Jurema - Tim Maia
+[18:07:32]       [+] Added: Jurema - Tim Maia
+[18:07:34]       [AR] Padre Cícero - Tim Maia
+[18:07:34]       [+] Added: Padre Cícero - Tim Maia
+[18:07:35]       [AR] War - Edwin Starr
+[18:07:35]       [+] Added: War - Edwin Starr
+[18:07:35]     Checking album: The Hits Of Edwin Starr
+[18:07:37]       [AR] Flamengo - Tim Maia
+[18:07:37]       [+] Added: Flamengo - Tim Maia
+[18:07:39]       [AR] Você Fingiu - Tim Maia
+[18:07:39]       [+] Added: Você Fingiu - Tim Maia
+[18:07:42]       [AR] Eu Amo Você - Tim Maia
+[18:07:42]       [+] Added: Eu Amo Você - Tim Maia
+[18:07:42]       [AR] War - Edwin Starr
+[18:07:42]     Checking album: Barbara Acklin: 20 Greatest Hits
+[18:07:44]       [AR] Primavera (Vai Chuva) - Tim Maia
+[18:07:44]       [+] Added: Primavera (Vai Chuva) - Tim Maia
+[18:07:45]     Checking album: The Complete Motown Singles Vol. 7: 1967
+[18:07:46]       [AR] Risos - Tim Maia
+[18:07:46]       [+] Added: Risos - Tim Maia
+[18:07:48]   Searching albums for 'هيتس 1970' in LB...
+[18:07:50]       [AR] Azul Da Cor Do Mar - Tim Maia
+[18:07:50]       [+] Added: Azul Da Cor Do Mar - Tim Maia
+[18:07:50]     Checking album: (It Goes Like) Nanana [Edit] - Single
+[18:07:52] 
+[SAFETY] Taking a long break for 50.4s...
+[18:07:53]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:07:56]     Checking album: The Very Best of Louis Armstrong
+[18:08:00]     Checking album: Greatest Hits
+[18:08:04]     Checking album: Saturday Night Fever (The Original Movie Soundtrack) [Deluxe Edition]
+[18:08:08]     Checking album: The Beatles 1967-1970 (The Blue Album)
+[18:08:15]       [AR] Let It Be - The Beatles
+[18:08:17]       [AR] The Long and Winding Road - The Beatles
+[18:08:17]     Checking album: Disney's Family Christmas Collection
+[18:08:19]     Checking album: Survivor (International Edition)
+[18:08:22]     Checking album: The Rolling Stones 1963-1971
+[18:08:26]     Checking album: Bridge Over Troubled Water
+[18:08:34]       [AR] Bridge Over Troubled Water - Simon & Garfunkel
+[18:08:34]       [+] Added: Bridge Over Troubled Water - Simon & Garfunkel
+[18:08:38]       [AR] El Condor Pasa (If I Could) - Simon & Garfunkel
+[18:08:38]       [+] Added: El Condor Pasa (If I Could) - Simon & Garfunkel
+[18:08:40]       [AR] Cecilia - Simon & Garfunkel
+[18:08:40]       [+] Added: Cecilia - Simon & Garfunkel
+[18:08:40]   Saved progress. Total added so far: 18
+[18:08:40] Year 1971: 0 songs. Need 18 more.
+[18:08:40]   Searching albums for 'Arabic Hits 1971' in SA...
+[18:08:42]       [AR] Cristina Nº 2 - Tim Maia
+[18:08:42]       [+] Added: Cristina Nº 2 - Tim Maia
+[18:08:45]       [AR] Tributo À Booker Pittman - Tim Maia
+[18:08:45]       [+] Added: Tributo À Booker Pittman - Tim Maia
+[18:08:45]     Checking album: 20th Century Masters - The Millennium Collection: The Best of Edwin Starr
+[18:08:46]     Checking album: Stampede (Remastered)
+[18:08:50]       [AR] War - Edwin Starr
+[18:08:50]       [+] Added: War - Edwin Starr
+[18:08:50]     Checking album: The Hits Of Edwin Starr
+[18:08:50]     Checking album: Take Me As I Am
+[18:08:53]     Checking album: Best of the Doobies (Remastered)
+[18:08:56]   Searching albums for 'Arabic Hits 1971' in EG...
+[18:08:56]       [AR] War - Edwin Starr
+[18:08:56]     Checking album: Barbara Acklin: 20 Greatest Hits
+[18:08:58]     Checking album: The Complete Motown Singles Vol. 7: 1967
+[18:08:59]   Searching albums for 'Arabic Hits 1971' in LB...
+[18:09:02]     Checking album: Best of the Doobies (Remastered)
+[18:09:03]     Checking album: Stampede (Remastered)
+[18:09:07]     Checking album: Take Me As I Am
+[18:09:09]   Searching albums for 'هيتس 1970' in LB...
+[18:09:14]     Checking album: (It Goes Like) Nanana [Edit] - Single
+[18:09:18]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:09:22]     Checking album: The Very Best of Louis Armstrong
+[18:09:29]     Checking album: Greatest Hits
+[18:09:31]     Checking album: Saturday Night Fever (The Original Movie Soundtrack) [Deluxe Edition]
+[18:09:31]   Searching albums for 'Arabic Hits 1971' in AE...
+[18:09:35]     Checking album: The Beatles 1967-1970 (The Blue Album)
+[18:09:36]     Checking album: Stampede (Remastered)
+[18:09:39]     Checking album: Take Me As I Am
+[18:09:41]       [AR] Let It Be - The Beatles
+[18:09:43]       [AR] The Long and Winding Road - The Beatles
+[18:09:43]     Checking album: Disney's Family Christmas Collection
+[18:09:45]     Checking album: Best of the Doobies (Remastered)
+[18:09:46]     Checking album: Survivor (International Edition)
+[18:09:47]   Searching albums for 'Best Arabic 1971' in SA...
+[18:09:50]     Checking album: Best of the Doobies (Remastered)
+[18:09:53]   Searching albums for 'Best Arabic 1971' in EG...
+[18:09:56]   Searching albums for 'Best Arabic 1971' in LB...
+[18:09:59]     Checking album: Best of the Doobies (Remastered)
+[18:10:02]   Searching albums for 'Best Arabic 1971' in AE...
+[18:10:05]     Checking album: Best of the Doobies (Remastered)
+[18:10:08]   Searching albums for 'Top Arabic 1971' in SA...
+[18:10:11]     Checking album: The Rolling Stones 1963-1971
+[18:10:11]   Searching albums for 'Top Arabic 1971' in EG...
+[18:10:13]   Searching albums for 'Top Arabic 1971' in LB...
+[18:10:14]     Checking album: Bridge Over Troubled Water
+[18:10:16]   Searching albums for 'Top Arabic 1971' in AE...
+[18:10:19]   Searching albums for 'أغاني 1971' in SA...
+[18:10:20]   Searching albums for 'أغاني 1971' in EG...
+[18:10:21]       [AR] Bridge Over Troubled Water - Simon & Garfunkel
+[18:10:21]       [+] Added: Bridge Over Troubled Water - Simon & Garfunkel
+[18:10:24]       [AR] El Condor Pasa (If I Could) - Simon & Garfunkel
+[18:10:24]       [+] Added: El Condor Pasa (If I Could) - Simon & Garfunkel
+[18:10:24]   Searching albums for 'أغاني 1971' in LB...
+[18:10:25] 
+[SAFETY] Taking a long break for 32.3s...
+[18:10:28]       [AR] Cecilia - Simon & Garfunkel
+[18:10:28]       [+] Added: Cecilia - Simon & Garfunkel
+[18:10:28]   Saved progress. Total added so far: 18
+[18:10:28] Year 1971: 0 songs. Need 18 more.
+[18:10:28]   Searching albums for 'Arabic Hits 1971' in SA...
+[18:10:32]     Checking album: Stampede (Remastered)
+[18:10:56]     Checking album: Take Me As I Am
+[18:10:58]     Checking album: Best of the Doobies (Remastered)
+[18:10:59]   Searching albums for 'أغاني 1971' in AE...
+[18:11:01]   Searching albums for 'هيتس 1971' in SA...
+[18:11:02]   Searching albums for 'Arabic Hits 1971' in EG...
+[18:11:04]   Searching albums for 'Arabic Hits 1971' in LB...
+[18:11:06]     Checking album: Best of the Doobies (Remastered)
+[18:11:10]     Checking album: Stampede (Remastered)
+[18:11:17]     Checking album: Take Me As I Am
+[18:11:19]   Searching albums for 'Arabic Hits 1971' in AE...
+[18:11:19]     Checking album: Demis Roussos - Greatest Hits (1971 - 1980)
+[18:11:21]     Checking album: Stampede (Remastered)
+[18:11:22]     Checking album: Their Greatest Hits 1971-1975
+[18:11:24]     Checking album: Take Me As I Am
+[18:11:24]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:11:27]     Checking album: Best of the Doobies (Remastered)
+[18:11:28]   Searching albums for 'Best Arabic 1971' in SA...
+[18:11:31]     Checking album: Hot Rocks 1964-1971
+[18:11:31]     Checking album: Best of the Doobies (Remastered)
+[18:11:34]   Searching albums for 'Best Arabic 1971' in EG...
+[18:11:35]   Searching albums for 'Best Arabic 1971' in LB...
+[18:11:38]     Checking album: Best of the Doobies (Remastered)
+[18:11:39]       [AR] Under My Thumb - The Rolling Stones
+[18:11:39]       [+] Added: Under My Thumb - The Rolling Stones
+[18:11:41]       [AR] Midnight Rambler (Live from Madison Square Garden, NY, 1969) - The Rolling Stones
+[18:11:41]       [+] Added: Midnight Rambler (Live from Madison Square Garden, NY, 1969) - The Rolling Stones
+[18:11:42]   Searching albums for 'Best Arabic 1971' in AE...
+[18:11:44]     Checking album: Best of the Doobies (Remastered)
+[18:11:45]       [AR] Brown Sugar - The Rolling Stones
+[18:11:45]       [+] Added: Brown Sugar - The Rolling Stones
+[18:11:49]       [AR] Wild Horses - The Rolling Stones
+[18:11:49]       [+] Added: Wild Horses - The Rolling Stones
+[18:11:49]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:11:51]     Checking album: What's Going On
+[18:11:56]       [AR] What's Going On - Marvin Gaye
+[18:11:56]       [+] Added: What's Going On - Marvin Gaye
+[18:12:00]       [AR] What's Happening Brother - Marvin Gaye
+[18:12:00]       [+] Added: What's Happening Brother - Marvin Gaye
+[18:12:01]   Searching albums for 'Top Arabic 1971' in SA...
+[18:12:03]       [AR] Flyin' High (In the Friendly Sky) - Marvin Gaye
+[18:12:03]       [+] Added: Flyin' High (In the Friendly Sky) - Marvin Gaye
+[18:12:07]       [AR] Save the Children - Marvin Gaye
+[18:12:07]       [+] Added: Save the Children - Marvin Gaye
+[18:12:07]   Searching albums for 'Top Arabic 1971' in LB...
+[18:12:09]   Searching albums for 'Top Arabic 1971' in AE...
+[18:12:09]       [AR] God Is Love - Marvin Gaye
+[18:12:09]       [+] Added: God Is Love - Marvin Gaye
+[18:12:12]   Searching albums for 'أغاني 1971' in SA...
+[18:12:14]   Searching albums for 'أغاني 1971' in EG...
+[18:12:16]   Searching albums for 'أغاني 1971' in LB...
+[18:12:19] 
+[SAFETY] Taking a long break for 59.4s...
+[18:12:35]       [AR] Mercy Mercy Me (The Ecology) - Marvin Gaye
+[18:12:35]       [+] Added: Mercy Mercy Me (The Ecology) - Marvin Gaye
+[18:12:37]       [AR] Right On - Marvin Gaye
+[18:12:37]       [+] Added: Right On - Marvin Gaye
+[18:12:40]       [AR] Wholy Holy - Marvin Gaye
+[18:12:40]       [+] Added: Wholy Holy - Marvin Gaye
+[18:12:42]       [AR] Inner City Blues (Make Me Wanna Holler) - Marvin Gaye
+[18:12:42]       [+] Added: Inner City Blues (Make Me Wanna Holler) - Marvin Gaye
+[18:12:42]     Checking album: Led Zeppelin II (Remastered)
+[18:12:45]     Checking album: Led Zeppelin III (Deluxe Edition)
+[18:12:48]     Checking album: Led Zeppelin IV (Deluxe Edition)
+[18:12:57]       [AR] Black Dog - Led Zeppelin
+[18:12:57]       [+] Added: Black Dog - Led Zeppelin
+[18:13:15]       [AR] Rock and Roll - Led Zeppelin
+[18:13:15]       [+] Added: Rock and Roll - Led Zeppelin
+[18:13:18]       [AR] The Battle of Evermore - Led Zeppelin
+[18:13:18]       [+] Added: The Battle of Evermore - Led Zeppelin
+[18:13:19]   Searching albums for 'أغاني 1971' in AE...
+[18:13:22]   Searching albums for 'هيتس 1971' in SA...
+[18:13:24]     Checking album: Demis Roussos - Greatest Hits (1971 - 1980)
+[18:13:28]     Checking album: Their Greatest Hits 1971-1975
+[18:13:30]     Checking album: Cold Heart (PNAU Remix) - Single
+[18:13:33]     Checking album: Hot Rocks 1964-1971
+[18:13:39]       [AR] Stairway to Heaven - Led Zeppelin
+[18:13:39]       [+] Added: Stairway to Heaven - Led Zeppelin
+[18:13:40]       [AR] Misty Mountain Hop - Led Zeppelin
+[18:13:40]       [+] Added: Misty Mountain Hop - Led Zeppelin
+[18:13:40]   Saved progress. Total added so far: 36
+[18:13:40] Year 1972: 0 songs. Need 18 more.
+[18:13:40]   Searching albums for 'Arabic Hits 1972' in SA...
+[18:13:43]     Checking album: One Love (Original Motion Picture Soundtrack)
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:13:44.718006 ---
+[18:13:44] --- Expanding Arabic Music Library ---
+[18:13:44] Year 1972: 0 songs. Need 18 more.
+[18:13:44]   Searching albums for 'Arabic Hits 1972' in SA...
+[18:13:45]       [AR] Under My Thumb - The Rolling Stones
+[18:13:45]       [+] Added: Under My Thumb - The Rolling Stones
+[18:13:49]       [AR] Concrete Jungle - Bob Marley & The Wailers
+[18:13:49]       [+] Added: Concrete Jungle - Bob Marley & The Wailers
+[18:13:49]     Checking album: Let's Get It On (Remastered 2003)
+[18:13:50]       [AR] Midnight Rambler (Live from Madison Square Garden, NY, 1969) - The Rolling Stones
+[18:13:50]       [+] Added: Midnight Rambler (Live from Madison Square Garden, NY, 1969) - The Rolling Stones
+[18:13:51]     Checking album: Every Great Motown Hit of Marvin Gaye
+[18:13:53]       [AR] Brown Sugar - The Rolling Stones
+[18:13:53]       [+] Added: Brown Sugar - The Rolling Stones
+[18:13:57]       [AR] Wild Horses - The Rolling Stones
+[18:13:57]       [+] Added: Wild Horses - The Rolling Stones
+[18:13:57]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:13:57]       [AR] Trouble Man - Marvin Gaye
+[18:13:57]       [+] Added: Trouble Man - Marvin Gaye
+[18:13:57]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:13:59]     Checking album: The Best Of Marvin Gaye
+[18:14:00]     Checking album: What's Going On
+[18:14:08]       [AR] What's Going On - Marvin Gaye
+[18:14:08]       [+] Added: What's Going On - Marvin Gaye
+[18:14:09]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:14:09]       [+] Added: You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:14:09]     Checking album: Ultimate Hits: Rock and Roll Never Forgets
+[18:14:11]       [AR] What's Happening Brother - Marvin Gaye
+[18:14:11]       [+] Added: What's Happening Brother - Marvin Gaye
+[18:14:13]   Searching albums for 'Arabic Hits 1972' in EG...
+[18:14:13]       [AR] Flyin' High (In the Friendly Sky) - Marvin Gaye
+[18:14:13]       [+] Added: Flyin' High (In the Friendly Sky) - Marvin Gaye
+[18:14:15]   Searching albums for 'Arabic Hits 1972' in LB...
+[18:14:19]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:14:22]       [AR] Save the Children - Marvin Gaye
+[18:14:22]       [+] Added: Save the Children - Marvin Gaye
+[18:14:24]       [AR] God Is Love - Marvin Gaye
+[18:14:24]       [+] Added: God Is Love - Marvin Gaye
+[18:14:24]       [AR] Concrete Jungle - Bob Marley & The Wailers
+[18:14:24]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:14:26]       [AR] Mercy Mercy Me (The Ecology) - Marvin Gaye
+[18:14:26]       [+] Added: Mercy Mercy Me (The Ecology) - Marvin Gaye
+[18:14:27]     Checking album: Every Great Motown Hit of Marvin Gaye
+[18:14:29]       [AR] Right On - Marvin Gaye
+[18:14:29]       [+] Added: Right On - Marvin Gaye
+[18:14:31]       [AR] Wholy Holy - Marvin Gaye
+[18:14:31]       [+] Added: Wholy Holy - Marvin Gaye
+[18:14:34]       [AR] Inner City Blues (Make Me Wanna Holler) - Marvin Gaye
+[18:14:34]       [+] Added: Inner City Blues (Make Me Wanna Holler) - Marvin Gaye
+[18:14:34]     Checking album: Led Zeppelin II (Remastered)
+[18:14:35]       [AR] Trouble Man - Marvin Gaye
+[18:14:35]     Checking album: The Best Of Marvin Gaye
+[18:14:36]     Checking album: Led Zeppelin III (Deluxe Edition)
+[18:14:40]   Searching albums for 'Arabic Hits 1972' in EG...
+[18:14:41]     Checking album: Led Zeppelin IV (Deluxe Edition)
+[18:14:42]   Searching albums for 'Arabic Hits 1972' in LB...
+[18:14:43]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:14:43]     Checking album: Let's Get It On (Remastered 2003)
+[18:14:45]     Checking album: Ultimate Hits: Rock and Roll Never Forgets
+[18:14:48] 
+[SAFETY] Taking a long break for 39.1s...
+[18:14:48]       [AR] Black Dog - Led Zeppelin
+[18:14:48]       [+] Added: Black Dog - Led Zeppelin
+[18:14:49]       [AR] Rock and Roll - Led Zeppelin
+[18:14:49]       [+] Added: Rock and Roll - Led Zeppelin
+[18:14:51]       [AR] The Battle of Evermore - Led Zeppelin
+[18:14:51]       [+] Added: The Battle of Evermore - Led Zeppelin
+[18:14:55]       [AR] Stairway to Heaven - Led Zeppelin
+[18:14:55]       [+] Added: Stairway to Heaven - Led Zeppelin
+[18:14:57]       [AR] Misty Mountain Hop - Led Zeppelin
+[18:14:57]       [+] Added: Misty Mountain Hop - Led Zeppelin
+[18:14:57]   Saved progress. Total added so far: 36
+[18:14:57] Year 1972: 0 songs. Need 18 more.
+[18:14:57]   Searching albums for 'Arabic Hits 1972' in SA...
+[18:15:01]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:15:06]       [AR] Concrete Jungle - Bob Marley & The Wailers
+[18:15:06]       [+] Added: Concrete Jungle - Bob Marley & The Wailers
+[18:15:06]     Checking album: Let's Get It On (Remastered 2003)
+[18:15:10]     Checking album: Every Great Motown Hit of Marvin Gaye
+[18:15:12]   Searching albums for 'Arabic Hits 1972' in AE...
+[18:15:14]       [AR] Trouble Man - Marvin Gaye
+[18:15:14]       [+] Added: Trouble Man - Marvin Gaye
+[18:15:14]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:15:17]     Checking album: The Best Of Marvin Gaye
+[18:15:21]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:15:21]       [+] Added: You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:15:21]     Checking album: Ultimate Hits: Rock and Roll Never Forgets
+[18:15:28]   Searching albums for 'Arabic Hits 1972' in AE...
+[18:15:30]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:15:35]       [AR] Concrete Jungle - Bob Marley & The Wailers
+[18:15:35]     Checking album: Let's Get It On (Remastered 2003)
+[18:15:38]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:15:40]     Checking album: The Best Of Marvin Gaye
+[18:15:44]   Searching albums for 'Arabic Hits 1972' in EG...
+[18:15:45]   Searching albums for 'Best Arabic 1972' in SA...
+[18:15:47]   Searching albums for 'Arabic Hits 1972' in LB...
+[18:15:48]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:15:48]     Checking album: Every Great Motown Hit of Marvin Gaye
+[18:15:50]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:15:54]       [AR] Trouble Man - Marvin Gaye
+[18:15:54]     Checking album: Ultimate Hits: Rock and Roll Never Forgets
+[18:15:56]       [AR] Concrete Jungle - Bob Marley & The Wailers
+[18:15:56]     Checking album: Rudolph The Red Nosed Reindeer And Other Christmas Classics
+[18:15:58]   Searching albums for 'Best Arabic 1972' in SA...
+[18:15:58]     Checking album: Every Great Motown Hit of Marvin Gaye
+[18:16:01]     Checking album: The Best Of Marvin Gaye
+[18:16:03]       [AR] Trouble Man - Marvin Gaye
+[18:16:03]     Checking album: The Best Of Marvin Gaye
+[18:16:05]   Searching albums for 'Best Arabic 1972' in EG...
+[18:16:07]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:16:07]     Checking album: Best of the Doobies (Remastered)
+[18:16:07]   Searching albums for 'Best Arabic 1972' in LB...
+[18:16:09]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:16:09]     Checking album: Let's Get It On (Remastered 2003)
+[18:16:11]     Checking album: Ultimate Hits: Rock and Roll Never Forgets
+[18:16:12]       [AR] Listen to the Music - The Doobie Brothers
+[18:16:12]       [+] Added: Listen to the Music - The Doobie Brothers
+[18:16:12] 
+[SAFETY] Taking a long break for 46.9s...
+[18:16:14]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:16:14]       [+] Added: Rockin' Down the Highway - The Doobie Brothers
+[18:16:16]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:16:16]       [+] Added: Jesus Is Just Alright with Me - The Doobie Brothers
+[18:16:16]   Searching albums for 'Best Arabic 1972' in EG...
+[18:16:18]   Searching albums for 'Best Arabic 1972' in LB...
+[18:16:21]     Checking album: Best of the Doobies (Remastered)
+[18:16:25]       [AR] Listen to the Music - The Doobie Brothers
+[18:16:26]   Searching albums for 'Best Arabic 1972' in AE...
+[18:16:28]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:16:29]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:16:29]     Checking album: The Best Of Marvin Gaye
+[18:16:37] 
+[SAFETY] Taking a long break for 57.7s...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:16:53.530073 ---
+[18:16:53] --- Expanding Arabic Music Library ---
+[18:16:53] Year 1972: 0 songs. Need 18 more.
+[18:16:53]   Searching albums for 'Arabic Hits 1972' in SA...
+[18:17:01]   Searching albums for 'Arabic Hits 1972' in AE...
+[18:17:12] Error fetching https://itunes.apple.com/lookup?id=1728317031&lang=ar_sa&country=SA: Remote end closed connection without response
+[18:17:13] Error fetching https://itunes.apple.com/search?term=Arabic+Hits+1972&media=music&entity=album&country=AE&limit=10: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+[18:17:13]   Searching albums for 'Best Arabic 1972' in SA...
+[18:17:16]     Checking album: The Best Of Marvin Gaye
+[18:17:20]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:17:20]     Checking album: Best of the Doobies (Remastered)
+[18:17:27]       [AR] Listen to the Music - The Doobie Brothers
+[18:17:27]       [+] Added: Listen to the Music - The Doobie Brothers
+[18:17:30]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:17:30]       [+] Added: Rockin' Down the Highway - The Doobie Brothers
+[18:17:32]   Searching albums for 'Arabic Hits 1972' in EG...
+[18:17:34]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:17:34]       [+] Added: Jesus Is Just Alright with Me - The Doobie Brothers
+[18:17:34]   Searching albums for 'Best Arabic 1972' in EG...
+[18:17:35]   Searching albums for 'Arabic Hits 1972' in LB...
+[18:17:36]   Searching albums for 'Best Arabic 1972' in LB...
+[18:17:39]     Checking album: Best of the Doobies (Remastered)
+[18:17:44]   Searching albums for 'Top Arabic 1972' in SA...
+[18:17:45]       [AR] Listen to the Music - The Doobie Brothers
+[18:17:47]   Searching albums for 'Top Arabic 1972' in EG...
+[18:17:48]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:17:51]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:17:51]     Checking album: The Best Of Marvin Gaye
+[18:17:51]   Searching albums for 'Top Arabic 1972' in LB...
+[18:17:54]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:17:54]   Searching albums for 'Best Arabic 1972' in AE...
+[18:17:55]   Searching albums for 'Top Arabic 1972' in AE...
+[18:17:56]   Searching albums for 'Arabic Hits 1972' in AE...
+[18:17:57]     Checking album: The Best Of Marvin Gaye
+[18:18:01]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:18:01]     Checking album: Best of the Doobies (Remastered)
+[18:18:07]       [AR] Listen to the Music - The Doobie Brothers
+[18:18:11]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:18:13]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:18:13]   Searching albums for 'Top Arabic 1972' in SA...
+[18:18:16]   Searching albums for 'Top Arabic 1972' in EG...
+[18:18:19]   Searching albums for 'Top Arabic 1972' in LB...
+[18:18:21]   Searching albums for 'Top Arabic 1972' in AE...
+[18:18:22]   Searching albums for 'Best Arabic 1972' in SA...
+[18:18:23]   Searching albums for 'أغاني 1972' in SA...
+[18:18:26]   Searching albums for 'أغاني 1972' in EG...
+[18:18:29]   Searching albums for 'أغاني 1972' in LB...
+[18:18:32]   Searching albums for 'أغاني 1972' in AE...
+[18:18:34]   Searching albums for 'هيتس 1972' in SA...
+[18:18:37]     Checking album: Melody (feat. James Blunt) - Single
+[18:18:37]   Searching albums for 'Best Arabic 1972' in EG...
+[18:18:41]   Searching albums for 'Best Arabic 1972' in LB...
+[18:18:41]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:18:43]     Checking album: What's Going On
+[18:18:44]     Checking album: Led Zeppelin II (Remastered)
+[18:18:46]     Checking album: Led Zeppelin III (Deluxe Edition)
+[18:18:49]     Checking album: Greatest Hits
+[18:18:52]     Checking album: Let's Get It On (Remastered 2003)
+[18:18:56]     Checking album: Simon and Garfunkel's Greatest Hits
+[18:19:00]   Searching albums for 'Best Arabic 1972' in AE...
+[18:19:01]       [AR] For Emily, Whenever I May Find Her (Live In St. Louis, MO - November 1969) - Simon & Garfunkel
+[18:19:01]       [+] Added: For Emily, Whenever I May Find Her (Live In St. Louis, MO - November 1969) - Simon & Garfunkel
+[18:19:04]       [AR] The 59th Street Bridge Song (Feelin' Groovy) [Live at Carnegie Hall, New York, NY - July 1970] - Simon & Garfunkel
+[18:19:04]       [+] Added: The 59th Street Bridge Song (Feelin' Groovy) [Live at Carnegie Hall, New York, NY - July 1970] - Simon & Garfunkel
+[18:19:06]       [AR] Homeward Bound (Live at Carnegie Hall, New York, NY - July 1970) - Simon & Garfunkel
+[18:19:06]       [+] Added: Homeward Bound (Live at Carnegie Hall, New York, NY - July 1970) - Simon & Garfunkel
+[18:19:09]       [AR] Kathy's Song (Live In St. Louis, MO - November 1969) - Simon & Garfunkel
+[18:19:09]       [+] Added: Kathy's Song (Live In St. Louis, MO - November 1969) - Simon & Garfunkel
+[18:19:09]     Checking album: Here, My Dear
+[18:19:10] 
+[SAFETY] Taking a long break for 46.2s...
+[18:19:11]     Checking album: 1972
+[18:19:14]   Searching albums for 'هيتس 1972' in EG...
+[18:19:18]     Checking album: Sonhos E Memórias - 1941 / 1972
+[18:19:22]       [AR] Largo Da 2ª Feira - Erasmo Carlos
+[18:19:22]       [+] Added: Largo Da 2ª Feira - Erasmo Carlos
+[18:19:24] 
+[SAFETY] Taking a long break for 52.1s...
+[18:20:06]   Searching albums for 'Top Arabic 1972' in SA...
+[18:20:08]   Searching albums for 'Top Arabic 1972' in EG...
+[18:20:09]   Searching albums for 'Top Arabic 1972' in LB...
+[18:20:12]   Searching albums for 'Top Arabic 1972' in AE...
+[18:20:16]       [AR] Mane Joao - Erasmo Carlos
+[18:20:16]       [+] Added: Mane Joao - Erasmo Carlos
+[18:20:19]       [AR] Bom Dia, Rock 'N' Roll - Erasmo Carlos
+[18:20:19]       [+] Added: Bom Dia, Rock 'N' Roll - Erasmo Carlos
+[18:20:22]       [AR] Grilos - Erasmo Carlos
+[18:20:22]       [+] Added: Grilos - Erasmo Carlos
+[18:20:26]       [AR] Minha Gente - Erasmo Carlos
+[18:20:26]       [+] Added: Minha Gente - Erasmo Carlos
+[18:20:29]       [AR] Mundo Cão - Erasmo Carlos
+[18:20:29]       [+] Added: Mundo Cão - Erasmo Carlos
+[18:26:08] Error fetching https://itunes.apple.com/lookup?id=1442361613&lang=ar_sa&country=LB: <urlopen error [WinError 10053] An established connection was aborted by the software in your host machine>
+[18:26:08] Error fetching https://itunes.apple.com/lookup?id=1443766414&lang=ar_sa&country=EG: <urlopen error [Errno 11001] getaddrinfo failed>
+[18:26:08]   Searching albums for 'Best Arabic 1972' in AE...
+[18:26:08]       [+] Added: Sorriso Dela - Erasmo Carlos
+[18:26:15]     Checking album: The Best Of Marvin Gaye
+[18:26:15]       [AR] Sábado Morto - Erasmo Carlos
+[18:26:15]       [+] Added: Sábado Morto - Erasmo Carlos
+[18:26:15]   Saved progress. Total added so far: 54
+[18:26:15] Year 1973: 0 songs. Need 18 more.
+[18:26:15]   Searching albums for 'Arabic Hits 1973' in SA...
+[18:26:21]     Checking album: The Lion King (Original 1997 Broadway Cast Recording)
+[18:26:26]       [AR] You're The Man (Pts. I & II / Single Version) - Marvin Gaye
+[18:26:26]     Checking album: Best of the Doobies (Remastered)
+[18:26:27]     Checking album: Legend: The Best of Bob Marley and the Wailers (Deluxe Edition)
+[18:26:36]       [AR] Listen to the Music - The Doobie Brothers
+[18:26:38]       [AR] Get Up, Stand Up - The Wailers
+[18:26:38]       [+] Added: Get Up, Stand Up - The Wailers
+[18:26:39]       [AR] Rockin' Down the Highway - The Doobie Brothers
+[18:26:42]       [AR] Stir It Up - Bob Marley & The Wailers
+[18:26:42]       [AR] Jesus Is Just Alright with Me - The Doobie Brothers
+[18:26:42]       [+] Added: Stir It Up - Bob Marley & The Wailers
+[18:26:42]   Searching albums for 'Top Arabic 1972' in SA...
+[18:26:45]   Searching albums for 'Top Arabic 1972' in EG...
+[18:26:45]       [AR] I Shot the Sheriff - The Wailers
+[18:26:45]       [+] Added: I Shot the Sheriff - The Wailers
+[18:26:45]     Checking album: I Put a Spell On You
+[18:26:49]   Searching albums for 'Top Arabic 1972' in LB...
+[18:26:49]     Checking album: One Love (Original Motion Picture Soundtrack)
+[18:26:52]   Searching albums for 'Top Arabic 1972' in AE...
+[18:26:57]       [AR] Get Up, Stand Up - The Wailers
+ SA...
+[18:27:01]   Searching albums for 'أغاني 1972' in EG...
+[18:27:02]       [AR] I Shot The Sheriff - The Wailers
+[18:27:02]     Checking album: I Wish You Love: More From the Bodyguard
+[18:27:06]   Searching albums for 'أغاني 1972' in LB...
+[18:27:09]     Checking album: Bad Moon Rising: Shadows on the Bayou
+[18:27:10]   Searching albums for 'أغاني 1972' in AE...
+[18:27:12]     Checking album: Let's Get It On (Remastered 2003)
+[18:27:13]   Searching albums for 'هيتس 1972' in SA...
+[18:27:16]     Checking album: Melody (feat. James Blunt) - Single
+[18:27:21]       [AR] Let's Get It On (Remastered 2003) - Marvin Gaye
+[18:27:21]       [+] Added: Let's Get It On (Remastered 2003) - Marvin Gaye
+[18:27:29]     Checking album: If You’re Too Shy (Let Me Know) [Edit] - Single
+[18:27:29]       [AR] Please Don't Stay (Once You Go Away) [Remastered 2003] - Marvin Gaye
+[18:27:29]       [+] Added: Please Don't Stay (Once You Go Away) [Remastered 2003] - Marvin Gaye
+[18:27:34]     Checking album: What's Going On
+[18:27:37]       [AR] If I Should Die Tonight (Remastered 2003) - Marvin Gaye
+[18:27:37]       [+] Added: If I Should Die Tonight (Remastered 2003) - Marvin Gaye
+[18:27:39]     Checking album: Led Zeppelin II (Remastered)
+[18:27:42]     Checking album: Led Zeppelin III (Deluxe Edition)
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:29:02.851948 ---
+[18:29:02] --- Expanding Arabic Music Library ---
+[18:29:02] Year 1973: 0 songs. Need 18 more.
+[18:29:02]   Searching albums for 'Arabic Hits 1973' in SA...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:29:29.921586 ---
+[18:29:29] --- Expanding Arabic Music Library ---
+[18:29:29] Year 1973: 0 songs. Need 18 more.
+[18:29:29]   Searching albums for 'Arabic Hits 1973' in SA...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:29:50.129037 ---
+[18:29:50] --- Expanding Arabic Music Library ---
+[18:29:50] Year 1973: 0 songs. Need 18 more.
+[18:29:50]   Searching albums for 'Arabic Hits 1973' in SA...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:31:50.739547 ---
+[18:31:50] --- Expanding Arabic Music Library ---
+[18:31:50] Year 1973: 0 songs. Need 18 more.
+[18:31:50]   Searching albums for 'Arabic Hits 1973' in SA...
+
+--- Starting Arabic Music Library Expansion 2026-01-29 18:33:05.109147 ---
+[18:33:05] --- Expanding Arabic Music Library ---
+[18:33:05] Year 1973: 0 songs. Need 18 more.
+[18:33:05]   Searching albums for 'Arabic Hits 1973' in SA...
+[18:34:46]   Searching albums for 'Arabic Hits 1973' in EG...
+[18:34:48]   Searching albums for 'Arabic Hits 1973' in LB...
+[18:35:31]   Searching albums for 'Arabic Hits 1973' in EG...
+[18:35:33]   Searching albums for 'Arabic Hits 1973' in LB...
+[18:35:57] 
+[SAFETY] Taking a long break for 33.2s...
+[18:36:51] 
+[SAFETY] Taking a long break for 41.4s...
+[18:37:05]   Searching albums for 'Arabic Hits 1973' in AE...
+[18:37:56]   Searching albums for 'Arabic Hits 1973' in AE...
+[18:38:26]   Searching albums for 'Best Arabic 1973' in SA...
+[18:38:53] 
+[SAFETY] Taking a long break for 53.1s...
+[18:39:07]   Searching albums for 'Best Arabic 1973' in SA...
+[18:39:37] 
+[SAFETY] Taking a long break for 39.4s...
+[18:41:34] Error fetching https://itunes.apple.com/lookup?id=1110962664&lang=ar_sa&country=SA: <urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>
+[18:41:34]   Searching albums for 'Best Arabic 1973' in EG...
+[18:41:38]   Searching albums for 'Best Arabic 1973' in LB...
+[18:41:40]   Searching albums for 'Best Arabic 1973' in EG...
+[18:41:44]   Searching albums for 'Best Arabic 1973' in LB...
+[18:42:10]   Searching albums for 'Best Arabic 1973' in AE...
+[18:42:18]   Searching albums for 'Best Arabic 1973' in AE...
+[19:44:30] --- Starting STRICT Arabic Expansion ---
+[19:44:30] Year 1980: Have 0, Need 5
+[19:45:34]   [+] Added: Tesadaa - Talal Maddah (1980) [Arabic Pop]
+[19:45:35]   [+] Added: Gatny Tekoul - Talal Maddah (1980) [Arabic Pop]
+[19:45:37]   [+] Added: Waadek Meita - Talal Maddah (1980) [Arabic Pop]
+[19:45:39]   [+] Added: تصدق ولا احلفلك - Talal Madaah (1980) [Worldwide]
+[19:46:10] Year 1981: Have 0, Need 5
+[19:47:01] Year 1982: Have 0, Need 5
+[19:48:12] Year 1983: Have 0, Need 5
+[19:49:02] Year 1984: Have 0, Need 5
+[19:50:09] Year 1985: Have 0, Need 5
+[19:51:06] Year 1986: Have 0, Need 5
+[19:51:58] Year 1987: Have 0, Need 5
+[19:53:02] Year 1988: Have 0, Need 5
+[19:53:52] Year 1989: Have 0, Need 5
+[19:55:50] Year 1990: Have 0, Need 5
+[19:56:43] Year 1991: Have 0, Need 5
+[19:58:29] Year 1992: Have 0, Need 5
+[19:59:55] Year 1993: Have 0, Need 5
+[20:01:48] Year 1994: Have 0, Need 5
+[20:02:37]   [+] Added: Khedni Maak Aa Darb Bi'ldi - Salwa El Katrib (1994) [Arabic]
+[20:02:40]   [+] Added: Ahwak - Fairouz (1994) [Arabic Pop]
+[20:04:04] Year 1995: Have 0, Need 5
+[20:05:16]   [+] Added: Nassam Alayna El Hawa - Fairouz (1995) [Arabic]
+[20:05:30] Year 1996: Have 0, Need 5
+[20:06:40] Year 1997: Have 0, Need 5
+[20:08:22] Year 1998: Have 0, Need 5
+[20:10:44] Year 1999: Have 0, Need 5
+[20:14:13] Year 2000: Have 0, Need 5
+[20:14:19]   [+] Added: Ya Ghayeb - Fadel Chaker (2000) [Levant]
+[20:14:38]   [+] Added: Boshret Kheir - Hussain Al Jassmi (2000) [Arabic Pop]
+[20:17:06]   [+] Added: Betghib Betrouh - Elissa (2000) [Arabic Pop]
+[20:18:27] Year 2001: Have 0, Need 5
+[20:18:58]   [+] Added: Nassam Alayna - Fairouz (2001) [Arabic]
+[20:19:03]   [+] Added: Targahali - George Wassouf (2001) [Arabic]
+[20:19:17]   [+] Added: Yalle Teabna Snen Be Hawak - George Wassouf (2001) [Arabic]
+[20:19:35] Year 2002: Have 0, Need 5
+[20:21:14] Year 2003: Have 0, Need 5
+[20:22:21] Year 2004: Have 0, Need 5
+[20:24:04] Year 2005: Have 0, Need 5
+[20:25:20]   [+] Added: Kifak Inta - Fairouz (2005) [Arabic]
+[20:25:22]   [+] Added: Sallimleh Alayh - Fairouz (2005) [Arabic]
+[20:25:24]   [+] Added: Al Bostah - Fairouz (2005) [Arabic]
+[20:25:26]   [+] Added: Sabah Wu Masaa - Fairouz (2005) [Arabic]
+[20:25:58] Year 2006: Have 0, Need 5
+[20:26:12]   [+] Added: Agmal Ghram - Ronnie (2006) [Arabic Pop]
+[20:26:14]   [+] Added: Ya Wakhed Akly - Ronnie (2006) [Arabic Pop]
+[20:26:17]   [+] Added: Bastana Kalamo - Ronnie (2006) [Arabic Pop]
+[20:26:19]   [+] Added: Marah Kaman - Ronnie (2006) [Arabic Pop]
+[20:26:20]   [+] Added: Bakaly Keteer - Ronnie (2006) [Arabic Pop]
+[20:26:20] Year 2007: Have 0, Need 5
+[20:27:40] Year 2008: Have 0, Need 5
+[20:28:47]   [+] Added: Oudak Rannan (Live) - Ziyad Al Rahbani (2008) [Arabic]
+[20:29:10] Year 2009: Have 0, Need 5
+[20:30:02] Year 2010: Have 0, Need 5
+[20:31:07] Year 2011: Have 0, Need 5
+[20:32:08]   [+] Added: يا زاهية (مع صباح عبدالله) - Taha Suliman (2011) [Worldwide]
+[20:32:10]   [+] Added: الكنينة (مع فرفور) - Taha Suliman (2011) [Worldwide]
+[20:32:13]   [+] Added: ست الودع (مع شريف الفحيل) - Taha Suliman (2011) [Worldwide]
+[20:32:15]   [+] Added: انا و النجم و المساء - Taha Suliman (2011) [Worldwide]
+[20:32:17]   [+] Added: يا غائب عن العين (مع جمال فرفور) - Taha Suliman (2011) [Worldwide]
+[20:32:17] Year 2012: Have 0, Need 5
+[20:32:26]   [+] Added: Tafoukt - Tihihite (2012) [Arabic]
+[20:32:28]   [+] Added: Irbi akhtad itagomn - Bahija (2012) [Arabic]
+[20:32:29]   [+] Added: Sidi rbi dark aghilla laafou - Houssine El Baz (2012) [Arabic]
+[20:32:31]   [+] Added: Ghassade aymoune lghard - Tislatine Onzar & Five 3 (2012) [Arabic]
+[20:32:33]   [+] Added: Irbbayt ayrgazn - Tihihite (2012) [Arabic]
+[20:32:33] Year 2013: Have 0, Need 5
+[20:33:08]   [+] Added: El Deni Zghire - Hussein Al Deek (2013) [Arabic Pop]
+[20:34:44] Year 2014: Have 0, Need 5
+[20:36:36]   [+] Added: وداد - Hussien Elsadig (2014) [Worldwide]
+[20:36:38]   [+] Added: البياح - Hussien Elsadig (2014) [Worldwide]
+[20:36:40]   [+] Added: عازف الأوتار - Hussien Elsadig (2014) [Worldwide]
+[20:36:42]   [+] Added: عيد الكواكب - Hussien Elsadig (2014) [Worldwide]
+[20:36:44]   [+] Added: حبة فرح - Hussien Elsadig (2014) [Worldwide]
+[20:36:44] Year 2015: Have 0, Need 5
+[20:38:31] Year 2016: Have 0, Need 5
+[20:38:40]   [+] Added: C'est moi qui choisis - Cheba Warda (2016) [Arabic]
+[20:38:42]   [+] Added: Alech Medit Galbi - Bilal Sghir (2016) [Arabic]
+[20:38:44]   [+] Added: Win Rouh Bik Ya Omri - Cheb Mourad (2016) [Arabic]
+[20:38:45]   [+] Added: Fakrouha Fakrouha - Kader Sghir (2016) [Arabic]
+[20:38:47]   [+] Added: Dbayli Dbayli - Cheb Amine 31 (2016) [Arabic]
+[20:38:47] Year 2017: Have 0, Need 5
+[20:39:03]   [+] Added: Galb li 3andi - Kader Tirigou (2017) [Maghreb Rai]
+[20:39:04]   [+] Added: Rani mkawi - Cheb Zaki (2017) [Maghreb Rai]
+[20:39:06]   [+] Added: Men galbi nsuprimik - Cheb Lotfi (2017) [Maghreb Rai]
+[20:39:08]   [+] Added: Top Raï Sentimentale (Top Raï Sentimentale) - Sohaib Titaniki (2017) [Arabic Pop]
+[20:39:09]   [+] Added: Kont dayer fik confience - Cheb Bello (2017) [Maghreb Rai]
+[20:39:09] Year 2018: Have 0, Need 5
+[20:40:19]   [+] Added: Kedeish Kan Fe Nas - Fairouz (2018) [Arabic]
+[20:40:40] Year 2019: Have 0, Need 5
+[20:41:53]   [+] Added: Oddam El Nas - Mohamed Hamaki (2019) [Arabic Pop]
+[20:43:03] Year 2020: Have 0, Need 5
+[20:43:12]   [+] Added: Bel Bont El3areedh - Hussain Al Jassmi (2020) [Arabic Pop]
+[20:44:52]   [+] Added: عاشرت ناس متتعاشرش ! اغاني 2020 ! اوشا الصغير ! مهرجانات 2020 - Tal2a Music (2020) [Alternative]
+[20:44:54]   [+] Added: مهرجان بنت الاكابر 2020 - اغاني 2020 - ادهم نظريه - عمرو جيفاز - اجدد مهرجانات 2020 - Tal2a Music (2020) [Alternative]
+[20:44:56]   [+] Added: مهرجان سبع فركات  مهرجانات 2020 - اغاني 2020  حمو بيكا  سوري اجمد اعم الطري - Tal2a Music (2020) [Alternative]
+[20:44:58]   [+] Added: اجدد مهرجان 2020 - انا الكتيبه - مهرجانات 2020 - ماندو الأمير - تيتو الجوكر - اغاني 2020 - Tal2a Music (2020) [Alternative]
+[20:44:58] Year 2021: Have 0, Need 5
+[20:45:03]   [+] Added: Bashofha - Ahmed Hedar (2021) [Arabic]
+[20:45:06]   [+] Added: Bent Msaytara - Mostafa Abdo (2021) [Arabic]
+[20:45:08]   [+] Added: Argaalo Tany - بسمه عطا (2021) [Arabic]
+[20:45:10]   [+] Added: Ma'a El Asaf - Ashraf Mohamed (2021) [Arabic]
+[20:45:12]   [+] Added: Ya Malek Alb 100 Million - Shehab Kamal (2021) [Arabic]
+[20:45:12] Year 2022: Have 0, Need 5
+[20:45:23]   [+] Added: بطل عالم - Marwan Moussa (2022) [Arabic]
+[20:46:01]   [+] Added: Set El Kel - Wael Kfoury (2022) [Arabic]
+[20:46:59]   [+] Added: Wasa3 Wasa3 - Ahmed Saad (2022) [Arabic]
+[20:47:02]   [+] Added: Aleky Eyoun - Ahmed Saad (2022) [Arabic]
+[20:47:58]   [+] Added: جديد أغاني راي 2022 Ykhroj Mostapha - YHYABEATS (2022) [Blues]
+[20:47:58] Year 2023: Have 0, Need 5
+[20:48:10]   [+] Added: Tek Tek (feat. MHD) - DYSTINCT (2023) [Arabic Pop]
+[20:49:24]   [+] Added: اختياراتي (من فيلم مستر إكس) - Ahmed Saad (2023) [Arabic]
+[20:49:25]   [+] Added: Ya Layaly (feat. Ruby) - Ahmed Saad (2023) [Arabic]
+[20:49:50]   [+] Added: يا راحل بدون إنذار - Hussien Elsadig (2023) [Worldwide]
+[20:49:52]   [+] Added: دار ام بادر - Hussien Elsadig (2023) [Worldwide]
+[20:49:52] Year 2024: Have 0, Need 5
+[20:49:57]   [+] Added: ماتيجي اعدي عليكي - TUL8TE (2024) [Arabic Pop]
+[20:50:02]   [+] Added: يا حياة الروح (Ya Hayat El Roh) - Popnable (2024) [Pop]
+[20:50:04]   [+] Added: يا ليل ويا عين (Ya Leil W Yal Ein) - Popnable (2024) [Pop]
+[20:50:06]   [+] Added: حبيبي، حياتي (Habibi, Hayati) - Popnable (2024) [Pop]
+[20:50:08]   [+] Added: ما في ليل (Ma Fi Leil) - Popnable (2024) [Pop]
+[20:50:08] Year 2025: Have 0, Need 5
+[20:50:47]   [+] Added: Awal Houb - Bashar Al Shatti (2025) [Levant Pop]
+[20:50:50]   [+] Added: Arbulenya (Byburak Bysb. Vol.4 Synth Bass Drum Compozisyon) - Burak Öksüzoğlu (2025) [Arabic]
+[20:50:51]   [+] Added: شرارة الحب (Remastered 2025) - Ivan Queiros (2025) [Hip-Hop/Rap]
+[20:50:53]   [+] Added: Arbulenya (Byburak Bysb. Vol.4) - Burak Öksüzoğlu (2025) [Arabic]
+[20:51:01]   [+] Added: Arbulenya (Byburak Bysb. Vol.4 Drum Compozisyon) - Burak Öksüzoğlu (2025) [Arabic]
+[20:51:01] Expansion Finish. Total Added: 81

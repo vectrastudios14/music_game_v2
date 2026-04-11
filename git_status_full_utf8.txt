@@ -1,0 +1,411 @@
+﻿On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   assets/songs.json
+	modified:   lib/main.dart
+	modified:   lib/models/song.dart
+	modified:   lib/screens/boa/boa_game_screen.dart
+	modified:   lib/screens/boa/boa_setup_screen.dart
+	modified:   lib/screens/game_hub_screen.dart
+	modified:   lib/screens/gts/game_screen.dart
+	modified:   lib/screens/gts/result_screen.dart
+	modified:   lib/screens/gts/setup_screen.dart
+	modified:   lib/screens/splash_screen.dart
+	modified:   lib/services/song_repository.dart
+	modified:   linux/flutter/generated_plugin_registrant.cc
+	modified:   linux/flutter/generated_plugins.cmake
+	modified:   macos/Flutter/GeneratedPluginRegistrant.swift
+	modified:   pubspec.lock
+	modified:   pubspec.yaml
+	modified:   windows/flutter/generated_plugin_registrant.cc
+	modified:   windows/flutter/generated_plugins.cmake
+	modified:   windows/runner/flutter_window.cpp
+	modified:   windows/runner/main.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	RESUME_EXPANSION.bat
+	RUN_SONG_TEST.bat
+	START_ARABIC_EXPANSION.bat
+	VIEW_DASHBOARD.bat
+	add_1970_arabic.ps1
+	add_aadaweya.py
+	add_amaher.py
+	add_angham.py
+	add_asma.py
+	add_assala.py
+	add_assi.py
+	add_carole.py
+	add_diana.py
+	add_ehab.py
+	add_elissa.py
+	add_etab.py
+	add_hamid.py
+	add_hany.py
+	add_hatem.py
+	add_khaled.py
+	add_mounir.py
+	add_mramadan.py
+	add_msaleh.py
+	add_nabil.py
+	add_nancy.py
+	add_nawal.py
+	add_rabab.py
+	add_ragheb.py
+	add_ruby.py
+	add_samira.py
+	add_sherine.py
+	add_thosny.py
+	add_user_songs.py
+	add_walid.py
+	add_wassouf.py
+	add_wjassar.py
+	all_songs_list.txt
+	angham_new.json
+	asma_new.json
+	assala_new.json
+	assets/Before_or_after_logo.png
+	assets/Guess_that_song_logo.png
+	assets/Musica_logo.png
+	assets/TimeSurvival_logo.png
+	assets/UK_flag - Copy.json
+	assets/UK_flag.json
+	assets/USA_flag.json
+	assets/animations/
+	assets/boa-logo-v5.png
+	assets/chillhop.mp3
+	assets/correct.mp3
+	assets/facts_00s.json
+	assets/facts_10s.json
+	assets/facts_70s.json
+	assets/facts_80s.json
+	assets/facts_90s.json
+	assets/facts_arabic.json
+	assets/facts_ext_1.json
+	assets/facts_ext_2.json
+	assets/facts_ext_final.json
+	assets/facts_recent.json
+	assets/flags/
+	assets/intro.mp3
+	assets/logo_reveal.mp3
+	assets/songs.json.bak
+	assets/songs_arabic.json
+	assets/songs_arabic.json.abdel_bkp
+	assets/songs_arabic.json.ahlam_bkp
+	assets/songs_arabic.json.bahar_bkp
+	assets/songs_arabic.json.bak
+	assets/songs_arabic.json.fadel_bkp
+	assets/songs_arabic.json.fairouz_bkp
+	assets/songs_arabic.json.jasmi_bkp
+	assets/songs_arabic.json.jumairi_bkp
+	assets/songs_arabic.json.kadim_bkp
+	assets/songs_arabic.json.khaled_bkp
+	assets/songs_arabic.json.mayada_bkp
+	assets/songs_arabic.json.nawal_bkp
+	assets/songs_arabic.json.rowaish_bkp
+	assets/songs_arabic.json.warda_bkp
+	assets/songs_arabic_backup.json
+	assets/songs_backup_before_revert.json
+	assets/water_drop.mp3
+	assets/wrong.mp3
+	assi_new.json
+	backup_manual_edits.dart
+	carole_new.json
+	check_missing_facts.dart
+	clean_library_arabic.py
+	copy_facts.dart
+	copy_facts_enhanced.dart
+	count_updates.dart
+	debug_itunes_fetch.py
+	diana_new.json
+	ehab_new.json
+	elissa_new.json
+	enrich_songs_batch_12.py
+	enrich_songs_batch_17.py
+	etab_new.json
+	expand_english_library.py
+	expand_library.py
+	expand_library_arabic.py
+	expansion_dashboard.ps1
+	expansion_log.txt
+	expansion_log_arabic.txt
+	extract_artists.py
+	fix_facts_type.py
+	found_batch_1.json
+	found_playlist_songs.json
+	generate_review_md.ps1
+	git_status_full.txt
+	hamid_new.json
+	hany_new.json
+	hatem_new.json
+	khaled_new.json
+	lib/main_song_test.dart
+	lib/screens/boa/boa_help_screen.dart
+	lib/screens/boa/boa_result_screen.dart
+	lib/screens/boa/widgets/boa_game_over_modal.dart
+	lib/screens/gts/help_screen.dart
+	lib/screens/intro_screen.dart
+	lib/screens/song_test_screen.dart
+	lib/screens/time_survival/
+	lib/scripts/
+	lib/services/background_music_service.dart
+	lib/services/song_review_service.dart
+	lib/utils/
+	list_abdulkarim_links.py
+	list_ayed_links.py
+	list_dalia_links.py
+	list_ibrahim_links.py
+	list_missing_facts.dart
+	list_songs.dart
+	list_songs.py
+	manual_edits_safety_backup.json
+	merge_angham.py
+	merge_asma.py
+	merge_assala.py
+	merge_assi.py
+	merge_carole.py
+	merge_diana.py
+	merge_ehab.py
+	merge_elissa.py
+	merge_etab.py
+	merge_hamid.py
+	merge_hany.py
+	merge_hatem.py
+	merge_khaled.py
+	merge_mounir.py
+	merge_nabil.py
+	merge_nancy.py
+	merge_nawal.py
+	merge_rabab.py
+	merge_ragheb.py
+	merge_ruby.py
+	merge_samira.py
+	merge_sherine.py
+	merge_thosny.py
+	merge_walid.py
+	merge_wassouf.py
+	missing_facts_list.txt
+	monitor_arabic_expansion.bat
+	mounir_new.json
+	nabil_new.json
+	nancy_new.json
+	nawal_new.json
+	rabab_new.json
+	ragheb_new.json
+	restore_manual_edits.dart
+	ruby_new.json
+	samira_new.json
+	scripts/
+	sherine_new.json
+	songs_plain.txt
+	songs_to_add.json
+	surgical_repair.dart
+	tag_gender.ps1
+	test_etab.py
+	test_itunes.py
+	test_parsing_standalone.dart
+	test_search_525.py
+	test_search_comparison.py
+	test_wassouf.py
+	thosny_new.json
+	update_arabic_songs.ps1
+	update_arabic_songs.py
+	update_facts.dart
+	verify_fix.py
+	verify_songs.py
+	walid_new.json
+	wassouf_new.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Would remove RESUME_EXPANSION.bat
+Would remove RUN_SONG_TEST.bat
+Would remove START_ARABIC_EXPANSION.bat
+Would remove VIEW_DASHBOARD.bat
+Would remove add_1970_arabic.ps1
+Would remove add_aadaweya.py
+Would remove add_amaher.py
+Would remove add_angham.py
+Would remove add_asma.py
+Would remove add_assala.py
+Would remove add_assi.py
+Would remove add_carole.py
+Would remove add_diana.py
+Would remove add_ehab.py
+Would remove add_elissa.py
+Would remove add_etab.py
+Would remove add_hamid.py
+Would remove add_hany.py
+Would remove add_hatem.py
+Would remove add_khaled.py
+Would remove add_mounir.py
+Would remove add_mramadan.py
+Would remove add_msaleh.py
+Would remove add_nabil.py
+Would remove add_nancy.py
+Would remove add_nawal.py
+Would remove add_rabab.py
+Would remove add_ragheb.py
+Would remove add_ruby.py
+Would remove add_samira.py
+Would remove add_sherine.py
+Would remove add_thosny.py
+Would remove add_user_songs.py
+Would remove add_walid.py
+Would remove add_wassouf.py
+Would remove add_wjassar.py
+Would remove all_songs_list.txt
+Would remove angham_new.json
+Would remove asma_new.json
+Would remove assala_new.json
+Would remove assets/Before_or_after_logo.png
+Would remove assets/Guess_that_song_logo.png
+Would remove assets/Musica_logo.png
+Would remove assets/TimeSurvival_logo.png
+Would remove assets/UK_flag - Copy.json
+Would remove assets/UK_flag.json
+Would remove assets/USA_flag.json
+Would remove assets/animations/
+Would remove assets/boa-logo-v5.png
+Would remove assets/chillhop.mp3
+Would remove assets/correct.mp3
+Would remove assets/facts_00s.json
+Would remove assets/facts_10s.json
+Would remove assets/facts_70s.json
+Would remove assets/facts_80s.json
+Would remove assets/facts_90s.json
+Would remove assets/facts_arabic.json
+Would remove assets/facts_ext_1.json
+Would remove assets/facts_ext_2.json
+Would remove assets/facts_ext_final.json
+Would remove assets/facts_recent.json
+Would remove assets/flags/
+Would remove assets/intro.mp3
+Would remove assets/logo_reveal.mp3
+Would remove assets/songs.json.bak
+Would remove assets/songs_arabic.json
+Would remove assets/songs_arabic.json.abdel_bkp
+Would remove assets/songs_arabic.json.ahlam_bkp
+Would remove assets/songs_arabic.json.bahar_bkp
+Would remove assets/songs_arabic.json.bak
+Would remove assets/songs_arabic.json.fadel_bkp
+Would remove assets/songs_arabic.json.fairouz_bkp
+Would remove assets/songs_arabic.json.jasmi_bkp
+Would remove assets/songs_arabic.json.jumairi_bkp
+Would remove assets/songs_arabic.json.kadim_bkp
+Would remove assets/songs_arabic.json.khaled_bkp
+Would remove assets/songs_arabic.json.mayada_bkp
+Would remove assets/songs_arabic.json.nawal_bkp
+Would remove assets/songs_arabic.json.rowaish_bkp
+Would remove assets/songs_arabic.json.warda_bkp
+Would remove assets/songs_arabic_backup.json
+Would remove assets/songs_backup_before_revert.json
+Would remove assets/water_drop.mp3
+Would remove assets/wrong.mp3
+Would remove assi_new.json
+Would remove backup_manual_edits.dart
+Would remove carole_new.json
+Would remove check_missing_facts.dart
+Would remove clean_library_arabic.py
+Would remove copy_facts.dart
+Would remove copy_facts_enhanced.dart
+Would remove count_updates.dart
+Would remove debug_itunes_fetch.py
+Would remove diana_new.json
+Would remove ehab_new.json
+Would remove elissa_new.json
+Would remove enrich_songs_batch_12.py
+Would remove enrich_songs_batch_17.py
+Would remove etab_new.json
+Would remove expand_english_library.py
+Would remove expand_library.py
+Would remove expand_library_arabic.py
+Would remove expansion_dashboard.ps1
+Would remove expansion_log.txt
+Would remove expansion_log_arabic.txt
+Would remove extract_artists.py
+Would remove fix_facts_type.py
+Would remove found_batch_1.json
+Would remove found_playlist_songs.json
+Would remove generate_review_md.ps1
+Would remove git_status_full.txt
+Would remove hamid_new.json
+Would remove hany_new.json
+Would remove hatem_new.json
+Would remove khaled_new.json
+Would remove lib/main_song_test.dart
+Would remove lib/screens/boa/boa_help_screen.dart
+Would remove lib/screens/boa/boa_result_screen.dart
+Would remove lib/screens/boa/widgets/boa_game_over_modal.dart
+Would remove lib/screens/gts/help_screen.dart
+Would remove lib/screens/intro_screen.dart
+Would remove lib/screens/song_test_screen.dart
+Would remove lib/screens/time_survival/
+Would remove lib/scripts/
+Would remove lib/services/background_music_service.dart
+Would remove lib/services/song_review_service.dart
+Would remove lib/utils/
+Would remove list_abdulkarim_links.py
+Would remove list_ayed_links.py
+Would remove list_dalia_links.py
+Would remove list_ibrahim_links.py
+Would remove list_missing_facts.dart
+Would remove list_songs.dart
+Would remove list_songs.py
+Would remove manual_edits_safety_backup.json
+Would remove merge_angham.py
+Would remove merge_asma.py
+Would remove merge_assala.py
+Would remove merge_assi.py
+Would remove merge_carole.py
+Would remove merge_diana.py
+Would remove merge_ehab.py
+Would remove merge_elissa.py
+Would remove merge_etab.py
+Would remove merge_hamid.py
+Would remove merge_hany.py
+Would remove merge_hatem.py
+Would remove merge_khaled.py
+Would remove merge_mounir.py
+Would remove merge_nabil.py
+Would remove merge_nancy.py
+Would remove merge_nawal.py
+Would remove merge_rabab.py
+Would remove merge_ragheb.py
+Would remove merge_ruby.py
+Would remove merge_samira.py
+Would remove merge_sherine.py
+Would remove merge_thosny.py
+Would remove merge_walid.py
+Would remove merge_wassouf.py
+Would remove missing_facts_list.txt
+Would remove monitor_arabic_expansion.bat
+Would remove mounir_new.json
+Would remove nabil_new.json
+Would remove nancy_new.json
+Would remove nawal_new.json
+Would remove rabab_new.json
+Would remove ragheb_new.json
+Would remove restore_manual_edits.dart
+Would remove ruby_new.json
+Would remove samira_new.json
+Would remove scripts/
+Would remove sherine_new.json
+Would remove songs_plain.txt
+Would remove songs_to_add.json
+Would remove surgical_repair.dart
+Would remove tag_gender.ps1
+Would remove test_etab.py
+Would remove test_itunes.py
+Would remove test_parsing_standalone.dart
+Would remove test_search_525.py
+Would remove test_search_comparison.py
+Would remove test_wassouf.py
+Would remove thosny_new.json
+Would remove update_arabic_songs.ps1
+Would remove update_arabic_songs.py
+Would remove update_facts.dart
+Would remove verify_fix.py
+Would remove verify_songs.py
+Would remove walid_new.json
+Would remove wassouf_new.json

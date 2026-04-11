@@ -1,0 +1,1292 @@
+--- Music Library Expansion Log ---
+[15:48:01] --- Expanding Music Library ---
+[15:48:01] Year 1970: 16 songs. Need 2 more.
+[15:48:01]   Searching albums for 'Hits of 1970'...
+[15:48:04]     Checking album: '70s Greatest Hits
+[15:48:07]     Checking album: Radio Hits of the '70s
+[15:48:09]     Checking album: Hits of the 70's
+[15:48:13]     Checking album: Greatest Hits 1970-1978
+[15:48:15]     Checking album: Hits
+[15:48:19]   Searching albums for 'Best of 1970'...
+[15:48:23]     Checking album: Best of the 70s
+[15:48:26]     Checking album: The Best of Keith Sweat: Make You Sweat (Remastered)
+[15:48:30]     Checking album: The Best of Anita Baker
+[15:48:34]     Checking album: The Decca Years: Best of 1970-1973 (Remastered)
+[15:48:38]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[15:48:44]   Searching albums for '1970 Hits'...
+[15:48:46]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[15:48:49]     Checking album: Cold Heart (PNAU Remix) - Single
+[15:48:51]     Checking album: Hits
+[15:48:54]     Checking album: Hits
+[15:51:56] Error fetching https://itunes.apple.com/lookup?id=1792683364&entity=song: Remote end closed connection without response
+[15:51:56]     Checking album: Live at the Cellar Door (1970)
+[15:51:59]   Searching albums for 'Billboard 1970'...
+[15:52:01]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[15:52:04]     Checking album: Billboard Top Rock 'n' Roll Hits
+[15:52:07]     Checking album: Billboard Hot 100 - Single
+[15:52:09]     Checking album: Snarez-n-Kickz Productions Presents... Billboard Hot 100 Beats
+[15:52:12]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[15:52:15]   Saved progress. Total added so far: 0
+[15:52:15] Year 1971: 14 songs. Need 4 more.
+[15:52:15]   Searching albums for 'Hits of 1971'...
+[15:52:18]     Checking album: Class Reunion '71: Greatest Hits Of 1971
+[15:52:25]     Checking album: Radio Hits of the '70s
+[15:52:30]     Checking album: US Hot 100 Hits of 1971
+[15:52:33]     Checking album: Their Greatest Hits 1971-1975
+[15:52:35]     Checking album: Hits!
+[15:52:38]   Searching albums for 'Best of 1971'...
+[15:52:40]     Checking album: The Best of Anita Baker
+[15:52:42]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[15:52:44]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[15:53:07]     Checking album: The Very Best of Eagles
+[15:53:13]     Checking album: The Very Best of Grateful Dead
+[15:53:20]   Searching albums for '1971 Hits'...
+[15:53:23]     Checking album: Their Greatest Hits 1971-1975
+[15:53:29]     Checking album: The Rolling Stones 1963-1971
+[15:53:34]     Checking album: 80s 100 Hits
+[15:53:37]     Checking album: Let It Bleed (Remastered 2019)
+[15:53:42]     Checking album: Hits!
+[15:53:46]   Searching albums for 'Billboard 1971'...
+[15:53:50]   Saved progress. Total added so far: 0
+[15:53:50] Year 1972: 18 songs (Sufficient)
+[15:53:50] Year 1973: 18 songs (Sufficient)
+[15:53:50] Year 1974: 17 songs. Need 1 more.
+[15:53:50]   Searching albums for 'Hits of 1974'...
+[15:53:53]     Checking album: The Spirit of Radio: Greatest Hits (1974-1987)
+[15:53:58]     Checking album: Radio Hits of the '70s
+[15:54:03]     Checking album: The 20 Greatest Hits of Frankie Valli & The Four Seasons (Live)
+[15:54:06]     Checking album: Greatest Hits 1974-78
+[15:54:09]     Checking album: The Best of John Lee Hooker, 1965 to 1974 (Impulse, Chess & ABC Recordings)
+[15:54:14]   Searching albums for 'Best of 1974'...
+[15:54:17] 
+[SAFETY] Taking a long break for 45.5s...
+[15:55:04]     Checking album: The Very Best of Grateful Dead
+[15:55:07]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[15:55:10]     Checking album: The Best of Sam Cooke
+[15:55:14]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[15:55:18]     Checking album: Best of the Doobies (Remastered)
+[15:55:20]   Searching albums for '1974 Hits'...
+[15:55:23]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[15:55:26]     Checking album: Greatest Hits 1974-78
+[15:55:28]     Checking album: Hits
+[15:55:31]     Checking album: Greatest Hits
+[15:55:33]     Checking album: Cold Heart (PNAU Remix) - Single
+[15:55:36]   Searching albums for 'Billboard 1974'...
+[15:55:40]     Checking album: 80s 100 Hits
+[15:55:43]     Checking album: Greatest Hits 1974-78
+[15:55:45]     Checking album: Billboard Hot 100 - Single
+[15:55:51]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[15:55:54]     Checking album: Billboard Top Rock 'n' Roll Hits
+[15:55:59]   Saved progress. Total added so far: 0
+[15:55:59] Year 1975: 18 songs (Sufficient)
+[15:55:59] Year 1976: 18 songs (Sufficient)
+[15:55:59] Year 1977: 18 songs (Sufficient)
+[15:55:59] Year 1978: 18 songs (Sufficient)
+[15:55:59] Year 1979: 18 songs (Sufficient)
+[15:55:59] Year 1980: 14 songs. Need 4 more.
+[15:55:59]   Searching albums for 'Hits of 1980'...
+[15:56:02]     Checking album: Radio Hits of the 80s
+[15:56:05]     Checking album: Hits of the 80's
+[15:56:07]     Checking album: Hits!
+[15:56:12]     Checking album: Hits
+[15:56:15]     Checking album: Hits
+[15:56:17]   Searching albums for 'Best of 1980'...
+[15:56:20]     Checking album: The Best of 1980-1990 & B-Sides
+[15:56:23]     Checking album: The Best of 1980-1990
+[15:56:27]     Checking album: Best Of
+[15:56:30]     Checking album: Best Of
+[15:56:34]     Checking album: Best Of 1980 - Single
+[15:56:37]   Searching albums for '1980 Hits'...
+[15:56:39]     Checking album: Hits
+[15:56:41]     Checking album: Cold Heart (PNAU Remix) - Single
+[15:56:43]     Checking album: Hits!
+[15:56:45]     Checking album: Hits
+[15:56:48]   Searching albums for 'Billboard 1980'...
+[15:56:50]     Checking album: 80s 100 Hits
+[15:56:54]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[15:56:56]     Checking album: Billboard Top Rock 'n' Roll Hits
+[15:56:58]     Checking album: Billboard Hot 100 - Single
+[15:57:00]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[15:57:02]   Saved progress. Total added so far: 0
+[15:57:02] Year 1981: 17 songs. Need 1 more.
+[15:57:02]   Searching albums for 'Hits of 1981'...
+[15:57:05]     Checking album: Hi Infidelity (2024 Remaster)
+[15:57:08]     Checking album: Greatest Hits (1981 UK Edition)
+[15:57:11]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[15:57:14]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[15:57:17]     Checking album: Hits!
+[15:57:18]   Searching albums for 'Best of 1981'...
+[15:57:21]     Checking album: Best of the Doobies (Remastered)
+[15:57:23]     Checking album: The Very Best of Grateful Dead
+[15:57:26]     Checking album: The Very Best of The Beach Boys: Sounds of Summer
+[15:57:29] 
+[SAFETY] Taking a long break for 47.2s...
+[15:58:17]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[15:58:19]     Checking album: Best Of (1981-82)
+[15:58:21]   Searching albums for '1981 Hits'...
+[15:58:31]     Checking album: Greatest Hits (1981 UK Edition)
+[15:58:35]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[15:58:38]     Checking album: Hi Infidelity (2024 Remaster)
+[15:58:41]     Checking album: Perfect Hits (1975 - 1981)
+[15:58:43]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[15:58:47]   Searching albums for 'Billboard 1981'...
+[16:19:40]     Checking album: Live at Billboard 1981
+[16:19:43]     Checking album: LIVE at Billboard 1981
+[16:19:47]     Checking album: LIVE at Billboard 1981
+[16:19:50]     Checking album: 80s 100 Hits
+[16:19:53]     Checking album: 100 Top Country Classics (Rerecorded Version)
+[16:19:56]   Saved progress. Total added so far: 0
+[16:19:56] Year 1982: 18 songs (Sufficient)
+[16:19:56] Year 1983: 18 songs (Sufficient)
+[16:19:56] Year 1984: 18 songs (Sufficient)
+[16:19:56] Year 1985: 13 songs. Need 5 more.
+[16:19:56]   Searching albums for 'Hits of 1985'...
+[16:19:57]     Checking album: Born In the U.S.A.
+[16:20:00]     Checking album: Greatest Hits 1985-1995
+[16:20:02]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[16:20:05]     Checking album: What's Going On
+[16:20:07]     Checking album: Greatest Hits 1985-1995
+[16:20:09]   Searching albums for 'Best of 1985'...
+[16:20:12]     Checking album: The Best of 1985
+[16:20:15]     Checking album: Best Of
+[16:20:17]     Checking album: Best Of
+[16:20:20]     Checking album: The Very Best of Daryl Hall & John Oates
+[16:20:22]   Searching albums for '1985 Hits'...
+[16:20:24]     Checking album: Born In the U.S.A.
+[16:20:27]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[16:20:30]     Checking album: Greatest Hits 1985-1995
+[16:20:33]     Checking album: Greatest Hits 1985-1995
+[16:20:35]     Checking album: 1985 - Single
+[16:20:38]   Searching albums for 'Billboard 1985'...
+[16:20:41]     Checking album: Live At Billboard 1985
+[16:20:42]     Checking album: Billboard - Single
+[16:20:45]     Checking album: Billboard - Single
+[16:20:48]     Checking album: Billboard (Lido Remix) - Single
+[16:20:50]     Checking album: Billboard - EP
+[16:20:52]   Saved progress. Total added so far: 0
+[16:20:52] Year 1986: 18 songs (Sufficient)
+[16:20:52] Year 1987: 18 songs (Sufficient)
+[16:20:52] Year 1988: 7 songs. Need 11 more.
+[16:20:52]   Searching albums for 'Hits of 1988'...
+[16:20:55]     Checking album: Silent Night: The Greatest Hits of Christmas
+[16:20:57]     Checking album: Radio Hits of the 80s
+[16:21:00]     Checking album: Greatest Christmas Hits of the Last Half Century - 50 Años de Patria, Tradición y Navídad (1962-2012) [Original Recordings] [feat. Andy Montanez & Pellin Rodriguez]
+[16:21:02]     Checking album: The Canadian Brass: Greatest Hits
+[16:21:04]     Checking album: Handel: Messiah, HWV 56
+[16:21:08]   Searching albums for 'Best of 1988'...
+[16:21:11]     Checking album: Best of (1988-2001)
+[16:21:14]     Checking album: Private Investigations: The Best of Dire Straits & Mark Knopfler
+[16:21:18]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[16:21:20]     Checking album: The Very Best of Grateful Dead
+[16:21:25]     Checking album: ZOMBIES (Original TV Movie Soundtrack)
+[16:21:27]   Searching albums for '1988 Hits'...
+[16:21:29] 
+[SAFETY] Taking a long break for 56.0s...
+[16:22:26]     Checking album: Hits of my year of birth-1988 / Hits aus meinem Geburtsjahr-1988
+[16:22:28]     Checking album: Pachelbel Canon and Other Baroque Hits
+[16:22:31]     Checking album: The Canadian Brass: Greatest Hits
+[16:22:33]     Checking album: Silent Night: The Greatest Hits of Christmas
+[16:22:35]     Checking album: Handel: Messiah, HWV 56
+[16:22:39]   Searching albums for 'Billboard 1988'...
+[16:22:41]     Checking album: 1988(Billboard Chart Pop Style Instrumentals)
+[16:22:44]   Saved progress. Total added so far: 0
+[16:22:44] Year 1989: 7 songs. Need 11 more.
+[16:22:44]   Searching albums for 'Hits of 1989'...
+[16:22:45]     Checking album: The Karaoke Channel - Top Rock Hits of 1989, Vol. 7
+[16:22:48]     Checking album: Stingray Music - Pop Hits of 1989, Vol. 3
+[16:22:50]     Checking album: Radio Hits of the 80s
+[16:22:53]     Checking album: What's Going On
+[16:22:55]     Checking album: A Decade of Hits 1969-1979
+[16:22:59]   Searching albums for 'Best of 1989'...
+[16:23:01]     Checking album: The Best of 1989 - 1995 (Remastered)
+[16:23:05]     Checking album: The Very Best Of 1989 – 2023
+[16:23:09]       [+] Added: I Don't Want a Lover - Texas
+[16:23:09]       [+] Added: Everyday Now - Texas
+[16:23:09]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[16:23:12]     Checking album: The Very Best of The Doors
+[16:23:17]     Checking album: The Best of Anita Baker
+[16:23:19]   Searching albums for '1989 Hits'...
+[16:23:22]     Checking album: Hits 1979-1989
+[16:23:24]     Checking album: King At the Controls: Essential Hits From Reggae's Digital Revolution 1985-1989
+[16:23:28]       [+] Added: Rock Them One By One - Eccleton Jarrett
+[16:23:28]     Checking album: Princípios (1989-1992) [Ao Vivo] - EP
+
+--- Resuming Music Library Expansion ---
+[16:28:58] --- Expanding Music Library ---
+[16:28:58] Year 1970: 16 songs. Need 2 more.
+[16:28:58]   Searching albums for 'Hits of 1970'...
+[16:29:00]     Checking album: '70s Greatest Hits
+[16:29:02]     Checking album: Radio Hits of the '70s
+[16:29:03]     Checking album: Hits of the 70's
+[16:29:07]     Checking album: Greatest Hits 1970-1978
+[16:29:10]     Checking album: Hits
+[16:29:12]   Searching albums for 'Best of 1970'...
+[16:29:15]     Checking album: Best of the 70s
+[16:29:17]     Checking album: The Best of Keith Sweat: Make You Sweat (Remastered)
+[16:29:20]     Checking album: The Best of Anita Baker
+[16:29:22]     Checking album: The Decca Years: Best of 1970-1973 (Remastered)
+[16:29:24]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[16:29:27]   Searching albums for '1970 Hits'...
+[16:29:28]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[16:29:32]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:29:35]     Checking album: Hits
+[16:29:37]     Checking album: Hits
+[16:29:41]     Checking album: Live at the Cellar Door (1970)
+[16:29:44]   Searching albums for 'Billboard 1970'...
+[16:29:47]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[16:29:49]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:29:52]     Checking album: Billboard Hot 100 - Single
+[16:29:53]     Checking album: Snarez-n-Kickz Productions Presents... Billboard Hot 100 Beats
+[16:29:57]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:29:59]   Saved progress. Total added so far: 0
+[16:29:59] Year 1971: 14 songs. Need 4 more.
+[16:29:59]   Searching albums for 'Hits of 1971'...
+[16:30:00]     Checking album: Class Reunion '71: Greatest Hits Of 1971
+[16:30:04]     Checking album: Radio Hits of the '70s
+[16:30:06]     Checking album: US Hot 100 Hits of 1971
+[16:30:09]     Checking album: Their Greatest Hits 1971-1975
+[16:30:12]     Checking album: Hits!
+[16:30:14]   Searching albums for 'Best of 1971'...
+[16:30:16]     Checking album: The Best of Anita Baker
+[16:30:18]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[16:30:21]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[16:30:23]     Checking album: The Very Best of Eagles
+[16:30:26]     Checking album: The Very Best of Grateful Dead
+[16:30:29]   Searching albums for '1971 Hits'...
+[16:30:31]     Checking album: Their Greatest Hits 1971-1975
+[16:30:34]     Checking album: The Rolling Stones 1963-1971
+[16:30:37]     Checking album: 80s 100 Hits
+[16:30:39]     Checking album: Let It Bleed (Remastered 2019)
+[16:30:41]     Checking album: Hits!
+[16:30:44]   Searching albums for 'Billboard 1971'...
+[16:30:47]   Saved progress. Total added so far: 0
+[16:30:47] Year 1974: 17 songs. Need 1 more.
+[16:30:47]   Searching albums for 'Hits of 1974'...
+[16:30:50]     Checking album: The Spirit of Radio: Greatest Hits (1974-1987)
+[16:30:52]     Checking album: Radio Hits of the '70s
+[16:30:56]     Checking album: The 20 Greatest Hits of Frankie Valli & The Four Seasons (Live)
+[16:30:59]     Checking album: Greatest Hits 1974-78
+[16:31:02]     Checking album: The Best of John Lee Hooker, 1965 to 1974 (Impulse, Chess & ABC Recordings)
+[16:31:05]   Searching albums for 'Best of 1974'...
+[16:31:06] 
+[SAFETY] Taking a long break for 52.1s...
+[16:31:59]     Checking album: The Very Best of Grateful Dead
+[16:32:02]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[16:32:04]     Checking album: The Best of Sam Cooke
+[16:32:07]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[16:32:10]     Checking album: Best of the Doobies (Remastered)
+[16:32:12]   Searching albums for '1974 Hits'...
+[16:32:15]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[16:32:17]     Checking album: Greatest Hits 1974-78
+[16:32:19]     Checking album: Hits
+[16:32:21]     Checking album: Greatest Hits
+[16:32:23]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:32:26]   Searching albums for 'Billboard 1974'...
+[16:32:28]     Checking album: 80s 100 Hits
+[16:32:31]     Checking album: Greatest Hits 1974-78
+[16:32:34]     Checking album: Billboard Hot 100 - Single
+[16:32:36]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:32:37]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:32:40]   Saved progress. Total added so far: 0
+[16:32:40] Year 1980: 14 songs. Need 4 more.
+[16:32:40]   Searching albums for 'Hits of 1980'...
+[16:32:43]     Checking album: Radio Hits of the 80s
+[16:32:45]     Checking album: Hits of the 80's
+[16:32:48]     Checking album: Hits!
+[16:32:50]     Checking album: Hits
+[16:32:53]     Checking album: Hits
+[16:32:56]   Searching albums for 'Best of 1980'...
+[16:32:59]     Checking album: The Best of 1980-1990 & B-Sides
+[16:33:03]     Checking album: The Best of 1980-1990
+[16:33:06]     Checking album: Best Of
+[16:33:07]     Checking album: Best Of
+[16:33:10]     Checking album: Best Of 1980 - Single
+[16:33:12]   Searching albums for '1980 Hits'...
+[16:33:14]     Checking album: Hits
+[16:33:17]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:33:19]     Checking album: Hits!
+[16:33:22]     Checking album: Hits
+[16:33:24]   Searching albums for 'Billboard 1980'...
+[16:33:27]     Checking album: 80s 100 Hits
+[16:33:29]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[16:33:32]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:33:34]     Checking album: Billboard Hot 100 - Single
+[16:33:36]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:33:39]   Saved progress. Total added so far: 0
+[16:33:39] Year 1981: 17 songs. Need 1 more.
+[16:33:39]   Searching albums for 'Hits of 1981'...
+[16:33:42]     Checking album: Hi Infidelity (2024 Remaster)
+[16:33:44]     Checking album: Greatest Hits (1981 UK Edition)
+[16:33:47]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[16:33:51]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[16:33:54]     Checking album: Hits!
+[16:33:56]   Searching albums for 'Best of 1981'...
+[16:34:00]     Checking album: Best of the Doobies (Remastered)
+[16:34:03]     Checking album: The Very Best of Grateful Dead
+[16:34:05]     Checking album: The Very Best of The Beach Boys: Sounds of Summer
+[16:34:07] 
+[SAFETY] Taking a long break for 53.6s...
+[16:35:02]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[16:35:04]     Checking album: Best Of (1981-82)
+[16:35:07]   Searching albums for '1981 Hits'...
+[16:35:10]     Checking album: Greatest Hits (1981 UK Edition)
+[16:35:12]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[16:35:16]     Checking album: Hi Infidelity (2024 Remaster)
+[16:35:18]     Checking album: Perfect Hits (1975 - 1981)
+[16:35:20]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[16:35:22]   Searching albums for 'Billboard 1981'...
+[16:35:25]     Checking album: Live at Billboard 1981
+[16:35:27]     Checking album: LIVE at Billboard 1981
+[16:35:29]     Checking album: LIVE at Billboard 1981
+[16:35:31]     Checking album: 80s 100 Hits
+[16:35:34]     Checking album: 100 Top Country Classics (Rerecorded Version)
+[16:35:37]   Saved progress. Total added so far: 0
+[16:35:37] Year 1985: 13 songs. Need 5 more.
+[16:35:37]   Searching albums for 'Hits of 1985'...
+[16:35:41]     Checking album: Born In the U.S.A.
+[16:35:42]     Checking album: Greatest Hits 1985-1995
+[16:35:46]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[16:35:48]     Checking album: What's Going On
+[16:35:51]     Checking album: Greatest Hits 1985-1995
+[16:35:54]   Searching albums for 'Best of 1985'...
+[16:35:57]     Checking album: The Best of 1985
+[16:36:00]     Checking album: Best Of
+[16:36:02]     Checking album: Best Of
+[16:36:06]     Checking album: The Very Best of Daryl Hall & John Oates
+[16:36:09]   Searching albums for '1985 Hits'...
+[16:36:11]     Checking album: Born In the U.S.A.
+[16:36:14]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[16:36:16]     Checking album: Greatest Hits 1985-1995
+[16:36:19]     Checking album: Greatest Hits 1985-1995
+[16:36:21]     Checking album: 1985 - Single
+[16:36:24]   Searching albums for 'Billboard 1985'...
+[16:36:27]     Checking album: Live At Billboard 1985
+[16:36:29]     Checking album: Billboard - Single
+[16:36:32]     Checking album: Billboard - Single
+[16:36:35]     Checking album: Billboard (Lido Remix) - Single
+[16:36:38]     Checking album: Billboard - EP
+[16:36:40]   Saved progress. Total added so far: 0
+[16:36:40] Year 1988: 7 songs. Need 11 more.
+[16:36:40]   Searching albums for 'Hits of 1988'...
+[16:36:43]     Checking album: Silent Night: The Greatest Hits of Christmas
+[16:36:46]     Checking album: Radio Hits of the 80s
+[16:36:49]     Checking album: Greatest Christmas Hits of the Last Half Century - 50 Años de Patria, Tradición y Navídad (1962-2012) [Original Recordings] [feat. Andy Montanez & Pellin Rodriguez]
+[16:36:52]     Checking album: The Canadian Brass: Greatest Hits
+[16:36:56]     Checking album: Handel: Messiah, HWV 56
+[16:36:59]   Searching albums for 'Best of 1988'...
+[16:37:01]     Checking album: Best of (1988-2001)
+[16:37:04]     Checking album: Private Investigations: The Best of Dire Straits & Mark Knopfler
+[16:37:07]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[16:37:09]     Checking album: The Very Best of Grateful Dead
+[16:37:13]     Checking album: ZOMBIES (Original TV Movie Soundtrack)
+[16:37:16]   Searching albums for '1988 Hits'...
+[16:37:18] 
+[SAFETY] Taking a long break for 54.9s...
+[16:38:13]     Checking album: Hits of my year of birth-1988 / Hits aus meinem Geburtsjahr-1988
+[16:38:17]     Checking album: Pachelbel Canon and Other Baroque Hits
+[16:38:20]     Checking album: The Canadian Brass: Greatest Hits
+[16:38:22]     Checking album: Silent Night: The Greatest Hits of Christmas
+[16:38:25]     Checking album: Handel: Messiah, HWV 56
+[16:38:28]   Searching albums for 'Billboard 1988'...
+[16:38:30]     Checking album: 1988(Billboard Chart Pop Style Instrumentals)
+[16:38:32]   Saved progress. Total added so far: 0
+[16:38:32] Year 1989: 7 songs. Need 11 more.
+[16:38:32]   Searching albums for 'Hits of 1989'...
+[16:38:34]     Checking album: The Karaoke Channel - Top Rock Hits of 1989, Vol. 7
+[16:38:37]     Checking album: Stingray Music - Pop Hits of 1989, Vol. 3
+[16:38:40]     Checking album: Radio Hits of the 80s
+[16:38:42]     Checking album: What's Going On
+[16:38:45]     Checking album: A Decade of Hits 1969-1979
+[16:38:47]   Searching albums for 'Best of 1989'...
+[16:38:49]     Checking album: The Best of 1989 - 1995 (Remastered)
+[16:38:52]     Checking album: The Very Best Of 1989 – 2023
+[16:38:56]       [+] Added: I Don't Want a Lover - Texas
+[16:38:56]       [+] Added: Everyday Now - Texas
+[16:38:56]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[16:38:58]     Checking album: The Very Best of The Doors
+[16:39:02]     Checking album: The Best of Anita Baker
+[16:39:05]   Searching albums for '1989 Hits'...
+[16:39:07]     Checking album: Hits 1979-1989
+[16:39:10]     Checking album: King At the Controls: Essential Hits From Reggae's Digital Revolution 1985-1989
+[16:39:13]       [+] Added: Rock Them One By One - Eccleton Jarrett
+[16:39:13]     Checking album: Princípios (1989-1992) [Ao Vivo] - EP
+
+--- Resuming Music Library Expansion ---
+[16:54:13] --- Expanding Music Library ---
+[16:54:13] Year 1970: 16 songs. Need 2 more.
+[16:54:13]   Searching albums for 'Hits of 1970'...
+[16:54:17]     Checking album: '70s Greatest Hits
+[16:54:19]     Checking album: Radio Hits of the '70s
+[16:54:21]     Checking album: Hits of the 70's
+[16:54:24]     Checking album: Greatest Hits 1970-1978
+[16:54:27]     Checking album: Hits
+[16:54:30]   Searching albums for 'Best of 1970'...
+[16:54:33]     Checking album: Best of the 70s
+[16:54:35]     Checking album: The Best of Keith Sweat: Make You Sweat (Remastered)
+[16:54:38]     Checking album: The Best of Anita Baker
+[16:54:41]     Checking album: The Decca Years: Best of 1970-1973 (Remastered)
+[16:54:44]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[16:54:47]   Searching albums for '1970 Hits'...
+[16:54:50]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[16:54:53]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:54:55]     Checking album: Hits
+[16:54:58]     Checking album: Hits
+[16:55:01]     Checking album: Live at the Cellar Door (1970)
+[16:55:02]   Searching albums for 'Billboard 1970'...
+[16:55:04]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[16:55:08]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:55:10]     Checking album: Billboard Hot 100 - Single
+[16:55:12]     Checking album: Snarez-n-Kickz Productions Presents... Billboard Hot 100 Beats
+[16:55:14]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:55:17]   Saved progress. Total added so far: 0
+[16:55:17] Year 1971: 14 songs. Need 4 more.
+[16:55:17]   Searching albums for 'Hits of 1971'...
+[16:55:20]     Checking album: Class Reunion '71: Greatest Hits Of 1971
+[16:55:23]     Checking album: Radio Hits of the '70s
+[16:55:27]     Checking album: US Hot 100 Hits of 1971
+[16:55:29]     Checking album: Their Greatest Hits 1971-1975
+[16:55:32]     Checking album: Hits!
+[16:55:36]   Searching albums for 'Best of 1971'...
+[16:55:39]     Checking album: The Best of Anita Baker
+[16:55:41]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[16:55:43]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[16:55:45]     Checking album: The Very Best of Eagles
+[16:55:47]     Checking album: The Very Best of Grateful Dead
+[16:55:49]   Searching albums for '1971 Hits'...
+[16:55:52]     Checking album: Their Greatest Hits 1971-1975
+[16:55:54]     Checking album: The Rolling Stones 1963-1971
+[16:55:57]     Checking album: 80s 100 Hits
+[16:56:00]     Checking album: Let It Bleed (Remastered 2019)
+[16:56:03]     Checking album: Hits!
+[16:56:07]   Searching albums for 'Billboard 1971'...
+[16:56:09]   Saved progress. Total added so far: 0
+[16:56:09] Year 1974: 17 songs. Need 1 more.
+[16:56:09]   Searching albums for 'Hits of 1974'...
+[16:56:12]     Checking album: The Spirit of Radio: Greatest Hits (1974-1987)
+[16:56:16]     Checking album: Radio Hits of the '70s
+[16:56:17]     Checking album: The 20 Greatest Hits of Frankie Valli & The Four Seasons (Live)
+[16:56:22]     Checking album: Greatest Hits 1974-78
+[16:56:25]     Checking album: The Best of John Lee Hooker, 1965 to 1974 (Impulse, Chess & ABC Recordings)
+[16:56:29]   Searching albums for 'Best of 1974'...
+[16:56:31] 
+[SAFETY] Taking a long break for 45.8s...
+[16:57:18]     Checking album: The Very Best of Grateful Dead
+[16:57:21]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[16:57:23]     Checking album: The Best of Sam Cooke
+[16:57:27]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[16:57:30]     Checking album: Best of the Doobies (Remastered)
+[16:57:33]   Searching albums for '1974 Hits'...
+[16:57:36]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[16:57:40]     Checking album: Greatest Hits 1974-78
+[16:57:43]     Checking album: Hits
+[16:57:46]     Checking album: Greatest Hits
+[16:57:47]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:57:50]   Searching albums for 'Billboard 1974'...
+[16:57:52]     Checking album: 80s 100 Hits
+[16:57:54]     Checking album: Greatest Hits 1974-78
+[16:57:57]     Checking album: Billboard Hot 100 - Single
+[16:58:00]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:58:02]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:58:06]   Saved progress. Total added so far: 0
+[16:58:06] Year 1980: 14 songs. Need 4 more.
+[16:58:06]   Searching albums for 'Hits of 1980'...
+[16:58:08]     Checking album: Radio Hits of the 80s
+[16:58:11]     Checking album: Hits of the 80's
+[16:58:15]     Checking album: Hits!
+[16:58:19]     Checking album: Hits
+[16:58:21]     Checking album: Hits
+[16:58:23]   Searching albums for 'Best of 1980'...
+[16:58:26]     Checking album: The Best of 1980-1990 & B-Sides
+[16:58:30]     Checking album: The Best of 1980-1990
+[16:58:33]     Checking album: Best Of
+[16:58:36]     Checking album: Best Of
+[16:58:38]     Checking album: Best Of 1980 - Single
+[16:58:42]   Searching albums for '1980 Hits'...
+[16:58:44]     Checking album: Hits
+[16:58:48]     Checking album: Cold Heart (PNAU Remix) - Single
+[16:58:50]     Checking album: Hits!
+[16:58:53]     Checking album: Hits
+[16:58:56]   Searching albums for 'Billboard 1980'...
+[16:58:58]     Checking album: 80s 100 Hits
+[16:59:01]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[16:59:03]     Checking album: Billboard Top Rock 'n' Roll Hits
+[16:59:04]     Checking album: Billboard Hot 100 - Single
+[16:59:06]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[16:59:09]   Saved progress. Total added so far: 0
+[16:59:09] Year 1981: 17 songs. Need 1 more.
+[16:59:09]   Searching albums for 'Hits of 1981'...
+[16:59:12]     Checking album: Hi Infidelity (2024 Remaster)
+[16:59:14]     Checking album: Greatest Hits (1981 UK Edition)
+[16:59:17]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[16:59:20]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[16:59:23]     Checking album: Hits!
+[16:59:26]   Searching albums for 'Best of 1981'...
+[16:59:29]     Checking album: Best of the Doobies (Remastered)
+[16:59:31]     Checking album: The Very Best of Grateful Dead
+[16:59:33]     Checking album: The Very Best of The Beach Boys: Sounds of Summer
+[16:59:36] 
+[SAFETY] Taking a long break for 57.5s...
+
+--- Resuming Music Library Expansion ---
+[17:01:45] --- Expanding Music Library ---
+[17:01:45] Year 1970: 16 songs. Need 2 more.
+[17:01:45]   Searching albums for 'Hits of 1970'...
+[17:01:49]     Checking album: '70s Greatest Hits
+[17:01:50]     Checking album: Radio Hits of the '70s
+[17:01:52]     Checking album: Hits of the 70's
+[17:01:56]     Checking album: Greatest Hits 1970-1978
+[17:01:58]     Checking album: Hits
+[17:02:00]   Searching albums for 'Best of 1970'...
+[17:02:02]     Checking album: Best of the 70s
+[17:02:05]     Checking album: The Best of Keith Sweat: Make You Sweat (Remastered)
+[17:02:09]     Checking album: The Best of Anita Baker
+[17:02:12]     Checking album: The Decca Years: Best of 1970-1973 (Remastered)
+[17:02:13]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[17:02:16]   Searching albums for '1970 Hits'...
+[17:02:18]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[17:02:21]     Checking album: Cold Heart (PNAU Remix) - Single
+[17:02:22]     Checking album: Hits
+[17:02:25]     Checking album: Hits
+[17:02:28]     Checking album: Live at the Cellar Door (1970)
+[17:02:30]   Searching albums for 'Billboard 1970'...
+[17:02:31]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[17:02:33]     Checking album: Billboard Top Rock 'n' Roll Hits
+[17:02:35]     Checking album: Billboard Hot 100 - Single
+[17:02:38]     Checking album: Snarez-n-Kickz Productions Presents... Billboard Hot 100 Beats
+[17:02:42]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[17:02:45]   Saved progress. Total added so far: 0
+[17:02:45] Year 1971: 14 songs. Need 4 more.
+[17:02:45]   Searching albums for 'Hits of 1971'...
+[17:02:47]     Checking album: Class Reunion '71: Greatest Hits Of 1971
+[17:02:50]     Checking album: Radio Hits of the '70s
+[17:02:51]     Checking album: US Hot 100 Hits of 1971
+[17:02:54]     Checking album: Their Greatest Hits 1971-1975
+[17:02:57]     Checking album: Hits!
+[17:02:59]   Searching albums for 'Best of 1971'...
+[17:03:02]     Checking album: The Best of Anita Baker
+[17:03:05]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[17:03:08]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[17:03:11]     Checking album: The Very Best of Eagles
+[17:03:12]     Checking album: The Very Best of Grateful Dead
+[17:03:15]   Searching albums for '1971 Hits'...
+[17:03:17]     Checking album: Their Greatest Hits 1971-1975
+[17:03:20]     Checking album: The Rolling Stones 1963-1971
+[17:03:23]     Checking album: 80s 100 Hits
+[17:03:24]     Checking album: Let It Bleed (Remastered 2019)
+[17:03:26]     Checking album: Hits!
+[17:03:29]   Searching albums for 'Billboard 1971'...
+[17:03:31]   Saved progress. Total added so far: 0
+[17:03:31] Year 1974: 17 songs. Need 1 more.
+[17:03:31]   Searching albums for 'Hits of 1974'...
+[17:03:33]     Checking album: The Spirit of Radio: Greatest Hits (1974-1987)
+[17:03:34]     Checking album: Radio Hits of the '70s
+[17:03:37]     Checking album: The 20 Greatest Hits of Frankie Valli & The Four Seasons (Live)
+[17:03:40]     Checking album: Greatest Hits 1974-78
+[17:03:43]     Checking album: The Best of John Lee Hooker, 1965 to 1974 (Impulse, Chess & ABC Recordings)
+[17:03:45]   Searching albums for 'Best of 1974'...
+[17:03:48] 
+[SAFETY] Taking a long break for 31.2s...
+[17:04:19]     Checking album: The Very Best of Grateful Dead
+[17:04:21]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[17:04:23]     Checking album: The Best of Sam Cooke
+[17:04:25]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[17:04:28]     Checking album: Best of the Doobies (Remastered)
+[17:04:31]   Searching albums for '1974 Hits'...
+[17:04:33]     Checking album: 70s HITS - 100 Greatest Songs of the 1970s
+[17:04:35]     Checking album: Greatest Hits 1974-78
+[17:04:37]     Checking album: Hits
+[17:04:40]     Checking album: Greatest Hits
+[17:04:42]     Checking album: Cold Heart (PNAU Remix) - Single
+[17:04:43]   Searching albums for 'Billboard 1974'...
+[17:04:46]     Checking album: 80s 100 Hits
+[17:04:48]     Checking album: Greatest Hits 1974-78
+[17:04:51]     Checking album: Billboard Hot 100 - Single
+[17:04:53]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[17:04:55]     Checking album: Billboard Top Rock 'n' Roll Hits
+[17:04:57]   Saved progress. Total added so far: 0
+[17:04:57] Year 1980: 14 songs. Need 4 more.
+[17:04:57]   Searching albums for 'Hits of 1980'...
+[17:04:58]     Checking album: Radio Hits of the 80s
+[17:05:02]     Checking album: Hits of the 80's
+[17:05:05]     Checking album: Hits!
+[17:05:08]     Checking album: Hits
+[17:05:10]     Checking album: Hits
+[17:05:13]   Searching albums for 'Best of 1980'...
+[17:05:15]     Checking album: The Best of 1980-1990 & B-Sides
+[17:05:18]     Checking album: The Best of 1980-1990
+[17:05:20]     Checking album: Best Of
+[17:05:21]     Checking album: Best Of
+[17:05:25]     Checking album: Best Of 1980 - Single
+[17:05:28]   Searching albums for '1980 Hits'...
+[17:05:30]     Checking album: Hits
+[17:05:32]     Checking album: Cold Heart (PNAU Remix) - Single
+[17:05:34]     Checking album: Hits!
+[17:05:36]     Checking album: Hits
+[17:05:39]   Searching albums for 'Billboard 1980'...
+[17:05:41]     Checking album: 80s 100 Hits
+[17:05:44]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[17:05:45]     Checking album: Billboard Top Rock 'n' Roll Hits
+[17:05:48]     Checking album: Billboard Hot 100 - Single
+[17:05:50]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[17:05:53]   Saved progress. Total added so far: 0
+[17:05:53] Year 1981: 17 songs. Need 1 more.
+[17:05:53]   Searching albums for 'Hits of 1981'...
+[17:05:54]     Checking album: Hi Infidelity (2024 Remaster)
+[17:05:57]     Checking album: Greatest Hits (1981 UK Edition)
+[17:05:59]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[17:06:01]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[17:06:04]     Checking album: Hits!
+[17:06:06]   Searching albums for 'Best of 1981'...
+[17:06:08]     Checking album: Best of the Doobies (Remastered)
+[17:06:09]     Checking album: The Very Best of Grateful Dead
+[17:06:12]     Checking album: The Very Best of The Beach Boys: Sounds of Summer
+[17:06:13] 
+[SAFETY] Taking a long break for 56.9s...
+[17:07:11]     Checking album: All Over the World: The Very Best of Electric Light Orchestra
+[17:07:13]     Checking album: Best Of (1981-82)
+[17:07:14]   Searching albums for '1981 Hits'...
+[17:07:18]     Checking album: Greatest Hits (1981 UK Edition)
+[17:07:20]     Checking album: Bach: Goldberg Variations, BWV 988 (The 1955 & 1981 Recordings)
+[17:07:23]     Checking album: Hi Infidelity (2024 Remaster)
+[17:07:26]     Checking album: Perfect Hits (1975 - 1981)
+[17:07:28]     Checking album: The Second Decade of Rock and Roll 1981 To 1991
+[17:07:30]   Searching albums for 'Billboard 1981'...
+[17:07:33]     Checking album: Live at Billboard 1981
+[17:07:35]     Checking album: LIVE at Billboard 1981
+[17:07:38]     Checking album: LIVE at Billboard 1981
+[17:07:41]     Checking album: 80s 100 Hits
+[17:07:44]     Checking album: 100 Top Country Classics (Rerecorded Version)
+[17:07:47]   Saved progress. Total added so far: 0
+[17:07:47] Year 1985: 13 songs. Need 5 more.
+[17:07:47]   Searching albums for 'Hits of 1985'...
+[17:07:50]     Checking album: Born In the U.S.A.
+[17:07:51]     Checking album: Greatest Hits 1985-1995
+[17:07:54]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[17:07:56]     Checking album: What's Going On
+[17:07:58]     Checking album: Greatest Hits 1985-1995
+[17:08:01]   Searching albums for 'Best of 1985'...
+[17:08:04]     Checking album: The Best of 1985
+[17:08:06]     Checking album: Best Of
+[17:08:08]     Checking album: Best Of
+[17:08:10]     Checking album: The Very Best of Daryl Hall & John Oates
+[17:08:13]   Searching albums for '1985 Hits'...
+[17:08:15]     Checking album: Born In the U.S.A.
+[17:08:17]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[17:08:19]     Checking album: Greatest Hits 1985-1995
+[17:08:22]     Checking album: Greatest Hits 1985-1995
+[17:08:24]     Checking album: 1985 - Single
+[17:08:27]   Searching albums for 'Billboard 1985'...
+[17:08:29]     Checking album: Live At Billboard 1985
+[17:08:32]     Checking album: Billboard - Single
+[17:08:33]     Checking album: Billboard - Single
+[17:08:36]     Checking album: Billboard (Lido Remix) - Single
+[17:08:39]     Checking album: Billboard - EP
+[17:08:40]   Saved progress. Total added so far: 0
+[17:08:40] Year 1988: 7 songs. Need 11 more.
+[17:08:40]   Searching albums for 'Hits of 1988'...
+[17:08:42]     Checking album: Silent Night: The Greatest Hits of Christmas
+[17:08:45]     Checking album: Radio Hits of the 80s
+[17:08:48]     Checking album: Greatest Christmas Hits of the Last Half Century - 50 Años de Patria, Tradición y Navídad (1962-2012) [Original Recordings] [feat. Andy Montanez & Pellin Rodriguez]
+[17:08:50]     Checking album: The Canadian Brass: Greatest Hits
+[17:08:52]     Checking album: Handel: Messiah, HWV 56
+[17:08:55]   Searching albums for 'Best of 1988'...
+[17:08:57]     Checking album: Best of (1988-2001)
+[17:09:00]     Checking album: Private Investigations: The Best of Dire Straits & Mark Knopfler
+[17:09:02]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[17:09:04]     Checking album: The Very Best of Grateful Dead
+[17:09:06]     Checking album: ZOMBIES (Original TV Movie Soundtrack)
+[17:09:09]   Searching albums for '1988 Hits'...
+[17:09:11] 
+[SAFETY] Taking a long break for 43.3s...
+[17:09:55]     Checking album: Hits of my year of birth-1988 / Hits aus meinem Geburtsjahr-1988
+[17:09:56]     Checking album: Pachelbel Canon and Other Baroque Hits
+[17:09:59]     Checking album: The Canadian Brass: Greatest Hits
+[17:10:01]     Checking album: Silent Night: The Greatest Hits of Christmas
+[17:10:04]     Checking album: Handel: Messiah, HWV 56
+[17:10:05]   Searching albums for 'Billboard 1988'...
+[17:10:08]     Checking album: 1988(Billboard Chart Pop Style Instrumentals)
+[17:10:12]   Saved progress. Total added so far: 0
+[17:10:12] Year 1989: 7 songs. Need 11 more.
+[17:10:12]   Searching albums for 'Hits of 1989'...
+[17:10:15]     Checking album: The Karaoke Channel - Top Rock Hits of 1989, Vol. 7
+[17:10:17]     Checking album: Stingray Music - Pop Hits of 1989, Vol. 3
+[17:10:20]     Checking album: Radio Hits of the 80s
+[17:10:22]     Checking album: What's Going On
+[17:10:24]     Checking album: A Decade of Hits 1969-1979
+[17:10:26]   Searching albums for 'Best of 1989'...
+[17:10:28]     Checking album: The Best of 1989 - 1995 (Remastered)
+[17:10:31]     Checking album: The Very Best Of 1989 – 2023
+[17:10:34]       [+] Added: I Don't Want a Lover - Texas
+[17:10:34]       [+] Added: Everyday Now - Texas
+[17:10:34]     Checking album: Experience Hendrix: The Best of Jimi Hendrix
+[17:10:36]     Checking album: The Very Best of The Doors
+[17:10:39]     Checking album: The Best of Anita Baker
+[17:10:41]   Searching albums for '1989 Hits'...
+[17:10:43]     Checking album: Hits 1979-1989
+[17:10:46]     Checking album: King At the Controls: Essential Hits From Reggae's Digital Revolution 1985-1989
+[17:10:48]       [+] Added: Rock Them One By One - Eccleton Jarrett
+[17:10:48]     Checking album: Princípios (1989-1992) [Ao Vivo] - EP
+[17:10:50]     Checking album: GOLDEN☆BEST 杉 良太郎 1975-1989 ヒット&カバーコレクション
+[17:10:53]     Checking album: Taylor Swift - 1989 - Piano Covers (feat. Relaxing Piano & Classic Songs On Piano)
+[17:10:56]   Searching albums for 'Billboard 1989'...
+[17:10:58]   Saved progress. Total added so far: 3
+[17:10:58] Year 1990: 10 songs. Need 8 more.
+[17:10:58]   Searching albums for 'Hits of 1990'...
+[17:11:00]     Checking album: Hits of the 90s
+[17:11:02]     Checking album: Greatest Hits 1990-1999: A Tribute To a Work In Progress...
+[17:11:04]       [+] Added: Jealous Again - The Black Crowes
+[17:11:04]       [+] Added: Twice As Hard - The Black Crowes
+[17:11:04]       [+] Added: Hard To Handle - The Black Crowes
+[17:11:04]       [+] Added: She Talks To Angels - The Black Crowes
+[17:11:04]     Checking album: In and Out of Consciousness: Greatest Hits 1990 - 2010
+[17:11:07]     Checking album: Hits!
+[17:11:10]     Checking album: Hits
+[17:11:13]   Searching albums for 'Best of 1990'...
+[17:11:16]     Checking album: Best of 90'S
+[17:11:18]     Checking album: 90's Dance Club Music: Best of 1990's Dance, House & Disco Songs. Top Classics & Radio Party Hits
+[17:11:22]     Checking album: Best Of 1990 - 2005
+[17:11:24]     Checking album: Best of 1990 - 2004
+[17:11:28]     Checking album: Best of 1990 - 1996
+[17:11:31]   Searching albums for '1990 Hits'...
+[17:11:32]     Checking album: Unholy - Single
+[17:11:35]     Checking album: Cold Heart (PNAU Remix) - Single
+[17:11:38]     Checking album: Bad Habits - Single
+[17:11:40]     Checking album: Hits
+[17:11:43]     Checking album: Hits!
+[17:11:44]   Searching albums for 'Billboard 1990'...
+[17:11:46]     Checking album: Billboard - Single
+[17:11:48]     Checking album: Billboard - Single
+[17:11:50]     Checking album: Billboard (Lido Remix) - Single
+[17:11:51]     Checking album: Billboard - EP
+[17:11:55]     Checking album: Billboard (feat. John Soto & Phyre Garza) - Single
+[17:11:56] 
+[SAFETY] Taking a long break for 49.9s...
+[17:12:47]   Saved progress. Total added so far: 7
+[17:12:47] Year 1991: 12 songs. Need 6 more.
+[17:12:47]   Searching albums for 'Hits of 1991'...
+[17:12:50]     Checking album: Hits!
+[17:12:53]     Checking album: Beauty and the Beast (Original Motion Picture Soundtrack) [Deluxe Edition]
+[17:12:55]     Checking album: Beauty and the Beast (Soundtrack from the Motion Picture)
+[17:12:58]       [+] Added: Prologue - Beauty and the Beast - Alan Menken
+[17:12:58]       [+] Added: Belle - Paige O'Hara, RICHARD WHITE/JESSE CORTI & The Chorus of Beauty and the Beast
+[17:12:58]       [+] Added: Belle (Reprise) - Paige O'Hara
+[17:12:58]       [+] Added: Gaston - Jesse Corti & RICHARD WHITE/JESSE CORTI
+[17:12:58]       [+] Added: Gaston (Reprise) - Jesse Corti & RICHARD WHITE/JESSE CORTI
+[17:12:58]       [+] Added: Be Our Guest - Angela Lansbury, Jerry Orbach & The Chorus of Beauty and the Beast
+[17:12:58]   Saved progress. Total added so far: 13
+[17:12:58] Year 1992: 9 songs. Need 9 more.
+[17:12:58]   Searching albums for 'Hits of 1992'...
+[17:13:00]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[17:13:02]     Checking album: Hitsville USA, The Motown Collection 1972-1992
+[17:13:07]     Checking album: The Singles 1992-2003
+[17:13:10]       [+] Added: Trapped In a Box - No Doubt
+[17:13:10]     Checking album: What's Going On
+[17:13:11]     Checking album: 90's Dance Club Music: Best of 1990's Dance, House & Disco Songs. Top Classics & Radio Party Hits
+[17:13:13]   Searching albums for 'Best of 1992'...
+[17:13:16]     Checking album: 1992 - 2012
+[17:13:19]     Checking album: Best of 90's Dance, Vol. 1 (EDM's Techno, Trance & Electro House Remixes)
+[17:13:22]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[17:13:24]     Checking album: The Best of Anita Baker
+[17:13:27]     Checking album: Legend – The Best Of Bob Marley & The Wailers
+[17:13:30]   Searching albums for '1992 Hits'...
+[17:13:31]     Checking album: Stars: The Best of the Cranberries 1992-2002
+[17:13:33]     Checking album: Latest 1992 Hits of Noor Jehan
+[17:13:37]       [+] Added: Kukrroo Kurroo Dil Kare - Noor Jehan
+[17:13:37]       [+] Added: Shalamar Wich Bangla - Noor Jehan
+[17:13:37]       [+] Added: Ang Ang Nache Mera - Noor Jehan
+[17:13:37]       [+] Added: Mari Akh Te - Noor Jehan
+[17:13:37]       [+] Added: Nabatan Kharrkan Pein - Noor Jehan
+[17:13:37]       [+] Added: Mera Dil Tere Te - Noor Jehan
+[17:13:37]       [+] Added: Akhyan We Akhyan - Noor Jehan
+[17:13:37]       [+] Added: Aj Meriyan Kaliyan - Noor Jehan
+[17:13:37]   Saved progress. Total added so far: 22
+[17:13:37] Year 1993: 11 songs. Need 7 more.
+[17:13:37]   Searching albums for 'Hits of 1993'...
+[17:13:39]     Checking album: The Bodyguard (Original Soundtrack Album)
+[17:13:41]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[17:13:43]     Checking album: What's Going On
+[17:13:46]     Checking album: Hits!
+[17:13:48]     Checking album: All the Best: The Hits
+[17:13:50]       [+] Added: I Don't Wanna Fight (Single Edit) - Tina Turner
+[17:13:50]       [+] Added: Proud Mary (1993 Version) - Tina Turner
+[17:13:50]       [+] Added: Look Me In the Heart - Tina Turner
+[17:13:50]   Searching albums for 'Best of 1993'...
+[17:13:53]     Checking album: Best Of 1993 - 2023
+[17:13:55]     Checking album: The Very Best of Daryl Hall & John Oates
+[17:13:57]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[17:13:59]     Checking album: Best Of 1993 - 1998
+[17:14:01]     Checking album: Best
+[17:14:04]       [+] Added: Paint The Town Beige - Robert Earl Keen
+[17:14:04]       [+] Added: Whenever Kindness Fails - Robert Earl Keen
+[17:14:04]       [+] Added: Corpus Christi Bay - Robert Earl Keen
+[17:14:04]   Searching albums for '1993 Hits'...
+[17:14:06]     Checking album: Stephanie Mills: Greatest Hits 1985-1993
+[17:14:08]     Checking album: The Bodyguard (Original Soundtrack Album)
+[17:14:12]     Checking album: ICYMI: Greatest Hits, Vol. 1 1993 - 2016
+[17:14:15]     Checking album: 90's Dance Club Music: Best of 1990's Dance, House & Disco Songs. Top Classics & Radio Party Hits
+[17:14:17]     Checking album: The First Decade: 1983-1993
+[17:14:20]       [+] Added: Do You Dream of Me - Michael W. Smith
+[17:14:20]   Saved progress. Total added so far: 29
+[17:14:20] Year 1994: 8 songs. Need 10 more.
+[17:14:20]   Searching albums for 'Hits of 1994'...
+[17:14:23]     Checking album: The Sign (2015 Remastered Version)
+[17:14:26]     Checking album: Bollywood Retro : Hits of 90s
+[17:14:29]     Checking album: Raritäten (1994 - 2012)
+[17:14:31]     Checking album: What's Going On
+[17:14:34]     Checking album: 90's Dance Club Music: Best of 1990's Dance, House & Disco Songs. Top Classics & Radio Party Hits
+[17:14:37]   Searching albums for 'Best of 1994'...
+[17:14:39]     Checking album: Best of 90's Dance, Vol. 1 (EDM's Techno, Trance & Electro House Remixes)
+[17:14:42]     Checking album: The Very Best of The Doors
+[17:14:44]     Checking album: The Very Best of Eagles
+[17:14:46]       [+] Added: Love Will Keep Us Alive - Eagles
+[17:14:46]     Checking album: Old Town Road (feat. RM of BTS) [Seoul Town Road Remix] - Single
+[17:14:48]     Checking album: Legend – The Best Of Bob Marley & The Wailers
+[17:14:51]   Searching albums for '1994 Hits'...
+[17:14:52] 
+[SAFETY] Taking a long break for 41.5s...
+[17:15:34]     Checking album: The Sign (2015 Remastered Version)
+[17:15:37]     Checking album: Loaded: The Greatest Hits 1994-2023
+[17:15:40]       [+] Added: Everything Zen - Bush
+[17:15:40]       [+] Added: Little Things - Bush
+[17:15:40]       [+] Added: Comedown - Bush
+[17:15:40]       [+] Added: Glycerine - Bush
+[17:15:40]       [+] Added: Machinehead - Bush
+[17:15:40]     Checking album: 80s 100 Hits
+[17:15:42]     Checking album: 90's Dance Club Music: Best of 1990's Dance, House & Disco Songs. Top Classics & Radio Party Hits
+[17:15:45]     Checking album: 80's Pop Hits
+[17:15:49]   Searching albums for 'Billboard 1994'...
+[17:15:52]     Checking album: Billboard - Single
+[17:15:54]     Checking album: Billboard - Single
+[17:15:55]     Checking album: Billboard (Lido Remix) - Single
+[17:15:57]     Checking album: Billboard - EP
+[17:15:59]     Checking album: Billboard (feat. John Soto & Phyre Garza) - Single
+[17:16:02]   Saved progress. Total added so far: 35
+[17:16:02] Year 1995: 14 songs. Need 4 more.
+[17:16:02]   Searching albums for 'Hits of 1995'...
+[17:16:04]     Checking album: Super Hits of 1995
+[17:16:06]       [+] Added: Don't Stop - Wade Hayes
+[17:16:06]       [+] Added: This Is Me Missing You - James House
+[17:16:06]       [+] Added: What Mattered Most - Ty Herndon
+[17:16:06]     Checking album: 20 Best Top 40 Hits of 2015 (Workout Mixes) [Unmixed Songs For Fitness & Exercise]
+[17:16:08]     Checking album: Bollywood Retro : Hits of 90s
+[17:16:10]       [+] Added: O Neeli Ankhon Wali (From "Share Bazaar") - Utpal Biswas, Babul Supriyo & Mahalakshmi Iyer
+[17:16:10]   Saved progress. Total added so far: 39
+[17:16:10] Year 1996: 8 songs. Need 10 more.
+[17:16:10]   Searching albums for 'Hits of 1996'...
+[17:16:12]     Checking album: Super Hits of 1996
+[17:16:15]       [+] Added: I Don't Think I Will - James Bonamy
+[17:16:15]       [+] Added: On a Good Night - Wade Hayes
+[17:16:15]       [+] Added: Living In a Moment - Ty Herndon
+[17:16:15]       [+] Added: Lonely Too Long - Patty Loveless
+[17:16:15]       [+] Added: Daddy's Money - Ricochet
+[17:16:15]     Checking album: The Best Hits of 2002 (The History of 1996-2000)
+[17:16:18]       [+] Added: Kung Ddari Sha Bah Rah - Clon
+[17:16:18]       [+] Added: I - Clon
+[17:16:18]       [+] Added: Like A Movie - Clon
+[17:16:18]       [+] Added: Why I Gave You Away - Clon
+[17:16:18]       [+] Added: Like A Movie (Funky Mix) - Clon
+[17:16:18]   Saved progress. Total added so far: 49
+[17:16:18] Year 1997: 12 songs. Need 6 more.
+[17:16:18]   Searching albums for 'Hits of 1997'...
+[17:16:20]     Checking album: Super Hits of 1997
+[17:16:23]       [+] Added: This Is Your Brain - Joe Diffie
+[17:16:23]       [+] Added: Whatever Comes First - Sons of the Desert
+[17:16:23]     Checking album: Bollywood Retro : Hits of 90s
+[17:16:25]     Checking album: Spice
+[17:16:27]     Checking album: 光陰似健1987-1997
+[17:16:29]       [+] Added: I Pray - Emil Wakin Chau
+[17:16:29]       [+] Added: The Widow Village - Emil Wakin Chau
+[17:16:29]       [+] Added: Love Me Again - Emil Wakin Chau
+[17:16:29]       [+] Added: My Dearest Baby - Emil Wakin Chau
+[17:16:29]   Saved progress. Total added so far: 55
+[17:16:29] Year 1998: 9 songs. Need 9 more.
+[17:16:29]   Searching albums for 'Hits of 1998'...
+[17:16:31]     Checking album: I Told You So: The Ultimate Hits of Randy Travis
+[17:16:34]     Checking album: 魔鬼的情詩II
+[17:16:37]       [+] Added: Tears Of Twenty - Bobby Chen
+[17:16:37]       [+] Added: SUMMER - Rene Liu & Bobby Chen
+[17:16:37]       [+] Added: Freezing Point - Bobby Chen
+[17:16:37]       [+] Added: About Man - Bobby Chen
+[17:16:37]       [+] Added: Bobby Hates Love Songs - Bobby Chen
+[17:16:37]       [+] Added: Serenade Of Shooting Stars - Bobby Chen
+[17:16:37]       [+] Added: Voyage - Bobby Chen
+[17:16:37]       [+] Added: June - Bobby Chen
+[17:16:37]       [+] Added: Will You Still Love Me Next Year - Bobby Chen
+[17:16:37]   Saved progress. Total added so far: 64
+[17:16:37] Year 1999: 16 songs. Need 2 more.
+[17:16:37]   Searching albums for 'Hits of 1999'...
+[17:16:39]     Checking album: Millennium
+[17:16:41]       [+] Added: Larger Than Life - Backstreet Boys
+[17:16:41]       [+] Added: Show Me the Meaning of Being Lonely - Backstreet Boys
+[17:16:41]   Saved progress. Total added so far: 66
+[17:16:41] Year 2000: 7 songs. Need 11 more.
+[17:16:41]   Searching albums for 'Hits of 2000'...
+[17:16:44]     Checking album: I Told You So: The Ultimate Hits of Randy Travis
+[17:16:47]     Checking album: No Strings Attached
+[17:16:50]       [+] Added: Bye Bye Bye - *NSYNC
+[17:16:50]       [+] Added: Space Cowboy (Yippie-Yi-Yay) [feat. Lisa "Left Eye" Lopes] - *NSYNC
+[17:16:50]       [+] Added: Just Got Paid - *NSYNC
+[17:16:50]       [+] Added: It Makes Me Ill - *NSYNC
+[17:16:50]       [+] Added: This I Promise You - *NSYNC
+[17:16:50]       [+] Added: No Strings Attached - *NSYNC
+[17:16:50]       [+] Added: Digital Get Down - *NSYNC
+[17:16:50]       [+] Added: Bringin' Da Noise - *NSYNC
+[17:16:50]       [+] Added: That's When I'll Stop Loving You - *NSYNC
+[17:16:50]       [+] Added: I'll Be Good For You - *NSYNC
+[17:16:50]       [+] Added: I Thought She Knew - *NSYNC
+[17:16:50]   Saved progress. Total added so far: 77
+[17:16:50] Year 2001: 10 songs. Need 8 more.
+[17:16:50]   Searching albums for 'Hits of 2001'...
+[17:16:53]     Checking album: 2001 (Instrumental)
+[17:16:55]     Checking album: 2001
+[17:16:58]     Checking album: Hits!
+[17:17:01]     Checking album: Hits
+[17:17:04]     Checking album: Hits (2011 Re-Recordings) [40th Anniversary Edition]
+[17:17:07]   Searching albums for 'Best of 2001'...
+[17:17:10]     Checking album: Best of 2001 - 2011 - EP
+[17:17:11]     Checking album: Best Of
+[17:17:15]       [+] Added: Control - Puddle of Mudd
+[17:17:15]       [+] Added: She Hates Me - Puddle of Mudd
+[17:17:15]     Checking album: Best Of
+[17:17:17]     Checking album: Best of (2001-2004)
+[17:17:20]       [+] Added: A Füredi Anna-Bálon - Dupla KáVé
+[17:17:20]       [+] Added: Temiattad - Dupla KáVé
+[17:17:20]       [+] Added: Tombold Ki A Bánatod! - Dupla KáVé
+[17:17:20]     Checking album: Best Of
+[17:17:21]   Searching albums for '2001 Hits'...
+[17:17:24]     Checking album: Hits of my year of birth-2001 / Hits aus meinem Geburtsjahr-2001
+[17:17:26]     Checking album: All Their Greatest Hits: Disc One 1991-2001
+[17:17:28]       [+] Added: The Old Apartment - Barenaked Ladies
+[17:17:28]       [+] Added: It's Only Me (The Wizard of Magicland) - Barenaked Ladies
+[17:17:28]       [+] Added: Lovers In a Dangerous Time - Barenaked Ladies
+[17:17:28]   Saved progress. Total added so far: 85
+[17:17:28] Year 2002: 12 songs. Need 6 more.
+[17:17:28]   Searching albums for 'Hits of 2002'...
+[17:17:30]     Checking album: The Best Hits of 2002 (The History of 1996-2000)
+[17:17:32]       [+] Added: Friend - Clon
+[17:17:32]       [+] Added: La La La - Clon
+[17:17:32]       [+] Added: Kick It - Clon
+[17:17:32]       [+] Added: Bing Bing Bing (Funky Mix) - Clon
+[17:17:32]       [+] Added: Twisted (Funky Mix) - Clon
+[17:17:32]       [+] Added: It's All Good (Funky Mix) - Clon
+[17:17:32]   Saved progress. Total added so far: 91
+[17:17:32] Year 2003: 12 songs. Need 6 more.
+[17:17:32]   Searching albums for 'Hits of 2003'...
+[17:17:35]     Checking album: Hits!
+[17:17:37] 
+[SAFETY] Taking a long break for 32.0s...
+[17:18:09]     Checking album: Descendants (Original TV Movie Soundtrack)
+[17:18:12]     Checking album: Hits
+[17:18:15]     Checking album: Hits (2011 Re-Recordings) [40th Anniversary Edition]
+[17:18:17]     Checking album: Hits
+[17:18:21]   Searching albums for 'Best of 2003'...
+[17:18:24]     Checking album: Best of 2003
+[17:18:26]     Checking album: Best Of 2003-2008
+[17:18:29]     Checking album: Best Of 2003 - 2014
+[17:18:32]     Checking album: Best of 2003 - 2010
+[17:18:35]     Checking album: Best of 2003
+[17:18:38]   Searching albums for '2003 Hits'...
+[17:18:40]     Checking album: Greatest Hits / Every Mile a Memory 2003-2008
+[17:18:43]       [+] Added: How Am I Doin' - Dierks Bentley
+[17:18:43]       [+] Added: My Last Name - Dierks Bentley
+[17:18:43]       [+] Added: What Was I Thinkin' - Dierks Bentley
+[17:18:43]     Checking album: Let's Get It On (Remastered 2003)
+[17:18:46]     Checking album: Arts & Crafts: 2003 - 2013
+[17:18:48]     Checking album: Greatest Hits 2003 - 2016
+[17:18:50]     Checking album: 2003 (with Jotapê) - Single
+[17:18:53]   Searching albums for 'Billboard 2003'...
+[17:18:56]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[17:18:59]     Checking album: Billboard Top Rock 'n' Roll Hits
+[17:19:01]     Checking album: Billboard Hot 100 - Single
+[17:19:03]     Checking album: Snarez-n-Kickz Productions Presents... Billboard Hot 100 Beats
+[17:19:06]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[17:19:08]   Saved progress. Total added so far: 94
+[17:19:08] Year 2004: 9 songs. Need 9 more.
+[17:19:08]   Searching albums for 'Hits of 2004'...
+[17:19:10]     Checking album: Confessions (Expanded Edition)
+[17:19:13]       [+] Added: Intro - USHER
+[17:19:13]       [+] Added: Yeah! (feat. Lil Jon & Ludacris) - USHER
+[17:19:13]       [+] Added: Throwback (feat. Jadakiss) - USHER
+[17:19:13]       [+] Added: Confessions - USHER
+[17:19:13]       [+] Added: Confessions, Pt. II (Confessions Special Edition Version) - USHER
+[17:19:13]       [+] Added: Burn (Confessions Special Edition Version) - USHER
+[17:19:13]       [+] Added: Caught Up - USHER
+[17:19:13]       [+] Added: Superstar (Interlude) - USHER
+[17:19:13]       [+] Added: Superstar (Confessions Special Edition Version) - USHER
+[17:19:13]   Saved progress. Total added so far: 103
+[17:19:13] Year 2005: 14 songs. Need 4 more.
+[17:19:13]   Searching albums for 'Hits of 2005'...
+[17:19:17]     Checking album: Bollywood Retro : Hits of 90s
+[17:19:18]     Checking album: The Great Hits of Ray Charles
+[17:19:20]     Checking album: Greatest Christmas Hits of the Last Half Century - 50 Años de Patria, Tradición y Navídad (1962-2012) [Original Recordings] [feat. Andy Montanez & Pellin Rodriguez]
+[17:19:23]     Checking album: Hits
+[17:19:25]       [+] Added: Big Bad Mama (feat. Dru Hill) [Radio Edit] - Foxy Brown
+[17:19:25]     Checking album: Hits!
+[17:19:27]   Searching albums for 'Best of 2005'...
+[17:19:30]     Checking album: Best Of
+[17:19:32]     Checking album: Best Of
+[17:19:36]     Checking album: Best Of
+[17:19:39]     Checking album: Best Of
+[17:19:41]     Checking album: Best Of
+[17:19:43]   Searching albums for '2005 Hits'...
+[17:19:47]     Checking album: Los Singles 1985 - 2005
+[17:19:50]     Checking album: Something To Be Proud Of:  Best Of 1999-2005
+[17:19:53]       [+] Added: She Don't Tell Me To - Montgomery Gentry
+[17:19:53]     Checking album: Musique, Vol. 1 (1993-2005)
+[17:19:56]       [+] Added: Robot Rock - Daft Punk
+[17:19:56]       [+] Added: Technologic (Radio Edit) - Daft Punk
+[17:19:56]   Saved progress. Total added so far: 107
+[17:19:56] Year 2006: 10 songs. Need 8 more.
+[17:19:56]   Searching albums for 'Hits of 2006'...
+[17:19:59]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[17:20:02]     Checking album: Hits
+[17:20:05]     Checking album: Just Like Fire (From "Alice Through the Looking Glass") - Single
+[17:20:07]     Checking album: ZOMBIES (Original TV Movie Soundtrack)
+[17:20:10]     Checking album: Hits (2011 Re-Recordings) [40th Anniversary Edition]
+[17:20:12]   Searching albums for 'Best of 2006'...
+[17:20:15]     Checking album: Best Of 2006-2016
+[17:20:18]       [+] Added: Falling Apart - The Veer Union
+[17:20:18]     Checking album: The Very Best of Frankie Valli and the Four Seasons
+[17:20:21]     Checking album: Old Town Road (feat. RM of BTS) [Seoul Town Road Remix] - Single
+[17:20:23] 
+[SAFETY] Taking a long break for 43.9s...
+[17:21:07]     Checking album: Best Of
+[17:21:09]   Searching albums for '2006 Hits'...
+[17:21:12]     Checking album: Some Hearts
+[17:21:16]     Checking album: 十光年精選輯
+[17:21:19]     Checking album: Anwar and 2006 Hits - Single
+[17:21:21]     Checking album: Rivermaya Greatest Hits 2006 (The Ultimate Collection)
+[17:21:23]     Checking album: 2000s Country Hits
+[17:21:25]   Searching albums for 'Billboard 2006'...
+[17:21:27]     Checking album: #1 Club Hits 2012 - Best of Dance, House, Electro & Techno
+[17:21:30]     Checking album: Las 20 Número 1 De Calibre 50 En Billboard
+[17:21:33]     Checking album: Billboard Top Rock 'n' Roll Hits
+[17:21:35]     Checking album: Billboard Hot 100 - Single
+[17:21:38]     Checking album: Billboard Hot 100 Songs Karaoke Instrumental, Vol. 5
+[17:21:39]   Saved progress. Total added so far: 108
+[17:21:39] Year 2007: 11 songs. Need 7 more.
+[17:21:39]   Searching albums for 'Hits of 2007'...
+[17:21:42]     Checking album: Hits of 2007
+[17:21:44]       [+] Added: Nil Padmer Katha - Srikanto Acharya
+[17:21:44]       [+] Added: Raater Andhare Jwale - Sampa Kundu
+[17:21:44]       [+] Added: Tumi Ki Amar Sei - Manomay Bhattacharya
+[17:21:44]       [+] Added: Kichu Din Elomelo - Mainak Mahalanobish & Mayukh Mahslanabish
+[17:21:44]       [+] Added: Ami Sab Bhule Bhai - Rathin Kisku
+[17:21:44]       [+] Added: Jat Gelo Jat Gelo - Rathin Kisku
+[17:21:44]       [+] Added: Chabi - Sravanti Majumdar
+[17:21:44]   Saved progress. Total added so far: 115
+[17:21:44] Year 2008: 10 songs. Need 8 more.
+[17:21:44]   Searching albums for 'Hits of 2008'...
+[17:21:46]     Checking album: #1 Club Hits 2008 - Best of Dance & Techno (New Edition)
+[17:21:49]       [+] Added: Self Control (The Annual Remake Edit 2008) - Dave Sinclair
+[17:21:49]       [+] Added: Let the Music Play (Hard Candy Video Mix) - Jackie B.
+[17:21:49]       [+] Added: Fade to Grey (Let Me Think About It Bootleg Cut) - Retro
+[17:21:49]       [+] Added: Tainted Love (Bleeding Love Club Edit) - Demande & Lesley Scott
+[17:21:49]       [+] Added: Call Me 08 (La Cascada Agua Ibiza Dance Mix) - Le Click
+[17:21:49]       [+] Added: Bleeding Love (Vinylmoverz Hands Up Edit) - Swing State
+[17:21:49]       [+] Added: Everytime We Touch 2008 (Twister Hardclub Edit) - Magic Artists
+[17:21:49]       [+] Added: All Together Now (American Euro Club Mix) - Idol Mania
+[17:21:49]   Saved progress. Total added so far: 123
+[17:21:49] Year 2009: 12 songs. Need 6 more.
+[17:21:49]   Searching albums for 'Hits of 2009'...
+[17:21:51]     Checking album: 35 Piano Pop Hits Of 2009
+[17:21:53]       [+] Added: Love Story - Piano Dreamers
+[17:21:53]       [+] Added: The Climb - Piano Dreamers
+[17:21:53]       [+] Added: You Belong With Me - Piano Dreamers
+[17:21:53]       [+] Added: Fallin' For You - Piano Dreamers
+[17:21:53]       [+] Added: White Horse - Piano Dreamers
+[17:21:53]       [+] Added: Never Say Never - Piano Dreamers
+[17:21:53]   Saved progress. Total added so far: 129
+[17:21:53] Year 2010: 16 songs. Need 2 more.
+[17:21:53]   Searching albums for 'Hits of 2010'...
+[17:21:56]     Checking album: Old Town Road (feat. Billy Ray Cyrus) [Remix] - Single
+[17:21:59]     Checking album: Hits!
+[17:22:01]     Checking album: Hits
+[17:22:03]     Checking album: ZOMBIES (Original TV Movie Soundtrack)
+[17:22:06]     Checking album: Descendants (Original TV Movie Soundtrack)
+[17:22:08]   Searching albums for 'Best of 2010'...
+[17:22:11]     Checking album: Best Of 2010 - Lounge Edition
+[17:22:15]       [+] Added: Sirens Del Mar (Luxury Lounge Cafe Allstars Remix) - Cafe Bossa
+[17:22:15]       [+] Added: Dulce Chocolate (Original Mix) - DJ Mibor & Chocolat Soul
+[17:22:15]   Saved progress. Total added so far: 131
+[17:22:15] Year 2011: 14 songs. Need 4 more.
+[17:22:15]   Searching albums for 'Hits of 2011'...
+[17:22:18]     Checking album: 2011 - Single
+[17:22:20]     Checking album: Hits (2011 Re-Recordings) [40th Anniversary Edition]
+[17:22:22]       [+] Added: A Horse With No Name (2011 Re-Recording) - America
+[17:22:22]       [+] Added: I Need You (2011 Re-Recording) - America
+[17:22:22]       [+] Added: Sandman (2011 Re-Recording) - America
+[17:22:22]       [+] Added: Ventura Highway (2011 Re-Recording) - America
+[17:22:22]   Saved progress. Total added so far: 135
+[17:22:22] Year 2012: 7 songs. Need 11 more.
+[17:22:22]   Searching albums for 'Hits of 2012'...
+[17:22:25]     Checking album: 2012 (It Ain't the End) [feat. Nicki Minaj] - Single
+[17:22:28]     Checking album: VSQ Performs The Hits Of 2012, Vol. 1
+[17:22:30]       [+] Added: We Are Young - Vitamin String Quartet
+[17:22:30]       [+] Added: Little Talks - Vitamin String Quartet
+[17:22:30]       [+] Added: Drive By - Vitamin String Quartet
+[17:22:30]       [+] Added: Cough Syrup - Vitamin String Quartet
+[17:22:30]       [+] Added: Everbody Talks - Vitamin String Quartet
+[17:22:30]       [+] Added: Called Out in the Dark - Vitamin String Quartet
+[17:22:30]       [+] Added: Shadow Days - Vitamin String Quartet
+[17:22:30]     Checking album: 25 Gospel Jazz Hits Of 2012
+[17:22:33]     Checking album: Pickin' On the Hits of 2012 - EP
+[17:22:36]     Checking album: Lullaby Hits of 2012
+[17:22:38]       [+] Added: Call Me Maybe - Twinkle Twinkle Little Rock Star
+[17:22:38]       [+] Added: Somebody That I used to Know - Twinkle Twinkle Little Rock Star
+[17:22:38]       [+] Added: We Are Young - Twinkle Twinkle Little Rock Star
+[17:22:38]       [+] Added: Payphone - Twinkle Twinkle Little Rock Star
+[17:22:38]   Saved progress. Total added so far: 146
+[17:22:38] Year 2013: 12 songs. Need 6 more.
+[17:22:38]   Searching albums for 'Hits of 2013'...
+[17:22:41]     Checking album: VSQ Performs the Hits of 2013, Vol. 1
+[17:22:44]       [+] Added: Thrift Shop - Vitamin String Quartet
+[17:22:44]       [+] Added: Get Lucky - Vitamin String Quartet
+[17:22:44]       [+] Added: Safe and Sound - Vitamin String Quartet
+[17:22:44]       [+] Added: Lego House - Vitamin String Quartet
+[17:22:44]       [+] Added: My Songs Know What You Did In the Dark (Light Em Up) - Vitamin String Quartet
+[17:22:44]       [+] Added: Young and Beautiful - Vitamin String Quartet
+[17:22:44]   Saved progress. Total added so far: 152
+[17:22:44] Year 2014: 13 songs. Need 5 more.
+[17:22:44]   Searching albums for 'Hits of 2014'...
+[17:22:47]     Checking album: Hits of 2014
+[17:22:51]       [+] Added: Naan Nee (From "Madras") - Shakthisree Gopalan & Dheekshitha
+[17:22:51]       [+] Added: Kakidha Kappal (From "Madras") - Gaana Bala
+[17:22:51]       [+] Added: Manasula Soora Kaathey (From "Cuckoo") - R. R. & Divya Ramani
+[17:22:51]       [+] Added: Vinmeen (From "Thegidi") - Abhay Jodhpurkar & Saindhavi Prakash
+[17:22:51]       [+] Added: Pesadhe (From "Thirudan Police") - Harihara Sudhan & Pooja
+[17:22:51]   Saved progress. Total added so far: 157
+[17:22:51] Year 2015: 8 songs. Need 10 more.
+[17:22:51]   Searching albums for 'Hits of 2015'...
+[17:22:53]     Checking album: VSQ Performs the Hits of 2015 Vol. 3
+[17:22:55]     Checking album: VSQ Performs the Hits of 2015, Vol. 1 - EP
+[17:22:57]       [+] Added: Uptown Funk - Vitamin String Quartet
+[17:22:57]       [+] Added: Love Me Like You Do - Vitamin String Quartet
+[17:22:57]       [+] Added: Shut Up and Dance - Vitamin String Quartet
+[17:22:57]       [+] Added: Thinking Out Loud - Vitamin String Quartet
+[17:22:57]       [+] Added: Earned It - Vitamin String Quartet
+[17:22:57]     Checking album: VSQ Performs the Hits of 2015, Vol. 2
+[17:22:59]       [+] Added: Can't Feel My Face - Vitamin String Quartet
+[17:22:59]       [+] Added: Uma Thurman - Vitamin String Quartet
+[17:22:59]       [+] Added: Photograph - Vitamin String Quartet
+[17:22:59]       [+] Added: Renegades - Vitamin String Quartet
+[17:22:59]       [+] Added: Fight Song - Vitamin String Quartet
+[17:22:59]   Saved progress. Total added so far: 167
+[17:22:59] Year 2016: 13 songs. Need 5 more.
+[17:22:59]   Searching albums for 'Hits of 2016'...
+[17:23:01]     Checking album: Hits of 2016
+[17:23:03]       [+] Added: 7 Years - Music Box Mania
+[17:23:03]       [+] Added: Can't Stop the Feeling! - Music Box Mania
+[17:23:03]       [+] Added: Cheap Thrills - Music Box Mania
+[17:23:03]       [+] Added: Cold Water - Music Box Mania
+[17:23:03]       [+] Added: Don't Let Me Down - Music Box Mania
+[17:23:03]   Saved progress. Total added so far: 172
+[17:23:03] Year 2017: 17 songs. Need 1 more.
+[17:23:03]   Searching albums for 'Hits of 2017'...
+[17:23:05]     Checking album: 20 Best Top 40 Hits of 2017 (Workout Mixes) [Unmixed Songs For Fitness & Exercise]
+[17:23:08]       [+] Added: Feel It Still (Workout Mix) - Dynamix Music
+[17:23:08]   Saved progress. Total added so far: 173
+[17:23:08] Year 2018: 8 songs. Need 10 more.
+[17:23:08]   Searching albums for 'Hits of 2018'...
+[17:23:11]     Checking album: 35 Piano Pop Hits of 2018 (Instrumental)
+[17:23:13] 
+[SAFETY] Taking a long break for 32.3s...
+[17:23:46]       [+] Added: Thank U, Next (Instrumental) - Piano Dreamers
+[17:23:46]       [+] Added: Sunflower (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Shallow (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Happier (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Without Me (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Lucid Dreams (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: In My Feelings (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: High Hopes (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Natural (Instrumental) - Piano Dreamers
+[17:23:47]       [+] Added: Girls Like You (Instrumental) - Piano Dreamers
+[17:23:47]   Saved progress. Total added so far: 183
+[17:23:47] Year 2019: 14 songs. Need 4 more.
+[17:23:47]   Searching albums for 'Hits of 2019'...
+[17:23:49]     Checking album: VSQ Performs the Hits of 2019, Vol. 2
+[17:23:53]     Checking album: Vitamin String Quartet Performs the Hits of 2019
+[17:23:54]       [+] Added: Bad Guy - Vitamin String Quartet
+[17:23:54]       [+] Added: Kill This Love - Vitamin String Quartet
+[17:23:54]       [+] Added: Sweet but Psycho - Vitamin String Quartet
+[17:23:54]       [+] Added: Sucker - Vitamin String Quartet
+[17:23:54]   Saved progress. Total added so far: 187
+[17:23:54] Year 2020: 13 songs. Need 5 more.
+[17:23:54]   Searching albums for 'Hits of 2020'...
+[17:23:57]     Checking album: 35 Piano Pop Hits of 2020 (Instrumental)
+[17:24:00]       [+] Added: Blinding Lights (Instrumental) - Piano Dreamers
+[17:24:00]       [+] Added: Dynamite (Instrumental) - Piano Dreamers
+[17:24:00]       [+] Added: Be Like That (Instrumental) - Piano Dreamers
+[17:24:00]       [+] Added: Stuck with U (Instrumental) - Piano Dreamers
+[17:24:00]       [+] Added: Come & Go (Instrumental) - Piano Dreamers
+[17:24:00]   Saved progress. Total added so far: 192
+[17:24:00] Year 2021: 12 songs. Need 6 more.
+[17:24:00]   Searching albums for 'Hits of 2021'...
+[17:24:02]     Checking album: VSQ Performs the Hits of 2021, Vol. 2
+[17:24:04]     Checking album: VSQ Performs the Hits of 2021, Vol. 1
+[17:24:06]       [+] Added: MONTERO (Call Me By Your Name) - Vitamin String Quartet
+[17:24:06]       [+] Added: Déjà Vu - Vitamin String Quartet
+[17:24:06]       [+] Added: Astronaut In the Ocean - Vitamin String Quartet
+[17:24:06]       [+] Added: Heat Waves - Vitamin String Quartet
+[17:24:06]       [+] Added: Butter - Vitamin String Quartet
+[17:24:06]       [+] Added: Peaches - Vitamin String Quartet
+[17:24:06]   Saved progress. Total added so far: 198
+[17:24:06] Year 2022: 12 songs. Need 6 more.
+[17:24:06]   Searching albums for 'Hits of 2022'...
+[17:24:09]     Checking album: Cold Heart (PNAU Remix) - Single
+[17:24:12]     Checking album: Hits!
+[17:24:14]     Checking album: Beauty and the Beast (Original Motion Picture Soundtrack) [Deluxe Edition]
+[17:24:17]     Checking album: ZOMBIES 3 (Original Soundtrack)
+[17:24:21]       [+] Added: Alien Invasion - ZOMBIES – Cast
+[17:24:21]       [+] Added: Ain't No Doubt About It - Milo Manheim, Meg Donnelly & ZOMBIES – Cast
+[17:24:21]       [+] Added: Come on Out - Chandler Kinney, Ariel Martin, Pearce Joza & ZOMBIES – Cast
+[17:24:21]       [+] Added: Exceptional Zed - ZOMBIES – Cast
+[17:24:21]       [+] Added: Exceptional Zed (Reprise) - Milo Manheim & ZOMBIES – Cast
+[17:24:21]       [+] Added: I'm Finally Me - ZOMBIES – Cast
+[17:24:21]   Saved progress. Total added so far: 204
+[17:24:21] Year 2023: 5 songs. Need 13 more.
+[17:24:21]   Searching albums for 'Hits of 2023'...
+[17:24:23]     Checking album: Hits!
+[17:24:24]     Checking album: Unholy - Single
+[17:24:26]     Checking album: Metallica (Remastered)
+[17:24:29]     Checking album: Hits
+[17:24:31]     Checking album: Hits
+[17:24:34]   Searching albums for 'Best of 2023'...
+[17:24:37]     Checking album: BEST OF 2023
+[17:24:39]       [+] Added: Namerakana - Lemtom
+[17:24:39]       [+] Added: Zenith Zero - Ruff Stuff
+[17:24:39]       [+] Added: Late Nights - Paul Rudder
+[17:24:39]       [+] Added: Clueless - JACK MARLOW
+[17:24:39]       [+] Added: Mi Right Dub - Thomas Garcia
+[17:24:39]       [+] Added: Another Day - Hurlee
+[17:24:39]       [+] Added: Condesa - Dj Windows 7
+[17:24:39]       [+] Added: Brûlante - Mascott
+[17:24:39]       [+] Added: Savage - Ghetto Groove
+[17:24:39]       [+] Added: Got to Have It (DJ Sandwich Remix) - rawBeetz
+[17:24:39]       [+] Added: Television Mixdown - Ginko
+[17:24:39]       [+] Added: It's House - Bress Underground
+[17:24:39]       [+] Added: Cold Cuts - Keecen
+[17:24:39]   Saved progress. Total added so far: 217
+[17:24:39] Year 2025: 2 songs. Need 16 more.
+[17:24:39]   Searching albums for 'Hits of 2025'...
+[17:24:42]     Checking album: The Art of Loving
+[17:24:45]       [+] Added: The Art of Loving (Intro) - Olivia Dean
+[17:24:45]       [+] Added: Nice To Each Other - Olivia Dean
+[17:24:45]       [+] Added: Lady Lady - Olivia Dean
+[17:24:45]       [+] Added: Close Up - Olivia Dean
+[17:24:45]       [+] Added: So Easy (To Fall In Love) - Olivia Dean
+[17:24:45]       [+] Added: Let Alone The One You Love - Olivia Dean
+[17:24:45]       [+] Added: Man I Need - Olivia Dean
+[17:24:45]       [+] Added: Something Inbetween - Olivia Dean
+[17:24:45]       [+] Added: Loud - Olivia Dean
+[17:24:45]       [+] Added: Baby Steps - Olivia Dean
+[17:24:45]       [+] Added: A Couple Minutes - Olivia Dean
+[17:24:45]       [+] Added: I've Seen It - Olivia Dean
+[17:24:45]     Checking album: VSQ Performs the Hits of 2025, Vol. 1 - EP
+[17:24:49]       [+] Added: Die With a Smile - Vitamin String Quartet
+[17:24:49]       [+] Added: That's So True - Vitamin String Quartet
+[17:24:49]       [+] Added: Busy Woman - Vitamin String Quartet
+[17:24:49]       [+] Added: DtMF - Vitamin String Quartet
+[17:24:49]   Saved progress. Total added so far: 233
+[17:24:49] 
+Expansion Complete. Grand Total Added: 233

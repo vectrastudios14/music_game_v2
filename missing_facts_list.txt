@@ -1,0 +1,84 @@
+ext_2005_1769883445_735|Reloaded|Marky Mark
+ext_1988_1769883530_600|Puerto Rico (feat. Mongo Santamaria, Charlie Palmieri & The Edwin Hawkins Singers)|Michael Sembello
+ext_1983_1769884402_786|Come Dancing|The Kinks
+ext_1964_1769884402_644|You Really Got Me|The Kinks
+ext_1979_1769884404_438|Good Girls Don't|The Knack
+ext_1979_1769884404_724|She's So Selfish|The Knack
+ext_1994_1769884407_198|Big Poppa|The Notorious B.I.G.
+ext_1994_1769884407_859|Juicy|The Notorious B.I.G.
+ext_1979_1769884410_478|Message In a Bottle|The Police
+ext_1997_1769884410_846|Roxanne|The Police
+ext_1969_1769884414_518|Gimme Shelter (Remastered 2019)|The Rolling Stones
+ext_1966_1769884414_390|Paint It Black|The Rolling Stones
+ext_1981_1769884416_715|Apache|The Sugarhill Gang
+ext_1964_1769884419_353|My Girl|The Temptations
+ext_1966_1769884419_514|Ain't Too Proud To Beg|The Temptations
+ext_2018_1769884422_976|Call Out My Name|The Weeknd
+ext_2019_1769884422_375|Blinding Lights|The Weeknd
+ext_2021_1769884426_439|Save Your Tears (Remix)|The Weeknd & Ariana Grande
+ext_2021_1769884426_506|Save Your Tears (Remix) [Bonus Track]|The Weeknd & Ariana Grande
+ext_2007_1769884432_201|Icky Thump|The White Stripes
+ext_2001_1769884432_900|We're Going to Be Friends|The White Stripes
+ext_1971_1769884435_580|Baba O'Riley|The Who
+ext_1971_1769884435_937|Won't Get Fooled Again|The Who
+ext_1987_1769884438_518|I Think We're Alone Now|Tiffany
+ext_1987_1769884438_616|Could've Been|Tiffany
+ext_1984_1769884444_191|What's Love Got to Do with It|Tina Turner
+ext_1993_1769884444_609|Proud Mary (1993 Version)|Tina Turner
+ext_2019_1769884447_647|Lunatic Fringe|Tom Cochrane
+ext_1986_1769884447_101|Boy Inside the Man|Tom Cochrane
+ext_1989_1769884450_628|Free Fallin'|Tom Petty
+ext_1989_1769884450_492|I Won't Back Down|Tom Petty
+ext_2025_1769884454_342|BOTHER ME|Tommy Richman
+ext_2023_1769884454_547|MESSY|Tommy Richman
+ext_2009_1769884457_886|Breakaway|Toni Basil
+ext_2000_1769884460_662|He Wasn't Man Enough|Toni Braxton
+ext_1993_1769884460_441|Breathe Again|Toni Braxton
+ext_1978_1769884473_139|Hold the Line|Toto
+ext_1986_1769884473_437|I'll Be Over You|Toto
+ext_1988_1769884476_192|Baby Can I Hold You|Tracy Chapman
+ext_1988_1769884476_310|Talkin' Bout a Revolution|Tracy Chapman
+ext_2012_1769884479_415|Drive By|Train
+ext_1998_1769884479_264|Meet Virginia|Train
+ext_2015_1769884482_179|Ride|Twenty One Pilots
+ext_2016_1769884482_564|Heathens|Twenty One Pilots
+ext_2000_1769884485_219|Beautiful Day|U2
+ext_1987_1769884485_872|I Still Haven't Found What I'm Looking For|U2
+ext_2008_1769884488_623|Love In This Club (feat. Young Jeezy)|Usher
+ext_1997_1769884488_205|Nice & Slow|Usher
+ext_1978_1769884510_765|Ain't Talkin' 'Bout Love|Van Halen
+ext_1984_1769884510_217|Panama|Van Halen
+ext_2002_1769884513_998|Ordinary Day|Vanessa Carlton
+ext_2004_1769884513_205|White Houses|Vanessa Carlton
+ext_1998_1769884516_939|Dreamin'|Vanessa Williams
+ext_1995_1769884516_669|Colors of the Wind (End Title)|Vanessa Williams
+ext_1990_1769884519_749|Play That Funky Music|Vanilla Ice
+ext_1999_1769884519_791|Ninja Rap|Vanilla Ice
+ext_1999_1769884522_189|You're a God|Vertical Horizon
+ext_1999_1769884522_786|Best I Ever Had (Grey Sky Morning)|Vertical Horizon
+ext_2007_1769884525_414|Macho Man|Village People
+ext_2007_1769884525_652|In the Navy|Village People
+ext_2017_1769884527_753|My Love (feat. Major Lazer, WizKid & Dua Lipa)|Wale
+ext_2020_1769884527_509|Butterflies, Pt. 2 (Wale Remix)|Wale
+ext_2017_1769884530_490|One Foot|Walk the Moon
+ext_2012_1769884530_141|Anna Sun|Walk the Moon
+ext_1984_1769884539_977|Everything She Wants|Wham!
+ext_1984_1769884539_748|Last Christmas (Single Version)|Wham!
+ext_1987_1769884542_424|Still Of The Night (2017 Remaster)|Whitesnake
+ext_1987_1769884542_723|Is This Love (2017 Remaster)|Whitesnake
+ext_1992_1769884545_899|I Have Nothing|Whitney Houston
+ext_1990_1769884545_972|I'm Your Baby Tonight|Whitney Houston
+ext_1976_1769884548_621|I Feel Sanctified|Wild Cherry
+ext_1976_1769884548_690|What In the Funk Do You See|Wild Cherry
+ext_1997_1769884551_998|Gettin' Jiggy Wit It|Will Smith
+ext_1997_1769884551_754|Miami|Will Smith
+ext_1990_1769884553_192|Release Me|Wilson Phillips
+ext_1990_1769884553_268|You're In Love|Wilson Phillips
+ext_1989_1769884559_104|Principal's Office|Young MC
+ext_1988_1769884559_246|Know How|Young MC
+ext_2026_1769884562_528|Plastic Cigarette|Zach Bryan
+ext_2024_1769884562_645|Pink Skies|Zach Bryan
+ext_2025_1769884565_116|Midnight Sun|Zara Larsson
+ext_2017_1769884565_854|Never Forget You|Zara Larsson
+ext_1986_1769884571_525|Cry Wolf|a-ha
+ext_1985_1769884571_568|The Sun Always Shines On TV|a-ha

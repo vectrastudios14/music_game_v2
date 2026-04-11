@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import '../models/song.dart';
 import 'dart:math';
 import 'dart:math';
-// import 'itunes_service.dart'; // DETOX
+import 'itunes_service.dart'; // DETOX
 // import 'audio_cache_service.dart'; // DETOX
 
 class Question {
@@ -19,6 +19,7 @@ class SongRepository {
   SongRepository._internal();
 
   List<Song> _songs = [];
+  String _currentLibrary = 'assets/songs.json';
 
   // Caching for Pre-loading
   Question? cachedNextQuestion;
@@ -26,24 +27,76 @@ class SongRepository {
 
   List<Song> get allSongs => List.unmodifiable(_songs);
 
-  Future<void> loadSongs() async {
-    if (_songs.isNotEmpty) return;
+  Future<void> loadSongs({String? libraryPath}) async {
+    final targetLibrary = libraryPath ?? _currentLibrary;
+    
+    // If we're already loaded with this library, skip (unless forced)
+    if (_songs.isNotEmpty && _currentLibrary == targetLibrary && libraryPath == null) return;
+
+    if (targetLibrary == 'mix') {
+       await _loadMixedLibrary();
+       return;
+    }
 
     try {
-      final String response = await rootBundle.loadString('assets/songs.json');
+      print('Repo: Loading songs from $targetLibrary...');
+      final String response = await rootBundle.loadString(targetLibrary);
       final List<dynamic> data = json.decode(response);
       
       _songs = data.map((json) => Song.fromJson(json)).toList();
-      
-      // Filter out songs with broken links if any
-      _songs = _songs.where((s) => s.link.isNotEmpty && s.link.startsWith('http')).toList();
+      _authCheck(); // Filter valid songs
 
-      print('Loaded ${_songs.length} songs from JSON.');
+      print('Repo: Loaded ${_songs.length} songs from $targetLibrary.');
     } catch (e) {
-      print('Error loading songs from JSON: $e');
-      // Fallback to empty or simple debug if JSON fails entirely
+      print('Repo: Error loading songs from $targetLibrary: $e');
+      if (_songs.isEmpty) _songs = [];
+    }
+  }
+
+  Future<void> _loadMixedLibrary() async {
+    try {
+      print('Repo: Loading MIXED library...');
+      
+      // Load English
+      final String resEng = await rootBundle.loadString('assets/songs.json');
+      final List<dynamic> dataEng = json.decode(resEng);
+      final songsEng = dataEng.map((json) => Song.fromJson(json)).toList();
+
+      // Load Arabic
+      final String resAra = await rootBundle.loadString('assets/songs_arabic.json');
+      final List<dynamic> dataAra = json.decode(resAra);
+      final songsAra = dataAra.map((json) => Song.fromJson(json)).toList();
+
+      // Combine
+      _songs = [...songsEng, ...songsAra];
+      _currentLibrary = 'mix';
+      _authCheck();
+
+      print('Repo: Loaded MIXED library with ${_songs.length} songs.');
+    } catch (e) {
+      print('Repo: Error loading mixed library: $e');
       _songs = [];
     }
+  }
+
+  void _authCheck() {
+     _songs = _songs.where((s) => s.link.isNotEmpty && s.link.startsWith('http')).toList();
+  }
+
+  void setLibrary(String type) {
+    if (type == 'arabic') {
+      _currentLibrary = 'assets/songs_arabic.json';
+    } else if (type == 'mix') {
+      _currentLibrary = 'mix'; // Special flag
+    } else {
+      _currentLibrary = 'assets/songs.json';
+    }
+    _songs = []; // Clear current songs to force reload
+  }
+
+  String get currentLibraryType {
+    if (_currentLibrary == 'mix') return 'mix';
+    return _currentLibrary.contains('arabic') ? 'arabic' : 'english';
   }
 
   // Filter helpers
@@ -56,7 +109,7 @@ class SongRepository {
     return _songs.where((s) => s.link.contains('http')).toList();
   }
 
-  Future<Question> getNextQuestion(List<Song> history) async {
+  Future<Question> getNextQuestion(List<Song> history, {bool forceUniqueArtists = false, int distractorCount = 3}) async {
     final availableSongs = _songs.where((s) => !history.contains(s) && s.link.contains('http')).toList();
     if (availableSongs.isEmpty) {
       throw Exception('No more songs available');
@@ -65,57 +118,109 @@ class SongRepository {
     final random = Random();
     final correctSong = availableSongs[random.nextInt(availableSongs.length)];
 
-    // Smart Distractors Logic
-    // 1. Same Era (+/- 5 years)
-    // 2. Same Genre (Style overlap)
-    final correctYear = int.tryParse(correctSong.year) ?? 1980;
+    // --- NEW SMART DISTRACTOR LOGIC ---
     
-    // Filter potential distractors (exclude correct song)
-    // Prioritize same decade and genre
-    var distractors = _songs.where((s) => s.id != correctSong.id).toList();
-    
-    // Attempt strict filtering
-    var strictDistractors = distractors.where((s) {
-      final year = int.tryParse(s.year) ?? 0;
-      final yearMatch = (year - correctYear).abs() <= 5;
-      final styleMatch = s.styles.any((style) => correctSong.styles.contains(style));
-      return yearMatch && styleMatch;
+    double calculateSimilarity(Song a, Song b) {
+      double score = 0;
+      
+      // 1. Year Similarity (Higher is better)
+      int yearA = int.tryParse(a.year) ?? 1980;
+      int yearB = int.tryParse(b.year) ?? 1980;
+      int yearDiff = (yearA - yearB).abs();
+      
+      if (yearDiff == 0) score += 4.0;
+      else if (yearDiff <= 1) score += 3.0;
+      else if (yearDiff <= 3) score += 2.0;
+      else if (yearDiff <= 5) score += 1.0;
+      else if (yearDiff <= 10) score += 0.5;
+
+      // 2. Style/Genre Match
+      int overlap = a.styles.where((s) => b.styles.contains(s)).length;
+      score += overlap * 2.5; 
+
+      // 3. Same Artist (Extra difficulty)
+      if (a.artist == b.artist) score += 5.0;
+
+      // 4. Gender Match (Highest difficulty factor)
+      if (a.gender != null) {
+        if (b.gender == null) {
+          score -= 10.0; // Penalty for unknown distractor gender when correct is known
+        } else if (a.gender == b.gender) {
+          score += 15.0; // Boost for matching gender
+        } else {
+          score -= 30.0; // Massive penalty for mismatch
+        }
+      } else if (b.gender != null) {
+         score -= 5.0; // Slight penalty for known distractor if correct is unknown
+      }
+
+      // 5. Same Decade
+      if (yearA ~/ 10 == yearB ~/ 10) score += 1.0;
+
+      return score;
+    }
+
+    // Filter potential distractors
+    var potentialDistractors = _songs.where((s) => s.id != correctSong.id).toList();
+
+    // Map all distractors to their scores
+    var scoredDistractors = potentialDistractors.map((s) => {
+      'song': s,
+      'score': calculateSimilarity(correctSong, s)
     }).toList();
 
-    List<Song> selectedDistractors = [];
+    // Sort by score descending
+    scoredDistractors.sort((a, b) => (b['score'] as double).compareTo(a['score'] as double));
 
-    if (strictDistractors.length >= 3) {
-      strictDistractors.shuffle();
-      selectedDistractors = strictDistractors.take(3).toList();
-    } else {
-      // Relax: Just Era match
-      var eraDistractors = distractors.where((s) {
-        final year = int.tryParse(s.year) ?? 0;
-        return (year - correctYear).abs() <= 5;
-      }).toList();
-      
-      if (eraDistractors.length >= 3) {
-        eraDistractors.shuffle();
-        selectedDistractors = eraDistractors.take(3).toList();
-      } else {
-        // Fallback: Random
-        distractors.shuffle();
-        selectedDistractors = distractors.take(3).toList();
-      }
+    // Select distractors:
+    final int poolSize = min(15, scoredDistractors.length);
+    var difficultPool = scoredDistractors.take(poolSize).toList();
+    difficultPool.shuffle();
+
+    List<Song> selectedDistractors = [];
+    final Set<String> selectedTitles = {correctSong.title};
+    final Set<String> usedArtists = {correctSong.artist};
+
+    for (var entry in difficultPool) {
+       final s = entry['song'] as Song;
+       if (selectedTitles.contains(s.title)) continue; 
+       
+       if (forceUniqueArtists && usedArtists.contains(s.artist)) continue;
+       
+       selectedDistractors.add(s);
+       selectedTitles.add(s.title);
+       usedArtists.add(s.artist);
+       
+       if (selectedDistractors.length >= distractorCount) break;
+    }
+
+    // Panic Fallback
+    if (selectedDistractors.length < distractorCount) {
+       var backupPool = scoredDistractors.take(min(50, scoredDistractors.length)).toList()..shuffle();
+       for (var entry in backupPool) {
+          final s = entry['song'] as Song;
+          if (selectedTitles.contains(s.title)) continue;
+          if (forceUniqueArtists && usedArtists.contains(s.artist)) continue;
+          
+          selectedDistractors.add(s);
+          selectedTitles.add(s.title);
+          usedArtists.add(s.artist);
+          if (selectedDistractors.length >= distractorCount) break;
+       }
     }
 
     // Combine and Shuffle Options
     final options = [correctSong, ...selectedDistractors]..shuffle();
 
     // Fetch Artwork for ALL options in parallel
-    // await Future.wait(options.map((song) async {
-    //   if (song.artworkUrl == null) {
-    //     final url = await ITunesService.fetchArtwork(song.artist, song.title);
-    //     if (url != null) {
-    //       song.artworkUrl = url;
-    //     }
-    //   }
-    // }));
+    await Future.wait(options.map((song) async {
+      if (song.artworkUrl == null) {
+        final url = await ITunesService.fetchArtwork(song.artist, song.title);
+        if (url != null) {
+          song.artworkUrl = url;
+        }
+      }
+    }));
 
     return Question(correctSong: correctSong, options: options);
   }
@@ -123,8 +228,17 @@ class SongRepository {
   // --- PRE-LOADING HELPERS ---
 
   // NATIVE METHODS STUBBED FOR DETOX
-  Future<void> prepareFirstRoundGTS() async {
-     print("Repo: prepareFirstRoundGTS (STUBBED)");
+  Future<void> prepareFirstRoundGTS({bool isHardMode = false, int distractorCount = 3}) async {
+     print("Repo: prepareFirstRoundGTS (Pre-loading started) HardMode: $isHardMode, Distractors: $distractorCount");
+     if (_songs.isEmpty) await loadSongs();
+     
+     try {
+       // Pre-fetch the first question which triggers artwork download
+       cachedNextQuestion = await getNextQuestion([], forceUniqueArtists: isHardMode, distractorCount: distractorCount);
+       print("Repo: GTS First Question Ready: ${cachedNextQuestion?.correctSong.title}");
+     } catch (e) {
+       print("Repo: Error pre-loading GTS: $e");
+     }
   }
 
   Future<void> prepareDeck({int playerCount = 2}) async {

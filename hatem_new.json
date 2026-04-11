@@ -1,0 +1,262 @@
+[
+    {
+        "id": "ara_haliraqi_1",
+        "artist": "Hatem Al Iraqi",
+        "title": "Shealoma",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Shealoma",
+        "year": "2012",
+        "styles": [
+            "Worldwide"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/57/97/1a/57971a25-0f12-587d-7163-d69f158b040f/mzaf_14401522933167349765.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4c/13/a0/4c13a031-4764-9332-7860-8f15305134fb/hatem_el_iraqy.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_2",
+        "artist": "Hatem Al Iraqi",
+        "title": "Berdak",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Berdak",
+        "year": "2010",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/53/b9/ab/53b9abfa-0b8d-e7b5-a5d2-5f933f577b21/mzaf_12021455893760850608.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1d/34/1d/1d341d0f-4d67-b541-5c7a-0ce590b438d1/Al_Denia_Ma_Teswa.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_3",
+        "artist": "Hatem Al Iraqi",
+        "title": "Ya Taer",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Ya Taer",
+        "year": "2006",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8c/a9/42/8ca942f2-7434-eb76-f957-aaf61b95a199/mzaf_8425885998575926305.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/ab/f1/f2/abf1f227-779b-dae6-c839-296fe8c81402/Ya_Tair.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_4",
+        "artist": "Hatem Al Iraqi",
+        "title": "Mhajer",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Mhajer",
+        "year": "2005",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/7f/24/8f/7f248f35-c52b-ec3c-69c0-2515bba6075d/mzaf_7882046713167896838.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/31/bc/8d/31bc8dee-d624-4ef7-b77b-5fd7f24b2588/Mhajer.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_5",
+        "artist": "Hatem Al Iraqi",
+        "title": "Wahed Yeheb Wahed",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Wahed Yeheb Wahed",
+        "year": "2011",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/48/92/b9/4892b96d-684c-804b-cd68-a7db5fe46cc1/mzaf_16660393418663060614.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/a5/34/27/a53427a6-2254-d19b-f878-4199222d0428/9296.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_6",
+        "artist": "Hatem Al Iraqi",
+        "title": "Mawal Elrooh",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Mawal Elrooh",
+        "year": "2008",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/31/da/2e31da03-70fc-a3c0-d19a-5021efe7354c/mzaf_176855683951353009.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e6/c5/09/e6c509bd-1d9e-0c58-370b-7de74236a8ca/dj.cduayrnp.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_7",
+        "artist": "Hatem Al Iraqi",
+        "title": "Eldonia Ma Teswa",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Eldonia Ma Teswa",
+        "year": "2010",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/17/2f/17/172f173e-c478-92c9-ebae-350e6a964823/mzaf_6370262068247752967.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1d/34/1d/1d341d0f-4d67-b541-5c7a-0ce590b438d1/Al_Denia_Ma_Teswa.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_8",
+        "artist": "Hatem Al Iraqi",
+        "title": "Shoof El Qahar",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Shoof El Qahar",
+        "year": "2023",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/98/cc/97/98cc9728-9b6f-ad09-1cc3-3347bcd26db9/mzaf_12367262345482233241.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4f/f4/11/4ff41189-3aef-4c35-3ca8-7af08b040e82/1142603.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_9",
+        "artist": "Hatem Al Iraqi",
+        "title": "Aakher Yoom",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Aakher Yoom",
+        "year": "2010",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/8c/5f/97/8c5f97a7-4177-9c39-2538-514428ebf9e7/mzaf_11478396045882143916.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1d/34/1d/1d341d0f-4d67-b541-5c7a-0ce590b438d1/Al_Denia_Ma_Teswa.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_10",
+        "artist": "Hatem Al Iraqi",
+        "title": "Athal Mahboob",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Athal Mahboob",
+        "year": "2020",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ca/54/69/ca546920-20a2-fc89-0d75-24623752db69/mzaf_3919984715978836384.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/07/b1/6b/07b16bdb-93f3-996a-5cc6-89d11c86fe32/1075623.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_11",
+        "artist": "Hatem Al Iraqi",
+        "title": "Sho Yaany",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Sho Yaany",
+        "year": "2010",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/89/9f/c4/899fc41a-fcdf-ba32-4acd-0868b18e3dfd/mzaf_15073057479832361196.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1d/34/1d/1d341d0f-4d67-b541-5c7a-0ce590b438d1/Al_Denia_Ma_Teswa.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_12",
+        "artist": "Hatem Al Iraqi",
+        "title": "Ana Habetak",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Ana Habetak",
+        "year": "2010",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a0/63/5e/a0635e38-d5b6-b2de-9e60-b2d0c3ba7745/mzaf_10813137171647581169.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1d/34/1d/1d341d0f-4d67-b541-5c7a-0ce590b438d1/Al_Denia_Ma_Teswa.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_13",
+        "artist": "Ali Saber & Hatem Al Iraqi",
+        "title": "Al Qaleb Daeilak",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Al Qaleb Daeilak",
+        "year": "2021",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ed/08/fd/ed08fdb4-b50c-d147-d1f3-4ae601d8e8b0/mzaf_4898995683937545452.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/ac/28/dc/ac28dcbb-00f8-948c-d614-4cf90bc219e5/1130129.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_14",
+        "artist": "Hatem Al Iraqi",
+        "title": "Dictory",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Dictory",
+        "year": "2017",
+        "styles": [
+            "Worldwide"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e6/ae/f5/e6aef5a2-7114-f602-9a7a-c3b08707258c/mzaf_4894077108428947398.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/b5/08/06/b50806af-6c9a-5d6b-11bf-142f571778cd/Hatem_Aliraqi_2017_3000x3000.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_15",
+        "artist": "Hatem Al Iraqi & Qusai Hatem",
+        "title": "Ma Yeswaa Damea",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Ma Yeswaa Damea",
+        "year": "2020",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/01/94/60/0194606f-e14b-4885-56c9-2cb97292f50e/mzaf_14764829150503607082.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/35/74/9d/35749d2e-7b36-75ad-bd65-fb23c52ee5f4/1083711.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_16",
+        "artist": "Hatem Al Iraqi",
+        "title": "La Yezaloon El Hbaieb",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "La Yezaloon El Hbaieb",
+        "year": "2018",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/db/f3/29/dbf32999-690c-1c6e-c3ec-9c17066f3987/mzaf_12951797373472958478.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/da/9b/a1/da9ba174-e4d2-9c44-1932-2c5deff38932/889359.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_17",
+        "artist": "Hatem Al Iraqi",
+        "title": "Aghla Nasi",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Aghla Nasi",
+        "year": "2015",
+        "styles": [
+            "Worldwide"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/82/b2/65/82b26535-0f03-5851-993c-2d4e45134e9f/mzaf_12887903550310227437.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7d/ac/7e/7dac7edf-2274-6e68-2c8e-43b7c3ddb905/889211325719.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_18",
+        "artist": "Hatem Al Iraqi",
+        "title": "Nom Ma Nemet",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Nom Ma Nemet",
+        "year": "2019",
+        "styles": [
+            "Iraqi Pop"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d5/44/58/d5445898-4bbb-343e-824b-4e4f8bf30bb7/mzaf_3549905884262153588.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/28/47/17/28471773-cc53-4e98-f020-212fecf63a9b/6281130217245.png/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_19",
+        "artist": "Hatem Al Iraqi",
+        "title": "Ad El Maam",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Ad El Maam",
+        "year": "2008",
+        "styles": [
+            "Khaleeji"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/52/e7/1e/52e71edd-da4b-c60d-71e3-7640703574ba/mzaf_7508121116794422583.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/e6/c5/09/e6c509bd-1d9e-0c58-370b-7de74236a8ca/dj.cduayrnp.jpg/600x600bb.jpg"
+    },
+    {
+        "id": "ara_haliraqi_20",
+        "artist": "Hatem Al Iraqi",
+        "title": "Shayeb Rasi",
+        "artistAr": "حاتم العراقي",
+        "titleAr": "Shayeb Rasi",
+        "year": "2012",
+        "styles": [
+            "Worldwide"
+        ],
+        "link": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/70/5d/22/705d220d-e2e2-d3db-9ef4-5ac3de4e1301/mzaf_3476392609034239888.plus.aac.p.m4a",
+        "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4c/13/a0/4c13a031-4764-9332-7860-8f15305134fb/hatem_el_iraqy.jpg/600x600bb.jpg"
+    }
+]

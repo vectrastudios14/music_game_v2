@@ -1,0 +1,240 @@
+﻿On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   assets/songs.json
+	modified:   lib/main.dart
+	modified:   lib/models/song.dart
+	modified:   lib/screens/boa/boa_game_screen.dart
+	modified:   lib/screens/boa/boa_setup_screen.dart
+	modified:   lib/screens/game_hub_screen.dart
+	modified:   lib/screens/gts/game_screen.dart
+	modified:   lib/screens/gts/result_screen.dart
+	modified:   lib/screens/gts/setup_screen.dart
+	modified:   lib/screens/splash_screen.dart
+	modified:   lib/services/song_repository.dart
+	modified:   linux/flutter/generated_plugin_registrant.cc
+	modified:   linux/flutter/generated_plugins.cmake
+	modified:   macos/Flutter/GeneratedPluginRegistrant.swift
+	modified:   pubspec.lock
+	modified:   pubspec.yaml
+	modified:   windows/flutter/generated_plugin_registrant.cc
+	modified:   windows/flutter/generated_plugins.cmake
+	modified:   windows/runner/flutter_window.cpp
+	modified:   windows/runner/main.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	RESUME_EXPANSION.bat
+	RUN_SONG_TEST.bat
+	START_ARABIC_EXPANSION.bat
+	VIEW_DASHBOARD.bat
+	add_1970_arabic.ps1
+	add_aadaweya.py
+	add_amaher.py
+	add_angham.py
+	add_asma.py
+	add_assala.py
+	add_assi.py
+	add_carole.py
+	add_diana.py
+	add_ehab.py
+	add_elissa.py
+	add_etab.py
+	add_hamid.py
+	add_hany.py
+	add_hatem.py
+	add_khaled.py
+	add_mounir.py
+	add_mramadan.py
+	add_msaleh.py
+	add_nabil.py
+	add_nancy.py
+	add_nawal.py
+	add_rabab.py
+	add_ragheb.py
+	add_ruby.py
+	add_samira.py
+	add_sherine.py
+	add_thosny.py
+	add_user_songs.py
+	add_walid.py
+	add_wassouf.py
+	add_wjassar.py
+	all_songs_list.txt
+	angham_new.json
+	asma_new.json
+	assala_new.json
+	assets/Before_or_after_logo.png
+	assets/Guess_that_song_logo.png
+	assets/Musica_logo.png
+	assets/TimeSurvival_logo.png
+	assets/UK_flag - Copy.json
+	assets/UK_flag.json
+	assets/USA_flag.json
+	assets/animations/Congratulations.json
+	assets/animations/Target.json
+	assets/animations/Trophy.json
+	assets/animations/arrow_down.json
+	assets/boa-logo-v5.png
+	assets/chillhop.mp3
+	assets/correct.mp3
+	assets/facts_00s.json
+	assets/facts_10s.json
+	assets/facts_70s.json
+	assets/facts_80s.json
+	assets/facts_90s.json
+	assets/facts_arabic.json
+	assets/facts_ext_1.json
+	assets/facts_ext_2.json
+	assets/facts_ext_final.json
+	assets/facts_recent.json
+	assets/flags/China_flag.json
+	assets/flags/France_flag.json
+	assets/flags/Germany_flag.json
+	assets/flags/Japan_flag.json
+	assets/flags/Saudi_flag.json
+	assets/intro.mp3
+	assets/logo_reveal.mp3
+	assets/songs.json.bak
+	assets/songs_arabic.json
+	assets/songs_arabic.json.abdel_bkp
+	assets/songs_arabic.json.ahlam_bkp
+	assets/songs_arabic.json.bahar_bkp
+	assets/songs_arabic.json.bak
+	assets/songs_arabic.json.fadel_bkp
+	assets/songs_arabic.json.fairouz_bkp
+	assets/songs_arabic.json.jasmi_bkp
+	assets/songs_arabic.json.jumairi_bkp
+	assets/songs_arabic.json.kadim_bkp
+	assets/songs_arabic.json.khaled_bkp
+	assets/songs_arabic.json.mayada_bkp
+	assets/songs_arabic.json.nawal_bkp
+	assets/songs_arabic.json.rowaish_bkp
+	assets/songs_arabic.json.warda_bkp
+	assets/songs_arabic_backup.json
+	assets/songs_backup_before_revert.json
+	assets/water_drop.mp3
+	assets/wrong.mp3
+	assi_new.json
+	backup_manual_edits.dart
+	carole_new.json
+	check_missing_facts.dart
+	clean_library_arabic.py
+	copy_facts.dart
+	copy_facts_enhanced.dart
+	count_updates.dart
+	debug_itunes_fetch.py
+	diana_new.json
+	ehab_new.json
+	elissa_new.json
+	enrich_songs_batch_12.py
+	enrich_songs_batch_17.py
+	etab_new.json
+	expand_english_library.py
+	expand_library.py
+	expand_library_arabic.py
+	expansion_dashboard.ps1
+	expansion_log.txt
+	expansion_log_arabic.txt
+	extract_artists.py
+	fix_facts_type.py
+	found_batch_1.json
+	found_playlist_songs.json
+	generate_review_md.ps1
+	git_status_full.txt
+	git_status_full_utf8.txt
+	git_status_untracked.txt
+	hamid_new.json
+	hany_new.json
+	hatem_new.json
+	khaled_new.json
+	lib/main_song_test.dart
+	lib/screens/boa/boa_help_screen.dart
+	lib/screens/boa/boa_result_screen.dart
+	lib/screens/boa/widgets/boa_game_over_modal.dart
+	lib/screens/gts/help_screen.dart
+	lib/screens/intro_screen.dart
+	lib/screens/song_test_screen.dart
+	lib/screens/time_survival/ts_game_screen.dart
+	lib/screens/time_survival/ts_game_screen_backup.dart
+	lib/screens/time_survival/ts_game_screen_backup_v2.dart
+	lib/screens/time_survival/ts_help_screen.dart
+	lib/screens/time_survival/ts_setup_screen.dart
+	lib/screens/time_survival/widgets/circular_year_node.dart
+	lib/screens/time_survival/widgets/liquid_tube.dart
+	lib/screens/time_survival/widgets/scrolling_neon_ticker.dart
+	lib/screens/time_survival/widgets/ts_round_result_modal.dart
+	lib/scripts/batch_importer.dart
+	lib/scripts/debug_search.dart
+	lib/scripts/match_app_logic.dart
+	lib/scripts/playlist_importer.dart
+	lib/services/background_music_service.dart
+	lib/services/song_review_service.dart
+	lib/utils/custom_scroll_behavior.dart
+	list_abdulkarim_links.py
+	list_ayed_links.py
+	list_dalia_links.py
+	list_ibrahim_links.py
+	list_missing_facts.dart
+	list_songs.dart
+	list_songs.py
+	manual_edits_safety_backup.json
+	merge_angham.py
+	merge_asma.py
+	merge_assala.py
+	merge_assi.py
+	merge_carole.py
+	merge_diana.py
+	merge_ehab.py
+	merge_elissa.py
+	merge_etab.py
+	merge_hamid.py
+	merge_hany.py
+	merge_hatem.py
+	merge_khaled.py
+	merge_mounir.py
+	merge_nabil.py
+	merge_nancy.py
+	merge_nawal.py
+	merge_rabab.py
+	merge_ragheb.py
+	merge_ruby.py
+	merge_samira.py
+	merge_sherine.py
+	merge_thosny.py
+	merge_walid.py
+	merge_wassouf.py
+	missing_facts_list.txt
+	monitor_arabic_expansion.bat
+	mounir_new.json
+	nabil_new.json
+	nancy_new.json
+	nawal_new.json
+	rabab_new.json
+	ragheb_new.json
+	restore_manual_edits.dart
+	ruby_new.json
+	samira_new.json
+	scripts/parse_playlist.py
+	sherine_new.json
+	songs_plain.txt
+	songs_to_add.json
+	surgical_repair.dart
+	tag_gender.ps1
+	test_etab.py
+	test_itunes.py
+	test_parsing_standalone.dart
+	test_search_525.py
+	test_search_comparison.py
+	test_wassouf.py
+	thosny_new.json
+	update_arabic_songs.ps1
+	update_arabic_songs.py
+	update_facts.dart
+	verify_fix.py
+	verify_songs.py
+	walid_new.json
+	wassouf_new.json
+
+no changes added to commit (use "git add" and/or "git commit -a")

@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:audioplayers/audioplayers.dart';
+
+
 import '../services/song_repository.dart';
 import 'game_hub_screen.dart';
+import 'intro_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,7 +17,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final AudioPlayer _audioPlayer = AudioPlayer();
+
 
   @override
   void initState() {
@@ -25,67 +27,71 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> _initializeApp() async {
     // 1. Play Intro Sound
+    /*
     try {
       await _audioPlayer.play(AssetSource('intro.mp3'), volume: 0.5);
     } catch (e) {
       debugPrint("Intro Sound Error (or missing asset): $e");
     }
+    */
 
     // 2. Load Songs
     final repo = Provider.of<SongRepository>(context, listen: false);
     await repo.loadSongs();
 
     // 2. Wait minimum time for animation (and to let intro play a bit)
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 6));
 
-    // 3. Navigate to Menu
+    // 3. Navigate to Intro Screen
     if (mounted) {
       Navigator.pushReplacement(
         context, 
-        MaterialPageRoute(builder: (_) => const GameHubScreen())
+        MaterialPageRoute(builder: (_) => const IntroScreen())
       );
     }
   }
 
   @override
   void dispose() {
-    _audioPlayer.stop();
-    _audioPlayer.dispose();
+
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor, // Matches Game Hub (0xFF0F172A)
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            FadeInDown(
-              duration: const Duration(seconds: 1),
-              child: Text(
-                'MUSICA',
-                style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  color: Theme.of(context).primaryColor,
+        child: ZoomIn(
+          duration: const Duration(seconds: 3),
+          delay: const Duration(milliseconds: 500),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'VECTRA',
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: Colors.white,
+                  letterSpacing: 22,
+                  fontSize: 48,
                   fontWeight: FontWeight.w900,
                   shadows: [
-                    Shadow(
-                      color: Theme.of(context).primaryColor,
-                      blurRadius: 30,
-                    ),
+                    Shadow(color: Colors.white.withOpacity(0.3), blurRadius: 20),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 40),
-            
-            // Visualizer instead of Loader
-            const MusicVisualizer(),
-            
-            const SizedBox(height: 10),
-            const SizedBox(height: 10),
-            // Removed "Loading library..." text
-          ],
+              const SizedBox(height: 10),
+              Text(
+                'PRESENTS',
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: Colors.white70,
+                  letterSpacing: 12,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w300,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -96,10 +102,15 @@ class MusicVisualizer extends StatelessWidget {
   const MusicVisualizer({super.key});
 
   @override
+
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(5, (index) => VisualizerBar(delay: index * 100)),
+    return SizedBox(
+      height: 60,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: List.generate(5, (index) => VisualizerBar(delay: index * 100)),
+      ),
     );
   }
 }

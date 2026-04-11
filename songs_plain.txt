@@ -1,0 +1,1320 @@
+Total songs: 1319
+70s_1|Don't Stop Me Now|Queen
+70s_2|Dancing Queen|ABBA
+70s_3|Stayin' Alive|Bee Gees
+70s_4|September|Earth, Wind & Fire
+70s_5|I Will Survive|Gloria Gaynor
+70s_6|My Sharona|The Knack
+70s_7|Y.M.C.A.|Village People
+70s_8|Hot Stuff|Donna Summer
+70s_9|Heart of Glass|Blondie
+70s_10|Don't Stop 'Til You Get Enough|Michael Jackson
+70s_11|We Are Family|Sister Sledge
+70s_12|The Devil Went Down to Georgia|Charlie Daniels Band
+70s_13|Highway to Hell|AC/DC
+70s_14|Rapper's Delight|The Sugarhill Gang
+70s_15|Night Fever|Bee Gees
+70s_16|Grease|Frankie Valli
+70s_17|Rasputin|Boney M.
+70s_18|We Are The Champions|Queen
+70s_19|Just the Way You Are|Billy Joel
+70s_20|Mr. Blue Sky|Electric Light Orchestra
+70s_21|Boogie Wonderland|Earth, Wind & Fire
+70s_22|Baker Street|Gerry Rafferty
+70s_23|Le Freak|CHIC
+70s_24|One Way or Another|Blondie
+70s_25|We Will Rock You|Queen
+70s_26|Hotel California|Eagles
+70s_27|Heroes|David Bowie
+70s_28|Go Your Own Way|Fleetwood Mac
+70s_29|Dreams|Fleetwood Mac
+70s_30|Barracuda|Heart
+70s_31|I Feel Love|Donna Summer
+70s_32|More Than a Feeling|Boston
+70s_33|Jamming|Bob Marley & The Wailers
+70s_34|How Deep Is Your Love|Bee Gees
+70s_35|Don\'t Go Breaking My Heart|Elton John & Kiki Dee
+70s_36|December, 1963 (Oh, What a Night)|Four Seasons
+70s_37|Play That Funky Music|Wild Cherry
+70s_38|(Don\'t Fear) The Reaper|Blue Öyster Cult
+70s_39|Fly Like an Eagle|Steve Miller Band
+70s_40|Fernando|ABBA
+70s_41|Love Hangover|Diana Ross
+70s_42|Sir Duke|Stevie Wonder
+70s_43|Get Up and Boogie|Silver Convention
+70s_44|Daddy Cool|Boney M.
+70s_45|Bohemian Rhapsody|Queen
+70s_46|Love Will Keep Us Together|Captain & Tennille
+70s_47|Rhinestone Cowboy|Glen Campbell
+70s_48|Fame|David Bowie
+70s_49|Shining Star|Earth, Wind & Fire
+70s_50|Jive Talkin\'|Bee Gees
+70s_51|That\'s the Way (I Like It)|KC and the Sunshine Band
+70s_52|Walk This Way|Aerosmith
+70s_53|Landslide|Fleetwood Mac
+70s_54|Low Rider|War
+70s_55|Hooked on a Feeling|Blue Swede
+70s_56|Come and Get Your Love|Redbone
+70s_57|Bennie and the Jets|Elton John
+70s_58|The Joker|Steve Miller Band
+70s_59|Waterloo|ABBA
+70s_60|Sweet Home Alabama|Lynyrd Skynyrd
+70s_61|Jungle Boogie|Kool & the Gang
+70s_62|Rock Your Baby|George McCrae
+70s_63|Can\'t Get Enough of Your Love, Babe|Barry White
+70s_64|Killer Queen|Queen
+70s_65|Crocodile Rock|Elton John
+70s_66|Superstition|Stevie Wonder
+70s_67|Money|Pink Floyd
+70s_68|Let\'s Get It On|Marvin Gaye
+70s_69|Killing Me Softly with His Song|Roberta Flack
+70s_70|Smoke on the Water|Deep Purple
+70s_71|Piano Man|Billy Joel
+70s_72|Midnight Train to Georgia|Gladys Knight & The Pips
+70s_73|Dream On|Aerosmith
+70s_74|Jolene|Dolly Parton
+70s_75|American Pie|Don McLean
+70s_76|Lean on Me|Bill Withers
+70s_77|Rocket Man|Elton John
+70s_78|A Horse with No Name|America
+70s_79|Heart of Gold|Neil Young
+70s_80|Let\'s Stay Together|Al Green
+70s_81|Papa Was a Rollin\' Stone|The Temptations
+70s_82|Brandy (You\'re a Fine Girl)|Looking Glass
+70s_83|Listen to the Music|The Doobie Brothers
+70s_84|Walk on the Wild Side|Lou Reed
+70s_85|Stairway to Heaven|Led Zeppelin
+70s_86|Imagine|John Lennon
+70s_87|What\'s Going On|Marvin Gaye
+70s_88|Maggie May|Rod Stewart
+70s_89|Ain\'t No Sunshine|Bill Withers
+70s_90|Baba O\'Riley|The Who
+70s_91|Tiny Dancer|Elton John
+70s_92|Take Me Home, Country Roads|John Denver
+70s_93|Family Affair|Sly & The Family Stone
+70s_94|Just My Imagination|The Temptations
+70s_95|Bridge Over Troubled Water|Simon & Garfunkel
+70s_96|Let It Be|The Beatles
+70s_97|American Woman|The Guess Who
+70s_98|War|Edwin Starr
+70s_99|I\'ll Be There|The Jackson 5
+70s_100|Paranoid|Black Sabbath
+70s_101|Lola|The Kinks
+70s_102|Black Magic Woman|Santana
+70s_103|Your Song|Elton John
+70s_104|Cecilia|Simon & Garfunkel
+80s_1|Billie Jean|Michael Jackson
+80s_2|Take On Me|a-ha
+80s_3|Livin\' on a Prayer|Bon Jovi
+80s_4|Sweet Dreams (Are Made of This)|Eurythmics
+80s_5|Never Gonna Give You Up|Rick Astley
+80s_6|Like a Prayer|Madonna
+80s_7|Miss You Much|Janet Jackson
+80s_8|Straight Up|Paula Abdul
+80s_9|My Prerogative|Bobby Brown
+80s_10|Love Shack|The B-52\'s
+80s_11|Pump Up the Jam|Technotronic
+80s_12|Free Fallin\'|Tom Petty
+80s_13|She Drives Me Crazy|Fine Young Cannibals
+80s_14|Bust a Move|Young MC
+80s_15|Eternal Flame|The Bangles
+80s_16|Faith|George Michael
+80s_17|Need You Tonight|INXS
+80s_18|Got My Mind Set on You|George Harrison
+80s_19|Sweet Child o\' Mine|Guns N\' Roses
+80s_20|Pour Some Sugar on Me|Def Leppard
+80s_21|Heaven Is a Place on Earth|Belinda Carlisle
+80s_22|Don\'t Worry, Be Happy|Bobby McFerrin
+80s_23|Fast Car|Tracy Chapman
+80s_24|Kokomo|The Beach Boys
+80s_25|Man in the Mirror|Michael Jackson
+80s_26|Walk Like an Egyptian|The Bangles
+80s_27|I Wanna Dance with Somebody|Whitney Houston
+80s_28|Alone|Heart
+80s_29|Nothing\'s Gonna Stop Us Now|Starship
+80s_30|With or Without You|U2
+80s_31|La Bamba|Los Lobos
+80s_32|Here I Go Again|Whitesnake
+80s_33|(I\'ve Had) The Time of My Life|Bill Medley
+80s_34|Bad|Michael Jackson
+80s_35|I Think We\'re Alone Now|Tiffany
+80s_36|Danger Zone|Kenny Loggins
+80s_37|Walk This Way|Run-D.M.C. ft. Aerosmith
+80s_38|Addicted to Love|Robert Palmer
+80s_39|How Will I Know|Whitney Houston
+80s_40|Kiss|Prince
+80s_41|The Final Countdown|Europe
+80s_42|West End Girls|Pet Shop Boys
+80s_43|Venus|Bananarama
+80s_44|(I Just) Died in Your Arms|Cutting Crew
+80s_45|You Give Love a Bad Name|Bon Jovi
+80s_46|Careless Whisper|George Michael
+80s_47|Like a Virgin|Madonna
+80s_48|Summer of \'69|Bryan Adams
+80s_49|Everybody Wants to Rule the World|Tears for Fears
+80s_50|Money for Nothing|Dire Straits
+80s_51|The Power of Love|Huey Lewis and the News
+80s_52|Don\'t You (Forget About Me)|Simple Minds
+80s_53|Part-Time Lover|Stevie Wonder
+80s_54|We Built This City|Starship
+80s_55|Walking on Sunshine|Katrina and the Waves
+80s_56|Footloose|Kenny Loggins
+80s_57|Jump|Van Halen
+80s_58|Ghostbusters|Ray Parker Jr.
+80s_59|Karma Chameleon|Culture Club
+80s_60|Wake Me Up Before You Go-Go|Wham!
+80s_61|Girls Just Want to Have Fun|Cyndi Lauper
+80s_62|When Doves Cry|Prince
+80s_63|What\'s Love Got to Do with It|Tina Turner
+80s_64|Hello|Lionel Richie
+80s_65|Dancing in the Dark|Bruce Springsteen
+80s_66|Every Breath You Take|The Police
+80s_67|Flashdance... What a Feeling|Irene Cara
+80s_68|Down Under|Men at Work
+80s_69|Beat It|Michael Jackson
+80s_70|Total Eclipse of the Heart|Bonnie Tyler
+80s_71|Maneater|Hall & Oates
+80s_72|Africa|Toto
+80s_73|Come On Eileen|Dexys Midnight Runners
+80s_74|Let\'s Dance|David Bowie
+80s_75|Maniac|Michael Sembello
+80s_76|Eye of the Tiger|Survivor
+80s_77|I Love Rock \'n Roll|Joan Jett & the Blackhearts
+80s_78|Physical|Olivia Newton-John
+80s_79|Don\'t You Want Me|The Human League
+80s_80|Centerfold|The J. Geils Band
+80s_81|Jack & Diane|John Cougar Mellencamp
+80s_82|Hungry Like the Wolf|Duran Duran
+80s_83|Rosanna|Toto
+80s_84|Sexual Healing|Marvin Gaye
+80s_85|Mickey|Toni Basil
+80s_86|Bette Davis Eyes|Kim Carnes
+80s_87|Jessie\'s Girl|Rick Springfield
+80s_88|Celebration|Kool & the Gang
+80s_89|9 to 5|Dolly Parton
+80s_90|Don\'t Stop Believin\'|Journey
+80s_91|In the Air Tonight|Phil Collins
+80s_92|Super Freak|Rick James
+80s_93|Under Pressure|Queen & David Bowie
+80s_94|Keep on Loving You|REO Speedwagon
+80s_95|Start Me Up|The Rolling Stones
+80s_96|Call Me|Blondie
+80s_97|Another Brick in the Wall, Pt. 2|Pink Floyd
+80s_98|Magic|Olivia Newton-John
+80s_99|Rock with You|Michael Jackson
+80s_100|Do That to Me One More Time|Captain & Tennille
+80s_101|Crazy Little Thing Called Love|Queen
+80s_102|Coming Up|Paul McCartney
+80s_103|Funkytown|Lipps Inc.
+80s_104|It\'s Still Rock and Roll to Me|Billy Joel
+80s_105|The Rose|Bette Midler
+90s_1|Smells Like Teen Spirit|Nirvana
+90s_2|Wannabe|Spice Girls
+90s_3|Wonderwall|Oasis
+90s_4|...Baby One More Time|Britney Spears
+90s_5|Gangsta\'s Paradise|Coolio
+90s_6|Believe|Cher
+90s_7|No Scrubs|TLC
+90s_8|Genie in a Bottle|Christina Aguilera
+90s_9|Livin\' la Vida Loca|Ricky Martin
+90s_10|I Want It That Way|Backstreet Boys
+90s_11|Kiss Me|Sixpence None the Richer
+90s_12|All Star|Smash Mouth
+90s_13|Mambo No. 5|Lou Bega
+90s_14|Every Morning|Sugar Ray
+90s_15|Angel of Mine|Monica
+90s_16|The Boy Is Mine|Brandy & Monica
+90s_17|Too Close|Next
+90s_18|You\'re Still The One|Shania Twain
+90s_19|Gettin\' Jiggy Wit It|Will Smith
+90s_20|I Don\'t Want to Miss a Thing|Aerosmith
+90s_21|Doo Wop (That Thing)|Lauryn Hill
+90s_22|Iris|Goo Goo Dolls
+90s_23|One Week|Barenaked Ladies
+90s_24|Ray of Light|Madonna
+90s_25|Truly Madly Deeply|Savage Garden
+90s_26|Candle in the Wind 1997|Elton John
+90s_27|Un-Break My Heart|Toni Braxton
+90s_28|I\'ll Be Missing You|Puff Daddy
+90s_29|Can\'t Nobody Hold Me Down|Puff Daddy
+90s_30|I Believe I Can Fly|R. Kelly
+90s_31|MMMBop|Hanson
+90s_32|Hypnotize|The Notorious B.I.G.
+90s_33|Mo Money Mo Problems|The Notorious B.I.G.
+90s_34|Honey|Mariah Carey
+90s_35|Barbie Girl|Aqua
+90s_36|Macarena (Bayside Boys Mix)|Los Del Rio
+90s_37|One Sweet Day|Mariah Carey & Boyz II Men
+90s_38|Because You Loved Me|Celine Dion
+90s_39|No Diggity|Blackstreet ft. Dr. Dre
+90s_40|Always Be My Baby|Mariah Carey
+90s_41|Give Me One Reason|Tracy Chapman
+90s_42|California Love|2Pac ft. Dr. Dre
+90s_43|Pony|Ginuwine
+90s_44|I Love You Always Forever|Donna Lewis
+90s_45|Tha Crossroads|Bone Thugs-n-Harmony
+90s_46|Waterfalls|TLC
+90s_47|Creep|TLC
+90s_48|Kiss from a Rose|Seal
+90s_49|On Bended Knee|Boyz II Men
+90s_50|Fantasy|Mariah Carey
+90s_51|This Is How We Do It|Montell Jordan
+90s_52|Another Night|Real McCoy
+90s_53|Take a Bow|Madonna
+90s_54|Don\'t Take It Personal|Monica
+90s_55|You Oughta Know|Alanis Morissette
+90s_56|The Sign|Ace of Base
+90s_57|I Swear|All-4-One
+90s_58|I\'ll Make Love to You|Boyz II Men
+90s_59|The Power of Love|Celine Dion
+90s_60|Hero|Mariah Carey
+90s_61|Stay (I Missed You)|Lisa Loeb
+90s_62|All I Wanna Do|Sheryl Crow
+90s_63|Regulate|Warren G ft. Nate Dogg
+90s_64|Bump n\' Grind|R. Kelly
+90s_65|The Most Beautiful Girl in the World|Prince
+90s_66|I Will Always Love You|Whitney Houston
+90s_67|Whoomp! (There It Is)|Tag Team
+90s_68|That\'s the Way Love Goes|Janet Jackson
+90s_69|I\'d Do Anything for Love (But I Won\'t Do That)|Meat Loaf
+90s_70|What Is Love|Haddaway
+90s_71|Dreamlover|Mariah Carey
+90s_72|Weak|SWV
+90s_73|Insane in the Brain|Cypress Hill
+90s_74|Shoop|Salt-N-Pepa
+90s_75|Two Princes|Spin Doctors
+90s_76|End of the Road|Boyz II Men
+90s_77|Jump|Kris Kross
+90s_78|Baby Got Back|Sir Mix-a-Lot
+90s_79|Save the Best for Last|Vanessa Williams
+90s_80|Baby-Baby-Baby|TLC
+90s_81|Tears in Heaven|Eric Clapton
+90s_82|My Lovin\' (You\'re Never Gonna Get It)|En Vogue
+90s_83|Under the Bridge|Red Hot Chili Peppers
+90s_84|Rhythm Is a Dancer|Snap!
+90s_85|Achy Breaky Heart|Billy Ray Cyrus
+90s_86|Enter Sandman|Metallica
+90s_87|Losing My Religion|R.E.M.
+90s_88|One|U2
+90s_89|Black or White|Michael Jackson
+90s_90|November Rain|Guns N\' Roses
+90s_91|Alive|Pearl Jam
+90s_92|Life Is a Highway|Tom Cochrane
+90s_93|Everything I Do (I Do It for You)|Bryan Adams
+90s_94|Gonna Make You Sweat|C+C Music Factory
+90s_95|Good Vibrations|Marky Mark
+90s_96|Hold On|Wilson Phillips
+90s_97|It Must Have Been Love|Roxette
+90s_98|Nothing Compares 2 U|Sinéad O\'Connor
+90s_99|Poison|Bell Biv DeVoe
+90s_100|Vogue|Madonna
+90s_101|Vision of Love|Mariah Carey
+90s_102|Ice Ice Baby|Vanilla Ice
+90s_103|U Can\'t Touch This|MC Hammer
+90s_104|Blaze of Glory|Jon Bon Jovi
+90s_105|Thunderstruck|AC/DC
+90s_106|Roses Are Red|Aqua
+00s_1|Hey Ya!|OutKast
+00s_2|Crazy in Love|Beyoncé
+00s_3|Mr. Brightside|The Killers
+00s_4|In the End|Linkin Park
+00s_5|Umbrella|Rihanna
+00s_6|I Gotta Feeling|The Black Eyed Peas
+00s_7|Poker Face|Lady Gaga
+00s_8|Party in the U.S.A.|Miley Cyrus
+00s_9|Empire State of Mind|Jay-Z ft. Alicia Keys
+00s_10|Fireflies|Owl City
+00s_11|You Belong With Me|Taylor Swift
+00s_12|Down|Jay Sean ft. Lil Wayne
+00s_13|Use Somebody|Kings of Leon
+00s_14|Halo|Beyoncé
+00s_15|Right Round|Flo Rida
+00s_16|Low|Flo Rida ft. T-Pain
+00s_17|Bleeding Love|Leona Lewis
+00s_18|No One|Alicia Keys
+00s_19|I Kissed a Girl|Katy Perry
+00s_20|Viva La Vida|Coldplay
+00s_21|Lollipop|Lil Wayne ft. Static Major
+00s_22|Apologize|Timbaland ft. OneRepublic
+00s_23|No Air|Jordin Sparks ft. Chris Brown
+00s_24|Love Song|Sara Bareilles
+00s_25|Love in This Club|Usher ft. Young Jeezy
+00s_26|Irreplaceable|Beyoncé
+00s_27|Big Girls Don\'t Cry|Fergie
+00s_28|Buy U a Drank|T-Pain
+00s_29|The Sweet Escape|Gwen Stefani
+00s_30|Hey There Delilah|Plain White T\'s
+00s_31|Crank That|Soulja Boy
+00s_32|Stronger|Kanye West
+00s_33|Girlfriend|Avril Lavigne
+00s_34|Makes Me Wonder|Maroon 5
+00s_35|Glamorous|Fergie ft. Ludacris
+00s_36|Hips Don\'t Lie|Shakira
+00s_37|SexyBack|Justin Timberlake
+00s_38|Crazy|Gnarls Barkley
+00s_39|Promiscuous|Nelly Furtado
+00s_40|Ridin\'|Chamillionaire
+00s_41|Unwritten|Natasha Bedingfield
+00s_42|Smack That|Akon ft. Eminem
+00s_43|Ain\'t No Other Man|Christina Aguilera
+00s_44|Temperature|Sean Paul
+00s_45|Me & U|Cassie
+00s_46|We Belong Together|Mariah Carey
+00s_47|Hollaback Girl|Gwen Stefani
+00s_48|Gold Digger|Kanye West
+00s_49|Since U Been Gone|Kelly Clarkson
+00s_50|1, 2 Step|Ciara
+00s_51|Candy Shop|50 Cent
+00s_52|Boulevard of Broken Dreams|Green Day
+00s_53|Don\'t Cha|Pussycat Dolls
+00s_54|Feel Good Inc.|Gorillaz
+00s_55|Pon de Replay|Rihanna
+00s_56|Yeah!|Usher ft. Lil Jon & Ludacris
+00s_57|Burn|Usher
+00s_58|If I Ain\'t Got You|Alicia Keys
+00s_59|This Love|Maroon 5
+00s_60|The Way You Move|OutKast
+00s_61|The Reason|Hoobastank
+00s_62|I Don\'t Wanna Know|Mario Winans
+00s_63|Toxic|Britney Spears
+00s_64|Goodies|Ciara
+00s_65|Lean Back|Terror Squad
+00s_66|In da Club|50 Cent
+00s_67|Ignition (Remix)|R. Kelly
+00s_68|Get Busy|Sean Paul
+00s_69|When I\'m Gone|3 Doors Down
+00s_70|Unwell|Matchbox Twenty
+00s_71|Right Thurr|Chingy
+00s_72|Miss You|Aaliyah
+00s_73|Picture|Kid Rock ft. Sheryl Crow
+00s_74|Bring Me to Life|Evanescence
+00s_75|Seven Nation Army|The White Stripes
+00s_76|How You Remind Me|Nickelback
+00s_77|Foolish|Ashanti
+00s_78|Hot in Herre|Nelly
+00s_79|Dilemma|Nelly ft. Kelly Rowland
+00s_80|Wherever You Will Go|The Calling
+00s_81|A Thousand Miles|Vanessa Carlton
+00s_82|Without Me|Eminem
+00s_83|What\'s Luv?|Fat Joe
+00s_84|U Got It Bad|Usher
+00s_85|Blurry|Puddle of Mudd
+00s_86|Hanging by a Moment|Lifehouse
+00s_87|Fallin\'|Alicia Keys
+00s_88|All for You|Janet Jackson
+00s_89|Drops of Jupiter|Train
+00s_90|I\'m Real (Remix)|Jennifer Lopez ft. Ja Rule
+00s_91|If You\'re Gone|Matchbox Twenty
+00s_92|Let Me Blow Ya Mind|Eve ft. Gwen Stefani
+00s_93|Thank You|Dido
+00s_94|Again|Lenny Kravitz
+00s_95|Independent Women Part I|Destiny\'s Child
+00s_96|Breathe|Faith Hill
+00s_97|Smooth|Santana ft. Rob Thomas
+00s_98|Maria Maria|Santana ft. The Product G&B
+00s_99|I Wanna Know|Joe
+00s_100|Everything You Want|Vertical Horizon
+00s_101|Say My Name|Destiny\'s Child
+00s_102|I Knew I Loved You|Savage Garden
+00s_103|Amazed|Lonestar
+00s_104|Bent|Matchbox Twenty
+00s_105|It\'s Gonna Be Me|*NSYNC
+00s_106|Pocketful of Sunshine|Natasha Bedingfield
+00s_107|I Don\'t Know|Erika
+00s_108|Look After You|The Fray
+10s_1|Uptown Funk|Mark Ronson ft. Bruno Mars
+10s_2|Rolling in the Deep|Adele
+10s_3|Happy|Pharrell Williams
+10s_4|Shape of You|Ed Sheeran
+10s_5|Despacito|Luis Fonsi ft. Daddy Yankee
+10s_6|Old Town Road|Lil Nas X
+10s_7|Sunflower|Post Malone & Swae Lee
+10s_8|Bad Guy|Billie Eilish
+10s_9|7 Rings|Ariana Grande
+10s_10|Señorita|Shawn Mendes & Camila Cabello
+10s_11|Truth Hurts|Lizzo
+10s_12|Sucker|Jonas Brothers
+10s_13|Circles|Post Malone
+10s_14|Without Me|Halsey
+10s_15|Talk|Khalid
+10s_16|God\'s Plan|Drake
+10s_17|Perfect|Ed Sheeran
+10s_18|Meant to Be|Bebe Rexha ft. Florida Georgia Line
+10s_19|Havana|Camila Cabello ft. Young Thug
+10s_20|Rockstar|Post Malone ft. 21 Savage
+10s_21|Psycho|Post Malone ft. Ty Dolla \$ign
+10s_22|I Like It|Cardi B, Bad Bunny & J Balvin
+10s_23|The Middle|Zedd, Maren Morris & Grey
+10s_24|In My Feelings|Drake
+10s_25|Girls Like You|Maroon 5 ft. Cardi B
+10s_26|That\'s What I Like|Bruno Mars
+10s_27|HUMBLE.|Kendrick Lamar
+10s_28|Something Just Like This|The Chainsmokers & Coldplay
+10s_29|Bad and Boujee|Migos ft. Lil Uzi Vert
+10s_30|Closer|The Chainsmokers ft. Halsey
+10s_31|Body Like A Back Road|Sam Hunt
+10s_32|Believer|Imagine Dragons
+10s_33|Congratulations|Post Malone ft. Quavo
+10s_34|Say You Won\'t Let Go|James Arthur
+10s_35|I\'m The One|DJ Khaled
+10s_36|Love Yourself|Justin Bieber
+10s_37|Sorry|Justin Bieber
+10s_38|One Dance|Drake ft. WizKid & Kyla
+10s_39|Work|Rihanna ft. Drake
+10s_40|Stressed Out|Twenty One Pilots
+10s_41|Panda|Desiigner
+10s_42|Hello|Adele
+10s_43|Don\'t Let Me Down|The Chainsmokers ft. Daya
+10s_44|Can\'t Stop The Feeling!|Justin Timberlake
+10s_45|Cheap Thrills|Sia ft. Sean Paul
+10s_46|Thinking Out Loud|Ed Sheeran
+10s_47|See You Again|Wiz Khalifa ft. Charlie Puth
+10s_48|Trap Queen|Fetty Wap
+10s_49|Sugar|Maroon 5
+10s_50|Shut Up and Dance|Walk the Moon
+10s_51|Blank Space|Taylor Swift
+10s_52|Watch Me (Whip/Nae Nae)|Silentó
+10s_53|Earned It|The Weeknd
+10s_54|The Hills|The Weeknd
+10s_55|Cheerleader|OMI
+10s_56|Dark Horse|Katy Perry ft. Juicy J
+10s_57|All of Me|John Legend
+10s_58|Fancy|Iggy Azalea ft. Charli XCX
+10s_59|Counting Stars|OneRepublic
+10s_60|Rude|MAGIC!
+10s_61|All About That Bass|Meghan Trainor
+10s_62|Problem|Ariana Grande ft. Iggy Azalea
+10s_63|Stay With Me|Sam Smith
+10s_64|Timber|Pitbull ft. Ke\$ha
+10s_65|Shake It Off|Taylor Swift
+10s_66|Thrift Shop|Macklemore & Ryan Lewis
+10s_67|Blurred Lines|Robin Thicke
+10s_68|Radioactive|Imagine Dragons
+10s_69|Royals|Lorde
+10s_70|Can\'t Hold Us|Macklemore & Ryan Lewis
+10s_71|Mirrors|Justin Timberlake
+10s_72|Just Give Me a Reason|Pink ft. Nate Ruess
+10s_73|When I Was Your Man|Bruno Mars
+10s_74|Wake Me Up|Avicii
+10s_75|Roar|Katy Perry
+10s_76|Somebody That I Used to Know|Gotye ft. Kimbra
+10s_77|Call Me Maybe|Carly Rae Jepsen
+10s_78|We Are Young|Fun. ft. Janelle Monáe
+10s_79|Payphone|Maroon 5 ft. Wiz Khalifa
+10s_80|Lights|Ellie Goulding
+10s_81|Gangnam Style|PSY
+10s_82|Stronger (What Doesn\'t Kill You)|Kelly Clarkson
+10s_83|We Found Love|Rihanna ft. Calvin Harris
+10s_84|Starships|Nicki Minaj
+10s_85|What Makes You Beautiful|One Direction
+10s_86|Party Rock Anthem|LMFAO
+10s_87|Firework|Katy Perry
+10s_88|E.T.|Katy Perry ft. Kanye West
+10s_89|Give Me Everything|Pitbull ft. Ne-Yo
+10s_90|Grenade|Bruno Mars
+10s_91|Forget You|CeeLo Green
+10s_92|Super Bass|Nicki Minaj
+10s_93|Moves Like Jagger|Maroon 5 ft. Christina Aguilera
+10s_94|Born This Way|Lady Gaga
+10s_95|On the Floor|Jennifer Lopez ft. Pitbull
+10s_96|TiK ToK|Kesha
+10s_97|Need You Now|Lady Antebellum
+10s_98|Hey, Soul Sister|Train
+10s_99|California Gurls|Katy Perry ft. Snoop Dogg
+10s_100|OMG|Usher ft. will.i.am
+10s_101|Airplanes|B.o.B ft. Hayley Williams
+10s_102|Love The Way You Lie|Eminem ft. Rihanna
+10s_103|Bad Romance|Lady Gaga
+10s_104|Just The Way You Are|Bruno Mars
+10s_105|Baby|Justin Bieber ft. Ludacris
+10s_106|LoveHate Thing|Wale
+10s_107|All Falls Down|Alan Walker
+10s_108|Alejandro|Lady Gaga
+10s_109|Turn The Lights Off|KATO
+10s_110|Plain Jane|A\$AP Ferg ft. Nicki Minaj
+10s_111|International Love|Pitbull ft. Chris Brown
+10s_112|GLOWED UP|KAYTRANADA ft. Anderson .Paak
+10s_113|Don\'t|Ed Sheeran
+10s_114|Lush Life|Zara Larsson
+10s_115|Fake I.D.|Riton & Kah-Lo
+10s_116|Mask Off|Future
+10s_117|Man Down|Rihanna
+10s_118|For A Better Day|Avicii
+10s_119|The Less I Know The Better|Tame Impala
+20s_1|Lose Control|Teddy Swims
+20s_2|Beautiful Things|Benson Boone
+20s_3|Espresso|Sabrina Carpenter
+20s_4|A Bar Song (Tipsy)|Shaboozey
+25_1|APT.|Rosé & Bruno Mars
+25_2|Die With A Smile|Lady Gaga & Bruno Mars
+25_3|Birds of a Feather|Billie Eilish
+25_4|Pink Pony Club|Chappell Roan
+25_5|Timeless|The Weeknd & Playboi Carti
+25_6|Not Like Us|Kendrick Lamar
+25_7|I Had Some Help|Post Malone ft. Morgan Wallen
+25_8|Good Luck, Babe!|Chappell Roan
+25_9|Taste|Sabrina Carpenter
+25_10|Too Sweet|Hozier
+25_61|No Broke Boys|Disco Lines & Tinashe
+25_62|Players|Coi Leray
+25_63|Diet Pepsi|Addison Rae
+25_11|Fortnight|Taylor Swift ft. Post Malone
+25_12|Like That|Future, Metro Boomin, Kendrick Lamar
+25_13|Million Dollar Baby|Tommy Richman
+25_14|Please Please Please|Sabrina Carpenter
+25_15|Greedy|Tate McRae
+25_16|Austin|Dasha
+25_17|We Can\'t Be Friends|Ariana Grande
+25_18|Carnival|Kanye West & Ty Dolla \$ign
+25_19|Stick Season|Noah Kahan
+25_20|Saturn|SZA
+25_21|Kill Bill|SZA
+25_22|Anti-Hero|Taylor Swift
+25_23|Creepin\'|Metro Boomin, The Weeknd & 21 Savage
+25_24|Calm Down|Rema & Selena Gomez
+25_25|Die For You|The Weeknd & Ariana Grande
+25_26|Fast Car|Luke Combs
+25_27|I\'m Good (Blue)|David Guetta & Bebe Rexha
+25_28|Unholy|Sam Smith & Kim Petras
+25_29|You Proof|Morgan Wallen
+25_30|Something in the Orange|Zach Bryan
+25_31|Easy On Me|Adele
+25_32|Shivers|Ed Sheeran
+25_33|Ghost|Justin Bieber
+25_34|Super Gremlin|Kodak Black
+25_35|Cold Heart|Elton John & Dua Lipa
+25_36|Bad Habits|Ed Sheeran
+25_37|THAT\'S WHAT I WANT|Lil Nas X
+25_38|Enemy|Imagine Dragons & JID
+25_39|INDUSTRY BABY|Lil Nas X ft. Jack Harlow
+25_40|abcdefu|GAYLE
+25_41|Butter|BTS
+25_42|Stay|The Kid Laroi & Justin Bieber
+25_43|Deja Vu|Olivia Rodrigo
+25_44|Positions|Ariana Grande
+25_45|Levitating|Dua Lipa ft. DaBaby
+25_46|Heat Waves|Glass Animals
+25_47|Without You|The Kid Laroi
+25_48|Forever After All|Luke Combs
+25_49|Go Crazy|Chris Brown & Young Thug
+25_50|Astronaut in the Ocean|Masked Wolf
+25_51|Dynamite|BTS
+25_52|WAP|Cardi B ft. Megan Thee Stallion
+25_53|Savage|Megan Thee Stallion
+25_54|Say So|Doja Cat
+25_55|Mood|24kGoldn ft. iann dior
+25_56|Life Is Good|Future ft. Drake
+25_57|The Box|Roddy Ricch
+25_58|Don\'t Start Now|Dua Lipa
+25_59|Rockstar|DaBaby ft. Roddy Ricch
+25_60|Watermelon Sugar|Harry Styles
+ext_2000_1769882156_909|Bye Bye Bye|*NSYNC
+ext_2000_1769882156_312|It's Gonna Be Me|*NSYNC
+ext_1999_1769882178_172|Kryptonite|3 Doors Down
+ext_2002_1769882178_895|Here Without You|3 Doors Down
+ext_2005_1769882184_237|Best Friend (Remix) [feat. Olivia]|50 Cent
+ext_2005_1769882184_122|Just a Lil Bit|50 Cent
+ext_1979_1769882188_206|Gimme! Gimme! Gimme! (A Man After Midnight)|ABBA
+ext_1977_1769882188_201|Take a Chance On Me|ABBA
+ext_1980_1769882201_765|Back In Black|AC/DC
+ext_1975_1769882201_213|T.N.T.|AC/DC
+ext_1996_1769882206_134|One In A Million|Aaliyah
+ext_2001_1769882206_131|Rock The Boat|Aaliyah
+ext_1992_1769882210_191|All That She Wants (2015 Remastered Version)|Ace of Base
+ext_1993_1769882210_125|Don't Turn Around (2015 Remastered Version)|Ace of Base
+ext_2025_1769882213_542|Fame is a Gun|Addison Rae
+ext_2025_1769882213_165|Headphones On|Addison Rae
+ext_2011_1769882215_655|Someone Like You|Adele
+ext_2011_1769882215_103|Set Fire to the Rain|Adele
+ext__1769882218_258|Mama Kin (2024 Mix)|Aerosmith
+ext_1998_1769882218_511|I Don't Want to Miss a Thing|Aerosmith
+ext_1972_1769882224_561|Love and Happiness|Al Green
+ext_1972_1769882224_418|Let's Stay Together|Al Green
+ext_2015_1769882227_154|Faded|Alan Walker
+ext_2016_1769882227_329|Alone|Alan Walker
+ext_1995_1769882230_645|Hand in My Pocket|Alanis Morissette
+ext_1995_1769882230_180|Ironic|Alanis Morissette
+ext_2009_1769882233_647|Un-thinkable (I'm Ready)|Alicia Keys
+ext_2003_1769882233_347|If I Ain't Got You|Alicia Keys
+ext_1995_1769882236_966|I Can Love You Like That|All-4-One
+ext_1993_1769882236_945|So Much In Love|All-4-One
+ext_1975_1769882239_554|Sister Golden Hair|America
+ext_1972_1769882239_527|Ventura Highway|America
+ext_1997_1769882242_248|Lollipop (Candyman)|Aqua
+ext_1997_1769882242_203|Doctor Jones|Aqua
+ext_2024_1769882245_759|we can't be friends (wait for your love)|Ariana Grande
+ext_2016_1769882245_354|Into You|Ariana Grande
+ext_2003_1769882250_757|Rock Wit U (Awww Baby)|Ashanti
+ext_2003_1769882250_579|Rain On Me|Ashanti
+ext_2011_1769882254_164|Levels|Avicii
+ext_2014_1769882254_779|The Nights|Avicii
+ext_2002_1769882268_527|Complicated|Avril Lavigne
+ext_2002_1769882268_450|Sk8er Boi|Avril Lavigne
+ext_2018_1769882281_263|FAKE LOVE|BTS
+ext_2019_1769882281_817|Boy With Luv (feat. Halsey)|BTS
+ext_1997_1769882284_990|Everybody (Backstreet's Back) [Extended Version]|Backstreet Boys
+ext_1997_1769882284_882|As Long as You Love Me|Backstreet Boys
+ext_1983_1769882286_409|Cruel Summer|Bananarama
+ext_1980_1769882286_716|I Heard a Rumour|Bananarama
+ext_2000_1769882320_411|Pinch Me|Barenaked Ladies
+ext_1992_1769882320_451|If I Had $1,000,000|Barenaked Ladies
+ext_1974_1769882324_591|Can't Get Enough of Your Love, Babe|Barry White
+ext_1974_1769882324_627|You're the First, the Last, My Everything|Barry White
+ext_1977_1769882339_218|Stayin' Alive|Bee Gees
+ext_1977_1769882339_212|More Than A Woman|Bee Gees
+ext_1986_1769882342_845|Mad About You|Belinda Carlisle
+ext_1987_1769882342_477|I Get Weak|Belinda Carlisle
+ext_1990_1769882345_965|When Will I See You Smile Again?|Bell Biv DeVoe
+ext_1990_1769882345_870|Do Me!|Bell Biv DeVoe
+ext_2025_1769882348_470|Mystical Magical|Benson Boone
+ext_2022_1769882348_980|In The Stars|Benson Boone
+ext_1988_1769882351_597|Wind Beneath My Wings|Bette Midler
+ext_1990_1769882351_765|From a Distance|Bette Midler
+ext_2011_1769882355_403|Dance For You|Beyoncé
+ext_2011_1769882355_152|Best Thing I Never Had|Beyoncé
+ext_1990_1769882358_851|You've Lost That Lovin' Feelin'|Bill Medley
+ext_1990_1769882358_672|Most of All You|Bill Medley
+ext_1971_1769882361_886|Ain't No Sunshine|Bill Withers
+ext_1977_1769882361_646|Lovely Day|Bill Withers
+ext_2024_1769882365_907|WILDFLOWER|Billie Eilish
+ext_2016_1769882365_128|ocean eyes|Billie Eilish
+ext_1977_1769882368_650|Vienna|Billy Joel
+ext_1977_1769882368_914|She's Always a Woman|Billy Joel
+ext_1992_1769882371_393|Could've Been Me|Billy Ray Cyrus
+ext_1992_1769882371_256|Some Gave All|Billy Ray Cyrus
+ext_1970_1769882375_256|Iron Man|Black Sabbath
+ext_1970_1769882375_683|War Pigs|Black Sabbath
+ext_1980_1769882391_193|Rapture|Blondie
+ext_1980_1769882391_821|The Tide Is High|Blondie
+ext_1973_1769882404_115|Destiny|Blue Swede
+ext_1973_1769882404_633|Never My Love|Blue Swede
+ext_1981_1769882408_657|Burnin' for You|Blue Öyster Cult
+ext_1977_1769882408_337|Godzilla|Blue Öyster Cult
+ext_1984_1769882411_804|Could You Be Loved|Bob Marley & The Wailers
+ext_1984_1769882411_759|Three Little Birds|Bob Marley & The Wailers
+ext_1988_1769882414_808|Every Little Step|Bobby Brown
+ext_1988_1769882414_850|Roni|Bobby Brown
+ext_1988_1769882417_129|Don't Worry, Be Happy|Bobby McFerrin
+ext_1984_1769882417_243|Blackbird|Bobby McFerrin
+ext_1986_1769882420_215|Livin' On A Prayer|Bon Jovi
+ext_1986_1769882420_236|Wanted Dead or Alive|Bon Jovi
+ext_1996_1769882424_492|Days of Our Livez (Soundtrack)|Bone Thugs-n-Harmony
+ext_2020_1769882424_326|Ultima (feat. Bone Thugs-N-Harmony) [Barely Alive Remix]|Bone Thugs-n-Harmony
+ext_1978_1769882427_418|Rivers of Babylon (2007 Remastered Version)|Boney M.
+ext_1977_1769882427_610|Ma Baker|Boney M.
+ext_1984_1769882431_180|Holding Out for a Hero|Bonnie Tyler
+ext_1977_1769882431_153|It's a Heartache|Bonnie Tyler
+ext_1976_1769882435_283|Foreplay / Long Time|Boston
+ext_1976_1769882435_484|Peace of Mind|Boston
+ext_1995_1769882438_517|I'll Make Love to You|Boyz II Men
+ext_1994_1769882438_946|Water Runs Dry|Boyz II Men
+ext_2012_1769882441_406|It All Belongs to Me|Brandy & Monica
+ext_2000_1769882444_500|Oops!…I Did It Again|Britney Spears
+ext_2008_1769882444_225|Womanizer|Britney Spears
+ext_1984_1769882458_835|I'm On Fire|Bruce Springsteen
+ext_1975_1769882458_342|Born to Run|Bruce Springsteen
+ext_2026_1769882462_274|I Just Might|Bruno Mars
+ext_2024_1769882462_616|Die With A Smile|Bruno Mars
+ext_2022_1769882465_363|(Everything I Do) I Do It For You (Classic Version)|Bryan Adams
+ext_1985_1769882465_128|Heaven|Bryan Adams
+ext_1990_1769882475_593|Gonna Make You Sweat (Everybody Dance Now) [feat. Freedom Williams]|C+C Music Factory
+ext_1990_1769882475_211|Things That Make You Go Hmmmm.... (feat. Freedom Williams)|C+C Music Factory
+ext_1979_1769882478_690|Good Times|CHIC
+ext_1977_1769882478_386|Everybody Dance|CHIC
+ext_1977_1769882495_673|Muskrat Love|Captain & Tennille
+ext_1975_1769882495_771|I Write the Songs|Captain & Tennille
+ext_2015_1769882505_795|I Really Like You|Carly Rae Jepsen
+ext_2012_1769882505_773|Good Time|Carly Rae Jepsen
+ext_2006_1769882508_150|Long Way 2 Go|Cassie
+ext_2008_1769882508_281|Official Girl (feat. Lil Wayne)|Cassie
+ext_2010_1769882514_433|Fool for You (feat. Melanie Fiona)|CeeLo Green
+ext_2003_1769882514_738|I'll Be Around (feat. Timbaland) [Radio Mix]|CeeLo Green
+ext_2007_1769882523_211|Hip Hop Police (feat. Slick Rick)|Chamillionaire
+ext_2006_1769882523_826|King Kong (Featuring Chamillionaire)|Chamillionaire
+ext_2023_1769882526_105|HOT TO GO!|Chappell Roan
+ext_2025_1769882526_126|The Giver|Chappell Roan
+ext_1974_1769882530_790|Long Haired Country Boy|Charlie Daniels Band
+ext_1989_1769882530_352|Simple Man|Charlie Daniels Band
+ext_1989_1769882534_757|If I Could Turn Back Time|Cher
+ext_1989_1769882534_421|Just Like Jesse James|Cher
+ext_2003_1769882538_576|One Call Away (feat. J/Weav)|Chingy
+ext_2003_1769882538_158|I Like That|Chingy
+ext_2020_1769882541_417|City Girls|Chris Brown & Young Thug
+ext_2020_1769882541_388|Say You Love Me|Chris Brown & Young Thug
+ext_2001_1769882544_370|Lady Marmalade|Christina Aguilera
+ext_2002_1769882544_631|Beautiful|Christina Aguilera
+ext_2013_1769882547_768|Body Party|Ciara
+ext_2004_1769882547_288|One, Two Step (feat. Missy Elliott)|Ciara
+ext_2023_1769882550_478|Self Love (Spider-Man: Across the Spider-Verse)|Coi Leray
+ext_2022_1769882550_200|Clingy|Coi Leray
+ext_2000_1769882561_244|Yellow|Coldplay
+ext_2000_1769882561_141|Sparks|Coldplay
+ext_1995_1769882564_685|Gangsta's Paradise (feat. L.V.)|Coolio
+ext_1995_1769882564_701|1, 2, 3, 4 (Sumpin' New)|Coolio
+ext_1982_1769882570_968|Time (Clock of the Heart)|Culture Club
+ext_1982_1769882570_899|Do You Really Want to Hurt Me|Culture Club
+ext_1986_1769882573_909|I've Been in Love Before|Cutting Crew
+ext_1986_1769882573_135|One for the Mockingbird|Cutting Crew
+ext_1983_1769882576_290|Time After Time|Cyndi Lauper
+ext_1986_1769882576_388|True Colors|Cyndi Lauper
+ext_2000_1769882579_364|(Rock) Superstar|Cypress Hill
+ext_1991_1769882579_391|How I Could Just Kill a Man|Cypress Hill
+ext_2019_1769882582_855|Celebrate (feat. Travis Scott & Post Malone)|DJ Khaled
+ext_2016_1769882582_867|For Free (feat. Drake)|DJ Khaled
+ext_2025_1769882588_368|Wiggle Up, Giddy Up!|Dasha
+ext_2025_1769882588_239|Like It Like That|Dasha
+ext_1972_1769882591_501|Starman (2012 Remaster)|David Bowie
+ext_1977_1769882591_895|"Heroes" (2017 Remaster)|David Bowie
+ext_2022_1769882596_881|I'm Good (Blue) [Mixed]|David Guetta & Bebe Rexha
+ext_2022_1769882596_180|I'm Good (Blue)|David Guetta & Bebe Rexha
+ext_1972_1769882599_894|Highway Star|Deep Purple
+ext_1984_1769882599_806|Knocking At Your Back Door|Deep Purple
+ext_1987_1769882602_955|Hysteria|Def Leppard
+ext_1983_1769882602_168|Photograph|Def Leppard
+ext_2018_1769882605_274|Priice Tag|Desiigner
+ext_2017_1769882605_423|Holy Ghost|Desiigner
+ext_1980_1769882613_180|Geno (2000 Remaster)|Dexys Midnight Runners
+ext_1982_1769882613_415|Jackie Wilson Said (I'm In Heaven When You Smile)|Dexys Midnight Runners
+ext_1980_1769882616_223|Upside Down|Diana Ross
+ext_1980_1769882616_283|I'm Coming Out|Diana Ross
+ext_2003_1769882620_797|White Flag|Dido
+ext_1999_1769882620_831|Here With Me|Dido
+ext_1978_1769882626_850|Sultans of Swing|Dire Straits
+ext_1985_1769882626_725|Walk of Life|Dire Straits
+ext_2021_1769882644_806|Kiss Me More (Instrumental)|Doja Cat
+ext_2023_1769882644_130|Paint The Town Red|Doja Cat
+ext_2025_1769882647_577|Friends!|Dolly Parton
+ext_2025_1769882647_943|We Will Always Be Friends|Dolly Parton
+ext_1971_1769882651_622|Vincent|Don McLean
+ext_1972_1769882651_261|Castles In the Air|Don McLean
+ext_1996_1769882654_938|Without Love|Donna Lewis
+ext_2008_1769882654_825|I Love You Always Forever (2008 Version) [Bonus Track]|Donna Lewis
+ext_1978_1769882664_688|Last Dance|Donna Summer
+ext_1979_1769882664_206|On the Radio|Donna Summer
+ext_2013_1769882667_393|Hold On, We're Going Home (feat. Majid Jordan)|Drake
+ext_2018_1769882667_612|Finesse|Drake
+ext_2020_1769882681_108|Levitating|Dua Lipa
+ext_2017_1769882681_469|New Rules|Dua Lipa
+ext_1993_1769882689_296|Come Undone|Duran Duran
+ext_1993_1769882689_430|Ordinary World|Duran Duran
+ext_1972_1769882695_587|Take It Easy|Eagles
+ext_1975_1769882695_250|Take It to the Limit|Eagles
+ext_1981_1769882700_276|Let's Groove|Earth, Wind & Fire
+ext_1975_1769882700_966|Reasons|Earth, Wind & Fire
+ext_2014_1769882703_591|Photograph|Ed Sheeran
+ext_2017_1769882703_217|Castle on the Hill|Ed Sheeran
+ext_1968_1769882714_317|Twenty Five Miles|Edwin Starr
+ext_1974_1769882714_712|Easin' In|Edwin Starr
+ext_1979_1769882718_489|Don't Bring Me Down|Electric Light Orchestra
+ext_1976_1769882718_493|Telephone Line|Electric Light Orchestra
+ext_2015_1769882724_598|Love Me Like You Do|Ellie Goulding
+ext_2013_1769882724_114|Burn|Ellie Goulding
+ext_1983_1769882730_519|I'm Still Standing|Elton John
+ext_1973_1769882730_467|Goodbye Yellow Brick Road (2014 Remaster)|Elton John
+ext_2021_1769882734_459|Cold Heart (PNAU Remix) [Mixed]|Elton John & Dua Lipa
+ext_1975_1769882737_900|Don't Go Breaking My Heart|Elton John & Kiki Dee
+ext_2020_1769882737_362|Snow Queen|Elton John & Kiki Dee
+ext_2002_1769882741_990|Lose Yourself|Eminem
+ext_2020_1769882741_145|Godzilla (feat. Juice WRLD)|Eminem
+ext_1996_1769882784_587|Don't Let Go (Love)|En Vogue
+ext_1992_1769882784_748|Giving Him Something He Can Feel|En Vogue
+ext_1977_1769882787_351|Wonderful Tonight|Eric Clapton
+ext_1977_1769882787_138|Cocaine|Eric Clapton
+ext_1986_1769882794_302|Carrie|Europe
+ext_1986_1769882794_244|Rock the Night|Europe
+ext_1983_1769882798_655|Here Comes the Rain Again|Eurythmics
+ext_1982_1769882798_933|Love Is a Stranger|Eurythmics
+ext_2003_1769882802_608|My Immortal|Evanescence
+ext_2003_1769882802_434|Going Under|Evanescence
+ext_1997_1769882819_763|It's Your Love|Faith Hill
+ext_1998_1769882819_636|This Kiss|Faith Hill
+ext_2005_1769882822_690|Lean Back (Remix) [feat. Lil Jon, Eminem, Mase & Remy Martin]|Fat Joe
+ext_2005_1769882822_836|Get It Poppin' (feat. Nelly)|Fat Joe
+ext_2006_1769882832_139|Big Girls Don't Cry (Personal)|Fergie
+ext_2006_1769882832_916|Clumsy|Fergie
+ext_2020_1769882838_617|Pretty Thang|Fetty Wap
+ext_2023_1769882838_835|Sweet Yamz|Fetty Wap
+ext_1988_1769882841_629|Good Thing|Fine Young Cannibals
+ext_1985_1769882841_306|Suspicious Minds|Fine Young Cannibals
+ext_1977_1769882844_829|The Chain|Fleetwood Mac
+ext_1976_1769882844_855|Silver Springs|Fleetwood Mac
+ext_2026_1769882847_460|Watch (Live)|Flo Rida
+ext_2007_1769882847_797|Low (feat. T-Pain)|Flo Rida
+ext_1967_1769882872_419|Can't Take My Eyes Off You|Frankie Valli
+ext_1974_1769882872_886|My Eyes Adored You|Frankie Valli
+ext_2021_1769882910_636|abc (nicer)|GAYLE
+ext_2020_1769882910_924|dumbass|GAYLE
+ext_1970_1769882926_518|My Sweet Lord (2014 Remaster)|George Harrison
+ext_1973_1769882926_431|Give Me Love (Give Me Peace on Earth)|George Harrison
+ext_1974_1769882929_426|I Get Lifted|George McCrae
+ext_1974_1769882929_549|You Can Have It All|George McCrae
+ext_1987_1769882932_823|Father Figure|George Michael
+ext_1987_1769882932_769|One More Try|George Michael
+ext_1978_1769882935_985|Right Down the Line|Gerry Rafferty
+ext_1979_1769882935_683|Get It Right Next Time|Gerry Rafferty
+ext_2001_1769882938_916|Differences|Ginuwine
+ext_1999_1769882938_608|So Anxious|Ginuwine
+ext_1973_1769882941_405|Neither One Of Us (Wants To Be The First To Say Goodbye)|Gladys Knight & The Pips
+ext_1973_1769882941_864|Best Thing That Ever Happened to Me|Gladys Knight & The Pips
+ext_2014_1769882944_994|Gooey|Glass Animals
+ext_2024_1769882944_820|A Tear in Space (Airlock)|Glass Animals
+ext_2013_1769882947_193|Wichita Lineman|Glen Campbell
+ext_2013_1769882947_322|By the Time I Get to Phoenix|Glen Campbell
+ext_1977_1769882950_463|Never Can Say Goodbye|Gloria Gaynor
+ext_1977_1769882950_296|Reach Out (I'll Be There)|Gloria Gaynor
+ext_2008_1769882963_724|Going On|Gnarls Barkley
+ext_2008_1769882963_255|Who's Gonna Save My Soul|Gnarls Barkley
+ext_1995_1769882966_791|Name|Goo Goo Dolls
+ext_1998_1769882966_748|Slide|Goo Goo Dolls
+ext_2005_1769882972_421|DARE (feat. Shaun Ryder & Roses Gabor)|Gorillaz
+ext_2010_1769882972_733|On Melancholy Hill|Gorillaz
+ext_1994_1769882979_635|Basket Case|Green Day
+ext_2004_1769882979_502|Holiday|Green Day
+ext_2004_1769882985_287|Rich Girl (feat. Eve)|Gwen Stefani
+ext_2004_1769882985_461|Luxurious|Gwen Stefani
+ext_1993_1769882988_415|What Is Love (7" Mix) [Remastered 2025]|Haddaway
+ext_1993_1769882988_847|Life (Radio Edit) [Remastered 2025]|Haddaway
+ext_2017_1769882993_879|Bad at Love|Halsey
+ext_2017_1769882993_616|Now or Never|Halsey
+ext_1997_1769882997_139|Where's the Love|Hanson
+ext_1997_1769882997_603|I Will Come to You|Hanson
+ext_2026_1769883007_845|Aperture|Harry Styles
+ext_2022_1769883007_395|As It Was|Harry Styles
+ext_1976_1769883010_138|Crazy On You|Heart
+ext_1975_1769883010_657|Magic Man|Heart
+ext_2001_1769883020_197|Crawling In The Dark|Hoobastank
+ext_2001_1769883020_881|Running Away|Hoobastank
+ext_2013_1769883023_736|Take Me to Church|Hozier
+ext_2014_1769883023_355|Work Song|Hozier
+ext_1987_1769883043_620|Never Tear Us Apart (2017 Remaster)|INXS
+ext_1982_1769883043_793|Don't Change|INXS
+ext_2017_1769883049_252|Thunder|Imagine Dragons
+ext_2012_1769883049_491|Demons|Imagine Dragons
+ext_1983_1769883065_828|Flashdance...What a Feeling|Irene Cara
+ext_1980_1769883065_765|Fame|Irene Cara
+ext_2016_1769883067_145|Say You Won't Let Go|James Arthur
+ext_2016_1769883067_692|Can I Be Him|James Arthur
+ext_1993_1769883070_220|That's the Way Love Goes|Janet Jackson
+ext_1993_1769883070_884|Any Time, Any Place|Janet Jackson
+ext_1981_1769883085_639|I Love Rock 'N Roll|Joan Jett & the Blackhearts
+ext_1988_1769883085_627|I Hate Myself for Loving You|Joan Jett & the Blackhearts
+ext_1996_1769883088_684|All the Things (Your Man Won't Do)|Joe
+ext_2003_1769883088_528|More & More|Joe
+ext_1983_1769883099_562|Pink Houses|John Cougar Mellencamp
+ext_1985_1769883099_295|Small Town|John Cougar Mellencamp
+ext_1972_1769883102_357|Rocky Mountain High|John Denver
+ext_1974_1769883102_814|Annie's Song|John Denver
+ext_2004_1769883106_678|Ordinary People|John Legend
+ext_2013_1769883106_727|You & I (Nobody in the World)|John Legend
+ext_1980_1769883109_855|Beautiful Boy (Darling Boy)|John Lennon
+ext_1980_1769883109_498|Woman|John Lennon
+ext_1990_1769883112_832|Miracle|Jon Bon Jovi
+ext_1990_1769883112_713|Billy Get Your Guns|Jon Bon Jovi
+ext_2008_1769883115_529|Burnin' Up|Jonas Brothers
+ext_2006_1769883115_583|Year 3000|Jonas Brothers
+ext_1981_1769883142_471|Don't Stop Believin' (2024 Remaster)|Journey
+ext_1983_1769883142_502|Faithfully (2024 Remaster)|Journey
+ext_2025_1769883146_709|YUKON|Justin Bieber
+ext_2010_1769883146_133|Baby (feat. Ludacris)|Justin Bieber
+ext_2006_1769883152_116|My Love (feat. T.I.)|Justin Timberlake
+ext_2002_1769883152_805|Rock Your Body|Justin Timberlake
+ext_2017_1769883159_174|Show You Love (feat. Hailee Steinfeld) [Acoustic]|KATO
+ext_2020_1769883159_661|Endless Nights|KATO
+ext_1975_1769883168_243|Get Down Tonight|KC and the Sunshine Band
+ext_1975_1769883168_473|Boogie Shoes|KC and the Sunshine Band
+ext_2008_1769883172_560|Heartless|Kanye West
+ext_2021_1769883172_630|Hurricane|Kanye West
+ext_1985_1769883178_430|Que Te Quiero|Katrina and the Waves
+ext_1985_1769883178_581|Do You Want Crying|Katrina and the Waves
+ext_2010_1769883198_316|Last Friday Night (T.G.I.F.)|Katy Perry
+ext_2013_1769883198_427|Dark Horse (feat. Juicy J)|Katy Perry
+ext_2004_1769883210_567|Because of You|Kelly Clarkson
+ext_2004_1769883210_216|Breakaway|Kelly Clarkson
+ext_2024_1769883213_927|luther|Kendrick Lamar
+ext_2017_1769883213_244|LOVE. (feat. Zacari)|Kendrick Lamar
+ext_1979_1769883217_502|This Is It|Kenny Loggins
+ext_1988_1769883217_419|Meet Me Half Way (From "Over The Top" Soundtrack)|Kenny Loggins
+ext_2010_1769883220_393|Your Love Is My Drug|Kesha
+ext_2010_1769883220_854|Blow|Kesha
+ext_2017_1769883223_697|Young Dumb & Broke|Khalid
+ext_2016_1769883223_276|Location|Khalid
+ext_1980_1769883265_436|More Love|Kim Carnes
+ext_1993_1769883265_254|Crazy in the Night (Barking at Airplanes)|Kim Carnes
+ext_2008_1769883271_518|Sex On Fire|Kings of Leon
+ext_2008_1769883271_339|Closer|Kings of Leon
+ext_2018_1769883281_412|Calling My Spirit|Kodak Black
+ext_2017_1769883281_311|Transportin'|Kodak Black
+ext_1981_1769883284_695|Get Down On It|Kool & the Gang
+ext_1974_1769883284_211|Summer Madness|Kool & the Gang
+ext_1992_1769883287_987|Warm It Up|Kris Kross
+ext_1992_1769883287_716|I Missed the Bus|Kris Kross
+ext_2011_1769883289_858|Sexy and I Know It|LMFAO
+ext_2008_1769883289_129|La La La|LMFAO
+ext_2018_1769883295_145|Always Remember Us This Way|Lady Gaga
+ext_2018_1769883295_923|Shallow|Lady Gaga
+ext_1998_1769883302_572|Ex-Factor|Lauryn Hill
+ext_1998_1769883302_681|Can't Take My Eyes Off of You (I Love You Baby)|Lauryn Hill
+ext_1970_1769883306_955|Immigrant Song|Led Zeppelin
+ext_1975_1769883306_367|Kashmir|Led Zeppelin
+ext_1998_1769883309_889|Fly Away|Lenny Kravitz
+ext_1991_1769883309_833|It Ain't Over 'Til It's Over|Lenny Kravitz
+ext_2007_1769883313_804|Better in Time|Leona Lewis
+ext_2018_1769883313_375|You Are the Reason (Duet Version)|Leona Lewis
+ext_2017_1769883315_301|You and Me|Lifehouse
+ext_2000_1769883315_918|Everything|Lifehouse
+ext_2019_1769883319_622|Old Town Road (feat. Billy Ray Cyrus) [Remix]|Lil Nas X
+ext_2019_1769883319_164|Panini|Lil Nas X
+ext_2003_1769883331_241|Somewhere I Belong|Linkin Park
+ext_2003_1769883331_867|Numb|Linkin Park
+ext_1983_1769883335_241|Stuck On You|Lionel Richie
+ext_1983_1769883335_133|All Night Long (All Night)|Lionel Richie
+ext_1997_1769883351_830|I Do|Lisa Loeb
+ext_1994_1769883351_731|Stay (I Missed You) [Acoustic Version]|Lisa Loeb
+ext_2016_1769883354_293|Good as Hell|Lizzo
+ext_2019_1769883354_910|Good as Hell (feat. Ariana Grande) [Remix]|Lizzo
+ext_2001_1769883360_924|I'm Already There|Lonestar
+ext_1990_1769883360_789|My Front Porch Looking In|Lonestar
+ext_2013_1769883366_682|Ribs|Lorde
+ext_2013_1769883366_989|Team|Lorde
+ext_1987_1769883374_737|We Belong Together|Los Lobos
+ext_1995_1769883374_638|Canción del Mariachi (Ilia Topuria "El Matador" Anthem)|Los Lobos
+ext_1999_1769883377_996|I Got a Girl|Lou Bega
+ext_1999_1769883377_775|1+1=2|Lou Bega
+ext_1972_1769883381_553|Perfect Day|Lou Reed
+ext_1973_1769883381_558|Sweet Jane|Lou Reed
+ext_2026_1769883397_642|Sleepless in a Hotel Room|Luke Combs
+ext_2023_1769883397_134|Where the Wild Things Are|Luke Combs
+ext_1973_1769883400_107|Simple Man|Lynyrd Skynyrd
+ext_1973_1769883400_756|Free Bird|Lynyrd Skynyrd
+ext_1990_1769883410_110|U Can't Touch This|MC Hammer
+ext_1996_1769883410_919|Too Legit to Quit|MC Hammer
+ext_2011_1769883414_983|Can't Hold Us (feat. Ray Dalton)|Macklemore & Ryan Lewis
+ext_2012_1769883414_983|Same Love (feat. Mary Lambert)|Macklemore & Ryan Lewis
+ext_1984_1769883417_300|Material Girl|Madonna
+ext_1984_1769883417_208|Into the Groove|Madonna
+ext_2008_1769883430_407|Touch My Body|Mariah Carey
+ext_2005_1769883430_992|Shake It Off|Mariah Carey
+ext_2004_1769883439_463|I Don't Wanna Know (feat. Enya & P. Diddy) [2016 Remaster]|Mario Winans
+ext_2004_1769883439_227|You're the One|Mario Winans
+ext_1991_1769883445_850|Wildside|Marky Mark
+ext_2005_1769883445_735|Reloaded|Marky Mark
+ext_2002_1769883448_964|She Will Be Loved|Maroon 5
+ext_2010_1769883448_709|Moves Like Jagger (feat. Christina Aguilera)|Maroon 5
+ext_1971_1769883482_303|What's Going On|Marvin Gaye
+ext_1973_1769883482_700|Let's Get It On|Marvin Gaye
+ext_2020_1769883488_237|Night Rider|Masked Wolf
+ext_2021_1769883488_186|Thief In The Night (feat. Kevin Gates)|Masked Wolf
+ext_1996_1769883492_131|3 am|Matchbox Twenty
+ext_1996_1769883492_137|Push|Matchbox Twenty
+ext_1993_1769883505_709|I'd Do Anything for Love (But I Won't Do That) [Single Edit]|Meat Loaf
+ext_1977_1769883505_962|Paradise By the Dashboard Light|Meat Loaf
+ext_2019_1769883508_602|Realer|Megan Thee Stallion
+ext_2019_1769883508_194|Hood Rat Shit|Megan Thee Stallion
+ext_2016_1769883512_907|Me Too|Meghan Trainor
+ext_2015_1769883512_980|Like I'm Gonna Lose You (feat. John Legend)|Meghan Trainor
+ext_1981_1769883515_187|Who Can It Be Now?|Men at Work
+ext_1983_1769883515_328|Overkill|Men at Work
+ext_1986_1769883519_731|Master of Puppets|Metallica
+ext_1988_1769883519_784|One|Metallica
+ext_2022_1769883523_389|Creepin'|Metro Boomin, The Weeknd & 21 Savage
+ext_1987_1769883528_271|Smooth Criminal|Michael Jackson
+ext_1987_1769883528_176|Dirty Diana|Michael Jackson
+ext_1983_1769883530_700|Automatic Man|Michael Sembello
+ext_1988_1769883530_600|Puerto Rico (feat. Mongo Santamaria, Charlie Palmieri & The Edwin Hawkins Singers)|Michael Sembello
+ext_2023_1769883536_676|Flowers|Miley Cyrus
+ext_2009_1769883536_186|The Climb|Miley Cyrus
+ext_1995_1769883539_126|Why I Love You So Much|Monica
+ext_2003_1769883539_172|So Gone|Monica
+ext_1999_1769883549_910|Get It On Tonite|Montell Jordan
+ext_1996_1769883549_760|What's On Tonight|Montell Jordan
+ext_2025_1769883576_978|What I Want|Morgan Wallen
+ext_2025_1769883576_515|I Got Better|Morgan Wallen
+ext_2004_1769883578_389|These Words|Natasha Bedingfield
+ext_2007_1769883578_620|Love Like This (feat. Sean Kingston)|Natasha Bedingfield
+ext_1992_1769883584_552|Harvest Moon|Neil Young
+ext_1972_1769883584_304|Old Man|Neil Young
+ext_2010_1769883587_950|Just a Dream|Nelly
+ext_2004_1769883587_899|Over and Over|Nelly
+ext_2006_1769883590_378|Say It Right|Nelly Furtado
+ext_2000_1769883590_449|I'm Like a Bird|Nelly Furtado
+ext_2004_1769883607_192|Wifey|Next
+ext_2005_1769883613_224|Rockstar|Nickelback
+ext_2005_1769883613_773|Photograph|Nickelback
+ext_2017_1769883619_643|Bom Bidi Bom|Nicki Minaj
+ext_2014_1769883619_355|Bang Bang|Nicki Minaj
+ext_1991_1769883622_294|Come As You Are|Nirvana
+ext_1993_1769883622_199|Heart-Shaped Box|Nirvana
+ext__1769883625_435|The Great Divide|Noah Kahan
+ext_2023_1769883625_365|Everywhere, Everything|Noah Kahan
+ext_2014_1769883628_960|Cheerleader (Felix Jaehn Remix) [Radio Edit]|OMI
+ext_2015_1769883628_882|Hula Hoop|OMI
+ext_1995_1769883631_487|Champagne Supernova (Remastered)|Oasis
+ext_1995_1769883631_860|Don't Look Back in Anger (Remastered)|Oasis
+ext_1978_1769883651_479|Hopelessly Devoted to You|Olivia Newton-John
+ext_1978_1769883651_782|You're the One That I Want|Olivia Newton-John
+ext_2021_1769883654_250|traitor|Olivia Rodrigo
+ext_2021_1769883654_167|drivers license|Olivia Rodrigo
+ext_2013_1769883663_905|Story of My Life|One Direction
+ext_2014_1769883663_492|Night Changes|One Direction
+ext_2022_1769883667_741|I Ain't Worried|OneRepublic
+ext_2006_1769883667_665|Apologize|OneRepublic
+ext_2003_1769883669_652|GhettoMusick (Radio Mix)|OutKast
+ext_2007_1769883669_556|Walk It Out (Remix) [feat. OutKast & Jim Jones]|OutKast
+ext_2012_1769883672_727|When Can I See You Again?|Owl City
+ext_2009_1769883672_817|Vanilla Twilight|Owl City
+ext_2013_1769883675_414|Gentleman|PSY
+ext_2015_1769883675_129|DADDY (feat. CL)|PSY
+ext_1973_1769883679_752|Band On The Run|Paul McCartney
+ext_1970_1769883679_426|Maybe I'm Amazed|Paul McCartney
+ext_1988_1769883691_329|Forever Your Girl|Paula Abdul
+ext_1991_1769883691_822|Rush Rush|Paula Abdul
+ext_1991_1769883694_842|Black|Pearl Jam
+ext_1994_1769883694_775|Better Man|Pearl Jam
+ext_1987_1769883704_704|It's a Sin|Pet Shop Boys
+ext_1987_1769883704_530|Always On My Mind (2003 Remaster)|Pet Shop Boys
+ext_2013_1769883708_525|Get Lucky|Pharrell Williams
+ext_2024_1769883708_767|Double Life (From "Despicable Me 4")|Pharrell Williams
+ext_1984_1769883715_410|Against All Odds (Take a Look at Me Now)|Phil Collins
+ext_1999_1769883715_557|You'll Be In My Heart|Phil Collins
+ext_1975_1769883718_620|Wish You Were Here|Pink Floyd
+ext_1979_1769883718_826|Comfortably Numb|Pink Floyd
+ext_2018_1769883736_257|Sunflower (Spider-Man: Into the Spider-Verse)|Post Malone
+ext_2024_1769883736_391|Pour Me A Drink (feat. Blake Shelton)|Post Malone
+ext_2021_1769883740_510|Sunflower (Spider-Man: Into the Spider-Verse) [Remix] [Mixed]|Post Malone & Swae Lee
+ext_1984_1769883811_148|Purple Rain|Prince
+ext_1979_1769883811_694|I Wanna Be Your Lover|Prince
+ext_2007_1769883814_619|Psycho|Puddle of Mudd
+ext_2001_1769883814_145|Drift and Die|Puddle of Mudd
+ext_1997_1769883828_114|I'll Be Missing You (feat. Faith Evans, 112)|Puff Daddy
+ext_1999_1769883828_113|Satisfy You|Puff Daddy
+ext_2005_1769883831_327|Don't Cha|Pussycat Dolls
+ext_2005_1769883831_472|Buttons|Pussycat Dolls
+ext_1980_1769883834_391|Another One Bites the Dust|Queen
+ext_1978_1769883834_422|Don't Stop Me Now|Queen
+ext_2017_1769883837_692|Under Pressure (Single Version) [2017 Remastered Version]|Queen & David Bowie
+ext_1993_1769883840_997|It Seems Like You're Ready|R. Kelly
+ext_2000_1769883840_290|Feelin' On Yo Booty|R. Kelly
+ext_1992_1769883846_359|Everybody Hurts|R.E.M.
+ext_1987_1769883846_438|It's the End of the World As We Know It (And I Feel Fine)|R.E.M.
+ext_1981_1769883849_843|Take It On the Run|REO Speedwagon
+ext_1978_1769883849_648|Time for Me to Fly|REO Speedwagon
+ext_1981_1769883853_357|A Woman Needs Love (Just Like You Do) [7" Version]|Ray Parker Jr.
+ext_1982_1769883853_717|The Other Woman|Ray Parker Jr.
+ext_1994_1769883877_542|Run Away|Real McCoy
+ext_1995_1769883877_422|Come and Get Your Love|Real McCoy
+ext_1999_1769883897_870|Scar Tissue|Red Hot Chili Peppers
+ext_2002_1769883897_658|Can't Stop|Red Hot Chili Peppers
+ext_1987_1769883916_784|Together Forever|Rick Astley
+ext_1987_1769883916_268|She Wants to Dance with Me (2023 Remaster)|Rick Astley
+ext_1997_1769883919_119|Give It to Me Baby|Rick James
+ext_1978_1769883919_289|Mary Jane|Rick James
+ext_1981_1769883926_166|Jessie's Girl|Rick Springfield
+ext_1984_1769883926_409|Love Somebody|Rick Springfield
+ext_1999_1769883929_554|Livin' la Vida Loca|Ricky Martin
+ext_2000_1769883929_831|She Bangs (English Version)|Ricky Martin
+ext_2007_1769883932_532|Don't Stop The Music|Rihanna
+ext_2010_1769883932_861|Only Girl (In The World)|Rihanna
+ext_2017_1769883988_147|Fake ID|Riton & Kah-Lo
+ext_2018_1769883988_160|Ginger|Riton & Kah-Lo
+ext_1988_1769884014_648|Simply Irresistible|Robert Palmer
+ext_1985_1769884014_391|I Didn't Mean to Turn You On|Robert Palmer
+ext_1969_1769884017_418|The First Time Ever I Saw Your Face|Roberta Flack
+ext_1974_1769884017_334|Feel Like Makin' Love|Roberta Flack
+ext_2006_1769884020_229|Lost Without U|Robin Thicke
+ext_2009_1769884020_845|Sex Therapy|Robin Thicke
+ext_1978_1769884024_382|Da Ya Think I'm Sexy?|Rod Stewart
+ext_1988_1769884024_870|Forever Young (2008 Remaster)|Rod Stewart
+ext_2021_1769884027_678|4 Da Gang|Roddy Ricch
+ext_2019_1769884027_234|Ballin’|Roddy Ricch
+ext_1988_1769884036_970|Listen To Your Heart|Roxette
+ext_1988_1769884036_672|The Look|Roxette
+ext_1992_1769884065_422|I'm So Into You|SWV
+ext_1997_1769884065_316|Rain|SWV
+ext_2022_1769884069_886|Open Arms (feat. Travis Scott)|SZA
+ext_2020_1769884069_677|The Other Side|SZA
+ext_2024_1769884072_911|Bed Chem|Sabrina Carpenter
+ext_2025_1769884072_929|Tears|Sabrina Carpenter
+ext_1999_1769884085_823|Push It (Re-Recorded) [Remastered]|Salt-N-Pepa
+ext_1993_1769884085_655|Whatta Man|Salt-N-Pepa
+ext_2014_1769884088_538|Take Your Time|Sam Hunt
+ext_2014_1769884088_877|Break Up in a Small Town|Sam Hunt
+ext_2014_1769884101_688|I'm Not The Only One|Sam Smith
+ext_2017_1769884101_835|Too Good at Goodbyes|Sam Smith
+ext_1970_1769884117_994|Oye Como Va|Santana
+ext_1999_1769884117_276|Smooth (feat. Rob Thomas)|Santana
+ext_2015_1769884129_443|She Used to Be Mine|Sara Bareilles
+ext_2007_1769884129_845|Gravity|Sara Bareilles
+ext_1996_1769884135_690|I Want You|Savage Garden
+ext_1996_1769884135_590|To the Moon & Back|Savage Garden
+ext_1990_1769884138_633|Crazy|Seal
+ext_1996_1769884138_170|Fly Like an Eagle|Seal
+ext_2002_1769884144_599|I'm Still in Love with You (feat. Sasha)|Sean Paul
+ext_2002_1769884144_145|Like Glue|Sean Paul
+ext_2024_1769884157_458|Good News|Shaboozey
+ext_2025_1769884157_474|Amen|Shaboozey
+ext_2006_1769884170_277|Hips Don't Lie (feat. Wyclef Jean)|Shakira
+ext_2010_1769884170_662|Waka Waka (Esto es Africa) [feat. Freshlyground]|Shakira
+ext_1997_1769884173_356|Man! I Feel Like a Woman!|Shania Twain
+ext_1997_1769884173_326|You're Still the One|Shania Twain
+ext_2015_1769884176_844|I Know What You Did Last Summer|Shawn Mendes & Camila Cabello
+ext_2020_1769884176_599|The Christmas Song|Shawn Mendes & Camila Cabello
+ext_1996_1769884182_169|If It Makes You Happy|Sheryl Crow
+ext_2002_1769884182_849|Soak Up the Sun|Sheryl Crow
+ext_2016_1769884190_500|Get Em|Silentó
+ext_2015_1769884190_737|Watch Me (Whip / Nae Nae) [Spanglish Version]|Silentó
+ext_1975_1769884200_964|Fly Robin Fly|Silver Convention
+ext_1976_1769884200_245|San Francisco Hustle|Silver Convention
+ext_1965_1769884203_356|The Sound of Silence|Simon & Garfunkel
+ext_1968_1769884203_253|Mrs. Robinson|Simon & Garfunkel
+ext_1985_1769884215_444|Don't You (Forget About Me)|Simple Minds
+ext_1985_1769884215_555|Alive and Kicking|Simple Minds
+ext_1992_1769884228_210|Lockjaw|Sir Mix-a-Lot
+ext_1989_1769884228_849|My Hooptie|Sir Mix-a-Lot
+ext_1978_1769884232_567|He's the Greatest Dancer|Sister Sledge
+ext_1979_1769884232_425|Thinking of You (1995 Remaster)|Sister Sledge
+ext_1999_1769884244_296|There She Goes|Sixpence None the Richer
+ext_2002_1769884244_550|Don't Dream It's Over|Sixpence None the Richer
+ext_1968_1769884248_601|Everyday People|Sly & The Family Stone
+ext_1973_1769884248_169|If You Want Me to Stay|Sly & The Family Stone
+ext_1997_1769884252_603|Walkin' On the Sun|Smash Mouth
+ext_2001_1769884252_842|I'm a Believer|Smash Mouth
+ext_1990_1769884256_719|The Power|Snap!
+ext_2008_1769884260_615|Kiss Me Thru the Phone (feat. Sammie)|Soulja Boy
+ext_2008_1769884260_287|Turn My Swag On|Soulja Boy
+ext_1997_1769884263_220|Spice Up Your Life|Spice Girls
+ext_1996_1769884263_837|Say You'll Be There (Single Mix)|Spice Girls
+ext_1991_1769884266_696|Little Miss Can't Be Wrong|Spin Doctors
+ext_1991_1769884266_940|Jimmy Olsen's Blues|Spin Doctors
+ext_1987_1769884269_928|Nothing's Gonna Stop Us Now|Starship
+ext_1985_1769884269_202|Sara|Starship
+ext_1982_1769884272_365|Abracadabra|Steve Miller Band
+ext_1978_1769884272_592|Jet Airliner|Steve Miller Band
+ext_1976_1769884275_197|Isn't She Lovely|Stevie Wonder
+ext_1976_1769884275_596|As|Stevie Wonder
+ext_1999_1769884278_468|Someday|Sugar Ray
+ext_1997_1769884278_408|Fly|Sugar Ray
+ext_2005_1769884284_808|I'm Sprung|T-Pain
+ext_2007_1769884284_119|Buy U A Drank (Shawty Snappin') [feat. Kanye West] [Remix]|T-Pain
+ext_1994_1769884289_943|Red Light Special|TLC
+ext_1999_1769884289_748|Unpretty|TLC
+ext_1998_1769884292_103|Whoomp! There It Is|Tag Team
+ext_2015_1769884295_209|Let It Happen|Tame Impala
+ext_2015_1769884295_995|New Person, Same Old Mistakes|Tame Impala
+ext_2025_1769884298_861|Sports car|Tate McRae
+ext_2025_1769884298_417|Just Keep Watching|Tate McRae
+ext_2025_1769884304_576|The Fate of Ophelia|Taylor Swift
+ext_2019_1769884304_413|Cruel Summer|Taylor Swift
+ext_1985_1769884311_792|Head Over Heels|Tears for Fears
+ext_1984_1769884311_127|Shout|Tears for Fears
+ext_1989_1769884314_112|Move This|Technotronic
+ext_1989_1769884314_828|Get Up (Before the Night Is Over)|Technotronic
+ext_2024_1769884317_294|The Door|Teddy Swims
+ext_2024_1769884317_384|Bad Dreams|Teddy Swims
+ext_2004_1769884320_913|Hum Drum|Terror Squad
+ext_2004_1769884320_872|Take Me Home|Terror Squad
+ext_1986_1769884326_411|Manic Monday|The Bangles
+ext_1987_1769884326_785|Hazy Shade of Winter|The Bangles
+ext_1963_1769884329_460|Surfin' U.S.A.|The Beach Boys
+ext_1966_1769884329_892|Wouldn't It Be Nice|The Beach Boys
+ext_1969_1769884332_211|Here Comes the Sun|The Beatles
+ext_1965_1769884332_815|Yesterday|The Beatles
+ext_2023_1769884342_619|Wish on an Eyelash, Pt. 2 / Something Just Like This / iPad (Mixed)|The Chainsmokers & Coldplay
+ext_2019_1769884342_634|Something Just Like This (Don Diablo Remix) [Mixed]|The Chainsmokers & Coldplay
+ext_1978_1769884351_316|What a Fool Believes (2016 Remastered)|The Doobie Brothers
+ext_1974_1769884351_946|Black Water|The Doobie Brothers
+ext_2005_1769884361_681|How to Save a Life|The Fray
+ext_2008_1769884361_642|You Found Me|The Fray
+ext_1968_1769884364_266|These Eyes|The Guess Who
+ext_1970_1769884364_146|No Sugar Tonight / New Mother Nature|The Guess Who
+ext_1981_1769884367_805|Don't You Want Me|The Human League
+ext_1986_1769884367_824|Human|The Human League
+ext_1981_1769884370_478|Freeze-Frame|The J. Geils Band
+ext_1980_1769884370_667|Love Stinks|The J. Geils Band
+ext_2023_1769884376_276|NIGHTS LIKE THIS|The Kid Laroi
+ext_2020_1769884376_938|SO DONE|The Kid Laroi
+ext_2004_1769884399_468|Somebody Told Me|The Killers
+ext_2006_1769884399_727|When You Were Young|The Killers
+ext_1983_1769884402_786|Come Dancing|The Kinks
+ext_1964_1769884402_644|You Really Got Me|The Kinks
+ext_1979_1769884404_438|Good Girls Don't|The Knack
+ext_1979_1769884404_724|She's So Selfish|The Knack
+ext_1994_1769884407_198|Big Poppa|The Notorious B.I.G.
+ext_1994_1769884407_859|Juicy|The Notorious B.I.G.
+ext_1979_1769884410_478|Message In a Bottle|The Police
+ext_1997_1769884410_846|Roxanne|The Police
+ext_1969_1769884414_518|Gimme Shelter (Remastered 2019)|The Rolling Stones
+ext_1966_1769884414_390|Paint It Black|The Rolling Stones
+ext_1999_1769884416_962|Rapper's Delight|The Sugarhill Gang
+ext_1981_1769884416_715|Apache|The Sugarhill Gang
+ext_1964_1769884419_353|My Girl|The Temptations
+ext_1966_1769884419_514|Ain't Too Proud To Beg|The Temptations
+ext_2018_1769884422_976|Call Out My Name|The Weeknd
+ext_2019_1769884422_375|Blinding Lights|The Weeknd
+ext_2021_1769884426_439|Save Your Tears (Remix)|The Weeknd & Ariana Grande
+ext_2021_1769884426_506|Save Your Tears (Remix) [Bonus Track]|The Weeknd & Ariana Grande
+ext_2007_1769884432_201|Icky Thump|The White Stripes
+ext_2001_1769884432_900|We're Going to Be Friends|The White Stripes
+ext_1971_1769884435_580|Baba O'Riley|The Who
+ext_1971_1769884435_937|Won't Get Fooled Again|The Who
+ext_1987_1769884438_518|I Think We're Alone Now|Tiffany
+ext_1987_1769884438_616|Could've Been|Tiffany
+ext_1984_1769884444_191|What's Love Got to Do with It|Tina Turner
+ext_1993_1769884444_609|Proud Mary (1993 Version)|Tina Turner
+ext_2019_1769884447_647|Lunatic Fringe|Tom Cochrane
+ext_1986_1769884447_101|Boy Inside the Man|Tom Cochrane
+ext_1989_1769884450_628|Free Fallin'|Tom Petty
+ext_1989_1769884450_492|I Won't Back Down|Tom Petty
+ext_2025_1769884454_342|BOTHER ME|Tommy Richman
+ext_2023_1769884454_547|MESSY|Tommy Richman
+ext_1982_1769884457_750|Hey Mickey|Toni Basil
+ext_2009_1769884457_886|Breakaway|Toni Basil
+ext_2000_1769884460_662|He Wasn't Man Enough|Toni Braxton
+ext_1993_1769884460_441|Breathe Again|Toni Braxton
+ext_1978_1769884473_139|Hold the Line|Toto
+ext_1986_1769884473_437|I'll Be Over You|Toto
+ext_1988_1769884476_192|Baby Can I Hold You|Tracy Chapman
+ext_1988_1769884476_310|Talkin' Bout a Revolution|Tracy Chapman
+ext_2012_1769884479_415|Drive By|Train
+ext_1998_1769884479_264|Meet Virginia|Train
+ext_2015_1769884482_179|Ride|Twenty One Pilots
+ext_2016_1769884482_564|Heathens|Twenty One Pilots
+ext_2000_1769884485_219|Beautiful Day|U2
+ext_1987_1769884485_872|I Still Haven't Found What I'm Looking For|U2
+ext_2008_1769884488_623|Love In This Club (feat. Young Jeezy)|Usher
+ext_1997_1769884488_205|Nice & Slow|Usher
+ext_1978_1769884510_765|Ain't Talkin' 'Bout Love|Van Halen
+ext_1984_1769884510_217|Panama|Van Halen
+ext_2002_1769884513_998|Ordinary Day|Vanessa Carlton
+ext_2004_1769884513_205|White Houses|Vanessa Carlton
+ext_1998_1769884516_939|Dreamin'|Vanessa Williams
+ext_1995_1769884516_669|Colors of the Wind (End Title)|Vanessa Williams
+ext_1990_1769884519_749|Play That Funky Music|Vanilla Ice
+ext_1999_1769884519_791|Ninja Rap|Vanilla Ice
+ext_1999_1769884522_189|You're a God|Vertical Horizon
+ext_1999_1769884522_786|Best I Ever Had (Grey Sky Morning)|Vertical Horizon
+ext_2007_1769884525_414|Macho Man|Village People
+ext_2007_1769884525_652|In the Navy|Village People
+ext_2017_1769884527_753|My Love (feat. Major Lazer, WizKid & Dua Lipa)|Wale
+ext_2020_1769884527_509|Butterflies, Pt. 2 (Wale Remix)|Wale
+ext_2017_1769884530_490|One Foot|Walk the Moon
+ext_2012_1769884530_141|Anna Sun|Walk the Moon
+ext_1984_1769884539_977|Everything She Wants|Wham!
+ext_1984_1769884539_748|Last Christmas (Single Version)|Wham!
+ext_1987_1769884542_424|Still Of The Night (2017 Remaster)|Whitesnake
+ext_1987_1769884542_723|Is This Love (2017 Remaster)|Whitesnake
+ext_1992_1769884545_899|I Have Nothing|Whitney Houston
+ext_1990_1769884545_972|I'm Your Baby Tonight|Whitney Houston
+ext_1976_1769884548_621|I Feel Sanctified|Wild Cherry
+ext_1976_1769884548_690|What In the Funk Do You See|Wild Cherry
+ext_1997_1769884551_998|Gettin' Jiggy Wit It|Will Smith
+ext_1997_1769884551_754|Miami|Will Smith
+ext_1990_1769884553_192|Release Me|Wilson Phillips
+ext_1990_1769884553_268|You're In Love|Wilson Phillips
+ext_1989_1769884559_104|Principal's Office|Young MC
+ext_1988_1769884559_246|Know How|Young MC
+ext_2026_1769884562_528|Plastic Cigarette|Zach Bryan
+ext_2024_1769884562_645|Pink Skies|Zach Bryan
+ext_2025_1769884565_116|Midnight Sun|Zara Larsson
+ext_2017_1769884565_854|Never Forget You|Zara Larsson
+ext_1986_1769884571_525|Cry Wolf|a-ha
+ext_1985_1769884571_568|The Sun Always Shines On TV|a-ha
