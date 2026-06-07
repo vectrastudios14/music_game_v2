@@ -435,11 +435,15 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                                     if (_team1Members.isEmpty || _team2Members.isEmpty) {
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
+                                          behavior: SnackBarBehavior.floating,
+                                          margin: const EdgeInsets.only(bottom: 30, left: 30, right: 30),
+                                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                           content: Text(
                                             isAr 
                                                 ? 'يجب أن ينضم لاعب واحد على الأقل لكل فريق!' 
                                                 : 'At least one player must join each team!',
-                                            style: GoogleFonts.outfit(),
+                                            style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
                                           ),
                                           backgroundColor: Colors.redAccent,
                                         ),
@@ -450,11 +454,15 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                                     if (_playerPool.isEmpty) {
                                       ScaffoldMessenger.of(context).showSnackBar(
                                         SnackBar(
+                                          behavior: SnackBarBehavior.floating,
+                                          margin: const EdgeInsets.only(bottom: 30, left: 30, right: 30),
+                                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                                           content: Text(
                                             isAr 
                                                 ? 'يجب أن ينضم لاعب واحد على الأقل لبدء اللعبة!' 
                                                 : 'At least one player must join to start the game!',
-                                            style: GoogleFonts.outfit(),
+                                            style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
                                           ),
                                           backgroundColor: Colors.redAccent,
                                         ),
