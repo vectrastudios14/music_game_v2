@@ -5,6 +5,9 @@ import '../../services/song_repository.dart';
 import 'game_screen.dart';
 import 'help_screen.dart';
 import '../../services/background_music_service.dart';
+import '../../services/firebase_service.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import 'dart:async';
 
 class GtsSetupScreen extends StatefulWidget {
   const GtsSetupScreen({super.key});
@@ -20,6 +23,9 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
   String _libraryType = SongRepository().currentLibraryType;
   String _uiLanguage = 'en'; // 'en' or 'ar'
   bool _isTeamMode = false;
+  bool _isMobileControlEnabled = false;
+  bool _isQrZoomed = false;
+  String? _roomCode;
   final List<TextEditingController> _nameControllers = [];
   
   // Interactive Team Setup State
@@ -68,6 +74,7 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
 
   @override
   void dispose() {
+    FirebaseService().stopListeningForJoins();
     for (var controller in _nameControllers) {
       controller.dispose();
     }
@@ -218,9 +225,17 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                             ChoiceChip(
                               label: Text(isAr ? 'فردي' : 'Individual'),
                               selected: !_isTeamMode,
-                              onSelected: (selected) { 
+                              onSelected: (selected) async { 
                                 if (selected) {
-                                  setState(() => _isTeamMode = false);
+                                  setState(() {
+                                    _isTeamMode = false;
+                                    _playerPool.clear();
+                                    _team1Members.clear();
+                                    _team2Members.clear();
+                                  });
+                                  if (_isMobileControlEnabled && _roomCode != null) {
+                                    await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                                  }
                                   _updateControllers();
                                   _preloadGameAssets(); // RELOAD CACHE
                                 }
@@ -230,9 +245,18 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                             ChoiceChip(
                               label: Text(isAr ? 'فرق' : 'Teams'),
                               selected: _isTeamMode,
-                              onSelected: (selected) { 
+                              onSelected: (selected) async { 
                                 if (selected) {
-                                  setState(() => _isTeamMode = true);
+                                  setState(() {
+                                    _isTeamMode = true;
+                                    _playerPool.clear();
+                                    _team1Members.clear();
+                                    _team2Members.clear();
+                                  });
+                                  if (_isMobileControlEnabled && _roomCode != null) {
+                                    await FirebaseService().setRoomMode(_roomCode!, 'team');
+                                    await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
+                                  }
                                   _updateControllers();
                                   _preloadGameAssets(); // RELOAD CACHE
                                 }
@@ -240,6 +264,108 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                             ),
                           ],
                         ),
+                        
+                        // Mobile Control Toggle (Only in Teams/Individual mode)
+                        const SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(isAr ? 'تحكم الموبايل:' : 'Mobile Control:', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                            const SizedBox(width: 10),
+                            Switch(
+                              value: _isMobileControlEnabled,
+                              activeColor: Theme.of(context).primaryColor,
+                              onChanged: (val) async {
+                                setState(() {
+                                  _isMobileControlEnabled = val;
+                                });
+                                if (val) {
+                                  _roomCode = FirebaseService().generateRoomCode();
+                                  await FirebaseService().createRoom(_roomCode!);
+                                  
+                                  if (_isTeamMode) {
+                                    await FirebaseService().setRoomMode(_roomCode!, 'team');
+                                    await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
+                                  } else {
+                                    await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                                  }
+
+                                  _playerPool.clear();
+                                  _team1Members.clear();
+                                  _team2Members.clear();
+
+                                  FirebaseService().listenForJoins(_roomCode!, (name, team) {
+                                    if (mounted) {
+                                      setState(() {
+                                        if (_isTeamMode) {
+                                          if (team == 'team1' && !_team1Members.contains(name)) {
+                                            _team1Members.add(name);
+                                          } else if (team == 'team2' && !_team2Members.contains(name)) {
+                                            _team2Members.add(name);
+                                          }
+                                        } else {
+                                          if (!_playerPool.contains(name)) {
+                                            _playerPool.add(name);
+                                            _playerCount = _playerPool.length;
+                                            _updateControllers();
+                                            for (int i = 0; i < _playerPool.length; i++) {
+                                              _nameControllers[i].text = _playerPool[i];
+                                            }
+                                          }
+                                        }
+                                      });
+                                    }
+                                  });
+                                } else {
+                                  _roomCode = null;
+                                  FirebaseService().stopListeningForJoins();
+                                  _playerPool.clear();
+                                  _team1Members.clear();
+                                  _team2Members.clear();
+                                }
+                              },
+                            ),
+                          ],
+                        ),
+                        if (_isMobileControlEnabled && _roomCode != null) ...[
+                          const SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10, bottom: 20),
+                            child: Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Column(
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        _isQrZoomed = !_isQrZoomed;
+                                      });
+                                    },
+                                    child: AnimatedContainer(
+                                      duration: const Duration(milliseconds: 300),
+                                      width: _isQrZoomed ? 300 : 100,
+                                      height: _isQrZoomed ? 300 : 100,
+                                      child: QrImageView(
+                                        data: 'https://vectrastudios14.github.io/music_game_v2/#/controller?room=$_roomCode',
+                                        version: QrVersions.auto,
+                                        backgroundColor: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    isAr ? 'رمز الغرفة: $_roomCode' : 'Room Code: $_roomCode',
+                                    style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ],
                     ),
                   ),
@@ -283,6 +409,40 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                             height: 60,
                             child: ElevatedButton(
                               onPressed: () async {
+                                if (_isMobileControlEnabled) {
+                                  if (_isTeamMode) {
+                                    if (_team1Members.isEmpty || _team2Members.isEmpty) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            isAr 
+                                                ? 'يجب أن ينضم لاعب واحد على الأقل لكل فريق!' 
+                                                : 'At least one player must join each team!',
+                                            style: GoogleFonts.outfit(),
+                                          ),
+                                          backgroundColor: Colors.redAccent,
+                                        ),
+                                      );
+                                      return;
+                                    }
+                                  } else {
+                                    if (_playerPool.isEmpty) {
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                          content: Text(
+                                            isAr 
+                                                ? 'يجب أن ينضم لاعب واحد على الأقل لبدء اللعبة!' 
+                                                : 'At least one player must join to start the game!',
+                                            style: GoogleFonts.outfit(),
+                                          ),
+                                          backgroundColor: Colors.redAccent,
+                                        ),
+                                      );
+                                      return;
+                                    }
+                                  }
+                                }
+
                                 List<String> playerNames = _nameControllers
                                   .take(_isTeamMode ? 2 : _playerCount)
                                   .map((c) => c.text).toList();
@@ -296,6 +456,7 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                                       isHardMode: _isHardMode,
                                       isTeamMode: _isTeamMode,
                                       uiLanguage: _uiLanguage,
+                                      roomCode: _isMobileControlEnabled ? _roomCode : null, // PASS ROOM CODE
                                       teamMembers: _isTeamMode ? {
                                         playerNames[0]: _team1Members,
                                         playerNames[1]: _team2Members,
@@ -381,45 +542,47 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
       child: Column(
         children: [
           // Player Input Field
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: _playerInputController,
-                  decoration: InputDecoration(
-                    hintText: isAr ? 'اسم اللاعب...' : 'Enter player name...',
-                    isDense: true,
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(0.05),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+          if (!_isMobileControlEnabled) ...[
+            Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _playerInputController,
+                    decoration: InputDecoration(
+                      hintText: isAr ? 'اسم اللاعب...' : 'Enter player name...',
+                      isDense: true,
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.05),
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                    onSubmitted: (_) => _addPlayer(),
                   ),
-                  onSubmitted: (_) => _addPlayer(),
                 ),
-              ),
-              const SizedBox(width: 8),
-              IconButton.filled(
-                onPressed: _addPlayer,
-                icon: const Icon(Icons.add),
-              ),
-              const SizedBox(width: 8),
-              IconButton.filledTonal(
-                onPressed: _autoShuffle,
-                icon: const Icon(Icons.shuffle),
-                tooltip: isAr ? 'توزيع تلقائي' : 'Auto Shuffle',
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
-          // Player Pool
-          if (_playerPool.isNotEmpty) ...[
-            Text(isAr ? 'اللاعبون غير الموزعين' : 'Unassigned Players', style: GoogleFonts.outfit(color: Colors.white30, fontSize: 12)),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: _playerPool.map((p) => _buildDraggablePlayerChip(p, 'pool')).toList(),
+                const SizedBox(width: 8),
+                IconButton.filled(
+                  onPressed: _addPlayer,
+                  icon: const Icon(Icons.add),
+                ),
+                const SizedBox(width: 8),
+                IconButton.filledTonal(
+                  onPressed: _autoShuffle,
+                  icon: const Icon(Icons.shuffle),
+                  tooltip: isAr ? 'توزيع تلقائي' : 'Auto Shuffle',
+                ),
+              ],
             ),
             const SizedBox(height: 20),
+            // Player Pool
+            if (_playerPool.isNotEmpty) ...[
+              Text(isAr ? 'اللاعبون غير الموزعين' : 'Unassigned Players', style: GoogleFonts.outfit(color: Colors.white30, fontSize: 12)),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: _playerPool.map((p) => _buildDraggablePlayerChip(p, 'pool')).toList(),
+              ),
+              const SizedBox(height: 20),
+            ],
           ],
           // Teams Board
           Expanded(
@@ -504,6 +667,15 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                     hintStyle: TextStyle(color: color.withOpacity(0.3)),
                     isDense: true,
                   ),
+                  onChanged: (val) {
+                    if (_isMobileControlEnabled && _roomCode != null) {
+                      FirebaseService().updateTeamNames(
+                        _roomCode!,
+                        _nameControllers[0].text,
+                        _nameControllers[1].text,
+                      );
+                    }
+                  },
                 ),
               ),
               const Divider(height: 1),
