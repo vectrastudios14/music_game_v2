@@ -113,8 +113,11 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
             child: Container(
               constraints: const BoxConstraints(maxWidth: 800),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              child: Column(
-                children: [
+              child: ScrollConfiguration(
+                behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
                   // 1. Logo
                   FadeInDown(
                     child: Image.asset(
@@ -413,9 +416,7 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                     ),
   
                   // 4. Player/Team Names (Individual) or Team Setup Board (Teams)
-                  Expanded(
-                    child: _isTeamMode ? _buildTeamSetupBoard(isAr) : _buildIndividualSetup(isAr),
-                  ),
+                  _isTeamMode ? _buildTeamSetupBoard(isAr) : _buildIndividualSetup(isAr),
   
                   const SizedBox(height: 20),
   
@@ -522,37 +523,35 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
           ),
         ),
       ),
-    );
+    ),
+  ),
+);
   }
   Widget _buildIndividualSetup(bool isAr) {
     return Center(
       child: FadeInUp(
         delay: const Duration(milliseconds: 300),
-        child: ScrollConfiguration(
-          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-          child: SingleChildScrollView(
-            child: Wrap(
-              spacing: 10,
-              runSpacing: 10,
-              alignment: WrapAlignment.center,
-              children: List.generate(_playerCount, (index) {
-                  final label = isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}';
-                  return SizedBox(
-                    width: 160,
-                    child: TextField(
-                    controller: _nameControllers[index],
-                    onTap: () => _nameControllers[index].clear(),
-                    decoration: InputDecoration(
-                      labelText: label,
-                      isDense: true,
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                      filled: true,
-                      fillColor: Theme.of(context).cardTheme.color,
-                    ),
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          alignment: WrapAlignment.center,
+          children: List.generate(_playerCount, (index) {
+              final label = isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}';
+              return SizedBox(
+                width: 160,
+                child: TextField(
+                  controller: _nameControllers[index],
+                  onTap: () => _nameControllers[index].clear(),
+                  decoration: InputDecoration(
+                    labelText: label,
+                    isDense: true,
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                    filled: true,
+                    fillColor: Theme.of(context).cardTheme.color,
                   ),
-                );
-            }),
-          ),
+                ),
+              );
+          }),
         ),
       ),
     );
@@ -607,14 +606,13 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
             ],
           ],
           // Teams Board
-          Expanded(
-            child: Row(
-              children: [
-                Expanded(child: _buildTeamDropZone(isAr ? 'الفريق 1' : 'Team 1', _team1Members, 'team1', Colors.cyan, 0)),
-                const SizedBox(width: 16),
-                Expanded(child: _buildTeamDropZone(isAr ? 'الفريق 2' : 'Team 2', _team2Members, 'team2', Colors.pinkAccent, 1)),
-              ],
-            ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(child: _buildTeamDropZone(isAr ? 'الفريق 1' : 'Team 1', _team1Members, 'team1', Colors.cyan, 0)),
+              const SizedBox(width: 16),
+              Expanded(child: _buildTeamDropZone(isAr ? 'الفريق 2' : 'Team 2', _team2Members, 'team2', Colors.pinkAccent, 1)),
+            ],
           ),
         ],
       ),
@@ -701,31 +699,31 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                 ),
               ),
               const Divider(height: 1),
-              Expanded(
-                child: ScrollConfiguration(
-                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-                  child: ListView(
-                    padding: const EdgeInsets.all(8),
-                    children: [
-                      Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        alignment: WrapAlignment.center,
-                        children: members.map((m) => _buildDraggablePlayerChip(m, targetId)).toList(),
-                      ),
-                      if (members.isEmpty)
-                         Center(
-                           child: Padding(
-                             padding: const EdgeInsets.all(20),
-                             child: Text(
-                               _uiLanguage == 'ar' ? 'اسحب أسماء اللاعبين هنا' : 'Drag players here',
-                               style: const TextStyle(color: Colors.white10, fontSize: 10),
-                               textAlign: TextAlign.center,
-                             ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  padding: EdgeInsets.zero,
+                  children: [
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      alignment: WrapAlignment.center,
+                      children: members.map((m) => _buildDraggablePlayerChip(m, targetId)).toList(),
+                    ),
+                    if (members.isEmpty)
+                       Center(
+                         child: Padding(
+                           padding: const EdgeInsets.all(20),
+                           child: Text(
+                             _uiLanguage == 'ar' ? 'اسحب أسماء اللاعبين هنا' : 'Drag players here',
+                             style: const TextStyle(color: Colors.white10, fontSize: 10),
+                             textAlign: TextAlign.center,
                            ),
                          ),
-                    ],
-                  ),
+                       ),
+                  ],
                 ),
               ),
             ],
