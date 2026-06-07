@@ -528,16 +528,18 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
     return Center(
       child: FadeInUp(
         delay: const Duration(milliseconds: 300),
-        child: SingleChildScrollView(
-          child: Wrap(
-            spacing: 10,
-            runSpacing: 10,
-            alignment: WrapAlignment.center,
-            children: List.generate(_playerCount, (index) {
-                final label = isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}';
-                return SizedBox(
-                  width: 160,
-                  child: TextField(
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+          child: SingleChildScrollView(
+            child: Wrap(
+              spacing: 10,
+              runSpacing: 10,
+              alignment: WrapAlignment.center,
+              children: List.generate(_playerCount, (index) {
+                  final label = isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}';
+                  return SizedBox(
+                    width: 160,
+                    child: TextField(
                     controller: _nameControllers[index],
                     onTap: () => _nameControllers[index].clear(),
                     decoration: InputDecoration(
@@ -700,27 +702,30 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
               ),
               const Divider(height: 1),
               Expanded(
-                child: ListView(
-                  padding: const EdgeInsets.all(8),
-                  children: [
-                    Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      alignment: WrapAlignment.center,
-                      children: members.map((m) => _buildDraggablePlayerChip(m, targetId)).toList(),
-                    ),
-                    if (members.isEmpty)
-                       Center(
-                         child: Padding(
-                           padding: const EdgeInsets.all(20),
-                           child: Text(
-                             _uiLanguage == 'ar' ? 'اسحب أسماء اللاعبين هنا' : 'Drag players here',
-                             style: const TextStyle(color: Colors.white10, fontSize: 10),
-                             textAlign: TextAlign.center,
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                  child: ListView(
+                    padding: const EdgeInsets.all(8),
+                    children: [
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        alignment: WrapAlignment.center,
+                        children: members.map((m) => _buildDraggablePlayerChip(m, targetId)).toList(),
+                      ),
+                      if (members.isEmpty)
+                         Center(
+                           child: Padding(
+                             padding: const EdgeInsets.all(20),
+                             child: Text(
+                               _uiLanguage == 'ar' ? 'اسحب أسماء اللاعبين هنا' : 'Drag players here',
+                               style: const TextStyle(color: Colors.white10, fontSize: 10),
+                               textAlign: TextAlign.center,
+                             ),
                            ),
                          ),
-                       ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],
