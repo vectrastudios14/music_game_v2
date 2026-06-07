@@ -39,6 +39,7 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
   Timer? _playTimer;
   int _playTimeSeconds = 0;
   bool _hasVotedToSkip = false;
+  bool _isWaitingForReady = false;
   late StreamSubscription _firebaseSubscription;
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
@@ -68,12 +69,15 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
           _clearSession();
         } else {
           final newStatus = data['status'] ?? 'waiting';
-          final bool wasBuzzerActive = _status == 'playing';
-          final bool isNowBuzzerActive = newStatus == 'playing';
+          _isWaitingForReady = data['isWaitingForReady'] == true;
+          final bool isIndividual = _roomMode == 'individual';
+          final bool isMyTurn = isIndividual && _activePlayer == widget.playerName;
+          final bool shouldPulse = (isIndividual && _isWaitingForReady && isMyTurn) || (!isIndividual && newStatus == 'playing');
+          final bool wasPulsing = _pulseController.isAnimating;
           
-          if (isNowBuzzerActive && !wasBuzzerActive) {
+          if (shouldPulse && !wasPulsing) {
             _pulseController.repeat(reverse: true);
-          } else if (!isNowBuzzerActive && wasBuzzerActive) {
+          } else if (!shouldPulse && wasPulsing) {
             _pulseController.stop();
             _pulseController.reset();
           }
@@ -199,6 +203,9 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
             ),
           ],
         );
+      }
+      if (_isWaitingForReady) {
+        return _buildIndividualReadyToStartControls();
       }
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -472,6 +479,42 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
           onPressed: () {
             FirebaseService().requestNextRound(widget.roomCode);
           },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildIndividualReadyToStartControls() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'YOUR TURN!',
+          style: GoogleFonts.outfit(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.amber),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          'Tap START when you are ready to listen',
+          style: GoogleFonts.outfit(fontSize: 16, color: Colors.white70),
+        ),
+        const SizedBox(height: 45),
+        ScaleTransition(
+          scale: _pulseAnimation,
+          child: ElevatedButton.icon(
+            icon: const Icon(Icons.play_circle_filled_rounded, color: Colors.black, size: 28),
+            label: const Text('START TURN'),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 22),
+              backgroundColor: Colors.amber,
+              foregroundColor: Colors.black,
+              textStyle: GoogleFonts.outfit(fontSize: 22, fontWeight: FontWeight.bold),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+              elevation: 8,
+            ),
+            onPressed: () {
+              FirebaseService().requestStartTurn(widget.roomCode);
+            },
+          ),
         ),
       ],
     );

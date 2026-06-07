@@ -446,4 +446,38 @@ import 'dart:math';class FirebaseService {
       } catch (e) {}
     }
   }
+
+  Future<void> setWaitingForReady(String roomCode, bool isWaiting) async {
+    final data = {
+      'isWaitingForReady': isWaiting,
+      if (isWaiting) 'startTurnRequested': false,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> requestStartTurn(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update({
+          'startTurnRequested': true,
+        });
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode({
+          'startTurnRequested': true,
+        }));
+      } catch (e) {}
+    }
+  }
 }

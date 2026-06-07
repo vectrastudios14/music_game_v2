@@ -156,6 +156,14 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             }
           }
 
+          // Handle Start Turn Request
+          if (data['startTurnRequested'] == true) {
+            if (_isWaitingForReady && !_isLoading) {
+              FirebaseService().setWaitingForReady(widget.roomCode!, false);
+              _beginTurn();
+            }
+          }
+
           // Handle Song Skip Voting - show names immediately on first vote
           if (widget.isTeamMode && !_isAnswered) {
             final Map<String, String> newSkipVotes = {};
@@ -254,6 +262,14 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           FirebaseService().clearPauseState(widget.roomCode!);
           FirebaseService().resetNextRoundRequest(widget.roomCode!);
           FirebaseService().clearSkipVotes(widget.roomCode!);
+          FirebaseService().setWaitingForReady(widget.roomCode!, _isWaitingForReady);
+
+          if (!widget.isTeamMode) {
+            final currentPlayer = widget.playerNames[_currentPlayerIndex];
+            final nextIndex = (_currentPlayerIndex + 1) % widget.playerNames.length;
+            final nextPlayer = widget.playerNames[nextIndex];
+            FirebaseService().setIndividualActivePlayer(widget.roomCode!, currentPlayer, nextPlayer: nextPlayer);
+          }
         }
         
         if (!_isWaitingForReady) {
@@ -286,6 +302,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       await Future.delayed(const Duration(milliseconds: 300));
       
       if (widget.roomCode != null) {
+        FirebaseService().setWaitingForReady(widget.roomCode!, false);
         if (widget.isTeamMode) {
           FirebaseService().startGame(widget.roomCode!);
         } else {
