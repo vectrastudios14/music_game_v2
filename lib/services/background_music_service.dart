@@ -62,16 +62,24 @@ class BackgroundMusicService {
 
   /// Plays a sound effect
   Future<void> playSfx(String assetName) async {
-    try {
-      if (_sfxPlayer.state == PlayerState.playing) {
-        await _sfxPlayer.stop(); // Stop current SFX if any (optional, or use multiple players)
+    // Try primary path then fallback
+    final paths = [assetName, 'sounds/$assetName'];
+
+    for (final path in paths) {
+      try {
+        print("🔊 BackgroundMusicService: Trying to play $path");
+        if (_sfxPlayer.state == PlayerState.playing) {
+          await _sfxPlayer.stop();
+        }
+        await _sfxPlayer.setReleaseMode(ReleaseMode.release);
+        await _sfxPlayer.setVolume(1.0);
+        await _sfxPlayer.play(AssetSource(path));
+        return; // Success!
+      } catch (e) {
+        print("⚠️ BackgroundMusicService: Failed to play $path - $e");
       }
-      await _sfxPlayer.setReleaseMode(ReleaseMode.release);
-      await _sfxPlayer.play(AssetSource(assetName));
-      await _sfxPlayer.setVolume(1.0); 
-    } catch (e) {
-      print("Error playing SFX: $e");
     }
+    print("❌ BackgroundMusicService: Could not find or play $assetName in any registered path.");
   }
 
   void dispose() {

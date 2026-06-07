@@ -1,34 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:audioplayers/audioplayers.dart'; // Ensure package is available
+import 'package:audioplayers/audioplayers.dart';
+import 'package:firebase_core/firebase_core.dart'; // IMPORT
+import 'firebase_options.dart'; // IMPORT
 import 'theme/app_theme.dart';
 import 'services/song_repository.dart';
 import 'screens/splash_screen.dart';
-import 'utils/custom_scroll_behavior.dart'; // IMPORT
+import 'screens/mobile_controller/controller_setup_screen.dart'; // IMPORT
+import 'utils/custom_scroll_behavior.dart';
+import 'package:flutter/foundation.dart'; // IMPORT kIsWeb
 import 'dart:async';
 
-import 'package:window_manager/window_manager.dart'; // IMPORT
+import 'package:window_manager/window_manager.dart';
 
 void main() {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
     
-    // Initialize Window Manager
-    await windowManager.ensureInitialized();
-
-    WindowOptions windowOptions = const WindowOptions(
-      center: true,
-      backgroundColor: Colors.transparent,
-      skipTaskbar: false,
-      titleBarStyle: TitleBarStyle.normal,
+    // Initialize Firebase
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
     );
+    
+    if (!kIsWeb) {
+      // Initialize Window Manager ONLY on Desktop
+      await windowManager.ensureInitialized();
 
-    windowManager.waitUntilReadyToShow(windowOptions, () async {
-      await windowManager.show();
-      await windowManager.focus();
-      await windowManager.setMinimumSize(const Size(1024, 768));
-      await windowManager.setTitle('Musica');
-    });
+      WindowOptions windowOptions = const WindowOptions(
+        center: true,
+        backgroundColor: Colors.transparent,
+        skipTaskbar: false,
+        titleBarStyle: TitleBarStyle.normal,
+      );
+
+      windowManager.waitUntilReadyToShow(windowOptions, () async {
+        await windowManager.show();
+        await windowManager.focus();
+        await windowManager.setMinimumSize(const Size(1024, 768));
+        await windowManager.setTitle('Musica');
+      });
+    }
 
     // AudioPlayers doesn't need explicit init on Windows usually, 
     // but we can keep main clean.
@@ -55,7 +66,28 @@ class MusicaApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         scrollBehavior: CustomScrollBehavior(), // ENABLE MOUSE DRAG
         theme: AppTheme.darkTheme,
-        home: const SplashScreen(),
+        initialRoute: kIsWeb ? null : '/',
+        onGenerateRoute: (settings) {
+          if (settings.name != null && settings.name!.startsWith('/controller')) {
+            final uri = Uri.parse(settings.name!);
+            final roomCode = uri.queryParameters['room'] ?? '';
+            return MaterialPageRoute(
+              builder: (context) => ControllerSetupScreen(roomCode: roomCode),
+            );
+          }
+          
+          // If on web and no valid route, show a blank/error screen instead of the Windows game
+          if (kIsWeb) {
+            return MaterialPageRoute(
+              builder: (context) => const Scaffold(
+                backgroundColor: Colors.black,
+                body: Center(child: Text('Invalid Room Link', style: TextStyle(color: Colors.white))),
+              ),
+            );
+          }
+
+          return MaterialPageRoute(builder: (context) => const SplashScreen());
+        },
       ),
     );
   }

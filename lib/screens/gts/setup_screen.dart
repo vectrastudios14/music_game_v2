@@ -184,146 +184,166 @@ class _GtsSetupScreenState extends State<GtsSetupScreen> {
                           ],
                         ),
                         const SizedBox(height: 10),
-                        // Library Toggle
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(isAr ? 'المكتبة: ' : 'Library: ', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                            const SizedBox(width: 10),
-                            FilterChip(
-                              label: Text(isAr ? 'الإنجليزية' : 'English'),
-                              selected: _libraryType == 'english',
-                              onSelected: (selected) {
-                                if (selected) {
-                                  setState(() => _libraryType = 'english');
-                                  SongRepository().setLibrary('english');
-                                  _preloadGameAssets();
-                                }
-                              },
-                            ),
-                            const SizedBox(width: 10),
-                            FilterChip(
-                              label: Text(isAr ? 'العربية' : 'Arabic'),
-                              selected: _libraryType == 'arabic',
-                              onSelected: (selected) {
-                                if (selected) {
-                                  setState(() => _libraryType = 'arabic');
-                                  SongRepository().setLibrary('arabic');
-                                  _preloadGameAssets();
-                                }
-                              },
-                            ),
-                          ],
-                        ),
-                        // Game Type Toggle
-                        const SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(isAr ? 'نوع اللعبة: ' : 'Game Type: ', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                            const SizedBox(width: 10),
-                            ChoiceChip(
-                              label: Text(isAr ? 'فردي' : 'Individual'),
-                              selected: !_isTeamMode,
-                              onSelected: (selected) async { 
-                                if (selected) {
-                                  setState(() {
-                                    _isTeamMode = false;
-                                    _playerPool.clear();
-                                    _team1Members.clear();
-                                    _team2Members.clear();
-                                  });
-                                  if (_isMobileControlEnabled && _roomCode != null) {
-                                    await FirebaseService().setRoomMode(_roomCode!, 'individual');
-                                  }
-                                  _updateControllers();
-                                  _preloadGameAssets(); // RELOAD CACHE
-                                }
-                              },
-                            ),
-                            const SizedBox(width: 10),
-                            ChoiceChip(
-                              label: Text(isAr ? 'فرق' : 'Teams'),
-                              selected: _isTeamMode,
-                              onSelected: (selected) async { 
-                                if (selected) {
-                                  setState(() {
-                                    _isTeamMode = true;
-                                    _playerPool.clear();
-                                    _team1Members.clear();
-                                    _team2Members.clear();
-                                  });
-                                  if (_isMobileControlEnabled && _roomCode != null) {
-                                    await FirebaseService().setRoomMode(_roomCode!, 'team');
-                                    await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
-                                  }
-                                  _updateControllers();
-                                  _preloadGameAssets(); // RELOAD CACHE
-                                }
-                              },
-                            ),
-                          ],
-                        ),
-                        
-                        // Mobile Control Toggle (Only in Teams/Individual mode)
-                        const SizedBox(height: 10),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(isAr ? 'تحكم الموبايل:' : 'Mobile Control:', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                            const SizedBox(width: 10),
-                            Switch(
-                              value: _isMobileControlEnabled,
-                              activeColor: Theme.of(context).primaryColor,
-                              onChanged: (val) async {
-                                setState(() {
-                                  _isMobileControlEnabled = val;
-                                });
-                                if (val) {
-                                  _roomCode = FirebaseService().generateRoomCode();
-                                  await FirebaseService().createRoom(_roomCode!);
-                                  
-                                  if (_isTeamMode) {
-                                    await FirebaseService().setRoomMode(_roomCode!, 'team');
-                                    await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
-                                  } else {
-                                    await FirebaseService().setRoomMode(_roomCode!, 'individual');
-                                  }
-
-                                  _playerPool.clear();
-                                  _team1Members.clear();
-                                  _team2Members.clear();
-
-                                  FirebaseService().listenForJoins(_roomCode!, (name, team) {
-                                    if (mounted) {
-                                      setState(() {
-                                        if (_isTeamMode) {
-                                          if (team == 'team1' && !_team1Members.contains(name)) {
-                                            _team1Members.add(name);
-                                          } else if (team == 'team2' && !_team2Members.contains(name)) {
-                                            _team2Members.add(name);
-                                          }
-                                        } else {
-                                          if (!_playerPool.contains(name)) {
-                                            _playerPool.add(name);
-                                            _playerCount = _playerPool.length;
-                                            _updateControllers();
-                                            for (int i = 0; i < _playerPool.length; i++) {
-                                              _nameControllers[i].text = _playerPool[i];
-                                            }
-                                          }
+                            // 1. Library Toggle
+                            Column(
+                              children: [
+                                Text(
+                                  isAr ? 'المكتبة' : 'Library', 
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white70)
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: [
+                                    ChoiceChip(
+                                      label: Text(isAr ? 'الإنجليزية' : 'English', style: const TextStyle(fontSize: 12)),
+                                      selected: _libraryType == 'english',
+                                      onSelected: (selected) {
+                                        if (selected) {
+                                          setState(() => _libraryType = 'english');
+                                          SongRepository().setLibrary('english');
+                                          _preloadGameAssets();
                                         }
+                                      },
+                                    ),
+                                    const SizedBox(width: 6),
+                                    ChoiceChip(
+                                      label: Text(isAr ? 'العربية' : 'Arabic', style: const TextStyle(fontSize: 12)),
+                                      selected: _libraryType == 'arabic',
+                                      onSelected: (selected) {
+                                        if (selected) {
+                                          setState(() => _libraryType = 'arabic');
+                                          SongRepository().setLibrary('arabic');
+                                          _preloadGameAssets();
+                                        }
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            // 2. Game Type Toggle
+                            Column(
+                              children: [
+                                Text(
+                                  isAr ? 'نوع اللعبة' : 'Game Type', 
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white70)
+                                ),
+                                const SizedBox(height: 4),
+                                Row(
+                                  children: [
+                                    ChoiceChip(
+                                      label: Text(isAr ? 'فردي' : 'Individual', style: const TextStyle(fontSize: 12)),
+                                      selected: !_isTeamMode,
+                                      onSelected: (selected) async { 
+                                        if (selected) {
+                                          setState(() {
+                                            _isTeamMode = false;
+                                            _playerPool.clear();
+                                            _team1Members.clear();
+                                            _team2Members.clear();
+                                          });
+                                          if (_isMobileControlEnabled && _roomCode != null) {
+                                            await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                                          }
+                                          _updateControllers();
+                                          _preloadGameAssets(); // RELOAD CACHE
+                                        }
+                                      },
+                                    ),
+                                    const SizedBox(width: 6),
+                                    ChoiceChip(
+                                      label: Text(isAr ? 'فرق' : 'Teams', style: const TextStyle(fontSize: 12)),
+                                      selected: _isTeamMode,
+                                      onSelected: (selected) async { 
+                                        if (selected) {
+                                          setState(() {
+                                            _isTeamMode = true;
+                                            _playerPool.clear();
+                                            _team1Members.clear();
+                                            _team2Members.clear();
+                                          });
+                                          if (_isMobileControlEnabled && _roomCode != null) {
+                                            await FirebaseService().setRoomMode(_roomCode!, 'team');
+                                            await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
+                                          }
+                                          _updateControllers();
+                                          _preloadGameAssets(); // RELOAD CACHE
+                                        }
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            // 3. Mobile Control Toggle
+                            Column(
+                              children: [
+                                Text(
+                                  isAr ? 'التحكم' : 'Mobile Control', 
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white70)
+                                ),
+                                const SizedBox(height: 4),
+                                SizedBox(
+                                  height: 38,
+                                  child: Switch(
+                                    value: _isMobileControlEnabled,
+                                    activeColor: Theme.of(context).primaryColor,
+                                    onChanged: (val) async {
+                                      setState(() {
+                                        _isMobileControlEnabled = val;
                                       });
-                                    }
-                                  });
-                                } else {
-                                  _roomCode = null;
-                                  FirebaseService().stopListeningForJoins();
-                                  _playerPool.clear();
-                                  _team1Members.clear();
-                                  _team2Members.clear();
-                                }
-                              },
+                                      if (val) {
+                                        _roomCode = FirebaseService().generateRoomCode();
+                                        await FirebaseService().createRoom(_roomCode!);
+                                        
+                                        if (_isTeamMode) {
+                                          await FirebaseService().setRoomMode(_roomCode!, 'team');
+                                          await FirebaseService().updateTeamNames(_roomCode!, _nameControllers[0].text, _nameControllers[1].text);
+                                        } else {
+                                          await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                                        }
+
+                                        _playerPool.clear();
+                                        _team1Members.clear();
+                                        _team2Members.clear();
+
+                                        FirebaseService().listenForJoins(_roomCode!, (name, team) {
+                                          if (mounted) {
+                                            setState(() {
+                                              if (_isTeamMode) {
+                                                if (team == 'team1' && !_team1Members.contains(name)) {
+                                                  _team1Members.add(name);
+                                                } else if (team == 'team2' && !_team2Members.contains(name)) {
+                                                  _team2Members.add(name);
+                                                }
+                                              } else {
+                                                if (!_playerPool.contains(name)) {
+                                                  _playerPool.add(name);
+                                                  _playerCount = _playerPool.length;
+                                                  _updateControllers();
+                                                  for (int i = 0; i < _playerPool.length; i++) {
+                                                    _nameControllers[i].text = _playerPool[i];
+                                                  }
+                                                }
+                                              }
+                                            });
+                                          }
+                                        });
+                                      } else {
+                                        _roomCode = null;
+                                        FirebaseService().stopListeningForJoins();
+                                        _playerPool.clear();
+                                        _team1Members.clear();
+                                        _team2Members.clear();
+                                      }
+                                    },
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
