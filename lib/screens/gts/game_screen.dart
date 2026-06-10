@@ -84,6 +84,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   bool _showChoicesAfterBuzz = false;
   double? _buzzTimeSeconds;
   String? _buzzedPlayerName;
+  bool _isBuzzShaking = false;
   String? _answeredPlayerName;
   bool _isResettingRound = false;
   bool _processingHint = false;
@@ -459,9 +460,19 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       _activeTeamIndex = teamIndex;
       _buzzTimeSeconds = listeningTime;
       _buzzedPlayerName = playerName;
+      _isBuzzShaking = true;
     });
     
     BackgroundMusicService.instance.playSfx('tick.mp3');
+
+    // Reset shaking after 500ms
+    Future.delayed(const Duration(milliseconds: 500), () {
+      if (mounted) {
+        setState(() {
+          _isBuzzShaking = false;
+        });
+      }
+    });
 
     // Automatically show choices after 3 seconds
     Future.delayed(const Duration(seconds: 3), () {
@@ -1824,99 +1835,114 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             final isAnyBuzzed = _buzzerPressed;
             final double opacity = isAnyBuzzed ? (isBuzzed ? 1.0 : 0.15) : 1.0;
 
+            Widget sectorWidget = SizedBox(
+              width: 170,
+              height: 170,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Team Name / Indicator
+                  Text(
+                    name.toUpperCase(),
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.outfit(
+                      color: color,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w900,
+                      shadows: [
+                        Shadow(color: color.withOpacity(0.5), blurRadius: 10),
+                      ],
+                    ),
+                  ),
+                  
+                  // Members
+                  if (members.isNotEmpty) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      members.join(", "),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.outfit(
+                        color: Colors.white70,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                  
+                  const SizedBox(height: 8),
+
+                  // Buzz Button / Status
+                  InkWell(
+                    onTap: () => _handleBuzz(index),
+                    borderRadius: BorderRadius.circular(40),
+                    child: AnimatedScale(
+                      scale: isBuzzed ? 1.15 : 1.0,
+                      duration: const Duration(milliseconds: 150),
+                      child: Container(
+                        width: 68,
+                        height: 68,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: isBuzzed ? color : color.withOpacity(0.12),
+                          border: Border.all(
+                            color: isBuzzed ? Colors.white : color.withOpacity(0.6),
+                            width: isBuzzed ? 3 : 2,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: color.withOpacity(isBuzzed ? 0.7 : 0.25),
+                              blurRadius: isBuzzed ? 25 : 10,
+                              spreadRadius: isBuzzed ? 3 : 1,
+                            )
+                          ],
+                        ),
+                        child: Center(
+                          child: isBuzzed
+                              ? const Icon(Icons.flash_on, color: Colors.white, size: 32)
+                              : Text(
+                                  'BUZZ',
+                                  style: GoogleFonts.outfit(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w900,
+                                    color: color,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  // Mini Skip button
+                  _buildMiniSkipButton(index),
+                ],
+              ),
+            );
+
+            if (_isBuzzShaking && isBuzzed) {
+              sectorWidget = ShakeX(
+                duration: const Duration(milliseconds: 500),
+                child: sectorWidget,
+              );
+            } else if (isBuzzed) {
+              sectorWidget = Pulse(
+                infinite: true,
+                duration: const Duration(seconds: 1),
+                child: sectorWidget,
+              );
+            }
+
             return Center(
               child: Transform.translate(
                 offset: Offset(xOffset, yOffset),
                 child: AnimatedOpacity(
                   opacity: opacity,
                   duration: const Duration(milliseconds: 300),
-                  child: SizedBox(
-                    width: 170,
-                    height: 170,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Team Name / Indicator
-                        Text(
-                          name.toUpperCase(),
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.outfit(
-                            color: color,
-                            fontSize: 22,
-                            fontWeight: FontWeight.w900,
-                            shadows: [
-                              Shadow(color: color.withOpacity(0.5), blurRadius: 10),
-                            ],
-                          ),
-                        ),
-                        
-                        // Members
-                        if (members.isNotEmpty) ...[
-                          const SizedBox(height: 4),
-                          Text(
-                            members.join(", "),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: GoogleFonts.outfit(
-                              color: Colors.white70,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                        
-                        const SizedBox(height: 8),
-
-                        // Buzz Button / Status
-                        InkWell(
-                          onTap: () => _handleBuzz(index),
-                          borderRadius: BorderRadius.circular(40),
-                          child: AnimatedScale(
-                            scale: isBuzzed ? 1.15 : 1.0,
-                            duration: const Duration(milliseconds: 150),
-                            child: Container(
-                              width: 68,
-                              height: 68,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: isBuzzed ? color : color.withOpacity(0.12),
-                                border: Border.all(
-                                  color: isBuzzed ? Colors.white : color.withOpacity(0.6),
-                                  width: isBuzzed ? 3 : 2,
-                                ),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: color.withOpacity(isBuzzed ? 0.7 : 0.25),
-                                    blurRadius: isBuzzed ? 25 : 10,
-                                    spreadRadius: isBuzzed ? 3 : 1,
-                                  )
-                                ],
-                              ),
-                              child: Center(
-                                child: isBuzzed
-                                    ? const Icon(Icons.flash_on, color: Colors.white, size: 32)
-                                    : Text(
-                                        'BUZZ',
-                                        style: GoogleFonts.outfit(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w900,
-                                          color: color,
-                                          letterSpacing: 0.5,
-                                        ),
-                                      ),
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(height: 10),
-
-                        // Mini Skip button
-                        _buildMiniSkipButton(index),
-                      ],
-                    ),
-                  ),
+                  child: sectorWidget,
                 ),
               ),
             );
