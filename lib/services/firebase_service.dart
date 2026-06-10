@@ -582,6 +582,7 @@ import 'dart:math';class FirebaseService {
     String? status,
     String? placementResult,
     bool? choicesVisible,
+    int? currentSlotIndex,
   }) async {
     final Map<String, dynamic> data = {
       'activePlayer': activePlayer,
@@ -590,6 +591,7 @@ import 'dart:math';class FirebaseService {
       if (status != null) 'status': status,
       'placementResult': placementResult,
       if (choicesVisible != null) 'choicesVisible': choicesVisible,
+      if (currentSlotIndex != null) 'currentSlotIndex': currentSlotIndex,
     };
     if (kIsWeb) {
       try {

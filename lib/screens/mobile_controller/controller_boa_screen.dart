@@ -52,6 +52,8 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
       if (!mounted) return;
       if (data.isEmpty) return;
 
+      final oldMysteryTitle = _mysterySong?['title'];
+
       setState(() {
         _status = data['status'] ?? 'waiting';
         _activePlayer = data['activePlayer'];
@@ -73,6 +75,15 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
           _timelineSongs = [];
         }
       });
+
+      // Reset PageView when a new mystery song appears
+      final newMysteryTitle = _mysterySong?['title'];
+      if (newMysteryTitle != null && newMysteryTitle != oldMysteryTitle) {
+        _currentSlotIndex = 0;
+        if (_pageController.hasClients) {
+          _pageController.jumpToPage(0);
+        }
+      }
 
       // Handle placement result animations
       if (_placementResult != null) {
@@ -134,35 +145,27 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     final bool isMyTurn = _activePlayer == widget.playerName;
 
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF0F0C1B), Color(0xFF201335), Color(0xFF0F0C1B)],
-          ),
-        ),
-        child: SafeArea(
-          child: Stack(
-            children: [
-              // Main content
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  // Header
-                  _buildHeader(isMyTurn),
+      backgroundColor: const Color(0xFFF8F9FA),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            // Main content
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // Header
+                _buildHeader(isMyTurn),
 
-                  // Body
-                  Expanded(
-                    child: _buildBody(isMyTurn),
-                  ),
-                ],
-              ),
+                // Body
+                Expanded(
+                  child: _buildBody(isMyTurn),
+                ),
+              ],
+            ),
 
-              // Feedback Overlay
-              if (_placementResult != null && isMyTurn) _buildResultOverlay(),
-            ],
-          ),
+            // Feedback Overlay
+            if (_placementResult != null && isMyTurn) _buildResultOverlay(),
+          ],
         ),
       ),
     );
@@ -180,7 +183,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Text(
                 widget.playerName,
                 style: GoogleFonts.outfit(
-                  color: Colors.white,
+                  color: Colors.black87,
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
@@ -189,17 +192,17 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
-                  color: isMyTurn ? Colors.green.withOpacity(0.2) : Colors.white10,
+                  color: isMyTurn ? Colors.green[50] : Colors.grey[200],
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: isMyTurn ? Colors.green : Colors.white24,
+                    color: isMyTurn ? Colors.green : Colors.grey[300]!,
                     width: 1,
                   ),
                 ),
                 child: Text(
                   isMyTurn ? 'YOUR TURN' : 'WAITING',
                   style: GoogleFonts.outfit(
-                    color: isMyTurn ? Colors.greenAccent : Colors.white54,
+                    color: isMyTurn ? Colors.green[800] : Colors.grey[600],
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
@@ -209,14 +212,14 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
             ],
           ),
           IconButton(
-            icon: const Icon(Icons.exit_to_app, color: Colors.white54),
+            icon: const Icon(Icons.exit_to_app, color: Colors.black54),
             onPressed: () {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  backgroundColor: const Color(0xFF201335),
-                  title: const Text('Leave Lobby?', style: TextStyle(color: Colors.white)),
-                  content: const Text('Are you sure you want to disconnect?', style: TextStyle(color: Colors.white70)),
+                  backgroundColor: Colors.white,
+                  title: const Text('Leave Lobby?', style: TextStyle(color: Colors.black87)),
+                  content: const Text('Are you sure you want to disconnect?', style: TextStyle(color: Colors.black54)),
                   actions: [
                     TextButton(
                       child: const Text('Cancel'),
@@ -247,16 +250,16 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CircularProgressIndicator(color: Colors.purpleAccent),
+            const CircularProgressIndicator(color: Colors.purple),
             const SizedBox(height: 24),
             Text(
               'Lobby Ready',
-              style: GoogleFonts.outfit(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+              style: GoogleFonts.outfit(color: Colors.black87, fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             Text(
               'Wait for host to start the timeline...',
-              style: GoogleFonts.outfit(color: Colors.white54, fontSize: 14),
+              style: GoogleFonts.outfit(color: Colors.grey[600], fontSize: 14),
             ),
           ],
         ),
@@ -273,13 +276,13 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.03),
+                  color: Colors.purple.withOpacity(0.05),
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.purpleAccent.withOpacity(0.2), width: 2),
+                  border: Border.all(color: Colors.purple.withOpacity(0.2), width: 2),
                 ),
                 child: const Icon(
                   Icons.audiotrack,
-                  color: Colors.purpleAccent,
+                  color: Colors.purple,
                   size: 60,
                 ),
               ),
@@ -287,7 +290,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Text(
                 '${_activePlayer ?? "Someone"}\'s Turn',
                 style: GoogleFonts.outfit(
-                  color: Colors.white,
+                  color: Colors.black87,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -297,7 +300,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Text(
                 'Watch the host screen to see their timeline placement!',
                 style: GoogleFonts.outfit(
-                  color: Colors.white54,
+                  color: Colors.grey[600],
                   fontSize: 14,
                 ),
                 textAlign: TextAlign.center,
@@ -318,13 +321,13 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: Colors.green.withOpacity(0.1),
+                  color: Colors.green[50],
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.green.withOpacity(0.3), width: 2),
+                  border: Border.all(color: Colors.green[200]!, width: 2),
                 ),
                 child: const Icon(
                   Icons.play_arrow,
-                  color: Colors.greenAccent,
+                  color: Colors.green,
                   size: 60,
                 ),
               ),
@@ -332,7 +335,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Text(
                 "It's Your Turn!",
                 style: GoogleFonts.outfit(
-                  color: Colors.white,
+                  color: Colors.black87,
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
                 ),
@@ -342,7 +345,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Text(
                 "Are you ready? Tap 'START NOW' to reveal your mystery song and timeline.",
                 style: GoogleFonts.outfit(
-                  color: Colors.white54,
+                  color: Colors.grey[600],
                   fontSize: 14,
                 ),
                 textAlign: TextAlign.center,
@@ -380,7 +383,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
 
     if (_mysterySong == null) {
       return const Center(
-        child: CircularProgressIndicator(color: Colors.tealAccent),
+        child: CircularProgressIndicator(color: Colors.teal),
       );
     }
 
@@ -559,10 +562,10 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
                 height: 200,
                 margin: const EdgeInsets.only(top: 36, left: 10, right: 10),
                 decoration: BoxDecoration(
-                  color: Colors.tealAccent.withOpacity(0.05),
+                  color: Colors.teal.withOpacity(0.05),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Colors.tealAccent.withOpacity(0.5),
+                    color: Colors.teal.withOpacity(0.3),
                     width: 2,
                     style: BorderStyle.solid,
                   ),
@@ -570,7 +573,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
                 child: const Center(
                   child: Icon(
                     Icons.arrow_downward,
-                    color: Colors.tealAccent,
+                    color: Colors.teal,
                     size: 24,
                   ),
                 ),
@@ -601,30 +604,23 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         Text(
           year,
           style: GoogleFonts.outfit(
-            color: Colors.tealAccent,
+            color: Colors.teal[800],
             fontSize: 22,
             fontWeight: FontWeight.bold,
-            shadows: [
-              const Shadow(
-                color: Colors.black54,
-                offset: Offset(0, 2),
-                blurRadius: 4,
-              ),
-            ],
           ),
         ),
         const SizedBox(height: 10),
         Container(
           height: 200,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.05),
+            color: Colors.white,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: Colors.white10),
-            boxShadow: const [
+            border: Border.all(color: Colors.grey[200]!),
+            boxShadow: [
               BoxShadow(
-                color: Colors.black38,
+                color: Colors.black.withOpacity(0.05),
                 blurRadius: 10,
-                offset: Offset(0, 4),
+                offset: const Offset(0, 4),
               )
             ],
           ),
@@ -694,10 +690,10 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         Container(
           height: 200,
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.02),
+            color: Colors.grey[100],
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: Colors.white.withOpacity(0.05),
+              color: Colors.grey[300]!,
               style: BorderStyle.solid,
             ),
           ),
@@ -705,7 +701,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
             child: Text(
               isLeft ? 'START' : 'END',
               style: GoogleFonts.outfit(
-                color: Colors.white24,
+                color: Colors.grey[400],
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 2,
@@ -720,14 +716,14 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
   Widget _buildDropButton() {
     final int slotsCount = _timelineSongs.length + 1;
     String buttonText = "PLACE BETWEEN";
-    Color buttonColor = Colors.tealAccent;
+    Color buttonColor = Colors.teal;
 
     if (_currentSlotIndex == 0) {
       buttonText = "PLACE BEFORE";
-      buttonColor = Colors.purpleAccent;
+      buttonColor = Colors.purple;
     } else if (_currentSlotIndex == slotsCount - 1) {
       buttonText = "PLACE AFTER";
-      buttonColor = Colors.indigoAccent;
+      buttonColor = Colors.indigo;
     }
 
     return Padding(
@@ -739,7 +735,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
-              color: buttonColor.withOpacity(0.3),
+              color: buttonColor.withOpacity(0.2),
               blurRadius: 15,
               offset: const Offset(0, 5),
             )
@@ -748,7 +744,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: buttonColor,
-            foregroundColor: Colors.black,
+            foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
@@ -775,7 +771,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     final message = isCorrect ? "CORRECT PLACE!" : "WRONG PLACE!";
 
     return Container(
-      color: Colors.black.withOpacity(0.9),
+      color: Colors.black.withOpacity(0.85),
       width: double.infinity,
       height: double.infinity,
       child: ScaleTransition(
@@ -785,7 +781,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
             padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
             margin: const EdgeInsets.symmetric(horizontal: 30),
             decoration: BoxDecoration(
-              color: const Color(0xFF1E1B2E),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(24),
               border: Border.all(color: color.withOpacity(0.5), width: 2),
             ),
@@ -797,7 +793,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
                 Text(
                   message,
                   style: GoogleFonts.outfit(
-                    color: Colors.white,
+                    color: Colors.black87,
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                   ),
@@ -808,7 +804,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
                       ? "Keep it up! Your timeline is growing."
                       : "Oops! Better luck next song.",
                   style: GoogleFonts.outfit(
-                    color: Colors.white70,
+                    color: Colors.grey[700],
                     fontSize: 14,
                   ),
                   textAlign: TextAlign.center,

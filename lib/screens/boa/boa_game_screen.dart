@@ -124,12 +124,10 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           
           _hoveredDropZoneIndex.value = currentSlotIndex;
 
-          if (_scrollController.hasClients) {
-            double screenWidth = MediaQuery.of(context).size.width;
-            double targetX = 100.0 + (currentSlotIndex * 176.0);
-            double centralOffset = targetX - (screenWidth / 2) + 88.0;
+          if (_scrollController.hasClients && !_isDragging) {
+            double targetOffset = currentSlotIndex * 176.0;
             _scrollController.animateTo(
-              centralOffset.clamp(0.0, _scrollController.position.maxScrollExtent),
+              targetOffset.clamp(0.0, _scrollController.position.maxScrollExtent),
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOutCubic,
             );
@@ -193,6 +191,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           timelineSongs: [],
           status: 'playing',
           placementResult: null,
+          currentSlotIndex: 0,
         );
         await FirebaseService().setWaitingForReady(widget.roomCode!, true);
       }
@@ -248,6 +247,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         mysterySong: mysteryMap,
         timelineSongs: timelineMaps,
         placementResult: null,
+        currentSlotIndex: 0,
       );
       await FirebaseService().setWaitingForReady(widget.roomCode!, false);
     }
@@ -631,7 +631,10 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                                     scrollDirection: Axis.horizontal, 
                                     clipBehavior: Clip.none, // Allow enlarged cards to spill out
                                     physics: const AlwaysScrollableScrollPhysics(),
-                                    padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 40),
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: MediaQuery.of(context).size.width / 2 - 60,
+                                      vertical: 40,
+                                    ),
                                     child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
