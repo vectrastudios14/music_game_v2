@@ -27,6 +27,8 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
   String? _buzzedTeam;
   String? _team1Name;
   String? _team2Name;
+  String? _team3Name;
+  String? _team4Name;
   String? _roomMode; // 'team' or 'individual'
   String? _activePlayer;
   String? _nextPlayer;
@@ -40,6 +42,8 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
   int _playTimeSeconds = 0;
   bool _hasVotedToSkip = false;
   bool _isWaitingForReady = false;
+  int _hintsUsed = 0;
+  bool _isRequestingHint = false;
   late StreamSubscription _firebaseSubscription;
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
@@ -85,6 +89,7 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
           if (newStatus == 'playing' && _status != 'playing') {
             _playTimeSeconds = 0;
             _hasVotedToSkip = false;
+            _isRequestingHint = false;
             _playTimer?.cancel();
             _playTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
               if (mounted && _status == 'playing' && !_isPaused) {
@@ -101,6 +106,8 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
         _buzzedTeam = data['buzzedTeam'];
         _team1Name = data['team1Name'];
         _team2Name = data['team2Name'];
+        _team3Name = data['team3Name'];
+        _team4Name = data['team4Name'];
         
         final newChoicesVisible = data['choicesVisible'] == true;
         if (newChoicesVisible && !_choicesVisible) {
@@ -142,6 +149,10 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
           _isPaused = data['pauseState']['isPaused'] == true;
         } else {
           _isPaused = false;
+        }
+        _hintsUsed = data['hintsUsed'] ?? 0;
+        if (data['hintRequested'] != true) {
+          _isRequestingHint = false;
         }
       });
     });
@@ -288,16 +299,34 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
     final bool isMyTurn = isIndividual && _activePlayer == widget.playerName;
     final bool isNextTurn = isIndividual && _nextPlayer == widget.playerName;
 
-    final bool isMyTeam = !isIndividual && widget.teamName == 'team1';
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    int teamIndex = 0;
+    if (widget.teamName == 'team2') teamIndex = 1;
+    else if (widget.teamName == 'team3') teamIndex = 2;
+    else if (widget.teamName == 'team4') teamIndex = 3;
+
     final Color teamColor = isIndividual
         ? Colors.amber
-        : (isMyTeam ? Colors.cyan : Colors.pinkAccent);
-    final String defaultTeamDisplayName = isIndividual ? 'Individual' : (isMyTeam ? 'Team 1' : 'Team 2');
-    final String teamDisplayName = isIndividual 
-      ? 'Individual'
-      : (isMyTeam 
-          ? (_team1Name != null && _team1Name!.isNotEmpty ? _team1Name! : defaultTeamDisplayName)
-          : (_team2Name != null && _team2Name!.isNotEmpty ? _team2Name! : defaultTeamDisplayName));
+        : colors[teamIndex % colors.length];
+
+    final String defaultTeamDisplayName = isIndividual ? 'Individual' : 'Team ${teamIndex + 1}';
+    String teamDisplayName = defaultTeamDisplayName;
+    if (!isIndividual) {
+      if (widget.teamName == 'team1') {
+        teamDisplayName = (_team1Name != null && _team1Name!.isNotEmpty) ? _team1Name! : defaultTeamDisplayName;
+      } else if (widget.teamName == 'team2') {
+        teamDisplayName = (_team2Name != null && _team2Name!.isNotEmpty) ? _team2Name! : defaultTeamDisplayName;
+      } else if (widget.teamName == 'team3') {
+        teamDisplayName = (_team3Name != null && _team3Name!.isNotEmpty) ? _team3Name! : defaultTeamDisplayName;
+      } else if (widget.teamName == 'team4') {
+        teamDisplayName = (_team4Name != null && _team4Name!.isNotEmpty) ? _team4Name! : defaultTeamDisplayName;
+      }
+    }
 
     bool isBuzzerActive = !isIndividual && _status == 'playing';
     bool didWeBuzz = !isIndividual && _status == 'buzzed' && _buzzedTeam == widget.teamName;
@@ -574,6 +603,45 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
                   ),
                 ],
               ),
+            )
+          else
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Your Turn! / دورك!',
+                    style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.amber),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: (_hintsUsed >= 2 || _isRequestingHint) ? null : () {
+                      setState(() {
+                        _isRequestingHint = true;
+                      });
+                      FirebaseService().requestHint(widget.roomCode);
+                    },
+                    icon: Icon(
+                      Icons.help_outline,
+                      size: 18,
+                      color: (_hintsUsed >= 2 || _isRequestingHint) ? Colors.white30 : Colors.black87,
+                    ),
+                    label: Text(
+                      _hintsUsed >= 2 ? 'No Hints' : (_isRequestingHint ? 'Wait...' : 'Hint / تلميح (${2 - _hintsUsed})'),
+                      style: TextStyle(
+                        color: (_hintsUsed >= 2 || _isRequestingHint) ? Colors.white30 : Colors.black87,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: (_hintsUsed >= 2 || _isRequestingHint) ? Colors.grey.withOpacity(0.3) : Colors.amber,
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                ],
+              ),
             ),
           Expanded(
             child: LayoutBuilder(
@@ -605,56 +673,90 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
                   itemCount: _options.length,
                   itemBuilder: (context, index) {
                     final opt = _options[index];
-                    return GestureDetector(
-                      onTap: () {
-                        FirebaseService().submitAnswer(widget.roomCode, opt['id'], widget.playerName);
-                        setState(() {
-                          _selectedOptionId = opt['id'];
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white10,
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: Colors.white24, width: 2),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-                                child: opt['artworkUrl'] != null && opt['artworkUrl'].toString().isNotEmpty
+                    final bool isHidden = opt['hidden'] == true;
+                    return Visibility(
+                      visible: !isHidden,
+                      maintainSize: true,
+                      maintainAnimation: true,
+                      maintainState: true,
+                      child: GestureDetector(
+                        onTap: isHidden ? null : () {
+                          FirebaseService().submitAnswer(widget.roomCode, opt['id'], widget.playerName);
+                          setState(() {
+                            _selectedOptionId = opt['id'];
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: Colors.white24, width: 1.5),
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(14),
+                            child: Stack(
+                              fit: StackFit.expand,
+                              children: [
+                                // Artwork Image
+                                opt['artworkUrl'] != null && opt['artworkUrl'].toString().isNotEmpty
                                     ? Image.network(
                                         'https://images.weserv.nl/?url=${Uri.encodeComponent(opt['artworkUrl'].toString())}',
                                         fit: BoxFit.cover,
                                         errorBuilder: (context, error, stackTrace) => Container(color: Colors.white10, child: const Center(child: Icon(Icons.music_note, color: Colors.white, size: 40))),
                                       )
                                     : Container(color: Colors.white10, child: const Center(child: Icon(Icons.music_note, color: Colors.white, size: 40))),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    opt['title'],
-                                    style: GoogleFonts.outfit(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    textAlign: TextAlign.center,
+                                // Gradient Overlay at the bottom
+                                Positioned(
+                                  bottom: 0, left: 0, right: 0,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.bottomCenter,
+                                        end: Alignment.topCenter,
+                                        colors: [
+                                          Colors.black.withOpacity(0.95),
+                                          Colors.black.withOpacity(0.0),
+                                        ],
+                                      ),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        Text(
+                                          opt['artist'],
+                                          style: GoogleFonts.outfit(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 14,
+                                            shadows: [
+                                              const Shadow(color: Colors.black, blurRadius: 8, offset: Offset(0, 1)),
+                                            ],
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          opt['title'],
+                                          style: GoogleFonts.outfit(
+                                            color: Colors.white70,
+                                            fontSize: 11,
+                                            shadows: [
+                                              const Shadow(color: Colors.black, blurRadius: 8, offset: Offset(0, 1)),
+                                            ],
+                                          ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  Text(
-                                    opt['artist'],
-                                    style: GoogleFonts.outfit(color: Colors.white70, fontSize: 11),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     );

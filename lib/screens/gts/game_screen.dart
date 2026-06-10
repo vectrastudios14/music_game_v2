@@ -6,6 +6,7 @@ import 'dart:math' as math;
 import 'package:audioplayers/audioplayers.dart'; 
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
+import 'dart:ui' as ui;
 
 import '../../models/song.dart';
 import '../../services/song_repository.dart';
@@ -75,6 +76,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   StreamSubscription? _firebaseSubscription; // NEW
   
   bool _isWaitingForReady = true; // NEW: Manual start phase
+  bool _isAudioLoading = true;
 
   // TEAM MODE STATE
   int? _activeTeamIndex;
@@ -84,6 +86,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   String? _buzzedPlayerName;
   String? _answeredPlayerName;
   bool _isResettingRound = false;
+  bool _processingHint = false;
   String? _skipPlayer1;
   String? _skipPlayer2;
   Map<String, String> _currentSkipVotes = {};
@@ -109,7 +112,10 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           if (data['status'] == 'buzzed' && !_buzzerPressed && !_isAnswered && !_isWaitingForReady && !_isResettingRound) {
             final buzzedTeam = data['buzzedTeam'];
             final buzzedPlayerName = data['buzzedPlayerName'];
-            int teamIndex = buzzedTeam == 'team1' ? 0 : 1;
+            int teamIndex = 0;
+            if (buzzedTeam == 'team2') teamIndex = 1;
+            else if (buzzedTeam == 'team3') teamIndex = 2;
+            else if (buzzedTeam == 'team4') teamIndex = 3;
             _handleBuzz(teamIndex, buzzedPlayerName);
           }
           // Handle Answer Selection in Mobile Controller
@@ -164,13 +170,27 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             }
           }
 
+          // Handle Hint Request in Mobile Controller
+          if (!widget.isTeamMode && data['hintRequested'] == true && !_isAnswered && _hintsUsed < 2 && !_isLoading && !_processingHint) {
+            _processingHint = true;
+            FirebaseService().resetHintRequest(widget.roomCode!);
+            _useHint();
+            Future.delayed(const Duration(milliseconds: 1000), () {
+              _processingHint = false;
+            });
+          }
+
           // Handle Song Skip Voting - show names immediately on first vote
           if (widget.isTeamMode && !_isAnswered) {
             final Map<String, String> newSkipVotes = {};
             if (data['skipVotes'] != null && !_isLoading) {
               final skipVotes = data['skipVotes'] as Map;
-              if (skipVotes.containsKey('team1')) newSkipVotes['team1'] = skipVotes['team1']['playerName'];
-              if (skipVotes.containsKey('team2')) newSkipVotes['team2'] = skipVotes['team2']['playerName'];
+              for (int i = 1; i <= 4; i++) {
+                final key = 'team$i';
+                if (skipVotes.containsKey(key) && skipVotes[key] != null) {
+                  newSkipVotes[key] = skipVotes[key]['playerName'] ?? 'Team $i';
+                }
+              }
             }
 
             // Always update the live display (even with one vote)
@@ -180,10 +200,17 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
               });
             }
 
-            // Trigger skip only when both teams voted and buzzer not already pressed
-            if (newSkipVotes.containsKey('team1') && newSkipVotes.containsKey('team2') && !_buzzerPressed) {
-              final p1 = newSkipVotes['team1']!;
-              final p2 = newSkipVotes['team2']!;
+            // Trigger skip only when all active teams have voted to skip and buzzer not already pressed
+            bool allVoted = true;
+            for (int i = 0; i < widget.playerNames.length; i++) {
+              if (!newSkipVotes.containsKey('team${i + 1}')) {
+                allVoted = false;
+                break;
+              }
+            }
+            if (allVoted && !_buzzerPressed && newSkipVotes.isNotEmpty) {
+              final p1 = newSkipVotes['team1'] ?? 'Team 1';
+              final p2 = newSkipVotes['team2'] ?? 'Team 2';
               _handleSongSkip(p1, p2);
             }
           }
@@ -207,10 +234,12 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
     setState(() {
       _isResettingRound = true; // Ignore old Firebase state
       _isLoading = true;
+      _isAudioLoading = true;
       _isAnswered = false;
       _selectedOptionId = null;
       _earnedPoints = null;
       _hintsUsed = 0;
+      _processingHint = false;
       _hiddenOptionIds.clear();
       _lastHintId = null;
       _answeredPlayerName = null;
@@ -253,7 +282,9 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           _currentQuestion = question;
           _history.add(question!.correctSong);
           _isLoading = false;
-          _isWaitingForReady = widget.isTeamMode ? (_currentRound <= 1) : true; // Wait only on round 1 for team mode
+          _isWaitingForReady = widget.roomCode != null 
+              ? (_currentRound <= 1 && _currentPlayerIndex == 0) 
+              : (widget.isTeamMode ? (_currentRound <= 1) : true);
         });
         _fillBuffer();
         if (widget.roomCode != null) {
@@ -263,6 +294,8 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           FirebaseService().resetNextRoundRequest(widget.roomCode!);
           FirebaseService().clearSkipVotes(widget.roomCode!);
           FirebaseService().setWaitingForReady(widget.roomCode!, _isWaitingForReady);
+          FirebaseService().setHintsUsed(widget.roomCode!, 0);
+          FirebaseService().resetHintRequest(widget.roomCode!);
 
           if (!widget.isTeamMode) {
             final currentPlayer = widget.playerNames[_currentPlayerIndex];
@@ -284,7 +317,10 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   Future<void> _beginTurn() async {
     if (_currentQuestion == null) return;
     
-    setState(() => _isWaitingForReady = false);
+    setState(() {
+      _isWaitingForReady = false;
+      _isAudioLoading = true;
+    });
 
     try {
       final audioUrl = _currentQuestion!.correctSong.link;
@@ -301,6 +337,12 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       // Delay slightly to ensure audio has actually reached the speakers
       await Future.delayed(const Duration(milliseconds: 300));
       
+      if (mounted) {
+        setState(() {
+          _isAudioLoading = false;
+        });
+      }
+
       if (widget.roomCode != null) {
         FirebaseService().setWaitingForReady(widget.roomCode!, false);
         if (widget.isTeamMode) {
@@ -312,14 +354,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           FirebaseService().setIndividualActivePlayer(widget.roomCode!, currentPlayer, nextPlayer: nextPlayer);
         }
 
-        final isArabic = SongRepository().currentLibraryType == 'arabic';
-        final optionsList = _currentQuestion!.options.map((s) => {
-          'id': s.id,
-          'title': widget.isHardMode ? '' : (isArabic ? (s.titleAr ?? s.title) : s.title),
-          'artist': isArabic ? (s.artistAr ?? s.artist) : s.artist,
-          'artworkUrl': s.artworkUrl,
-        }).toList();
-        FirebaseService().pushOptions(widget.roomCode!, optionsList);
+        _pushOptionsToFirebase();
       }
       
       // Start response timer for ALL modes so bonuses work correctly
@@ -329,6 +364,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       _isSkipped = false;
     } catch (e) {
       debugPrint("GTS: Audio start error: $e");
+      if (mounted) {
+        setState(() {
+          _isAudioLoading = false;
+        });
+      }
     }
   }
 
@@ -408,7 +448,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   void _handleBuzz(int teamIndex, [String? playerName]) {
-    if (_buzzerPressed || _isAnswered || _isLoading || _isWaitingForReady) return;
+    if (_buzzerPressed || _isAnswered || _isLoading || _isWaitingForReady || _isAudioLoading) return;
     
     _player.pause(); // Stop music immediately on buzz
     _responseTimer.stop();
@@ -543,10 +583,6 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       _skipVotes.clear();
     });
 
-    // No auto advance timer - transition is manual via Next Round on controller
-    if (widget.isTeamMode) {
-      // FirebaseService().resetNextRoundRequest(widget.roomCode!);
-    }
   }
 
   void _handleSongSkip(String player1, String player2) {
@@ -567,6 +603,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
     
     setState(() {
       _isAnswered = true;
+      _showChoicesAfterBuzz = true;
       _selectedOptionId = "skip";
       _earnedPoints = 0;
       _answeredPlayerName = "SKIP";
@@ -574,10 +611,6 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       _skipPlayer2 = player2;
     });
 
-    // No auto advance timer - transition is manual via Next Round on controller
-    if (widget.isTeamMode) {
-      // FirebaseService().resetNextRoundRequest(widget.roomCode!);
-    }
   }
 
   void _startAutoAdvanceTimer() {
@@ -784,7 +817,25 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
         _hintsUsed++;
         _lastHintId = toHide.id;
       });
+      if (widget.roomCode != null) {
+        FirebaseService().setHintsUsed(widget.roomCode!, _hintsUsed);
+        _pushOptionsToFirebase();
+      }
     }
+  }
+
+  void _pushOptionsToFirebase() {
+    if (widget.roomCode == null || _currentQuestion == null) return;
+    final isArabic = SongRepository().currentLibraryType == 'arabic';
+    final optionsList = _currentQuestion!.options
+        .map((s) => {
+          'id': s.id,
+          'title': widget.isHardMode ? '' : (isArabic ? (s.titleAr ?? s.title) : s.title),
+          'artist': isArabic ? (s.artistAr ?? s.artist) : s.artist,
+          'artworkUrl': s.artworkUrl,
+          'hidden': _hiddenOptionIds.contains(s.id),
+        }).toList();
+    FirebaseService().pushOptions(widget.roomCode!, optionsList);
   }
 
   @override
@@ -797,24 +848,6 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Positioned(
-              top: 20, 
-              right: 20, 
-              child: TextButton(
-                onPressed: () { 
-                  _player.stop(); 
-                  Navigator.pop(context); 
-                },
-                child: Text(
-                  _t('setup'),
-                  style: GoogleFonts.outfit(
-                    color: Colors.white70, 
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
-            ),
             _isLoading 
               ? const Center(child: CircularProgressIndicator())
               : Directionality(
@@ -823,16 +856,24 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                     children: [
                       if (widget.isTeamMode) ...[
                         const SizedBox(height: 10),
+                        if (_showChoicesAfterBuzz) ...[
+                          Image.asset(
+                            'assets/Guess_that_song_logo.png',
+                            height: 125,
+                            fit: BoxFit.contain,
+                          ),
+                          const SizedBox(height: 10),
+                        ],
                         _buildTeamHeader(),
                         const SizedBox(height: 10),
                       ] else ...[
-                        const SizedBox(height: 15),
+                        SizedBox(height: widget.playerNames.length > 5 ? 8 : 15),
                         Image.asset(
                           'assets/Guess_that_song_logo.png',
-                          height: 125,
+                          height: widget.playerNames.length > 5 ? 75 : 120,
                           fit: BoxFit.contain,
                         ),
-                        const SizedBox(height: 10),
+                        SizedBox(height: widget.playerNames.length > 5 ? 8 : 10),
                       ],
                       Expanded(
                         child: widget.isTeamMode && !_showChoicesAfterBuzz
@@ -854,6 +895,26 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             // Ready Screen Overlay
             if (_isWaitingForReady && !_isLoading)
               widget.isTeamMode ? _buildReadyScreen("EVERYONE") : _buildReadyScreen(currentPlayer),
+
+             // Back / Setup Button on top of everything (aligned to start/left)
+             Positioned.directional(
+               textDirection: widget.uiLanguage == 'ar' ? TextDirection.rtl : TextDirection.ltr,
+               start: 20,
+               top: 20, 
+               child: IconButton(
+                 onPressed: () { 
+                   _player.stop(); 
+                   Navigator.pop(context); 
+                 },
+                 icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white70, size: 20),
+                 tooltip: widget.uiLanguage == 'ar' ? 'العودة للإعدادات' : 'Back to Settings',
+                 style: IconButton.styleFrom(
+                   backgroundColor: Colors.white.withOpacity(0.05),
+                   padding: const EdgeInsets.all(12),
+                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                 ),
+               ),
+             ),
           ],
         ),
       ),
@@ -950,8 +1011,8 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
     final sortedNames = List<String>.from(widget.playerNames)
       ..sort((a, b) => (_scores[b] ?? 0).compareTo(_scores[a] ?? 0));
       
-    final double itemHeight = 60.0;
-    final double spacing = 10.0;
+    final double itemHeight = 56.0;
+    final double spacing = 8.0;
     final double totalHeight = widget.playerNames.length * (itemHeight + spacing);
 
     final int nextIndex = (_currentPlayerIndex + 1) % widget.playerNames.length;
@@ -968,29 +1029,68 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       width: 220,
       height: totalHeight,
       child: Stack(
+        clipBehavior: Clip.none,
         children: widget.playerNames.map((playerName) {
           final int index = sortedNames.indexOf(playerName);
-          final bool isActive = playerName == currentPlayer;
           final int playerScore = _scores[playerName] ?? 0;
-          final bool isLeader = playerScore == highestScore && highestScore > 0;
-          final bool isNext = _isAnswered && playerName == nextPlayerName && widget.playerNames.length > 1 && !isActive;
+
+          // Team Mode specific variables
+          final bool isTeam1 = widget.isTeamMode && playerName == widget.playerNames[0];
+          final bool isTeam2 = widget.isTeamMode && playerName == widget.playerNames[1];
+          final bool isTeam3 = widget.isTeamMode && widget.playerNames.length >= 3 && playerName == widget.playerNames[2];
+          final bool isTeam4 = widget.isTeamMode && widget.playerNames.length >= 4 && playerName == widget.playerNames[3];
+          final bool isBuzzedTeam = widget.isTeamMode && _buzzerPressed && _activeTeamIndex != null && playerName == widget.playerNames[_activeTeamIndex!];
+
+          // Individual Mode variables
+          final bool isActive = !widget.isTeamMode && playerName == currentPlayer;
+          final bool isLeader = !widget.isTeamMode && playerScore == highestScore && highestScore > 0;
+          final bool isNext = !widget.isTeamMode && _isAnswered && playerName == nextPlayerName && widget.playerNames.length > 1 && !isActive;
+
+          Color teamColor = Colors.cyan;
+          if (isTeam1) teamColor = Colors.cyan;
+          else if (isTeam2) teamColor = Colors.pinkAccent;
+          else if (isTeam3) teamColor = Colors.amber;
+          else if (isTeam4) teamColor = Colors.lightGreenAccent;
 
           Color borderColor = Colors.white10;
           double borderWidth = 1.0;
           Color containerBgColor = Colors.white.withOpacity(0.03);
+          Color textAccentColor = Colors.white70;
+          Color scoreColor = Colors.white54;
+          Color textLabelColor = Colors.white;
 
-          if (isActive) {
-            borderColor = Theme.of(context).primaryColor;
-            borderWidth = 2.0;
-            containerBgColor = Theme.of(context).primaryColor.withOpacity(0.15);
-          } else if (isLeader) {
-            borderColor = Colors.amber;
-            borderWidth = 1.5;
-            containerBgColor = Colors.amber.withOpacity(0.08);
-          } else if (isNext) {
-            borderColor = Colors.pinkAccent;
-            borderWidth = 2.0;
-            containerBgColor = Colors.pink.withOpacity(0.07);
+          if (widget.isTeamMode) {
+            if (isBuzzedTeam) {
+              borderColor = teamColor;
+              borderWidth = 2.5;
+              containerBgColor = teamColor.withOpacity(0.2);
+              textAccentColor = teamColor;
+              scoreColor = teamColor;
+            } else {
+              borderColor = teamColor.withOpacity(0.4);
+              borderWidth = 1.2;
+              containerBgColor = teamColor.withOpacity(0.05);
+              textAccentColor = teamColor.withOpacity(0.9);
+              scoreColor = teamColor.withOpacity(0.8);
+            }
+          } else {
+            if (isActive) {
+              borderColor = Theme.of(context).primaryColor;
+              borderWidth = 2.0;
+              containerBgColor = Theme.of(context).primaryColor.withOpacity(0.15);
+              textLabelColor = Colors.white;
+              scoreColor = Colors.white;
+            } else if (isLeader) {
+              borderColor = Colors.amber;
+              borderWidth = 1.5;
+              containerBgColor = Colors.amber.withOpacity(0.08);
+              textAccentColor = Colors.amberAccent;
+              scoreColor = Colors.amber;
+            } else if (isNext) {
+              borderColor = Colors.pinkAccent;
+              borderWidth = 2.0;
+              containerBgColor = Colors.pink.withOpacity(0.07);
+            }
           }
 
           return AnimatedPositioned(
@@ -1023,10 +1123,10 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                               spreadRadius: 2,
                             )
                           ]
-                        : (isActive
+                        : (isActive || isBuzzedTeam
                             ? [
                                 BoxShadow(
-                                  color: Theme.of(context).primaryColor.withOpacity(0.15),
+                                  color: (widget.isTeamMode ? (isTeam1 ? Colors.cyan : Colors.pinkAccent) : Theme.of(context).primaryColor).withOpacity(0.15),
                                   blurRadius: 6,
                                   spreadRadius: 1,
                                 )
@@ -1055,7 +1155,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                        color: isLeader ? Colors.amber.withOpacity(0.2) : (isActive ? Theme.of(context).primaryColor.withOpacity(0.2) : Colors.white12),
+                        color: isLeader 
+                            ? Colors.amber.withOpacity(0.2) 
+                            : (widget.isTeamMode
+                                ? (isTeam1 ? Colors.cyan.withOpacity(0.2) : Colors.pinkAccent.withOpacity(0.2))
+                                : (isActive ? Theme.of(context).primaryColor.withOpacity(0.2) : Colors.white12)),
                         shape: BoxShape.circle,
                       ),
                       child: Center(
@@ -1064,7 +1168,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                           style: GoogleFonts.outfit(
                             fontSize: 14,
                             fontWeight: FontWeight.w900,
-                            color: isLeader ? Colors.amber : (isActive ? Colors.white : Colors.white60),
+                            color: isLeader 
+                                ? Colors.amber 
+                                : (widget.isTeamMode
+                                    ? teamColor
+                                    : (isActive ? Colors.white : Colors.white60)),
                           ),
                         ),
                       ),
@@ -1074,9 +1182,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                     child: Text(
                       playerName,
                       style: GoogleFonts.outfit(
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: isActive ? Colors.white : (isLeader ? Colors.amberAccent : Colors.white70),
+                        color: widget.isTeamMode
+                            ? teamColor
+                            : (isActive ? Colors.white : (isLeader ? Colors.amberAccent : Colors.white70)),
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -1085,9 +1195,9 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                   Text(
                     "$playerScore",
                     style: GoogleFonts.outfit(
-                      fontSize: 22,
+                      fontSize: 20,
                       fontWeight: FontWeight.w900,
-                      color: isLeader ? Colors.amber : (isActive ? Colors.white : Colors.white54),
+                      color: isLeader ? Colors.amber : (isActive || widget.isTeamMode ? Colors.white : Colors.white54),
                     ),
                   ),
                   const SizedBox(width: 4),
@@ -1096,11 +1206,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                     style: GoogleFonts.outfit(
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
-                      color: isLeader ? Colors.amber.withOpacity(0.7) : (isActive ? Colors.white60 : Colors.white30),
+                      color: isLeader 
+                          ? Colors.amber.withOpacity(0.7) 
+                          : (isActive || widget.isTeamMode ? Colors.white60 : Colors.white30),
                     ),
                   ),
-
-
                 ],
               ),
             ),
@@ -1114,27 +1224,10 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ...widget.playerNames.map((teamName) => Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-            decoration: BoxDecoration(
-              color: teamName == widget.playerNames[0] ? Colors.cyan.withOpacity(0.2) : Colors.pinkAccent.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(15),
-              border: Border.all(color: teamName == widget.playerNames[0] ? Colors.cyan : Colors.pinkAccent, width: 1.5),
-            ),
-            child: Text(
-              "$teamName: ${_scores[teamName] ?? 0}",
-              style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-          ),
-        )),
         if (!_isAnswered && _currentSkipVotes.isNotEmpty) ...[
-          const SizedBox(width: 16),
           _buildLiveSkipVotesBadge(),
         ],
         if (_isAnswered) ...[
-          const SizedBox(width: 24),
           _buildEarnedPointsBadge(),
           if (_answeredPlayerName != null) ...[
             const SizedBox(width: 16),
@@ -1158,24 +1251,27 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
         ),
       );
     }
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(colors: [Colors.orangeAccent, Colors.deepOrange]),
-        borderRadius: BorderRadius.circular(15),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.orangeAccent.withOpacity(0.4),
-            blurRadius: 8,
-            spreadRadius: 1,
-          )
-        ]
-      ),
-      child: Text(
-        widget.uiLanguage == 'ar' ? "👉 اضغط \"الجولة التالية\" من الجوال للاستمرار" : "👉 Press \"Next Round\" on controller", 
-        style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)
-      ),
-    );
+    if (widget.roomCode != null) {
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(colors: [Colors.orangeAccent, Colors.deepOrange]),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.orangeAccent.withOpacity(0.4),
+              blurRadius: 8,
+              spreadRadius: 1,
+            )
+          ]
+        ),
+        child: Text(
+          widget.uiLanguage == 'ar' ? "👉 اضغط \"الجولة التالية\" من الجوال للاستمرار" : "👉 Press \"Next Round\" on controller", 
+          style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)
+        ),
+      );
+    }
+    return const SizedBox.shrink();
   }
 
   Widget _buildPauseOverlay() {
@@ -1311,23 +1407,28 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            if (widget.isTeamMode && !_isAnswered)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _buildPointsDisplay(isLarge: false),
+            if (!widget.isTeamMode) ...[
+              SizedBox(
+                height: 45,
+                child: _isAnswered ? Center(child: _buildEarnedPointsBadge()) : null,
               ),
-            if (!widget.isTeamMode && _isAnswered) ...[
-              _buildEarnedPointsBadge(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 15),
             ],
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                if (!widget.isTeamMode) ...[
-                  _buildVerticalScoreboard(widget.playerNames[_currentPlayerIndex]),
-                  const SizedBox(width: 40),
-                ],
-                _buildRoundDisplay(),
+                _buildVerticalScoreboard(widget.playerNames[_currentPlayerIndex]),
+                const SizedBox(width: 40),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (widget.isTeamMode && !_isAnswered) ...[
+                      _buildPointsDisplay(isLarge: false),
+                      const SizedBox(height: 20),
+                    ],
+                    _buildRoundDisplay(),
+                  ],
+                ),
                 const SizedBox(width: 40),
                 Expanded(
                   child: Column(
@@ -1340,7 +1441,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                           crossAxisCount: 2, 
                           crossAxisSpacing: 16, 
                           mainAxisSpacing: 8,
-                          childAspectRatio: widget.isTeamMode ? 2.8 : 1.6,
+                          childAspectRatio: widget.isTeamMode ? 2.8 : 1.85,
                         ),
                         itemCount: widget.isTeamMode ? 6 : 4,
                         itemBuilder: (context, index) {
@@ -1372,7 +1473,25 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                           ),
                         ),
                       if (_isAnswered)
-                        FadeInUp(child: ElevatedButton(onPressed: _nextTurn, child: Text(_t('nextTurn')))),
+                        FadeInUp(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: ElevatedButton.icon(
+                              onPressed: _nextTurn,
+                              icon: const Icon(Icons.arrow_forward, color: Colors.white),
+                              label: Text(
+                                widget.uiLanguage == 'ar' ? "الجولة التالية" : "NEXT TURN", 
+                                style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                elevation: 5,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                              ),
+                            ),
+                          ),
+                        ),
                     ],
                   ),
                 ),
@@ -1473,6 +1592,14 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   Widget _buildBuzzerLayout() {
+    final teamCount = widget.playerNames.length;
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+
     return KeyboardListener(
       focusNode: FocusNode()..requestFocus(),
       onKeyEvent: (event) {
@@ -1516,69 +1643,253 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
       },
       child: Stack(
         children: [
+          // Circular Wheel Background Custom Painter
+          Positioned.fill(
+            child: Center(
+              child: CustomPaint(
+                size: const Size(600, 600),
+                painter: GTSWheelPainter(
+                  teamCount: teamCount,
+                  colors: colors,
+                  activeTeamIndex: _buzzerPressed ? _activeTeamIndex : null,
+                ),
+              ),
+            ),
+          ),
+
+          // Central Pulsing Info Card (Logo, status, points)
           Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Pulse(
-                  infinite: true,
-                  child: Container(
-                    padding: const EdgeInsets.all(40),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Theme.of(context).primaryColor.withOpacity(0.1),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Theme.of(context).primaryColor.withOpacity(0.2),
-                          blurRadius: 30,
-                          spreadRadius: 10,
-                        )
+            child: Container(
+              width: 280,
+              height: 280,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color(0xFF1E293B),
+                boxShadow: [
+                  BoxShadow(
+                    color: (_buzzerPressed && _activeTeamIndex != null)
+                        ? colors[_activeTeamIndex! % colors.length].withOpacity(0.5)
+                        : Theme.of(context).primaryColor.withOpacity(0.3),
+                    blurRadius: 40,
+                    spreadRadius: 8,
+                  ),
+                  const BoxShadow(
+                    color: Colors.black54,
+                    blurRadius: 15,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: ClipOval(
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Pulse(
+                          infinite: true,
+                          child: Image.asset(
+                            'assets/Guess_that_song_logo.png',
+                            height: 85,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          _isAudioLoading
+                              ? (widget.uiLanguage == 'ar' ? 'جاري التحميل...' : 'LOADING...')
+                              : (widget.uiLanguage == 'ar' ? 'استمع جيداً...' : 'LISTENING...'),
+                          style: GoogleFonts.outfit(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w900,
+                            color: Colors.white,
+                            letterSpacing: 2,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        _isAudioLoading
+                            ? const SizedBox(
+                                height: 35,
+                                child: Center(
+                                  child: SizedBox(
+                                    width: 18,
+                                    height: 18,
+                                    child: CircularProgressIndicator(strokeWidth: 2),
+                                  ),
+                                ),
+                              )
+                            : _buildPointsDisplay(isLarge: false),
                       ],
                     ),
-                    child: Image.asset(
-                      'assets/Guess_that_song_logo.png',
-                      height: 120,
-                      fit: BoxFit.contain,
-                    ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  widget.uiLanguage == 'ar' ? 'استمع جيداً...' : 'LISTENING...',
-                  style: GoogleFonts.outfit(fontSize: 32, fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 4),
-                ),
-                const SizedBox(height: 10),
-                _buildPointsDisplay(isLarge: true),
-                const SizedBox(height: 20),
-              ],
+              ),
             ),
           ),
-          // Team Buzzers
-          Positioned.fill(
-            child: Row(
-              children: [
-                // Left side buzzers
-                Expanded(
+
+          // Positioning individual Team overlay widgets dynamically over each sector
+          ...List.generate(teamCount, (index) {
+            // angle division: 360 / teamCount
+            // We want to offset by a standard starting angle (-pi / 2 is top) so the first team is at the top/top-left
+            // To rotate sectors nicely:
+            final double sectorAngle = 2 * math.pi / teamCount;
+            // Center angle of this team's sector:
+            final double midAngle = -math.pi / 2 + (index * sectorAngle) + (sectorAngle / 2);
+            
+            // Placement radius from center
+            const double radius = 200.0;
+            final double xOffset = radius * math.cos(midAngle);
+            final double yOffset = radius * math.sin(midAngle);
+
+            final name = widget.playerNames[index];
+            final members = widget.teamMembers?[name] ?? [];
+            final color = colors[index % colors.length];
+            final isBuzzed = _buzzerPressed && _activeTeamIndex == index;
+
+            return Center(
+              child: Transform.translate(
+                offset: Offset(xOffset, yOffset),
+                child: SizedBox(
+                  width: 170,
+                  height: 170,
                   child: Column(
-                    children: List.generate((widget.playerNames.length / 2).ceil(), (index) {
-                      return Expanded(child: _buildBuzzButton(index));
-                    }),
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Team Name / Indicator
+                      Text(
+                        name.toUpperCase(),
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.outfit(
+                          color: color,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          shadows: [
+                            Shadow(color: color.withOpacity(0.5), blurRadius: 10),
+                          ],
+                        ),
+                      ),
+                      
+                      // Members
+                      if (members.isNotEmpty) ...[
+                        const SizedBox(height: 4),
+                        Text(
+                          members.join(", "),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.outfit(
+                            color: Colors.white70,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                      
+                      const SizedBox(height: 8),
+
+                      // Buzz Button / Status
+                      InkWell(
+                        onTap: () => _handleBuzz(index),
+                        borderRadius: BorderRadius.circular(40),
+                        child: AnimatedScale(
+                          scale: isBuzzed ? 1.15 : 1.0,
+                          duration: const Duration(milliseconds: 150),
+                          child: Container(
+                            width: 68,
+                            height: 68,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: isBuzzed ? color : color.withOpacity(0.12),
+                              border: Border.all(
+                                color: isBuzzed ? Colors.white : color.withOpacity(0.6),
+                                width: isBuzzed ? 3 : 2,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: color.withOpacity(isBuzzed ? 0.7 : 0.25),
+                                  blurRadius: isBuzzed ? 25 : 10,
+                                  spreadRadius: isBuzzed ? 3 : 1,
+                                )
+                              ],
+                            ),
+                            child: Center(
+                              child: isBuzzed
+                                  ? const Icon(Icons.flash_on, color: Colors.white, size: 32)
+                                  : Text(
+                                      'BUZZ',
+                                      style: GoogleFonts.outfit(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w900,
+                                        color: color,
+                                        letterSpacing: 0.5,
+                                      ),
+                                    ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 10),
+
+                      // Mini Skip button
+                      _buildMiniSkipButton(index),
+                    ],
                   ),
                 ),
-                const SizedBox(width: 300), // Space for center animation
-                // Right side buzzers
-                Expanded(
-                  child: Column(
-                    children: List.generate(widget.playerNames.length ~/ 2, (index) {
-                      final actualIndex = (widget.playerNames.length / 2).ceil() + index;
-                      return Expanded(child: _buildBuzzButton(actualIndex));
-                    }),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              ),
+            );
+          }),
         ],
+      ),
+    );
+  }
+
+  Widget _buildMiniSkipButton(int teamIndex) {
+    final teamKey = 'team${teamIndex + 1}';
+    final hasVoted = _currentSkipVotes.containsKey(teamKey);
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    final color = colors[teamIndex % colors.length];
+    
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: () => _handleSkipVote(teamIndex),
+        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          decoration: BoxDecoration(
+            color: hasVoted ? color.withOpacity(0.2) : Colors.white.withOpacity(0.04),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: hasVoted ? color : Colors.white12, width: 1.5),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                hasVoted ? Icons.check : Icons.fast_forward,
+                size: 13,
+                color: hasVoted ? color : Colors.white38,
+              ),
+              const SizedBox(width: 4),
+              Text(
+                hasVoted
+                    ? (widget.uiLanguage == 'ar' ? 'تم' : 'VOTED')
+                    : (widget.uiLanguage == 'ar' ? 'تخطي؟' : 'SKIP?'),
+                style: GoogleFonts.outfit(
+                  color: hasVoted ? color : Colors.white38,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -1833,9 +2144,15 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   Widget _buildSkipButton(int teamIndex) {
-    final teamKey = teamIndex == 0 ? 'team1' : 'team2';
+    final teamKey = 'team${teamIndex + 1}';
     final hasVoted = _currentSkipVotes.containsKey(teamKey);
-    final color = teamIndex == 0 ? Colors.cyan : Colors.pinkAccent;
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    final color = colors[teamIndex % colors.length];
     
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -1876,15 +2193,37 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   void _handleSkipVote(int teamIndex) {
-    if (_isAnswered || _buzzerPressed || _isLoading || widget.roomCode == null) return;
+    if (_isAnswered || _buzzerPressed || _isLoading) return;
     
-    final teamKey = teamIndex == 0 ? 'team1' : 'team2';
-    final hasVoted = _currentSkipVotes.containsKey(teamKey);
+    final teamKey = 'team${teamIndex + 1}';
     
-    if (hasVoted) {
-      FirebaseService().removeSkipVote(widget.roomCode!, teamKey);
+    if (widget.roomCode != null) {
+      final hasVoted = _currentSkipVotes.containsKey(teamKey);
+      if (hasVoted) {
+        FirebaseService().removeSkipVote(widget.roomCode!, teamKey);
+      } else {
+        FirebaseService().voteToSkip(widget.roomCode!, teamKey, "HOST");
+      }
     } else {
-      FirebaseService().voteToSkip(widget.roomCode!, teamKey, "HOST");
+      setState(() {
+        if (_currentSkipVotes.containsKey(teamKey)) {
+          _currentSkipVotes.remove(teamKey);
+        } else {
+          _currentSkipVotes[teamKey] = widget.playerNames[teamIndex];
+        }
+        
+        // Trigger skip if all active teams voted
+        bool allVotedLocal = true;
+        for (int i = 0; i < widget.playerNames.length; i++) {
+          if (!_currentSkipVotes.containsKey('team${i + 1}')) {
+            allVotedLocal = false;
+            break;
+          }
+        }
+        if (allVotedLocal) {
+          _handleSongSkip(widget.playerNames[0], widget.playerNames[1]);
+        }
+      });
     }
   }
 
@@ -2086,21 +2425,43 @@ class _OptionCardState extends State<_OptionCard> with TickerProviderStateMixin 
                   ]
                 )
               ),
-              child: Text(
-                SongRepository().currentLibraryType == 'arabic' 
-                  ? ((widget.isHardMode && !widget.isAnswered) ? (widget.song.artistAr ?? widget.song.artist) : '${widget.song.artistAr ?? widget.song.artist}\n${widget.song.titleAr ?? widget.song.title}')
-                  : ((widget.isHardMode && !widget.isAnswered) ? widget.song.artist : '${widget.song.artist}\n${widget.song.title}'),
-                style: TextStyle(
-                  color: Colors.white, 
-                  fontSize: widget.isTeamMode ? 18 : 12, 
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 0.5,
-                  shadows: [
-                    const Shadow(color: Colors.black, blurRadius: 12, offset: Offset(0, 2)),
-                    if (widget.isTeamMode) const Shadow(color: Colors.black, blurRadius: 20),
-                  ]
-                ),
-                textAlign: TextAlign.center,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    SongRepository().currentLibraryType == 'arabic' 
+                      ? (widget.song.artistAr ?? widget.song.artist)
+                      : widget.song.artist,
+                    style: GoogleFonts.outfit(
+                      color: Colors.white, 
+                      fontSize: 17, 
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 0.5,
+                      shadows: [
+                        const Shadow(color: Colors.black, blurRadius: 12, offset: Offset(0, 2)),
+                      ]
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  if (!widget.isHardMode || widget.isAnswered) ...[
+                    const SizedBox(height: 4),
+                    Text(
+                      SongRepository().currentLibraryType == 'arabic' 
+                        ? (widget.song.titleAr ?? widget.song.title)
+                        : widget.song.title,
+                      style: GoogleFonts.outfit(
+                        color: Colors.amberAccent, 
+                        fontSize: 13, 
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.8,
+                        shadows: [
+                          const Shadow(color: Colors.black, blurRadius: 8, offset: Offset(0, 1)),
+                        ]
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ],
               ),
             ),
           ),
@@ -2293,5 +2654,108 @@ class _OptionCardState extends State<_OptionCard> with TickerProviderStateMixin 
           ),
       ],
     );
+  }
+}
+
+class GTSWheelPainter extends CustomPainter {
+  final int teamCount;
+  final List<Color> colors;
+  final int? activeTeamIndex;
+
+  GTSWheelPainter({
+    required this.teamCount,
+    required this.colors,
+    this.activeTeamIndex,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height / 2);
+    final outerRadius = math.min(size.width, size.height) / 2;
+    // We want a hollow center (donut-like) where the central card sits
+    const innerRadius = 140.0;
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..isAntiAlias = true;
+
+    final double sweepAngle = 2 * math.pi / teamCount;
+    // Start angle offset by -pi/2 so index 0 starts at the top
+    const double startAngleOffset = -math.pi / 2;
+
+    for (int i = 0; i < teamCount; i++) {
+      final color = colors[i % colors.length];
+      final double startAngle = startAngleOffset + (i * sweepAngle);
+      final isBuzzed = activeTeamIndex == i;
+
+      // Draw sector background
+      paint.color = color.withOpacity(isBuzzed ? 0.22 : 0.04);
+      
+      final path = Path();
+      // Draw sector from innerRadius to outerRadius
+      path.arcTo(
+        Rect.fromCircle(center: center, radius: outerRadius),
+        startAngle + 0.02, // slight padding gap
+        sweepAngle - 0.04,
+        true,
+      );
+      path.arcTo(
+        Rect.fromCircle(center: center, radius: innerRadius),
+        startAngle + sweepAngle - 0.02,
+        -(sweepAngle - 0.04),
+        false,
+      );
+      path.close();
+      canvas.drawPath(path, paint);
+
+      // Draw sector outer arc border
+      final borderPaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = isBuzzed ? 4.5 : 1.5
+        ..color = isBuzzed ? color : color.withOpacity(0.25)
+        ..isAntiAlias = true;
+
+      canvas.drawArc(
+        Rect.fromCircle(center: center, radius: outerRadius),
+        startAngle + 0.02,
+        sweepAngle - 0.04,
+        false,
+        borderPaint,
+      );
+
+      // Draw sector inner arc border
+      canvas.drawArc(
+        Rect.fromCircle(center: center, radius: innerRadius),
+        startAngle + 0.02,
+        sweepAngle - 0.04,
+        false,
+        borderPaint,
+      );
+
+      // Draw dividers / separator lines
+      final dividerPaint = Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.5
+        ..color = Colors.white.withOpacity(0.08)
+        ..isAntiAlias = true;
+
+      final double divAngle = startAngle;
+      final offsetInner = Offset(
+        center.dx + innerRadius * math.cos(divAngle),
+        center.dy + innerRadius * math.sin(divAngle),
+      );
+      final offsetOuter = Offset(
+        center.dx + outerRadius * math.cos(divAngle),
+        center.dy + outerRadius * math.sin(divAngle),
+      );
+      canvas.drawLine(offsetInner, offsetOuter, dividerPaint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant GTSWheelPainter oldDelegate) {
+    return oldDelegate.teamCount != teamCount ||
+        oldDelegate.colors != colors ||
+        oldDelegate.activeTeamIndex != activeTeamIndex;
   }
 }
