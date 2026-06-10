@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../services/song_repository.dart';
 import 'boa_game_screen.dart';
 import 'boa_help_screen.dart';
 import '../../services/background_music_service.dart';
+import '../../services/firebase_service.dart';
 
 class BoaSetupScreen extends StatefulWidget {
   const BoaSetupScreen({super.key});
@@ -20,6 +22,12 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
   String _libraryType = SongRepository().currentLibraryType;
   String _uiLanguage = 'en'; // 'en' or 'ar'
   final List<TextEditingController> _nameControllers = [];
+
+  // Mobile Controller variables
+  bool _isMobileControlEnabled = false;
+  String? _roomCode;
+  final List<String> _playerPool = [];
+  bool _isQrZoomed = false;
 
   @override
   void initState() {
@@ -48,6 +56,7 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
     for (var controller in _nameControllers) {
       controller.dispose();
     }
+    FirebaseService().stopListeningForJoins();
     super.dispose();
   }
 
@@ -91,13 +100,13 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
                   FadeInDown(
                     child: Image.asset(
                       'assets/Before_or_after_logo.png',
-                      height: 220,
+                      height: 180,
                       fit: BoxFit.contain,
                     ),
                   ),
-                  const SizedBox(height: 60),
+                  const SizedBox(height: 30),
   
-                  // 2. Settings Row (Target Score & Player Count)
+                  // 2. Settings Row (Target Score & Mobile Control)
                   FadeInDown(
                     delay: const Duration(milliseconds: 100),
                     child: Column(
@@ -124,31 +133,79 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
                               ),
                             ),
                             const SizedBox(width: 20),
-                            // Player Count
+                            // Mobile Control Toggle
                             Expanded(
-                              child: Row(
-                                children: [
-                                  Text(
-                                    isAr ? 'اللاعبون: $_playerCount' : 'Players: $_playerCount', 
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)
-                                  ),
-                                  Expanded(
-                                    child: Slider(
-                                      value: _playerCount.toDouble(),
-                                      min: 1, max: 6, divisions: 5,
-                                      label: _playerCount.toString(),
-                                      onChanged: (v) => setState(() {
-                                        _playerCount = v.round();
-                                        _updateControllers();
-                                      }),
-                                    ),
-                                  ),
-                                ],
+                              child: SwitchListTile(
+                                title: Text(
+                                  isAr ? 'تحكم الجوال' : 'Mobile Control',
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87),
+                                ),
+                                value: _isMobileControlEnabled,
+                                onChanged: (val) async {
+                                  setState(() {
+                                    _isMobileControlEnabled = val;
+                                  });
+                                  if (val) {
+                                    _roomCode = FirebaseService().generateRoomCode();
+                                    await FirebaseService().createRoom(_roomCode!);
+                                    await FirebaseService().setGameType(_roomCode!, 'boa');
+                                    await FirebaseService().setRoomMode(_roomCode!, 'individual');
+
+                                    _playerPool.clear();
+                                    FirebaseService().listenForJoins(_roomCode!, (name, team) {
+                                      if (mounted) {
+                                        setState(() {
+                                          if (!_playerPool.contains(name)) {
+                                            _playerPool.add(name);
+                                            _playerCount = _playerPool.length;
+                                            _updateControllers();
+                                            for (int i = 0; i < _playerPool.length; i++) {
+                                              _nameControllers[i].text = _playerPool[i];
+                                            }
+                                          }
+                                        });
+                                      }
+                                    });
+                                  } else {
+                                    FirebaseService().stopListeningForJoins();
+                                    setState(() {
+                                      _roomCode = null;
+                                      _playerPool.clear();
+                                      _playerCount = 2;
+                                      _updateControllers();
+                                    });
+                                  }
+                                },
                               ),
                             ),
                           ],
                         ),
                         const SizedBox(height: 10),
+                        
+                        // Player Count (Only when mobile control is disabled)
+                        if (!_isMobileControlEnabled)
+                          Row(
+                            children: [
+                              Text(
+                                isAr ? 'اللاعبون: $_playerCount' : 'Players: $_playerCount', 
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)
+                              ),
+                              Expanded(
+                                child: Slider(
+                                  value: _playerCount.toDouble(),
+                                  min: 1, max: 6, divisions: 5,
+                                  label: _playerCount.toString(),
+                                  onChanged: (v) => setState(() {
+                                    _playerCount = v.round();
+                                    _updateControllers();
+                                  }),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                        const SizedBox(height: 10),
+                        
                         // Library Toggle
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -196,37 +253,76 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
                     ),
                   ),
   
-                  // 3. Player Names
+                  // QR code display
+                  if (_isMobileControlEnabled && _roomCode != null) ...[
+                    const SizedBox(height: 15),
+                    FadeInUp(
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: Colors.grey[300]!),
+                        ),
+                        child: Column(
+                          children: [
+                            GestureDetector(
+                              onTap: () => setState(() => _isQrZoomed = !_isQrZoomed),
+                              child: AnimatedContainer(
+                                duration: const Duration(milliseconds: 250),
+                                width: _isQrZoomed ? 260 : 110,
+                                height: _isQrZoomed ? 260 : 110,
+                                child: QrImageView(
+                                  data: 'https://vectrastudios14.github.io/music_game_v2/#/controller?room=$_roomCode',
+                                  version: QrVersions.auto,
+                                  backgroundColor: Colors.white,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 6),
+                            Text(
+                              isAr ? 'رمز الغرفة: $_roomCode' : 'Room Code: $_roomCode',
+                              style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+
+                  // 3. Player Names / Joined list
                   Expanded(
                     child: Center(
                       child: FadeInUp(
                         delay: const Duration(milliseconds: 300),
                         child: SingleChildScrollView( 
-                          child: Wrap(
-                            spacing: 10,
-                            runSpacing: 10,
-                            alignment: WrapAlignment.center,
-                            children: List.generate(_playerCount, (index) {
-                               return SizedBox(
-                                 width: 160,
-                                 child: TextField(
-                                   controller: _nameControllers[index],
-                                   onTap: () => _nameControllers[index].clear(),
-                                   decoration: InputDecoration(
-                                     labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
-                                     isDense: true,
-                                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                                     filled: true,
-                                     fillColor: Colors.grey[200],
-                                     contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                                     prefixIcon: const Icon(Icons.person, color: Colors.black54),
-                                     labelStyle: const TextStyle(color: Colors.black87),
-                                   ),
-                                   style: const TextStyle(color: Colors.black),
-                                 ),
-                               );
-                            }),
-                          ),
+                          child: _isMobileControlEnabled
+                              ? _buildJoinedPlayersList(isAr)
+                              : Wrap(
+                                  spacing: 10,
+                                  runSpacing: 10,
+                                  alignment: WrapAlignment.center,
+                                  children: List.generate(_playerCount, (index) {
+                                     return SizedBox(
+                                       width: 160,
+                                       child: TextField(
+                                         controller: _nameControllers[index],
+                                         onTap: () => _nameControllers[index].clear(),
+                                         decoration: InputDecoration(
+                                           labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
+                                           isDense: true,
+                                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                                           filled: true,
+                                           fillColor: Colors.grey[200],
+                                           contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                                           prefixIcon: const Icon(Icons.person, color: Colors.black54),
+                                           labelStyle: const TextStyle(color: Colors.black87),
+                                         ),
+                                         style: const TextStyle(color: Colors.black),
+                                       ),
+                                     );
+                                  }),
+                                ),
                         ),
                       ),
                     ),
@@ -243,21 +339,27 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
                           child: SizedBox(
                             height: 60,
                             child: ElevatedButton(
-                              onPressed: () async {
-                                List<String> playerNames = _nameControllers.map((c) => c.text).toList();
-                                BackgroundMusicService.instance.stopMenuMusic();
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => BoaGameScreen(
-                                      targetScore: _targetScore,
-                                      playerNames: playerNames,
-                                      uiLanguage: _uiLanguage,
-                                    ),
-                                  ),
-                                );
-                                BackgroundMusicService.instance.playMenuMusic();
-                              },
+                              onPressed: (_isMobileControlEnabled && _playerPool.isEmpty)
+                                  ? null
+                                  : () async {
+                                      List<String> playerNames = _isMobileControlEnabled
+                                          ? _playerPool
+                                          : _nameControllers.map((c) => c.text).toList();
+                                      
+                                      BackgroundMusicService.instance.stopMenuMusic();
+                                      await Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => BoaGameScreen(
+                                            targetScore: _targetScore,
+                                            playerNames: playerNames,
+                                            uiLanguage: _uiLanguage,
+                                            roomCode: _isMobileControlEnabled ? _roomCode : null,
+                                          ),
+                                        ),
+                                      );
+                                      BackgroundMusicService.instance.playMenuMusic();
+                                    },
                               style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.all(0),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -295,6 +397,72 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildJoinedPlayersList(bool isAr) {
+    if (_playerPool.isEmpty) {
+      return Text(
+        isAr ? 'في انتظار انضمام اللاعبين...' : 'Waiting for players to join...',
+        style: GoogleFonts.outfit(
+          color: Colors.grey[500],
+          fontSize: 16,
+          fontStyle: FontStyle.italic,
+        ),
+      );
+    }
+    return Column(
+      children: [
+        Text(
+          isAr ? 'اللاعبون المنضمون:' : 'Joined Players:',
+          style: GoogleFonts.outfit(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87),
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          alignment: WrapAlignment.center,
+          children: _playerPool.map((player) {
+            return Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              decoration: BoxDecoration(
+                color: Colors.teal[50],
+                border: Border.all(color: Colors.teal[200]!),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    player,
+                    style: GoogleFonts.outfit(
+                      color: Colors.teal[900],
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _playerPool.remove(player);
+                        _playerCount = _playerPool.length;
+                        _updateControllers();
+                      });
+                      FirebaseService().kickPlayer(_roomCode!, player);
+                    },
+                    child: const Icon(
+                      Icons.close,
+                      size: 18,
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }).toList(),
+        ),
+      ],
     );
   }
 }

@@ -14,16 +14,19 @@ import 'widgets/headphone_score_overlay.dart';
 import 'widgets/boa_game_over_modal.dart';
 import 'boa_result_screen.dart';
 import '../../services/background_music_service.dart';
+import '../../services/firebase_service.dart';
 
 class BoaGameScreen extends StatefulWidget {
   final int targetScore;
   final List<String> playerNames;
+  final String? roomCode;
 
   const BoaGameScreen({
     super.key,
     required this.targetScore,
     required this.playerNames,
     this.uiLanguage = 'en',
+    this.roomCode,
   });
 
   final String uiLanguage;
@@ -62,6 +65,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
   String? _errorMessage;
   late final SongRepository _repository;
+  StreamSubscription? _firebaseSubscription;
   
   String get formattedName => widget.playerNames[_currentPlayerIndex];
   final ScrollController _scrollController = ScrollController();
@@ -79,6 +83,29 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     _scrollController.addListener(_updateScrollIndicators);
     _celebrationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 1000));
     WidgetsBinding.instance.addPostFrameCallback((_) => _updateScrollIndicators());
+    
+    if (widget.roomCode != null) {
+      _firebaseSubscription = FirebaseService().listenToRoomCustom(widget.roomCode!).listen((data) {
+        if (!mounted) return;
+        if (data.isEmpty) return;
+
+        if (data['boaChoice'] != null) {
+          final choice = Map<String, dynamic>.from(data['boaChoice'] as Map);
+          final slotIndex = choice['selectedSlot'] as int?;
+          final playerName = choice['playerName'] as String?;
+
+          // If the player is the active player and selected a slot, and we are not already showing results
+          if (slotIndex != null && 
+              playerName == formattedName && 
+              !_isRoundResultShowing && 
+              !_isWaitingForTurnStart && 
+              _currentMysteryCard != null) {
+            _handleCardDrop(slotIndex);
+          }
+        }
+      });
+    }
+
     _startGame();
     } catch (e) {
        setState(() => _errorMessage = "INIT ERROR: $e");
@@ -87,6 +114,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
   @override
   void dispose() {
+    _firebaseSubscription?.cancel();
     _scrollController.removeListener(_updateScrollIndicators);
     _stopAutoScroll();
     _scrollController.dispose();
@@ -124,6 +152,18 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
            }
         }
       }
+      
+      if (widget.roomCode != null) {
+        await FirebaseService().updateBoaState(
+          widget.roomCode!,
+          activePlayer: widget.playerNames[_currentPlayerIndex],
+          mysterySong: {},
+          timelineSongs: [],
+          status: 'playing',
+          placementResult: null,
+        );
+      }
+
       if (mounted) setState(() { _isLoading = false; _isWaitingForTurnStart = true; });
     } catch (e) { setState(() => _errorMessage = "START ERROR: $e"); }
   }
@@ -152,6 +192,31 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
        _currentMysteryCard = nextSongNonNull;
        _roundFeedbackText = null;
     });
+
+    if (widget.roomCode != null) {
+      await FirebaseService().clearBoaChoice(widget.roomCode!);
+      final timeline = _timelines[formattedName]!;
+      final List<Map<String, dynamic>> timelineMaps = timeline.map((s) => {
+        'title': s.title,
+        'artist': s.artist,
+        'year': s.year,
+        'artworkUrl': s.artworkUrl ?? '',
+      }).toList();
+
+      final Map<String, dynamic> mysteryMap = {
+        'title': nextSongNonNull.title,
+        'artist': nextSongNonNull.artist,
+        'artworkUrl': nextSongNonNull.artworkUrl ?? '',
+      };
+
+      await FirebaseService().updateBoaState(
+        widget.roomCode!,
+        activePlayer: formattedName,
+        mysterySong: mysteryMap,
+        timelineSongs: timelineMaps,
+        placementResult: null,
+      );
+    }
 
     try {
       await _audioPlayer.stop();
@@ -264,6 +329,25 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           _isRoundResultShowing = true;
           WidgetsBinding.instance.addPostFrameCallback((_) => _updateScrollIndicators());
        });
+
+       if (widget.roomCode != null) {
+         FirebaseService().updateBoaState(
+           widget.roomCode!,
+           activePlayer: currentPlayerName,
+           mysterySong: {
+             'title': _currentMysteryCard!.title,
+             'artist': _currentMysteryCard!.artist,
+             'artworkUrl': _currentMysteryCard!.artworkUrl ?? '',
+           },
+           timelineSongs: timeline.map((s) => {
+             'title': s.title,
+             'artist': s.artist,
+             'year': s.year,
+             'artworkUrl': s.artworkUrl ?? '',
+           }).toList(),
+           placementResult: isValid ? 'correct' : 'wrong',
+         );
+       }
     }
   }
 
@@ -304,11 +388,23 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     );
   }
 
-  void _nextPlayer() {
+  void _nextPlayer() async {
      if (_isGameOver) return;
      _audioPlayer.stop(); 
      bool isLastPlayerOfRound = _currentPlayerIndex == widget.playerNames.length - 1;
      if (_isTargetReached && isLastPlayerOfRound) { _handleGameOver(); return; }
+     
+     if (widget.roomCode != null) {
+       await FirebaseService().clearBoaChoice(widget.roomCode!);
+       await FirebaseService().updateBoaState(
+         widget.roomCode!,
+         activePlayer: widget.playerNames[(_currentPlayerIndex + 1) % widget.playerNames.length],
+         mysterySong: {},
+         timelineSongs: [],
+         placementResult: null,
+       );
+     }
+
      setState(() {
         _currentPlayerIndex = (_currentPlayerIndex + 1) % widget.playerNames.length;
         _isWaitingForTurnStart = true;

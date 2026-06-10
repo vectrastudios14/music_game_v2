@@ -529,4 +529,78 @@ import 'dart:math';class FirebaseService {
       } catch (e) {}
     }
   }
+
+  Future<void> setGameType(String roomCode, String gameType) async {
+    final data = {'gameType': gameType};
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> submitBoaChoice(String roomCode, int slotIndex, String playerName) async {
+    final data = {
+      'selectedSlot': slotIndex,
+      'playerName': playerName,
+      'choiceTimestamp': DateTime.now().millisecondsSinceEpoch,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/boaChoice').set(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/boaChoice.json");
+        await http.put(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> clearBoaChoice(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/boaChoice').remove();
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/boaChoice.json");
+        await http.delete(url);
+      } catch (e) {}
+    }
+  }
+
+  Future<void> updateBoaState(String roomCode, {
+    required String activePlayer,
+    required Map<String, dynamic> mysterySong,
+    required List<Map<String, dynamic>> timelineSongs,
+    String? status,
+    String? placementResult,
+    bool? choicesVisible,
+  }) async {
+    final Map<String, dynamic> data = {
+      'activePlayer': activePlayer,
+      'mysterySong': mysterySong,
+      'timelineSongs': timelineSongs,
+      if (status != null) 'status': status,
+      'placementResult': placementResult,
+      if (choicesVisible != null) 'choicesVisible': choicesVisible,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
 }
+
