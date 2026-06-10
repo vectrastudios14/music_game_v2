@@ -103,6 +103,11 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
             _handleCardDrop(slotIndex);
           }
         }
+
+        if (data['nextRoundRequested'] == true && _isRoundResultShowing) {
+          FirebaseService().resetNextRoundRequest(widget.roomCode!);
+          _nextPlayer();
+        }
       });
     }
 

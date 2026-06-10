@@ -725,6 +725,31 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
                   ),
                   textAlign: TextAlign.center,
                 ),
+                const SizedBox(height: 30),
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: color,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                    onPressed: () {
+                      FirebaseService().requestNextRound(widget.roomCode);
+                    },
+                    child: Text(
+                      "CONTINUE",
+                      style: GoogleFonts.outfit(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
