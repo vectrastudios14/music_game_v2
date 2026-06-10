@@ -402,12 +402,12 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
                 child: (isIndividual ? (isMyTurn && _options.isNotEmpty && _choicesVisible) : (didWeBuzz && _options.isNotEmpty && _choicesVisible))
                     ? _buildOptionsGrid()
                     : (isIndividual
-                        ? (_status == 'buzzed' && _options.isEmpty
+                        ? (_status == 'round_finished'
                             ? (isNextTurn
                                 ? _buildIndividualPostRoundControls(teamColor)
                                 : _buildIndividualWaitingForNextPlayer())
                             : _buildIndividualStatusContent(isMyTurn))
-                        : ((_status == 'buzzed' && _options.isEmpty && _choicesVisible)
+                        : ((_status == 'round_finished')
                             ? _buildPostRoundControls(teamColor)
                             : _buildBuzzerWidget(isBuzzerActive, teamColor, statusText)))
               ),
@@ -435,7 +435,7 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
               ),
             if (isIndividual
                 ? !(_activePlayer == widget.playerName && _options.isNotEmpty && _choicesVisible)
-                : (!(didWeBuzz && _options.isNotEmpty && _choicesVisible) && !(_status == 'buzzed' && _options.isEmpty && _choicesVisible)))
+                : (!(didWeBuzz && _options.isNotEmpty && _choicesVisible) && !(_status == 'round_finished')))
               Padding(
                 padding: const EdgeInsets.only(bottom: 40.0),
                 child: Text(

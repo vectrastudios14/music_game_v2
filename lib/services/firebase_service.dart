@@ -399,7 +399,7 @@ import 'dart:math';class FirebaseService {
     if (kIsWeb) {
       try {
         await _db.child('gts_rooms/$roomCode').update({
-          'status': 'buzzed',
+          'status': 'round_finished',
           'choicesVisible': true,
         });
       } catch (e) {}
@@ -407,7 +407,7 @@ import 'dart:math';class FirebaseService {
       try {
         final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
         await http.patch(url, body: jsonEncode({
-          'status': 'buzzed',
+          'status': 'round_finished',
           'choicesVisible': true,
         }));
       } catch (e) {}

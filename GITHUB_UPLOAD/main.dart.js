@@ -82266,11 +82266,11 @@ a6=A.A9(A.c([A.bU(a.a.d,a0,a0,a0,a0,B.yF,a0,a0),A.bU(o,a0,a0,a0,a0,A.iy(a0,a0,r,
 if(a2)i=a3&&a.as.length!==0&&a.ax
 else i=m&&a.as.length!==0&&a.ax
 if(i)i=a.a3l()
-else if(a2)if(a.d==="buzzed"&&a.as.length===0)if(a4)i=a.a3d(r)
+else if(a2)if(a.d==="round_finished")if(a4)i=a.a3d(r)
 else{h=a.Q
 if(h==null)h="next player"
 i=A.fN(A.c([B.EZ,B.hG,A.bU("Waiting for "+h+"...",a0,a0,a0,a0,A.ck().$3$color$fontSize$fontWeight(B.D,24,B.J),B.bX,a0),B.yf,A.bU("They need to press NEXT TURN to start.",a0,a0,a0,a0,A.ck().$2$color$fontSize(B.d6,16),B.bX,a0)],a5),B.a8,B.bC,B.au)}else i=a.a3f(a3)
-else if(a.d==="buzzed"&&a.as.length===0&&a.ax)i=a.a3o(r)
+else if(a.d==="round_finished")i=a.a3o(r)
 else{i=a.go
 i===$&&A.a()
 g=n?300:250
@@ -82289,8 +82289,7 @@ a6=a6?"Waiting for other team...":"Skip this song"
 a6=A.bU(a6,a0,a0,a0,a0,A.ck().$2$fontSize$fontWeight(20,B.J),a0,a0)
 g=a.db?B.cK:B.Jp
 a5.push(new A.de(B.DX,A.Ia(i,a6,p,A.ry(a0,a0,g,a0,a0,a0,a0,a0,a0,B.k,a0,a0,B.E7,a0,new A.cc(A.eg(30),B.q),a0,a0,a0,a0,a0)),a0))}if(a2)a6=!(a.z===a.a.d&&a.as.length!==0&&a.ax)
-else if(!(m&&a.as.length!==0&&a.ax))a6=!(a.d==="buzzed"&&a.as.length===0&&a.ax)
-else a6=!1
+else a6=!(m&&a.as.length!==0&&a.ax)&&a.d!=="round_finished"
 if(a6)a5.push(new A.de(B.DY,A.bU(k,a0,a0,a0,a0,A.ck().$3$color$fontSize$fontWeight(l?B.ha:B.k,24,B.J),a0,a0),a0))
 return A.axl(a0,j,A.axk(!0,A.fN(a5,B.a8,B.aV,B.au),!0),!1)},
 a3o(a){var s=null,r=A.bU("ROUND FINISHED!",s,s,s,s,A.ck().$3$color$fontSize$fontWeight(B.k,32,B.J),s,s),q=A.ck().$2$fontSize$fontWeight(22,B.J)
