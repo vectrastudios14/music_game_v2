@@ -884,9 +884,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                   ),
                 ),
             
-            // Buzzer Alert Overlay
-            if (widget.isTeamMode && _buzzerPressed && !_showChoicesAfterBuzz && !_isAnswered)
-               _buildBuzzAlert(),
+            // Buzzer Alert Overlay (handled inline within the circular wheel layout)
 
             // Pause Overlay
             if (_isPaused)
@@ -1686,41 +1684,118 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                   child: Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Pulse(
-                          infinite: true,
-                          child: Image.asset(
-                            'assets/Guess_that_song_logo.png',
-                            height: 85,
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          _isAudioLoading
-                              ? (widget.uiLanguage == 'ar' ? 'جاري التحميل...' : 'LOADING...')
-                              : (widget.uiLanguage == 'ar' ? 'استمع جيداً...' : 'LISTENING...'),
-                          style: GoogleFonts.outfit(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                            letterSpacing: 2,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        _isAudioLoading
-                            ? const SizedBox(
-                                height: 35,
-                                child: Center(
-                                  child: SizedBox(
-                                    width: 18,
-                                    height: 18,
-                                    child: CircularProgressIndicator(strokeWidth: 2),
+                      children: (_buzzerPressed && _activeTeamIndex != null)
+                          ? [
+                              ZoomIn(
+                                duration: const Duration(milliseconds: 300),
+                                child: Text(
+                                  widget.uiLanguage == 'ar' ? "تم الضغط!" : "BUZZED!",
+                                  style: GoogleFonts.outfit(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w800,
+                                    color: Colors.white70,
+                                    letterSpacing: 1.5,
                                   ),
                                 ),
-                              )
-                            : _buildPointsDisplay(isLarge: false),
-                      ],
+                              ),
+                              const SizedBox(height: 8),
+                              ZoomIn(
+                                duration: const Duration(milliseconds: 350),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                  child: Text(
+                                    _buzzedPlayerName ?? widget.playerNames[_activeTeamIndex!],
+                                    textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: GoogleFonts.outfit(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w900,
+                                      color: colors[_activeTeamIndex! % colors.length],
+                                      shadows: [
+                                        Shadow(
+                                          color: colors[_activeTeamIndex! % colors.length].withOpacity(0.5),
+                                          blurRadius: 12,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              if (_buzzedPlayerName != null) ...[
+                                const SizedBox(height: 4),
+                                ZoomIn(
+                                  duration: const Duration(milliseconds: 400),
+                                  child: Text(
+                                    widget.playerNames[_activeTeamIndex!],
+                                    style: GoogleFonts.outfit(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white38,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                              const SizedBox(height: 16),
+                              ZoomIn(
+                                duration: const Duration(milliseconds: 450),
+                                child: TextButton(
+                                  onPressed: _triggerShowChoices,
+                                  style: TextButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                                    backgroundColor: colors[_activeTeamIndex! % colors.length].withOpacity(0.2),
+                                    side: BorderSide(
+                                      color: colors[_activeTeamIndex! % colors.length].withOpacity(0.8),
+                                      width: 1.5,
+                                    ),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                  ),
+                                  child: Text(
+                                    widget.uiLanguage == 'ar' ? 'عرض الخيارات' : 'SHOW CHOICES',
+                                    style: GoogleFonts.outfit(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w800,
+                                      color: colors[_activeTeamIndex! % colors.length],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ]
+                          : [
+                              Pulse(
+                                infinite: true,
+                                child: Image.asset(
+                                  'assets/Guess_that_song_logo.png',
+                                  height: 85,
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              Text(
+                                _isAudioLoading
+                                    ? (widget.uiLanguage == 'ar' ? 'جاري التحميل...' : 'LOADING...')
+                                    : (widget.uiLanguage == 'ar' ? 'استمع جيداً...' : 'LISTENING...'),
+                                style: GoogleFonts.outfit(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w900,
+                                  color: Colors.white,
+                                  letterSpacing: 2,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              _isAudioLoading
+                                  ? const SizedBox(
+                                      height: 35,
+                                      child: Center(
+                                        child: SizedBox(
+                                          width: 18,
+                                          height: 18,
+                                          child: CircularProgressIndicator(strokeWidth: 2),
+                                        ),
+                                      ),
+                                    )
+                                  : _buildPointsDisplay(isLarge: false),
+                            ],
                     ),
                   ),
                 ),
@@ -1746,95 +1821,101 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             final members = widget.teamMembers?[name] ?? [];
             final color = colors[index % colors.length];
             final isBuzzed = _buzzerPressed && _activeTeamIndex == index;
+            final isAnyBuzzed = _buzzerPressed;
+            final double opacity = isAnyBuzzed ? (isBuzzed ? 1.0 : 0.15) : 1.0;
 
             return Center(
               child: Transform.translate(
                 offset: Offset(xOffset, yOffset),
-                child: SizedBox(
-                  width: 170,
-                  height: 170,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      // Team Name / Indicator
-                      Text(
-                        name.toUpperCase(),
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.outfit(
-                          color: color,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900,
-                          shadows: [
-                            Shadow(color: color.withOpacity(0.5), blurRadius: 10),
-                          ],
-                        ),
-                      ),
-                      
-                      // Members
-                      if (members.isNotEmpty) ...[
-                        const SizedBox(height: 4),
+                child: AnimatedOpacity(
+                  opacity: opacity,
+                  duration: const Duration(milliseconds: 300),
+                  child: SizedBox(
+                    width: 170,
+                    height: 170,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Team Name / Indicator
                         Text(
-                          members.join(", "),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.outfit(
-                            color: Colors.white70,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
+                          name.toUpperCase(),
                           textAlign: TextAlign.center,
+                          style: GoogleFonts.outfit(
+                            color: color,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w900,
+                            shadows: [
+                              Shadow(color: color.withOpacity(0.5), blurRadius: 10),
+                            ],
+                          ),
                         ),
-                      ],
-                      
-                      const SizedBox(height: 8),
-
-                      // Buzz Button / Status
-                      InkWell(
-                        onTap: () => _handleBuzz(index),
-                        borderRadius: BorderRadius.circular(40),
-                        child: AnimatedScale(
-                          scale: isBuzzed ? 1.15 : 1.0,
-                          duration: const Duration(milliseconds: 150),
-                          child: Container(
-                            width: 68,
-                            height: 68,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: isBuzzed ? color : color.withOpacity(0.12),
-                              border: Border.all(
-                                color: isBuzzed ? Colors.white : color.withOpacity(0.6),
-                                width: isBuzzed ? 3 : 2,
-                              ),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: color.withOpacity(isBuzzed ? 0.7 : 0.25),
-                                  blurRadius: isBuzzed ? 25 : 10,
-                                  spreadRadius: isBuzzed ? 3 : 1,
-                                )
-                              ],
+                        
+                        // Members
+                        if (members.isNotEmpty) ...[
+                          const SizedBox(height: 4),
+                          Text(
+                            members.join(", "),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: GoogleFonts.outfit(
+                              color: Colors.white70,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
                             ),
-                            child: Center(
-                              child: isBuzzed
-                                  ? const Icon(Icons.flash_on, color: Colors.white, size: 32)
-                                  : Text(
-                                      'BUZZ',
-                                      style: GoogleFonts.outfit(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w900,
-                                        color: color,
-                                        letterSpacing: 0.5,
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                        
+                        const SizedBox(height: 8),
+
+                        // Buzz Button / Status
+                        InkWell(
+                          onTap: () => _handleBuzz(index),
+                          borderRadius: BorderRadius.circular(40),
+                          child: AnimatedScale(
+                            scale: isBuzzed ? 1.15 : 1.0,
+                            duration: const Duration(milliseconds: 150),
+                            child: Container(
+                              width: 68,
+                              height: 68,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: isBuzzed ? color : color.withOpacity(0.12),
+                                border: Border.all(
+                                  color: isBuzzed ? Colors.white : color.withOpacity(0.6),
+                                  width: isBuzzed ? 3 : 2,
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: color.withOpacity(isBuzzed ? 0.7 : 0.25),
+                                    blurRadius: isBuzzed ? 25 : 10,
+                                    spreadRadius: isBuzzed ? 3 : 1,
+                                  )
+                                ],
+                              ),
+                              child: Center(
+                                child: isBuzzed
+                                    ? const Icon(Icons.flash_on, color: Colors.white, size: 32)
+                                    : Text(
+                                        'BUZZ',
+                                        style: GoogleFonts.outfit(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w900,
+                                          color: color,
+                                          letterSpacing: 0.5,
+                                        ),
                                       ),
-                                    ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
 
-                      const SizedBox(height: 10),
+                        const SizedBox(height: 10),
 
-                      // Mini Skip button
-                      _buildMiniSkipButton(index),
-                    ],
+                        // Mini Skip button
+                        _buildMiniSkipButton(index),
+                      ],
+                    ),
                   ),
                 ),
               ),
