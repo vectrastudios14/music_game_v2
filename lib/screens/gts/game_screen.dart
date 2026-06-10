@@ -1312,7 +1312,16 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   Widget _buildAnsweredPlayerBadge() {
-    final color = _answeredPlayerName == 'SKIP' ? Colors.orange : (_activeTeamIndex == 0 ? Colors.cyan : Colors.pinkAccent);
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    final color = _answeredPlayerName == 'SKIP' 
+        ? Colors.orange 
+        : (_activeTeamIndex != null ? colors[_activeTeamIndex! % colors.length] : Colors.cyan);
+
     return ZoomIn(
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -1329,9 +1338,35 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                   widget.uiLanguage == 'ar' ? '⏭️ تم التخطي بطلب من: ' : '⏭️ Skipped by: ',
                   style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
-                Text(_skipPlayer1 ?? '', style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.cyan)),
-                Text(' & ', style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
-                Text(_skipPlayer2 ?? '', style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.pinkAccent)),
+                ...() {
+                  final List<Widget> voters = [];
+                  int addedCount = 0;
+                  for (int i = 0; i < widget.playerNames.length; i++) {
+                    final teamKey = 'team${i + 1}';
+                    final voterName = _currentSkipVotes[teamKey];
+                    if (voterName != null) {
+                      if (addedCount > 0) {
+                        voters.add(Text(' & ', style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)));
+                      }
+                      voters.add(Text(
+                        voterName,
+                        style: GoogleFonts.outfit(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: colors[i % colors.length],
+                        ),
+                      ));
+                      addedCount++;
+                    }
+                  }
+                  if (voters.isEmpty) {
+                    voters.add(Text(
+                      widget.uiLanguage == 'ar' ? 'الجميع' : 'Everyone',
+                      style: GoogleFonts.outfit(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.orange),
+                    ));
+                  }
+                  return voters;
+                }(),
               ],
             )
           : Text(
@@ -1349,8 +1384,36 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   Widget _buildLiveSkipVotesBadge() {
-    final team1Player = _currentSkipVotes['team1'];
-    final team2Player = _currentSkipVotes['team2'];
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    final List<Widget> children = [
+      const Text('⏭️ ', style: TextStyle(fontSize: 16)),
+    ];
+    
+    int addedCount = 0;
+    for (int i = 0; i < widget.playerNames.length; i++) {
+      final teamKey = 'team${i + 1}';
+      final voterName = _currentSkipVotes[teamKey];
+      if (voterName != null) {
+        if (addedCount > 0) {
+          children.add(Text(' & ', style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white70)));
+        }
+        children.add(Text(
+          voterName,
+          style: GoogleFonts.outfit(
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+            color: colors[i % colors.length],
+          ),
+        ));
+        addedCount++;
+      }
+    }
+
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
       child: Container(
@@ -1363,15 +1426,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('⏭️ ', style: TextStyle(fontSize: 16)),
-            if (team1Player != null)
-              Text(team1Player, style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.cyan)),
-            if (team1Player != null && team2Player != null)
-              Text(' & ', style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white70)),
-            if (team2Player != null)
-              Text(team2Player, style: GoogleFonts.outfit(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.pinkAccent)),
-          ],
+          children: children,
         ),
       ),
     );
