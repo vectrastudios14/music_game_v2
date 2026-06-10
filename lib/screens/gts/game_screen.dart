@@ -2097,7 +2097,13 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
 
   Widget _buildBuzzAlert() {
     final teamName = widget.playerNames[_activeTeamIndex!];
-    final color = _activeTeamIndex == 0 ? Colors.cyan : Colors.pinkAccent;
+    final colors = [
+      Colors.cyan,
+      Colors.pinkAccent,
+      Colors.amber,
+      Colors.lightGreenAccent,
+    ];
+    final color = colors[_activeTeamIndex! % colors.length];
 
     return Container(
       color: Colors.black,
