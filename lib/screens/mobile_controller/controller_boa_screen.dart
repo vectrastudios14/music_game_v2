@@ -38,7 +38,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(viewportFraction: 0.7);
+    _pageController = PageController(viewportFraction: 0.85);
     _resultAnimController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
@@ -314,15 +314,9 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
       );
     }
 
-    // Mystery song + active timeline cards
+    // Slidable Gaps Carousel
     return Column(
       children: [
-        // 1. Mystery Song Card
-        _buildMysterySongSection(),
-
-        const SizedBox(height: 30),
-
-        // 2. Slidable Gaps Carousel
         Expanded(
           child: _buildTimelineCarousel(),
         ),
@@ -491,7 +485,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               // Drop-zone Visual Placeholder
               Container(
                 width: 50,
-                height: 120,
+                height: 200,
                 margin: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                   color: Colors.tealAccent.withOpacity(0.05),
@@ -530,7 +524,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     final year = song['year']?.toString() ?? '????';
 
     return Container(
-      height: 150,
+      height: 240,
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.05),
         borderRadius: BorderRadius.circular(16),
@@ -612,7 +606,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
 
   Widget _buildEmptyTimelineBoundary({required bool isLeft}) {
     return Container(
-      height: 150,
+      height: 240,
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.02),
         borderRadius: BorderRadius.circular(16),
