@@ -602,5 +602,19 @@ import 'dart:math';class FirebaseService {
       } catch (e) {}
     }
   }
+
+  Future<void> updateBoaScrollPosition(String roomCode, int slotIndex) async {
+    final data = {'currentSlotIndex': slotIndex};
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
 }
 

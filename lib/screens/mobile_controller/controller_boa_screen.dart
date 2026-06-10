@@ -498,6 +498,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         setState(() {
           _currentSlotIndex = index;
         });
+        FirebaseService().updateBoaScrollPosition(widget.roomCode, index);
       },
       itemBuilder: (context, index) {
         // We'll calculate the relative difference from the center page

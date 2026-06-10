@@ -112,6 +112,29 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         if (data['startTurnRequested'] == true && _isWaitingForTurnStart) {
           _startTurn();
         }
+
+        // Live scroll synchronization from active player's phone
+        final int? currentSlotIndex = data['currentSlotIndex'] != null 
+            ? int.tryParse(data['currentSlotIndex'].toString()) 
+            : null;
+        if (currentSlotIndex != null && 
+            !_isRoundResultShowing && 
+            !_isWaitingForTurnStart && 
+            _currentMysteryCard != null) {
+          
+          _hoveredDropZoneIndex.value = currentSlotIndex;
+
+          if (_scrollController.hasClients) {
+            double screenWidth = MediaQuery.of(context).size.width;
+            double targetX = 100.0 + (currentSlotIndex * 176.0);
+            double centralOffset = targetX - (screenWidth / 2) + 88.0;
+            _scrollController.animateTo(
+              centralOffset.clamp(0.0, _scrollController.position.maxScrollExtent),
+              duration: const Duration(milliseconds: 400),
+              curve: Curves.easeOutCubic,
+            );
+          }
+        }
       });
     }
 
