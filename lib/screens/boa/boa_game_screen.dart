@@ -108,6 +108,10 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           FirebaseService().resetNextRoundRequest(widget.roomCode!);
           _nextPlayer();
         }
+
+        if (data['startTurnRequested'] == true && _isWaitingForTurnStart) {
+          _startTurn();
+        }
       });
     }
 
@@ -167,6 +171,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           status: 'playing',
           placementResult: null,
         );
+        await FirebaseService().setWaitingForReady(widget.roomCode!, true);
       }
 
       if (mounted) setState(() { _isLoading = false; _isWaitingForTurnStart = true; });
@@ -221,6 +226,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         timelineSongs: timelineMaps,
         placementResult: null,
       );
+      await FirebaseService().setWaitingForReady(widget.roomCode!, false);
     }
 
     try {
@@ -408,6 +414,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
          timelineSongs: [],
          placementResult: null,
        );
+       await FirebaseService().setWaitingForReady(widget.roomCode!, true);
      }
 
      setState(() {

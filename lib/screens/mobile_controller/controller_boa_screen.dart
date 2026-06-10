@@ -308,6 +308,76 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
       );
     }
 
+    if (_isWaitingForReady) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.1),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.green.withOpacity(0.3), width: 2),
+                ),
+                child: const Icon(
+                  Icons.play_arrow,
+                  color: Colors.greenAccent,
+                  size: 60,
+                ),
+              ),
+              const SizedBox(height: 32),
+              Text(
+                "It's Your Turn!",
+                style: GoogleFonts.outfit(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                "Are you ready? Tap 'START NOW' to reveal your mystery song and timeline.",
+                style: GoogleFonts.outfit(
+                  color: Colors.white54,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 40),
+              SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  onPressed: () {
+                    FirebaseService().requestStartTurn(widget.roomCode);
+                  },
+                  child: Text(
+                    "START NOW",
+                    style: GoogleFonts.outfit(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     if (_mysterySong == null) {
       return const Center(
         child: CircularProgressIndicator(color: Colors.tealAccent),
