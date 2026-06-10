@@ -556,7 +556,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               Container(
                 width: 50,
                 height: 200,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.only(top: 36, left: 10, right: 10),
                 decoration: BoxDecoration(
                   color: Colors.tealAccent.withOpacity(0.05),
                   borderRadius: BorderRadius.circular(10),
@@ -593,109 +593,126 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     final title = song['title'] ?? 'Title';
     final year = song['year']?.toString() ?? '????';
 
-    return Container(
-      height: 240,
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white10),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black38,
-            blurRadius: 10,
-            offset: Offset(0, 4),
-          )
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            // Artwork
-            artworkUrl != null && artworkUrl.isNotEmpty
-                ? Image.network(
-                    artworkUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (c, e, s) => Container(color: Colors.grey[900]),
-                  )
-                : Container(color: Colors.grey[900]),
-
-            // Semi-transparent overlay
-            Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Colors.transparent, Colors.black87],
-                ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        // Year text above the card
+        Text(
+          year,
+          style: GoogleFonts.outfit(
+            color: Colors.tealAccent,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+            shadows: [
+              const Shadow(
+                color: Colors.black54,
+                offset: Offset(0, 2),
+                blurRadius: 4,
               ),
-            ),
-
-            // Metadata
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: GoogleFonts.outfit(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(height: 2),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: Colors.white24,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                      year,
-                      style: GoogleFonts.outfit(
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
+        const SizedBox(height: 10),
+        Container(
+          height: 200,
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.05),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: Colors.white10),
+            boxShadow: const [
+              BoxShadow(
+                color: Colors.black38,
+                blurRadius: 10,
+                offset: Offset(0, 4),
+              )
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                // Artwork
+                artworkUrl != null && artworkUrl.isNotEmpty
+                    ? Image.network(
+                        artworkUrl,
+                        fit: BoxFit.cover,
+                        errorBuilder: (c, e, s) => Container(color: Colors.grey[900]),
+                      )
+                    : Container(color: Colors.grey[900]),
+
+                // Semi-transparent overlay
+                Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.transparent, Colors.black87],
+                    ),
+                  ),
+                ),
+
+                // Metadata
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: GoogleFonts.outfit(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
   Widget _buildEmptyTimelineBoundary({required bool isLeft}) {
-    return Container(
-      height: 240,
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.02),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: Colors.white.withOpacity(0.05),
-          style: BorderStyle.solid,
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        // Empty placeholder year to align heights
+        Text(
+          "",
+          style: GoogleFonts.outfit(fontSize: 22),
         ),
-      ),
-      child: Center(
-        child: Text(
-          isLeft ? 'START' : 'END',
-          style: GoogleFonts.outfit(
-            color: Colors.white24,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2,
+        const SizedBox(height: 10),
+        Container(
+          height: 200,
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.02),
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: Colors.white.withOpacity(0.05),
+              style: BorderStyle.solid,
+            ),
+          ),
+          child: Center(
+            child: Text(
+              isLeft ? 'START' : 'END',
+              style: GoogleFonts.outfit(
+                color: Colors.white24,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2,
+              ),
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 
