@@ -160,7 +160,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               ),
 
               // Feedback Overlay
-              if (_placementResult != null) _buildResultOverlay(),
+              if (_placementResult != null && isMyTurn) _buildResultOverlay(),
             ],
           ),
         ),
