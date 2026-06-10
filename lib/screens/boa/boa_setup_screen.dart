@@ -94,8 +94,10 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
             child: Container(
               constraints: const BoxConstraints(maxWidth: 800),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              child: Column(
-                children: [
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
                   // 1. Logo
                   FadeInDown(
                     child: Image.asset(
@@ -291,43 +293,42 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
                   ],
 
                   // 3. Player Names / Joined list
-                  Expanded(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
                     child: Center(
                       child: FadeInUp(
                         delay: const Duration(milliseconds: 300),
-                        child: SingleChildScrollView( 
-                          child: _isMobileControlEnabled
-                              ? _buildJoinedPlayersList(isAr)
-                              : Wrap(
-                                  spacing: 10,
-                                  runSpacing: 10,
-                                  alignment: WrapAlignment.center,
-                                  children: List.generate(_playerCount, (index) {
-                                     return SizedBox(
-                                       width: 160,
-                                       child: TextField(
-                                         controller: _nameControllers[index],
-                                         onTap: () => _nameControllers[index].clear(),
-                                         decoration: InputDecoration(
-                                           labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
-                                           isDense: true,
-                                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                                           filled: true,
-                                           fillColor: Colors.grey[200],
-                                           contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                                           prefixIcon: const Icon(Icons.person, color: Colors.black54),
-                                           labelStyle: const TextStyle(color: Colors.black87),
-                                         ),
-                                         style: const TextStyle(color: Colors.black),
+                        child: _isMobileControlEnabled
+                            ? _buildJoinedPlayersList(isAr)
+                            : Wrap(
+                                spacing: 10,
+                                runSpacing: 10,
+                                alignment: WrapAlignment.center,
+                                children: List.generate(_playerCount, (index) {
+                                   return SizedBox(
+                                     width: 160,
+                                     child: TextField(
+                                       controller: _nameControllers[index],
+                                       onTap: () => _nameControllers[index].clear(),
+                                       decoration: InputDecoration(
+                                         labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
+                                         isDense: true,
+                                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                                         filled: true,
+                                         fillColor: Colors.grey[200],
+                                         contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                                         prefixIcon: const Icon(Icons.person, color: Colors.black54),
+                                         labelStyle: const TextStyle(color: Colors.black87),
                                        ),
-                                     );
-                                  }),
-                                ),
-                        ),
+                                       style: const TextStyle(color: Colors.black),
+                                     ),
+                                   );
+                                }),
+                              ),
                       ),
                     ),
                   ),
-  
+
                   const SizedBox(height: 20),
   
                   // 4. Start Button
@@ -396,6 +397,7 @@ class _BoaSetupScreenState extends State<BoaSetupScreen> {
             ),
           ),
         ),
+      ),
       ),
     );
   }
