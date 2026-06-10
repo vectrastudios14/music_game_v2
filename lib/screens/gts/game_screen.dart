@@ -1699,9 +1699,9 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
           
           final isAr = widget.uiLanguage == 'ar';
           if (leftKeys.contains(event.logicalKey)) {
-            _handleBuzz(isAr ? 1 : 0); 
+            _handleBuzz(isAr ? 0 : 1); 
           } else if (rightKeys.contains(event.logicalKey)) {
-            _handleBuzz(isAr ? 0 : 1);
+            _handleBuzz(isAr ? 1 : 0);
           }
         }
       },
