@@ -1823,17 +1823,18 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             // Center angle of this team's sector:
             final double midAngle = -math.pi / 2 + (index * sectorAngle) + (sectorAngle / 2);
             
+            final isBuzzed = _buzzerPressed && _activeTeamIndex == index;
+            final isAnyBuzzed = _buzzerPressed;
+            final double opacity = isAnyBuzzed ? (isBuzzed ? 1.0 : 0.15) : 1.0;
+
             // Placement radius from center
-            const double radius = 200.0;
-            final double xOffset = radius * math.cos(midAngle);
-            final double yOffset = radius * math.sin(midAngle);
+            final double currentRadius = isBuzzed ? 215.0 : 200.0; // Pop out by 15 pixels if buzzed
+            final double xOffset = currentRadius * math.cos(midAngle);
+            final double yOffset = currentRadius * math.sin(midAngle);
 
             final name = widget.playerNames[index];
             final members = widget.teamMembers?[name] ?? [];
             final color = colors[index % colors.length];
-            final isBuzzed = _buzzerPressed && _activeTeamIndex == index;
-            final isAnyBuzzed = _buzzerPressed;
-            final double opacity = isAnyBuzzed ? (isBuzzed ? 1.0 : 0.15) : 1.0;
 
             Widget sectorWidget = SizedBox(
               width: 170,
@@ -2801,19 +2802,29 @@ class GTSWheelPainter extends CustomPainter {
       final double startAngle = startAngleOffset + (i * sweepAngle);
       final isBuzzed = activeTeamIndex == i;
 
+      double dx = 0.0;
+      double dy = 0.0;
+      if (isBuzzed) {
+        final double midAngle = startAngle + (sweepAngle / 2);
+        const double offsetDistance = 15.0; // Pop out by 15 pixels
+        dx = offsetDistance * math.cos(midAngle);
+        dy = offsetDistance * math.sin(midAngle);
+      }
+      final sectorCenter = Offset(center.dx + dx, center.dy + dy);
+
       // Draw sector background
       paint.color = color.withOpacity(isBuzzed ? 0.22 : 0.04);
       
       final path = Path();
       // Draw sector from innerRadius to outerRadius
       path.arcTo(
-        Rect.fromCircle(center: center, radius: outerRadius),
+        Rect.fromCircle(center: sectorCenter, radius: outerRadius),
         startAngle + 0.02, // slight padding gap
         sweepAngle - 0.04,
         true,
       );
       path.arcTo(
-        Rect.fromCircle(center: center, radius: innerRadius),
+        Rect.fromCircle(center: sectorCenter, radius: innerRadius),
         startAngle + sweepAngle - 0.02,
         -(sweepAngle - 0.04),
         false,
@@ -2829,7 +2840,7 @@ class GTSWheelPainter extends CustomPainter {
         ..isAntiAlias = true;
 
       canvas.drawArc(
-        Rect.fromCircle(center: center, radius: outerRadius),
+        Rect.fromCircle(center: sectorCenter, radius: outerRadius),
         startAngle + 0.02,
         sweepAngle - 0.04,
         false,
@@ -2838,7 +2849,7 @@ class GTSWheelPainter extends CustomPainter {
 
       // Draw sector inner arc border
       canvas.drawArc(
-        Rect.fromCircle(center: center, radius: innerRadius),
+        Rect.fromCircle(center: sectorCenter, radius: innerRadius),
         startAngle + 0.02,
         sweepAngle - 0.04,
         false,
@@ -2854,12 +2865,12 @@ class GTSWheelPainter extends CustomPainter {
 
       final double divAngle = startAngle;
       final offsetInner = Offset(
-        center.dx + innerRadius * math.cos(divAngle),
-        center.dy + innerRadius * math.sin(divAngle),
+        sectorCenter.dx + innerRadius * math.cos(divAngle),
+        sectorCenter.dy + innerRadius * math.sin(divAngle),
       );
       final offsetOuter = Offset(
-        center.dx + outerRadius * math.cos(divAngle),
-        center.dy + outerRadius * math.sin(divAngle),
+        sectorCenter.dx + outerRadius * math.cos(divAngle),
+        sectorCenter.dy + outerRadius * math.sin(divAngle),
       );
       canvas.drawLine(offsetInner, offsetOuter, dividerPaint);
     }
