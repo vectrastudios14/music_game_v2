@@ -10,6 +10,7 @@ import 'screens/mobile_controller/controller_setup_screen.dart'; // IMPORT
 import 'utils/custom_scroll_behavior.dart';
 import 'package:flutter/foundation.dart'; // IMPORT kIsWeb
 import 'dart:async';
+import 'package:flutter/services.dart'; // IMPORT for keyboard shortcuts
 
 import 'package:window_manager/window_manager.dart';
 
@@ -36,8 +37,11 @@ void main() {
       windowManager.waitUntilReadyToShow(windowOptions, () async {
         await windowManager.show();
         await windowManager.focus();
-        await windowManager.setMinimumSize(const Size(1024, 768));
         await windowManager.setTitle('Musica');
+        
+        // Add a slight delay before triggering fullscreen to prevent native initialization crashes
+        await Future.delayed(const Duration(milliseconds: 150));
+        await windowManager.setFullScreen(true);
       });
     }
 
@@ -66,6 +70,20 @@ class MusicaApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         scrollBehavior: CustomScrollBehavior(), // ENABLE MOUSE DRAG
         theme: AppTheme.darkTheme,
+        shortcuts: {
+          LogicalKeySet(LogicalKeyboardKey.f11): const ToggleFullscreenIntent(),
+        },
+        actions: {
+          ToggleFullscreenIntent: CallbackAction<ToggleFullscreenIntent>(
+            onInvoke: (intent) async {
+              if (!kIsWeb) {
+                final isFull = await windowManager.isFullScreen();
+                await windowManager.setFullScreen(!isFull);
+              }
+              return null;
+            },
+          ),
+        },
         initialRoute: kIsWeb ? null : '/',
         onGenerateRoute: (settings) {
           if (settings.name != null && settings.name!.startsWith('/controller')) {
@@ -91,4 +109,8 @@ class MusicaApp extends StatelessWidget {
       ),
     );
   }
+}
+
+class ToggleFullscreenIntent extends Intent {
+  const ToggleFullscreenIntent();
 }

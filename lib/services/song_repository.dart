@@ -178,18 +178,20 @@ class SongRepository {
     difficultPool.shuffle();
 
     List<Song> selectedDistractors = [];
-    final Set<String> selectedTitles = {correctSong.title};
-    final Set<String> usedArtists = {correctSong.artist};
+    final Set<String> selectedTitles = {correctSong.title.trim().toLowerCase()};
+    final Set<String> usedArtists = {correctSong.artist.trim().toLowerCase()};
 
     for (var entry in difficultPool) {
        final s = entry['song'] as Song;
-       if (selectedTitles.contains(s.title)) continue; 
+       final normTitle = s.title.trim().toLowerCase();
+       final normArtist = s.artist.trim().toLowerCase();
        
-       if (forceUniqueArtists && usedArtists.contains(s.artist)) continue;
+       if (selectedTitles.contains(normTitle)) continue; 
+       if (forceUniqueArtists && usedArtists.contains(normArtist)) continue;
        
        selectedDistractors.add(s);
-       selectedTitles.add(s.title);
-       usedArtists.add(s.artist);
+       selectedTitles.add(normTitle);
+       usedArtists.add(normArtist);
        
        if (selectedDistractors.length >= distractorCount) break;
     }
@@ -199,12 +201,15 @@ class SongRepository {
        var backupPool = scoredDistractors.take(min(50, scoredDistractors.length)).toList()..shuffle();
        for (var entry in backupPool) {
           final s = entry['song'] as Song;
-          if (selectedTitles.contains(s.title)) continue;
-          if (forceUniqueArtists && usedArtists.contains(s.artist)) continue;
+          final normTitle = s.title.trim().toLowerCase();
+          final normArtist = s.artist.trim().toLowerCase();
+          
+          if (selectedTitles.contains(normTitle)) continue;
+          if (forceUniqueArtists && usedArtists.contains(normArtist)) continue;
           
           selectedDistractors.add(s);
-          selectedTitles.add(s.title);
-          usedArtists.add(s.artist);
+          selectedTitles.add(normTitle);
+          usedArtists.add(normArtist);
           if (selectedDistractors.length >= distractorCount) break;
        }
     }

@@ -40,11 +40,18 @@ import 'dart:math';class FirebaseService {
     }
   }
 
-  Future<void> updateTeamNames(String roomCode, String team1Name, String team2Name) async {
+  Future<void> updateTeamNames(String roomCode, List<String> teamNames) async {
     final Map<String, dynamic> names = {
-      'team1Name': team1Name,
-      'team2Name': team2Name,
+      'teamCount': teamNames.length,
     };
+    for (int i = 0; i < teamNames.length; i++) {
+      names['team${i + 1}Name'] = teamNames[i];
+    }
+    // Clear unused team names in Firebase
+    for (int i = teamNames.length; i < 4; i++) {
+      names['team${i + 1}Name'] = "";
+    }
+    
     if (kIsWeb) {
       try {
         await _db.child('gts_rooms/$roomCode').update(names);
@@ -477,6 +484,48 @@ import 'dart:math';class FirebaseService {
         await http.patch(url, body: jsonEncode({
           'startTurnRequested': true,
         }));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> requestHint(String roomCode) async {
+    final data = {'hintRequested': true};
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> resetHintRequest(String roomCode) async {
+    final data = {'hintRequested': false};
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> setHintsUsed(String roomCode, int hintsUsed) async {
+    final data = {'hintsUsed': hintsUsed};
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
       } catch (e) {}
     }
   }

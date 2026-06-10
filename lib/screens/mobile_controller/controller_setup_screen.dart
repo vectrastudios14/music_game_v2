@@ -19,6 +19,9 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
   String? _selectedTeam;
   String? _team1Name;
   String? _team2Name;
+  String? _team3Name;
+  String? _team4Name;
+  int _teamCount = 2;
   String? _roomMode; // 'team' or 'individual'
   bool _isJoining = false;
   StreamSubscription? _firebaseSubscription;
@@ -32,6 +35,14 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
         setState(() {
           _team1Name = data['team1Name'];
           _team2Name = data['team2Name'];
+          _team3Name = data['team3Name'];
+          _team4Name = data['team4Name'];
+          final rawCount = data['teamCount'];
+          if (rawCount != null) {
+            _teamCount = int.tryParse(rawCount.toString()) ?? 2;
+          } else {
+            _teamCount = 2;
+          }
           _roomMode = data['mode'] ?? 'team';
           if (_roomMode == 'individual') {
             _selectedTeam = 'individual';
@@ -154,25 +165,59 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 12),
-              Row(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Expanded(
-                    child: _TeamButton(
-                      label: team1DisplayName,
-                      color: Colors.cyan,
-                      isSelected: _selectedTeam == 'team1',
-                      onTap: () => setState(() => _selectedTeam = 'team1'),
-                    ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _TeamButton(
+                          label: _team1Name != null && _team1Name!.isNotEmpty ? _team1Name! : 'Team 1',
+                          color: Colors.cyan,
+                          isSelected: _selectedTeam == 'team1',
+                          onTap: () => setState(() => _selectedTeam = 'team1'),
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: _TeamButton(
+                          label: _team2Name != null && _team2Name!.isNotEmpty ? _team2Name! : 'Team 2',
+                          color: Colors.pinkAccent,
+                          isSelected: _selectedTeam == 'team2',
+                          onTap: () => setState(() => _selectedTeam = 'team2'),
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: _TeamButton(
-                      label: team2DisplayName,
-                      color: Colors.pinkAccent,
-                      isSelected: _selectedTeam == 'team2',
-                      onTap: () => setState(() => _selectedTeam = 'team2'),
+                  if (_teamCount >= 3) ...[
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _TeamButton(
+                            label: _team3Name != null && _team3Name!.isNotEmpty ? _team3Name! : 'Team 3',
+                            color: Colors.amber,
+                            isSelected: _selectedTeam == 'team3',
+                            onTap: () => setState(() => _selectedTeam = 'team3'),
+                          ),
+                        ),
+                        if (_teamCount >= 4) ...[
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: _TeamButton(
+                              label: _team4Name != null && _team4Name!.isNotEmpty ? _team4Name! : 'Team 4',
+                              color: Colors.lightGreenAccent,
+                              isSelected: _selectedTeam == 'team4',
+                              onTap: () => setState(() => _selectedTeam = 'team4'),
+                            ),
+                          ),
+                        ] else ...[
+                          const SizedBox(width: 16),
+                          const Spacer(),
+                        ],
+                      ],
                     ),
-                  ),
+                  ],
                 ],
               ),
             ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
+import 'dart:io';
+import 'package:flutter/foundation.dart';
 
 import 'gts/setup_screen.dart';
 import 'boa/boa_setup_screen.dart';
@@ -157,6 +159,30 @@ class _GameHubScreenState extends State<GameHubScreen> with TickerProviderStateM
                     ),
                   ),
                 ),
+                if (!kIsWeb) ...[
+                  const SizedBox(height: 30),
+                  FadeInUp(
+                    delay: const Duration(milliseconds: 700),
+                    child: OutlinedButton.icon(
+                      onPressed: () => exit(0),
+                      icon: const Icon(Icons.exit_to_app, color: Colors.redAccent),
+                      label: const Text(
+                        'QUIT GAME',
+                        style: TextStyle(
+                          color: Colors.redAccent,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                          fontSize: 16,
+                        ),
+                      ),
+                      style: OutlinedButton.styleFrom(
+                        side: const BorderSide(color: Colors.redAccent, width: 2),
+                        padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
           ),
