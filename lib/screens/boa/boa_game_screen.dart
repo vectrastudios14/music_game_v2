@@ -669,16 +669,39 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                   !_isRoundResultShowing && 
                   !_isWaitingForTurnStart && 
                   _currentMysteryCard != null)
-                ValueListenableBuilder<int?>(
-                  valueListenable: _hoveredDropZoneIndex,
-                  builder: (context, hoveredIdx, _) {
-                    if (hoveredIdx == null) return const SizedBox.shrink();
-                    return LayoutBuilder(
-                      builder: (context, constraints) {
-                        return HoverConnectionArrow(bodyHeight: constraints.maxHeight);
-                      },
-                    );
-                  },
+                Positioned.fill(
+                  child: ValueListenableBuilder<int?>(
+                    valueListenable: _hoveredDropZoneIndex,
+                    builder: (context, hoveredIdx, _) {
+                      if (hoveredIdx == null) return const SizedBox.shrink();
+                      return LayoutBuilder(
+                        builder: (context, constraints) {
+                          final double bodyHeight = constraints.maxHeight;
+                          final double flex3Height = bodyHeight * 3 / 5;
+                          final double flex2Height = bodyHeight * 2 / 5;
+
+                          final double timelineCardBottom = flex3Height / 2 + 90;
+                          final double mysteryCardTop = flex3Height + (flex2Height / 2) - 90;
+
+                          if (mysteryCardTop <= timelineCardBottom) return const SizedBox.shrink();
+
+                          return Stack(
+                            children: [
+                              Positioned(
+                                left: 0,
+                                right: 0,
+                                top: timelineCardBottom,
+                                height: mysteryCardTop - timelineCardBottom,
+                                child: _AnimatedArrowPainterWidget(
+                                  color: Theme.of(context).primaryColor,
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                  ),
                 ),
               if (_isWaitingForTurnStart && !_isLoading) _buildReadyScreen(formattedName),
             ],
@@ -1198,15 +1221,15 @@ class _TimelineHoverScaleWrapperState extends State<_TimelineHoverScaleWrapper> 
   }
 }
 
-class HoverConnectionArrow extends StatefulWidget {
-  final double bodyHeight;
-  const HoverConnectionArrow({super.key, required this.bodyHeight});
+class _AnimatedArrowPainterWidget extends StatefulWidget {
+  final Color color;
+  const _AnimatedArrowPainterWidget({required this.color});
 
   @override
-  State<HoverConnectionArrow> createState() => _HoverConnectionArrowState();
+  State<_AnimatedArrowPainterWidget> createState() => _AnimatedArrowPainterWidgetState();
 }
 
-class _HoverConnectionArrowState extends State<HoverConnectionArrow> with SingleTickerProviderStateMixin {
+class _AnimatedArrowPainterWidgetState extends State<_AnimatedArrowPainterWidget> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
   @override
@@ -1226,33 +1249,16 @@ class _HoverConnectionArrowState extends State<HoverConnectionArrow> with Single
 
   @override
   Widget build(BuildContext context) {
-    final double flex3Height = widget.bodyHeight * 3 / 5;
-    final double flex2Height = widget.bodyHeight * 2 / 5;
-
-    // Timeline card vertical center is in the middle of flex3, bottom of card is center + 90
-    final double timelineCardBottom = flex3Height / 2 + 90;
-    
-    // Mystery card top is centered in flex2, top of card is center - 90
-    final double mysteryCardTop = flex3Height + (flex2Height / 2) - 90;
-
-    if (mysteryCardTop <= timelineCardBottom) return const SizedBox.shrink();
-
-    return Positioned(
-      left: 0,
-      right: 0,
-      top: timelineCardBottom,
-      height: mysteryCardTop - timelineCardBottom,
-      child: AnimatedBuilder(
-        animation: _controller,
-        builder: (context, child) {
-          return CustomPaint(
-            painter: _ArrowPainter(
-              progress: _controller.value,
-              color: Theme.of(context).primaryColor,
-            ),
-          );
-        },
-      ),
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        return CustomPaint(
+          painter: _ArrowPainter(
+            progress: _controller.value,
+            color: widget.color,
+          ),
+        );
+      },
     );
   }
 }
