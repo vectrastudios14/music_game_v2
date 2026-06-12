@@ -167,52 +167,52 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                                 }
                               },
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        // Mobile Control Switch
-                        SwitchListTile(
-                          title: Text(
-                            isAr ? 'تحكم الجوال' : 'Mobile Control',
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white70),
-                          ),
-                          value: _isMobileControlEnabled,
-                          activeColor: const Color(0xFF6C63FF),
-                          onChanged: (val) async {
-                            setState(() {
-                              _isMobileControlEnabled = val;
-                            });
-                            if (val) {
-                              _roomCode = FirebaseService().generateRoomCode();
-                              await FirebaseService().createRoom(_roomCode!);
-                              await FirebaseService().setGameType(_roomCode!, 'ts');
-                              await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                            const SizedBox(width: 30),
+                            Text(
+                              isAr ? 'تحكم الجوال' : 'Mobile Control',
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),
+                            ),
+                            const SizedBox(width: 10),
+                            Switch(
+                              value: _isMobileControlEnabled,
+                              activeColor: const Color(0xFF6C63FF),
+                              onChanged: (val) async {
+                                setState(() {
+                                  _isMobileControlEnabled = val;
+                                });
+                                if (val) {
+                                  _roomCode = FirebaseService().generateRoomCode();
+                                  await FirebaseService().createRoom(_roomCode!);
+                                  await FirebaseService().setGameType(_roomCode!, 'ts');
+                                  await FirebaseService().setRoomMode(_roomCode!, 'individual');
 
-                              _playerPool.clear();
-                              FirebaseService().listenForJoins(_roomCode!, (name, team) {
-                                if (mounted) {
-                                  setState(() {
-                                    if (!_playerPool.contains(name)) {
-                                      _playerPool.add(name);
-                                      _playerCount = _playerPool.length;
-                                      _updateControllers();
-                                      for (int i = 0; i < _playerPool.length; i++) {
-                                        _nameControllers[i].text = _playerPool[i];
-                                      }
+                                  _playerPool.clear();
+                                  FirebaseService().listenForJoins(_roomCode!, (name, team) {
+                                    if (mounted) {
+                                      setState(() {
+                                        if (!_playerPool.contains(name)) {
+                                          _playerPool.add(name);
+                                          _playerCount = _playerPool.length;
+                                          _updateControllers();
+                                          for (int i = 0; i < _playerPool.length; i++) {
+                                            _nameControllers[i].text = _playerPool[i];
+                                          }
+                                        }
+                                      });
                                     }
                                   });
+                                } else {
+                                  FirebaseService().stopListeningForJoins();
+                                  setState(() {
+                                    _roomCode = null;
+                                    _playerPool.clear();
+                                    _playerCount = 2;
+                                    _updateControllers();
+                                  });
                                 }
-                              });
-                            } else {
-                              FirebaseService().stopListeningForJoins();
-                              setState(() {
-                                _roomCode = null;
-                                _playerPool.clear();
-                                _playerCount = 2;
-                                _updateControllers();
-                              });
-                            }
-                          },
+                              },
+                            ),
+                          ],
                         ),
                         const SizedBox(height: 10),
                         Row(

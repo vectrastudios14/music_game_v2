@@ -185,7 +185,9 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
 
     final String logoAsset = _gameType == 'boa'
         ? 'assets/Before_or_after_logo.png'
-        : 'assets/Guess_that_song_logo.png';
+        : _gameType == 'ts'
+            ? 'assets/TimeSurvival_logo.png'
+            : 'assets/Guess_that_song_logo.png';
 
     return Scaffold(
       body: SafeArea(
