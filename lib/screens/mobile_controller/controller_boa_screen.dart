@@ -498,6 +498,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
       controller: _pageController,
       itemCount: slotsCount,
       onPageChanged: (index) {
+        debugPrint("Controller PageChanged to: $index");
         setState(() {
           _currentSlotIndex = index;
         });

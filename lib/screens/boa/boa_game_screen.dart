@@ -119,6 +119,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         final int? currentSlotIndex = data['currentSlotIndex'] != null 
             ? int.tryParse(data['currentSlotIndex'].toString()) 
             : null;
+        debugPrint("Host listener: currentSlotIndex = $currentSlotIndex, _isWaitingForTurnStart = $_isWaitingForTurnStart, _currentMysteryCard = ${_currentMysteryCard != null}");
         if (currentSlotIndex != null && 
             !_isWaitingForTurnStart && 
             _currentMysteryCard != null) {
