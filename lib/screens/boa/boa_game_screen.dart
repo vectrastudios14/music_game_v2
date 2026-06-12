@@ -126,9 +126,16 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
           _hoveredDropZoneIndex.value = currentSlotIndex;
 
           if (_scrollController.hasClients && !_isDragging) {
-            double targetOffset = currentSlotIndex * 176.0;
+            double targetOffset = _getScrollOffsetForSlot(currentSlotIndex);
+            double slotWidth = 40.0;
+            if (_isRoundResultShowing && !_lastPlacementCorrect) {
+              if (_correctInsertionIndex == currentSlotIndex || _wrongPlacementIndex == currentSlotIndex) {
+                slotWidth = 120.0;
+              }
+            }
+            double scrollTarget = targetOffset + (slotWidth / 2) - 60.0;
             _scrollController.animateTo(
-              targetOffset.clamp(0.0, _scrollController.position.maxScrollExtent),
+              scrollTarget.clamp(0.0, _scrollController.position.maxScrollExtent),
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOutCubic,
             );
@@ -311,6 +318,24 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
       },
     };
     return strings[isAr ? 'ar' : 'en']![key] ?? key;
+  }
+
+  double _getScrollOffsetForSlot(int index) {
+    double offset = 0.0;
+    final timelineLen = _timelines[widget.playerNames[_currentPlayerIndex]]?.length ?? 0;
+    for (int i = 0; i < index; i++) {
+      double dzWidth = 40.0;
+      if (_isRoundResultShowing && !_lastPlacementCorrect) {
+        if (_correctInsertionIndex == i || _wrongPlacementIndex == i) {
+          dzWidth = 120.0;
+        }
+      }
+      offset += dzWidth;
+      if (i < timelineLen) {
+        offset += 136.0; // 120 card + 16 horizontal margins
+      }
+    }
+    return offset;
   }
 
   void _handleCardDrop(int dropIndex) async {

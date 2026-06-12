@@ -818,7 +818,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     final borderColor = isCorrect ? Colors.green[300]! : Colors.red[300]!;
     final textColor = isCorrect ? Colors.green[800]! : Colors.red[800]!;
     final icon = isCorrect ? Icons.check_circle_outline : Icons.error_outline;
-    final text = isCorrect ? "Correct answer! Scroll to show others." : "Incorrect answer! Scroll to show correct slot.";
+    final text = isCorrect ? "CORRECT!" : "WRONG!";
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
@@ -829,17 +829,17 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
         border: Border.all(color: borderColor, width: 1.5),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(icon, color: textColor, size: 28),
           const SizedBox(width: 12),
-          Expanded(
-            child: Text(
-              text,
-              style: GoogleFonts.outfit(
-                color: textColor,
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
+          Text(
+            text,
+            style: GoogleFonts.outfit(
+              color: textColor,
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1.5,
             ),
           ),
         ],
