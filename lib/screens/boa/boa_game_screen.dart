@@ -899,40 +899,18 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                     width: 120,
                     height: 180,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor.withOpacity(0.05),
+                      color: Theme.of(context).primaryColor.withOpacity(0.03),
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
-                        color: Theme.of(context).primaryColor.withOpacity(0.6),
-                        width: 2.5,
+                        color: Theme.of(context).primaryColor.withOpacity(0.5),
+                        width: 2,
                         style: BorderStyle.solid,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Theme.of(context).primaryColor.withOpacity(0.15),
-                          blurRadius: 10,
-                          spreadRadius: 2,
+                          color: Theme.of(context).primaryColor.withOpacity(0.1),
+                          blurRadius: 8,
                         )
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.arrow_downward_rounded,
-                          color: Theme.of(context).primaryColor,
-                          size: 36,
-                        ),
-                        const SizedBox(height: 10),
-                        Text(
-                          "PLACING\nHERE",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.outfit(
-                            color: Theme.of(context).primaryColor,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
                       ],
                     ),
                   ),
