@@ -101,6 +101,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
               !_isWaitingForTurnStart && 
               _currentMysteryCard != null) {
             _handleCardDrop(slotIndex);
+            _hoveredDropZoneIndex.value = null;
           }
         }
 
@@ -886,7 +887,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     return ValueListenableBuilder<int?>(
       valueListenable: _hoveredDropZoneIndex,
       builder: (context, hoveredIdx, _) {
-        final bool isHovered = hoveredIdx == index;
+        final bool isHovered = hoveredIdx == index && !_isRoundResultShowing;
         
         return AnimatedContainer(
           duration: const Duration(milliseconds: 200),
