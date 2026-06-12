@@ -494,7 +494,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
     final scrollOffset = _scrollController.hasClients ? _scrollController.offset : 0.0;
     const double pitch = 176.0;
-    const double startX = 100.0;
+    final double startX = widget.roomCode != null
+        ? (MediaQuery.of(context).size.width / 2 - 60)
+        : 100.0;
     final relativeX = x + scrollOffset - startX;
     int nearestIndex = (relativeX / pitch).round();
     int maxIndex = _timelines[formattedName]?.length ?? 0;
@@ -574,7 +576,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
             final scrollOffset = _scrollController.hasClients ? _scrollController.offset : 0.0;
             const double pitch = 176.0;
-            const double startX = 100.0;
+            final double startX = widget.roomCode != null
+                ? (MediaQuery.of(context).size.width / 2 - 60)
+                : 100.0;
 
             // Math: Local position in viewport + scroll amount - padding
             final relativeX = x + scrollOffset - startX;
@@ -631,10 +635,12 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                                     scrollDirection: Axis.horizontal, 
                                     clipBehavior: Clip.none, // Allow enlarged cards to spill out
                                     physics: const AlwaysScrollableScrollPhysics(),
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: MediaQuery.of(context).size.width / 2 - 60,
-                                      vertical: 40,
-                                    ),
+                                    padding: widget.roomCode != null
+                                        ? EdgeInsets.symmetric(
+                                            horizontal: MediaQuery.of(context).size.width / 2 - 60,
+                                            vertical: 40,
+                                          )
+                                        : const EdgeInsets.symmetric(horizontal: 100, vertical: 40),
                                     child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
