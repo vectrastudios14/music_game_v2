@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -119,7 +120,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         final int? currentSlotIndex = data['currentSlotIndex'] != null 
             ? int.tryParse(data['currentSlotIndex'].toString()) 
             : null;
-        debugPrint("Host listener: currentSlotIndex = $currentSlotIndex, _isWaitingForTurnStart = $_isWaitingForTurnStart, _currentMysteryCard = ${_currentMysteryCard != null}");
+        _logToFile("Host listener: currentSlotIndex = $currentSlotIndex, _isWaitingForTurnStart = $_isWaitingForTurnStart, _currentMysteryCard = ${_currentMysteryCard != null}");
         if (currentSlotIndex != null && 
             !_isWaitingForTurnStart && 
             _currentMysteryCard != null) {
@@ -135,11 +136,14 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
               }
             }
             double scrollTarget = targetOffset + (slotWidth / 2) - 60.0;
+            _logToFile("Animate to scrollTarget: $scrollTarget, maxScrollExtent: ${_scrollController.position.maxScrollExtent}");
             _scrollController.animateTo(
               scrollTarget.clamp(0.0, _scrollController.position.maxScrollExtent),
               duration: const Duration(milliseconds: 400),
               curve: Curves.easeOutCubic,
             );
+          } else {
+            _logToFile("Cannot animate: hasClients = ${_scrollController.hasClients}, isDragging = $_isDragging");
           }
         }
       });
@@ -319,6 +323,13 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
       },
     };
     return strings[isAr ? 'ar' : 'en']![key] ?? key;
+  }
+
+  void _logToFile(String message) {
+    try {
+      final file = File('c:/Projects/music_game_v2/debug_scroll_logs.txt');
+      file.writeAsStringSync("${DateTime.now().toIso8601String()}: $message\n", mode: FileMode.append);
+    } catch (e) {}
   }
 
   double _getScrollOffsetForSlot(int index) {
