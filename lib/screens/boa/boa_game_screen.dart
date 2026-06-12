@@ -39,6 +39,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
   final GlobalKey _timelineViewportKey = GlobalKey();
   final ValueNotifier<int?> _hoveredDropZoneIndex = ValueNotifier<int?>(null);
   int? _correctInsertionIndex;
+  int? _wrongPlacementIndex;
   int? _lastPlacedCorrectIndex;
   late AnimationController _celebrationController;
   final Map<String, List<Song>> _timelines = {};
@@ -341,6 +342,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
              if (timeline.length >= widget.targetScore) setState(() => _isTargetReached = true);
           } else {
              _playWrongAudioWithDucking();
+             _wrongPlacementIndex = dropIndex;
              int correctIndex = timeline.length;
              for (int i = 0; i < timeline.length; i++) {
                 int year = int.tryParse(timeline[i].year) ?? 0;
@@ -445,7 +447,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         _currentPlayerIndex = (_currentPlayerIndex + 1) % widget.playerNames.length;
         _isWaitingForTurnStart = true;
         _isRoundResultShowing = false;
-        _currentMysteryCard = null; _correctInsertionIndex = null;
+        _currentMysteryCard = null; 
+        _correctInsertionIndex = null;
+        _wrongPlacementIndex = null;
      });
   }
 
@@ -883,6 +887,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     if (_isRoundResultShowing && !_lastPlacementCorrect && _correctInsertionIndex == index) {
        return FadeIn(child: MissedGapIndicator(year: _currentMysteryCard?.year ?? "???"));
     }
+    if (_isRoundResultShowing && !_lastPlacementCorrect && _wrongPlacementIndex == index) {
+       return FadeIn(child: WrongChoiceIndicator(year: _currentMysteryCard?.year ?? "???"));
+    }
     
     return ValueListenableBuilder<int?>(
       valueListenable: _hoveredDropZoneIndex,
@@ -1307,5 +1314,53 @@ class _ArrowPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _ArrowPainter oldDelegate) {
     return oldDelegate.progress != progress || oldDelegate.color != color;
+  }
+}
+
+class WrongChoiceIndicator extends StatelessWidget {
+  final String year;
+  const WrongChoiceIndicator({super.key, required this.year});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 120,
+      height: 180,
+      decoration: BoxDecoration(
+        color: Colors.red.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.red, width: 2.5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.red.withOpacity(0.1),
+            blurRadius: 8,
+          )
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.red.withOpacity(0.1),
+            ),
+            child: const Icon(Icons.close_rounded, color: Colors.red, size: 28),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            "PLAYED\nHERE",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.outfit(
+              color: Colors.red,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.5,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
