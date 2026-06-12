@@ -850,20 +850,62 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
       builder: (context, hoveredIdx, _) {
         final bool isHovered = hoveredIdx == index;
         
-        // We restore the 'expansion' (width change) for a physical feel,
-        // but keep it visually invisible (transparent).
         return AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           width: isHovered ? 120 : 40, 
           height: 180,
           color: Colors.transparent,
-          child: Center(
-            child: Container(
-              width: 1, 
-              height: 40, 
-              decoration: BoxDecoration(color: Colors.black.withOpacity(0.02), borderRadius: BorderRadius.circular(1)),
-            ),
-          ),
+          child: (isHovered && widget.roomCode != null)
+              ? Center(
+                  child: Container(
+                    width: 120,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: Theme.of(context).primaryColor.withOpacity(0.6),
+                        width: 2.5,
+                        style: BorderStyle.solid,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Theme.of(context).primaryColor.withOpacity(0.15),
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.arrow_downward_rounded,
+                          color: Theme.of(context).primaryColor,
+                          size: 36,
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          "PLACING\nHERE",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.outfit(
+                            color: Theme.of(context).primaryColor,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              : Center(
+                  child: Container(
+                    width: 1, 
+                    height: 40, 
+                    decoration: BoxDecoration(color: Colors.black.withOpacity(0.02), borderRadius: BorderRadius.circular(1)),
+                  ),
+                ),
         );
       },
     );
