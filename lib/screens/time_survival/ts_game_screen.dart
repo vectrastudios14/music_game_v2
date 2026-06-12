@@ -560,7 +560,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
                 }(),
 
                 // Selected Year Marker (Glow line below the timeline instead of a flag)
-                if (_selectedYear != null && !_isRoundResultShowing)
+                if (_selectedYear != null && !_isRoundResultShowing && !(widget.roomCode != null && !_isRevealMode))
                   Positioned(
                     left: (_selectedYear! - _startYear) * yearWidth + (yearWidth / 2) - 3,
                     top: 75, // Starting from the center line (150/2)
@@ -582,7 +582,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
                   ),
                 
                 // 1. Precise Indicator Line (Always reflects exact year)
-                if (!_isRoundResultShowing)
+                if (!_isRoundResultShowing && !(widget.roomCode != null && !_isRevealMode))
                   AnimatedPositioned(
                     duration: Duration(milliseconds: _isLockHovered ? 400 : 60),
                     curve: _isLockHovered ? Curves.elasticOut : Curves.linear,
@@ -601,7 +601,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
                   ),
 
                 // 2. Year Banner (Clamped to edges for visibility, now sitting flush with the line)
-                if (!_isRoundResultShowing)
+                if (!_isRoundResultShowing && !(widget.roomCode != null && !_isRevealMode))
                   AnimatedPositioned(
                     duration: Duration(milliseconds: _isLockHovered ? 400 : 60),
                     curve: _isLockHovered ? Curves.elasticOut : Curves.linear,
@@ -629,7 +629,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
                             letterSpacing: 1,
                           )
                         ),
-                      ),
+                       ),
                     ),
                   ),
 
