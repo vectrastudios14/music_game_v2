@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../services/song_repository.dart';
 import 'ts_game_screen.dart';
 import 'ts_help_screen.dart';
 import '../../services/background_music_service.dart';
+import '../../services/firebase_service.dart';
 
 class TsSetupScreen extends StatefulWidget {
   const TsSetupScreen({super.key});
@@ -20,6 +22,11 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
   String _startingLibraryType = SongRepository().currentLibraryType;
   String _uiLanguage = 'en'; // 'en' or 'ar'
   final List<TextEditingController> _nameControllers = [];
+  
+  bool _isMobileControlEnabled = false;
+  String? _roomCode;
+  final List<String> _playerPool = [];
+  bool _isQrZoomed = false;
   
   final List<Color> _availableColors = [
     const Color(0xFFFF595E),
@@ -62,6 +69,7 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
 
   @override
   void dispose() {
+    FirebaseService().stopListeningForJoins();
     for (var controller in _nameControllers) {
       controller.dispose();
     }
@@ -162,29 +170,75 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                           ],
                         ),
                         const SizedBox(height: 10),
+                        // Mobile Control Switch
+                        SwitchListTile(
+                          title: Text(
+                            isAr ? 'تحكم الجوال' : 'Mobile Control',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white70),
+                          ),
+                          value: _isMobileControlEnabled,
+                          activeColor: const Color(0xFF6C63FF),
+                          onChanged: (val) async {
+                            setState(() {
+                              _isMobileControlEnabled = val;
+                            });
+                            if (val) {
+                              _roomCode = FirebaseService().generateRoomCode();
+                              await FirebaseService().createRoom(_roomCode!);
+                              await FirebaseService().setGameType(_roomCode!, 'ts');
+                              await FirebaseService().setRoomMode(_roomCode!, 'individual');
+
+                              _playerPool.clear();
+                              FirebaseService().listenForJoins(_roomCode!, (name, team) {
+                                if (mounted) {
+                                  setState(() {
+                                    if (!_playerPool.contains(name)) {
+                                      _playerPool.add(name);
+                                      _playerCount = _playerPool.length;
+                                      _updateControllers();
+                                      for (int i = 0; i < _playerPool.length; i++) {
+                                        _nameControllers[i].text = _playerPool[i];
+                                      }
+                                    }
+                                  });
+                                }
+                              });
+                            } else {
+                              FirebaseService().stopListeningForJoins();
+                              setState(() {
+                                _roomCode = null;
+                                _playerPool.clear();
+                                _playerCount = 2;
+                                _updateControllers();
+                              });
+                            }
+                          },
+                        ),
+                        const SizedBox(height: 10),
                         Row(
                           children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: isAr ? CrossAxisAlignment.end : CrossAxisAlignment.start,
-                                children: [
-                                  Text(isAr ? 'اللاعبون: $_playerCount' : 'Players: $_playerCount', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white70)),
-                                  Slider(
-                                    value: _playerCount.toDouble(),
-                                    min: 2, max: 12, divisions: 10,
-                                    label: _playerCount.toString(),
-                                    activeColor: const Color(0xFF6C63FF),
-                                    onChanged: (value) {
-                                      setState(() {
-                                        _playerCount = value.round();
-                                        _updateControllers();
-                                      });
-                                    },
-                                  ),
-                                ],
+                            if (!_isMobileControlEnabled)
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: isAr ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+                                  children: [
+                                    Text(isAr ? 'اللاعبون: $_playerCount' : 'Players: $_playerCount', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white70)),
+                                    Slider(
+                                      value: _playerCount.toDouble(),
+                                      min: 2, max: 12, divisions: 10,
+                                      label: _playerCount.toString(),
+                                      activeColor: const Color(0xFF6C63FF),
+                                      onChanged: (value) {
+                                        setState(() {
+                                          _playerCount = value.round();
+                                          _updateControllers();
+                                        });
+                                      },
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const SizedBox(width: 20),
+                            if (!_isMobileControlEnabled) const SizedBox(width: 20),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: isAr ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -208,61 +262,117 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                   
                   const SizedBox(height: 10),
   
-                  // 3. Player Names
+                  // 3. Player Names or QR Display
                   Expanded(
                     child: Center(
                       child: FadeInUp(
                         delay: const Duration(milliseconds: 300),
                         child: SingleChildScrollView(
-                          child: GridView.builder(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 3,
-                              childAspectRatio: 3.5,
-                              crossAxisSpacing: 10,
-                              mainAxisSpacing: 8,
-                            ),
-                            itemCount: _playerCount,
-                            itemBuilder: (context, index) {
-                              return Row(
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {
-                                      setState(() {
-                                        int currentIndex = _availableColors.indexOf(_playerColors[index]);
-                                        _playerColors[index] = _availableColors[(currentIndex + 1) % _availableColors.length];
-                                      });
-                                    },
-                                    child: Container(
-                                      width: 32,
-                                      height: 32,
-                                      decoration: BoxDecoration(
-                                        color: _playerColors[index],
-                                        shape: BoxShape.circle,
-                                        border: Border.all(color: Colors.white, width: 2),
-                                      ),
-                                    ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              if (_isMobileControlEnabled && _roomCode != null) ...[
+                                Container(
+                                  padding: const EdgeInsets.all(12),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.08),
+                                    borderRadius: BorderRadius.circular(15),
+                                    border: Border.all(color: Colors.white24),
                                   ),
-                                  const SizedBox(width: 8),
-                                  Expanded(
-                                    child: TextField(
-                                      controller: _nameControllers[index],
-                                      onTap: () => _nameControllers[index].clear(),
-                                      decoration: InputDecoration(
-                                        labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
-                                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                                        filled: true,
-                                        fillColor: Colors.white.withOpacity(0.1),
-                                        contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-                                        labelStyle: const TextStyle(color: Colors.white70, fontSize: 13),
+                                  child: Column(
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () => setState(() => _isQrZoomed = !_isQrZoomed),
+                                        child: AnimatedContainer(
+                                          duration: const Duration(milliseconds: 250),
+                                          width: _isQrZoomed ? 260 : 110,
+                                          height: _isQrZoomed ? 260 : 110,
+                                          child: QrImageView(
+                                            data: 'https://vectrastudios14.github.io/music_game_v2/#/controller?room=$_roomCode',
+                                            version: QrVersions.auto,
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
                                       ),
-                                      style: const TextStyle(color: Colors.white, fontSize: 14),
-                                    ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        isAr ? 'رمز الغرفة: $_roomCode' : 'Room Code: $_roomCode',
+                                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              );
-                            },
+                                ),
+                                const SizedBox(height: 15),
+                                Text(
+                                  isAr ? 'اللاعبون المنضمون:' : 'Joined Players:',
+                                  style: const TextStyle(color: Colors.white70, fontSize: 15, fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(height: 8),
+                                Wrap(
+                                  spacing: 8,
+                                  runSpacing: 8,
+                                  children: List.generate(_playerPool.length, (index) {
+                                    return Chip(
+                                      backgroundColor: _playerColors[index % _playerColors.length],
+                                      label: Text(
+                                        _playerPool[index],
+                                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                      ),
+                                    );
+                                  }),
+                                ),
+                              ] else
+                                GridView.builder(
+                                  shrinkWrap: true,
+                                  physics: const NeverScrollableScrollPhysics(),
+                                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisCount: 3,
+                                    childAspectRatio: 3.5,
+                                    crossAxisSpacing: 10,
+                                    mainAxisSpacing: 8,
+                                  ),
+                                  itemCount: _playerCount,
+                                  itemBuilder: (context, index) {
+                                    return Row(
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            setState(() {
+                                              int currentIndex = _availableColors.indexOf(_playerColors[index]);
+                                              _playerColors[index] = _availableColors[(currentIndex + 1) % _availableColors.length];
+                                            });
+                                          },
+                                          child: Container(
+                                            width: 32,
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              color: _playerColors[index],
+                                              shape: BoxShape.circle,
+                                              border: Border.all(color: Colors.white, width: 2),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        Expanded(
+                                          child: TextField(
+                                            controller: _nameControllers[index],
+                                            onTap: () => _nameControllers[index].clear(),
+                                            decoration: InputDecoration(
+                                              labelText: isAr ? 'اللاعب ${index + 1}' : 'Player ${index + 1}',
+                                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                                              filled: true,
+                                              fillColor: Colors.white.withOpacity(0.1),
+                                              contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                                              labelStyle: const TextStyle(color: Colors.white70, fontSize: 13),
+                                            ),
+                                            style: const TextStyle(color: Colors.white, fontSize: 14),
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ),
+                            ],
                           ),
                         ),
                       ),
@@ -280,11 +390,13 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                           child: SizedBox(
                             height: 60,
                             child: ElevatedButton(
-                              onPressed: () async {
-                                List<String> playerNames = _nameControllers.map((c) => c.text).toList();
+                              onPressed: (_isMobileControlEnabled && _playerPool.isEmpty) ? null : () async {
+                                List<String> playerNames = _isMobileControlEnabled 
+                                    ? _playerPool 
+                                    : _nameControllers.map((c) => c.text).toList();
                                 Map<String, Color> playerColorsMap = {};
                                 for (int i=0; i<playerNames.length; i++) {
-                                   playerColorsMap[playerNames[i]] = _playerColors[i];
+                                   playerColorsMap[playerNames[i]] = _playerColors[i % _playerColors.length];
                                 }
                                 BackgroundMusicService.instance.stopMenuMusic();
                                 await Navigator.push(
@@ -295,6 +407,7 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                                       playerColors: playerColorsMap,
                                       startingPoints: _startingPoints,
                                       uiLanguage: _uiLanguage,
+                                      roomCode: _isMobileControlEnabled ? _roomCode : null,
                                     ),
                                   ),
                                 );

@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/firebase_service.dart';
 import 'controller_buzzer_screen.dart';
 import 'controller_boa_screen.dart';
+import 'controller_ts_screen.dart';
 
 class ControllerSetupScreen extends StatefulWidget {
   final String roomCode;
@@ -78,6 +79,16 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
               ),
             ),
           );
+        } else if (_gameType == 'ts') {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ControllerTsScreen(
+                roomCode: savedRoom!,
+                playerName: savedName,
+              ),
+            ),
+          );
         } else {
           Navigator.pushReplacement(
             context,
@@ -132,6 +143,16 @@ class _ControllerSetupScreenState extends State<ControllerSetupScreen> {
           context,
           MaterialPageRoute(
             builder: (context) => ControllerBoaScreen(
+              roomCode: widget.roomCode,
+              playerName: name,
+            ),
+          ),
+        );
+      } else if (_gameType == 'ts') {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ControllerTsScreen(
               roomCode: widget.roomCode,
               playerName: name,
             ),

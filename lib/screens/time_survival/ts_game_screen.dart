@@ -16,6 +16,7 @@ import '../gts/result_screen.dart';
 import 'widgets/ts_round_result_modal.dart';
 import 'widgets/scrolling_neon_ticker.dart';
 import '../../services/background_music_service.dart';
+import '../../services/firebase_service.dart';
 // LiquidTube import removed
 
 class TsGameScreen extends StatefulWidget {
@@ -23,6 +24,7 @@ class TsGameScreen extends StatefulWidget {
   final Map<String, Color> playerColors;
   final int startingPoints;
   final String uiLanguage;
+  final String? roomCode;
 
   const TsGameScreen({
     super.key,
@@ -30,6 +32,7 @@ class TsGameScreen extends StatefulWidget {
     this.playerColors = const {},
     this.startingPoints = 100,
     this.uiLanguage = 'en',
+    this.roomCode,
   });
 
   @override
@@ -44,6 +47,13 @@ class _TsGameScreenState extends State<TsGameScreen> {
   
   final Map<String, int> _platformGuesses = {}; 
   int _currentGuesserIndex = 0;
+  
+  StreamSubscription? _firebaseSubscription;
+  final Map<String, int> _submittedGuesses = {};
+  bool _allPlayersGuessed = false;
+  bool _isRevealMode = false;
+  List<String> _revealedPlayers = [];
+  int _revealIndex = 0;
   bool _isRoundActive = false;
   bool _isRoundResultShowing = false;
   bool _isGameOver = false;
@@ -83,11 +93,42 @@ class _TsGameScreenState extends State<TsGameScreen> {
     }
     if (_repository.allSongs.isEmpty) await _repository.loadSongs();
     _deck = _repository.getValidSongs()..shuffle();
+    
+    if (widget.roomCode != null) {
+      _firebaseSubscription = FirebaseService().listenToRoomCustom(widget.roomCode!).listen((data) {
+        if (!mounted) return;
+        if (data.isEmpty) return;
+
+        if (data['nextRoundRequested'] == true && _isRoundResultShowing) {
+          FirebaseService().resetNextRoundRequest(widget.roomCode!);
+          _continueToNextRound();
+        }
+
+        if (data['tsGuesses'] != null) {
+          final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
+          setState(() {
+            _submittedGuesses.clear();
+            rawGuesses.forEach((player, val) {
+              final guessData = Map<String, dynamic>.from(val as Map);
+              _submittedGuesses[player] = int.tryParse(guessData['year'].toString()) ?? _startYear;
+            });
+            _allPlayersGuessed = _submittedGuesses.length >= widget.playerNames.length;
+          });
+        } else {
+          setState(() {
+            _submittedGuesses.clear();
+            _allPlayersGuessed = false;
+          });
+        }
+      });
+    }
+
     if (mounted) _startNewRound();
   }
 
   @override
   void dispose() {
+    _firebaseSubscription?.cancel();
     _audioPlayer.stop();
     _audioPlayer.dispose();
     _showcaseTimer?.cancel();
@@ -102,7 +143,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
       _currentGuesserIndex = 0;
       _isRoundActive = true;
       _isRoundResultShowing = false;
-      _isReadyOverlayVisible = true; // Show first player ready
+      _isReadyOverlayVisible = widget.roomCode == null; // Skip sequential ready overlays in mobile mode
       _showScoreOverlay = false;
       _isPlaying = false;
       _roundLoserName = null;
@@ -114,6 +155,12 @@ class _TsGameScreenState extends State<TsGameScreen> {
       _showcasedPlayerIndex = -1;
       _showcaseTimer?.cancel();
       
+      _submittedGuesses.clear();
+      _allPlayersGuessed = false;
+      _isRevealMode = false;
+      _revealedPlayers.clear();
+      _revealIndex = 0;
+
       // Select one random fact for the round safely
       if (_currentSong != null && _currentSong!.facts.isNotEmpty) {
         final random = Random();
@@ -122,6 +169,25 @@ class _TsGameScreenState extends State<TsGameScreen> {
         _currentRoundFact = null;
       }
     });
+
+    if (widget.roomCode != null) {
+      await FirebaseService().clearTsGuesses(widget.roomCode!);
+      await FirebaseService().updateTsRoomState(
+        widget.roomCode!,
+        playerNames: widget.playerNames,
+        scores: _playerScores,
+        currentSong: {
+          'title': _currentSong!.title,
+          'artist': _currentSong!.artist,
+          'artworkUrl': _currentSong!.artworkUrl ?? '',
+        },
+        status: 'guessing',
+        isRoundResultShowing: false,
+        isWaitingForReady: false,
+        roundLoserName: null,
+        actualYear: int.tryParse(_currentSong!.year) ?? _startYear,
+      );
+    }
     if (_currentSong!.artworkUrl == null) {
       ITunesService.fetchArtwork(_currentSong!.artist, _currentSong!.title).then((url) {
         if (url != null && mounted) setState(() => _currentSong!.artworkUrl = url);
@@ -150,6 +216,79 @@ class _TsGameScreenState extends State<TsGameScreen> {
       await _audioPlayer.play(source);
       setState(() => _isPlaying = true);
     } catch (_) {}
+  }
+
+  void _startRevealSequence() {
+    setState(() {
+      _isRevealMode = true;
+      _revealedPlayers = List.from(widget.playerNames);
+      _revealIndex = 0;
+    });
+    _revealNextPlayerGuess();
+  }
+
+  void _revealNextPlayerGuess() {
+    if (_revealIndex < _revealedPlayers.length) {
+      final playerName = _revealedPlayers[_revealIndex];
+      final playerGuess = _submittedGuesses[playerName] ?? _startYear;
+      
+      setState(() {
+        _platformGuesses[playerName] = playerGuess;
+        _focusYear = playerGuess; // smooth scroll to their guess
+      });
+      
+      BackgroundMusicService.instance.playSfx('tick.mp3');
+      
+      Future.delayed(const Duration(seconds: 2), () {
+        if (mounted) {
+          setState(() {
+            _revealIndex++;
+          });
+          _revealNextPlayerGuess();
+        }
+      });
+    } else {
+      _revealFinalResults();
+    }
+  }
+
+  void _revealFinalResults() {
+    _previousScores = Map.from(_playerScores);
+    final actualYear = int.tryParse(_currentSong!.year) ?? _startYear;
+    
+    setState(() {
+      _isRoundActive = false;
+      _isRoundResultShowing = true;
+      _focusYear = actualYear;
+    });
+
+    bool someoneDied = false;
+    int maxLoss = -1;
+    String? maxLoser;
+    
+    _platformGuesses.forEach((player, guess) {
+      int diff = (guess - actualYear).abs();
+      if (diff > maxLoss) { maxLoss = diff; maxLoser = player; }
+      int newScore = _playerScores[player]! - diff;
+      _playerScores[player] = newScore;
+      if (newScore <= 0) someoneDied = true;
+    });
+
+    if (maxLoss > 0) setState(() => _roundLoserName = maxLoser);
+    if (someoneDied) setState(() => _isGameOver = true);
+    
+    if (widget.roomCode != null) {
+      FirebaseService().updateTsRoomState(
+        widget.roomCode!,
+        playerNames: widget.playerNames,
+        scores: _playerScores,
+        status: 'results',
+        isRoundResultShowing: true,
+        isWaitingForReady: false,
+        roundLoserName: _roundLoserName,
+        actualYear: actualYear,
+      );
+    }
   }
 
   void _submitGuess() {
@@ -218,8 +357,19 @@ class _TsGameScreenState extends State<TsGameScreen> {
 
 
   void _continueToNextRound() {
-     if (_isGameOver) setState(() => _showScoreOverlay = false);
-     else _startNewRound();
+     if (_isGameOver) {
+       setState(() => _showScoreOverlay = false);
+       if (widget.roomCode != null) {
+         FirebaseService().updateTsRoomState(
+           widget.roomCode!,
+           playerNames: widget.playerNames,
+           scores: _playerScores,
+           status: 'gameover',
+         );
+       }
+     } else {
+       _startNewRound();
+     }
   }
 
   String _t(String key) {
@@ -786,17 +936,43 @@ class _TsGameScreenState extends State<TsGameScreen> {
                 ),
               ],
             )
-          : (_selectedYear != null 
-              ? MouseRegion(
-                  onEnter: (_) => setState(() => _isLockHovered = true),
-                  onExit: (_) => setState(() => _isLockHovered = false),
-                  child: ElevatedButton(
-                    onPressed: _submitGuess, 
-                    style: ElevatedButton.styleFrom(backgroundColor: color), 
-                    child: Text("${_t('lockIn')} $_selectedYear")
-                  ),
-                ) 
-              : Text(_t('selectYear'), style: const TextStyle(color: Colors.white38))),
+          : (widget.roomCode != null
+              ? (_allPlayersGuessed
+                  ? (!_isRevealMode
+                      ? ElevatedButton(
+                          onPressed: _startRevealSequence,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).primaryColor,
+                            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                          ),
+                          child: Text(
+                            widget.uiLanguage == 'ar' ? 'كشف تخمينات اللاعبين' : 'REVEAL PLAYER GUESSES',
+                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        )
+                      : Text(
+                          widget.uiLanguage == 'ar' 
+                              ? 'جاري الكشف... (${_revealIndex}/${_revealedPlayers.length})'
+                              : 'Revealing guesses... (${_revealIndex}/${_revealedPlayers.length})',
+                          style: const TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.bold),
+                        ))
+                  : Text(
+                      widget.uiLanguage == 'ar'
+                          ? 'في انتظار تخمينات اللاعبين (${_submittedGuesses.length}/${widget.playerNames.length})...'
+                          : 'Waiting for player guesses (${_submittedGuesses.length}/${widget.playerNames.length})...',
+                      style: const TextStyle(color: Colors.white38, fontSize: 16),
+                    ))
+              : (_selectedYear != null 
+                  ? MouseRegion(
+                      onEnter: (_) => setState(() => _isLockHovered = true),
+                      onExit: (_) => setState(() => _isLockHovered = false),
+                      child: ElevatedButton(
+                        onPressed: _submitGuess, 
+                        style: ElevatedButton.styleFrom(backgroundColor: color), 
+                        child: Text("${_t('lockIn')} $_selectedYear")
+                      ),
+                    ) 
+                  : Text(_t('selectYear'), style: const TextStyle(color: Colors.white38)))),
       ),
     );
   }
@@ -833,9 +1009,9 @@ class _TsGameScreenState extends State<TsGameScreen> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: widget.playerNames.map((name) {
-                      final isCurrent = widget.playerNames[_currentGuesserIndex] == name && !_isRoundResultShowing;
+                      final isCurrent = widget.roomCode == null && widget.playerNames[_currentGuesserIndex] == name && !_isRoundResultShowing;
                       final isHovered = _hoveredPlayerName == name;
-                      final hasGuessed = _platformGuesses.containsKey(name);
+                      final hasGuessed = widget.roomCode != null ? _submittedGuesses.containsKey(name) : _platformGuesses.containsKey(name);
                       final color = widget.playerColors[name] ?? Colors.blueAccent;
                       
                       return MouseRegion(

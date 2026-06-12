@@ -618,5 +618,67 @@ import 'dart:math';class FirebaseService {
       } catch (e) {}
     }
   }
+
+  Future<void> submitTsGuess(String roomCode, String playerName, int year) async {
+    final data = {
+      'year': year,
+      'timestamp': DateTime.now().millisecondsSinceEpoch,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/tsGuesses/$playerName').set(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/tsGuesses/$playerName.json");
+        await http.put(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> clearTsGuesses(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/tsGuesses').remove();
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/tsGuesses.json");
+        await http.delete(url);
+      } catch (e) {}
+    }
+  }
+
+  Future<void> updateTsRoomState(String roomCode, {
+    required List<String> playerNames,
+    required Map<String, int> scores,
+    Map<String, dynamic>? currentSong,
+    String? status,
+    bool? isRoundResultShowing,
+    bool? isWaitingForReady,
+    String? roundLoserName,
+    int? actualYear,
+  }) async {
+    final data = {
+      'playerNames': playerNames,
+      'scores': scores,
+      if (currentSong != null) 'currentSong': currentSong,
+      if (status != null) 'status': status,
+      if (isRoundResultShowing != null) 'isRoundResultShowing': isRoundResultShowing,
+      if (isWaitingForReady != null) 'isWaitingForReady': isWaitingForReady,
+      if (roundLoserName != null) 'roundLoserName': roundLoserName,
+      if (actualYear != null) 'actualYear': actualYear,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
 }
 

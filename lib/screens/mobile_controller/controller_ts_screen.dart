@@ -1,0 +1,516 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../services/firebase_service.dart';
+
+class ControllerTsScreen extends StatefulWidget {
+  final String roomCode;
+  final String playerName;
+
+  const ControllerTsScreen({
+    super.key,
+    required this.roomCode,
+    required this.playerName,
+  });
+
+  @override
+  State<ControllerTsScreen> createState() => _ControllerTsScreenState();
+}
+
+class _ControllerTsScreenState extends State<ControllerTsScreen> {
+  String _status = 'waiting';
+  Map<String, int> _playerScores = {};
+  Map<String, dynamic>? _currentSong;
+  bool _isRoundResultShowing = false;
+  bool _isWaitingForReady = false;
+  String? _roundLoserName;
+  int? _actualYear;
+
+  late StreamSubscription _firebaseSubscription;
+  late PageController _pageController;
+  int _selectedYear = 1995; // Default middle year
+  bool _hasSubmittedGuess = false;
+  bool _isReadyClicked = false;
+
+  final int _startYear = 1970;
+  final int _endYear = 2026;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(
+      initialPage: _selectedYear - _startYear,
+      viewportFraction: 0.35,
+    );
+
+    _firebaseSubscription = FirebaseService().listenToRoomCustom(widget.roomCode).listen((data) {
+      if (!mounted) return;
+      if (data.isEmpty) return;
+
+      final oldSongTitle = _currentSong?['title'];
+
+      setState(() {
+        _status = data['status'] ?? 'waiting';
+        _isRoundResultShowing = data['isRoundResultShowing'] == true;
+        _isWaitingForReady = data['isWaitingForReady'] == true;
+        _roundLoserName = data['roundLoserName'];
+        _actualYear = data['actualYear'] != null ? int.tryParse(data['actualYear'].toString()) : null;
+
+        // Sync Scores
+        if (data['scores'] != null) {
+          final rawScores = Map<String, dynamic>.from(data['scores'] as Map);
+          _playerScores = rawScores.map((key, value) => MapEntry(key, int.tryParse(value.toString()) ?? 100));
+        }
+
+        // Song details
+        if (data['currentSong'] != null) {
+          _currentSong = Map<String, dynamic>.from(data['currentSong'] as Map);
+        } else {
+          _currentSong = null;
+        }
+
+        // Guesses list check
+        if (data['tsGuesses'] != null) {
+          final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
+          _hasSubmittedGuess = rawGuesses.containsKey(widget.playerName);
+        } else {
+          _hasSubmittedGuess = false;
+        }
+      });
+
+      // Reset PageView when a new song starts
+      final newSongTitle = _currentSong?['title'];
+      if (newSongTitle != null && newSongTitle != oldSongTitle) {
+        setState(() {
+          _selectedYear = 1995;
+          _isReadyClicked = false;
+          _hasSubmittedGuess = false;
+        });
+        if (_pageController.hasClients) {
+          _pageController.jumpToPage(_selectedYear - _startYear);
+        }
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _firebaseSubscription.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  void _clearSession() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('roomCode');
+    await prefs.remove('playerName');
+    await prefs.remove('teamName');
+  }
+
+  void _submitGuess() async {
+    if (_hasSubmittedGuess) return;
+    await FirebaseService().submitTsGuess(widget.roomCode, widget.playerName, _selectedYear);
+    setState(() {
+      _hasSubmittedGuess = true;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_status == 'kicked' || _status == 'gameover') {
+      return Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                _status == 'gameover' ? Icons.emoji_events : Icons.gavel,
+                color: _status == 'gameover' ? Colors.amber : Colors.redAccent,
+                size: 80,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                _status == 'gameover' ? 'GAME OVER!' : 'You have been removed',
+                style: GoogleFonts.outfit(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 12),
+              ElevatedButton(
+                onPressed: () {
+                  _clearSession();
+                  Navigator.of(context).popUntil((route) => route.isFirst);
+                },
+                child: const Text('Back to Home'),
+              )
+            ],
+          ),
+        ),
+      );
+    }
+
+    return Scaffold(
+      backgroundColor: const Color(0xFFF8F9FA),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            _buildHeader(),
+            Expanded(
+              child: _buildBody(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    final myScore = _playerScores[widget.playerName] ?? 100;
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                widget.playerName,
+                style: GoogleFonts.outfit(
+                  color: Colors.black87,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  color: Colors.red[50],
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.red[300]!, width: 1),
+                ),
+                child: Text(
+                  'HEALTH: $myScore HP',
+                  style: GoogleFonts.outfit(
+                    color: Colors.red[700],
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          IconButton(
+            icon: const Icon(Icons.exit_to_app, color: Colors.black54),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  backgroundColor: Colors.white,
+                  title: const Text('Leave Lobby?', style: TextStyle(color: Colors.black87)),
+                  content: const Text('Are you sure you want to disconnect?', style: TextStyle(color: Colors.black54)),
+                  actions: [
+                    TextButton(
+                      child: const Text('Cancel'),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.redAccent),
+                      onPressed: () {
+                        _clearSession();
+                        Navigator.pop(context);
+                        Navigator.of(context).popUntil((route) => route.isFirst);
+                      },
+                      child: const Text('Leave'),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBody() {
+    if (_status == 'waiting') {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CircularProgressIndicator(color: Colors.purple),
+            const SizedBox(height: 24),
+            Text(
+              'Lobby Ready',
+              style: GoogleFonts.outfit(color: Colors.black87, fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Wait for host to start...',
+              style: GoogleFonts.outfit(color: Colors.grey[600], fontSize: 14),
+            ),
+          ],
+        ),
+      );
+    }
+
+    if (_isRoundResultShowing) {
+      return _buildResultsView();
+    }
+
+    if (!_isReadyClicked) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(24),
+                decoration: BoxDecoration(
+                  color: Colors.purple[50],
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.purple[200]!, width: 2),
+                ),
+                child: const Icon(
+                  Icons.lock_open,
+                  color: Colors.purple,
+                  size: 60,
+                ),
+              ),
+              const SizedBox(height: 32),
+              Text(
+                "Secret Guessing",
+                style: GoogleFonts.outfit(
+                  color: Colors.black87,
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                "Tap below to unlock the timeline and enter your guess secretly.",
+                style: GoogleFonts.outfit(
+                  color: Colors.grey[600],
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 40),
+              SizedBox(
+                width: double.infinity,
+                height: 60,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _isReadyClicked = true;
+                    });
+                  },
+                  child: Text(
+                    "UNLOCK TIMELINE",
+                    style: GoogleFonts.outfit(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    if (_hasSubmittedGuess) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: Colors.green[50],
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.green[200]!, width: 2),
+              ),
+              child: const Icon(
+                Icons.check,
+                color: Colors.green,
+                size: 60,
+              ),
+            ),
+            const SizedBox(height: 32),
+            Text(
+              "GUESS SUBMITTED!",
+              style: GoogleFonts.outfit(
+                color: Colors.green[800],
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              "Your guess is locked at $_selectedYear.\nWaiting for other players to submit...",
+              style: GoogleFonts.outfit(
+                color: Colors.grey[600],
+                fontSize: 14,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Select Song Year",
+          style: GoogleFonts.outfit(
+            color: Colors.black87,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 30),
+        SizedBox(
+          height: 120,
+          child: PageView.builder(
+            controller: _pageController,
+            itemCount: _endYear - _startYear + 1,
+            onPageChanged: (index) {
+              setState(() {
+                _selectedYear = _startYear + index;
+              });
+            },
+            itemBuilder: (context, index) {
+              final year = _startYear + index;
+              final bool isSelected = year == _selectedYear;
+
+              return Center(
+                child: AnimatedScale(
+                  scale: isSelected ? 1.4 : 0.8,
+                  duration: const Duration(milliseconds: 150),
+                  child: Text(
+                    year.toString(),
+                    style: GoogleFonts.outfit(
+                      color: isSelected ? Colors.purple[800] : Colors.grey[400],
+                      fontSize: 32,
+                      fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: 10),
+        const Icon(Icons.arrow_drop_up, color: Colors.purple, size: 36),
+        const SizedBox(height: 50),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: SizedBox(
+            width: double.infinity,
+            height: 60,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              onPressed: _submitGuess,
+              child: Text(
+                "SUBMIT SECRET GUESS",
+                style: GoogleFonts.outfit(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildResultsView() {
+    if (_actualYear == null) {
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    final diff = (_selectedYear - _actualYear!).abs();
+    final isLoser = _roundLoserName == widget.playerName;
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: isLoser ? Colors.red[50] : Colors.green[50],
+                shape: BoxShape.circle,
+                border: Border.all(color: isLoser ? Colors.red[200]! : Colors.green[200]!, width: 2),
+              ),
+              child: Icon(
+                isLoser ? Icons.trending_down : Icons.thumb_up_alt_outlined,
+                color: isLoser ? Colors.red : Colors.green,
+                size: 60,
+              ),
+            ),
+            const SizedBox(height: 32),
+            Text(
+              isLoser ? "BIGGEST LOSS!" : "SURVIVED",
+              style: GoogleFonts.outfit(
+                color: isLoser ? Colors.red[800] : Colors.green[800],
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.5,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              "Actual Year: $_actualYear\nYour Guess: $_selectedYear\nDifference: $diff years (-$diff HP)",
+              style: GoogleFonts.outfit(
+                color: Colors.grey[700],
+                fontSize: 16,
+                height: 1.5,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 40),
+            Text(
+              "Wait for the host to start the next round.",
+              style: GoogleFonts.outfit(
+                color: Colors.grey[500],
+                fontSize: 14,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
