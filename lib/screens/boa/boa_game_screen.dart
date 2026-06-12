@@ -665,6 +665,21 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                   ),
                 ],
               ),
+              if (widget.roomCode != null && 
+                  !_isRoundResultShowing && 
+                  !_isWaitingForTurnStart && 
+                  _currentMysteryCard != null)
+                ValueListenableBuilder<int?>(
+                  valueListenable: _hoveredDropZoneIndex,
+                  builder: (context, hoveredIdx, _) {
+                    if (hoveredIdx == null) return const SizedBox.shrink();
+                    return LayoutBuilder(
+                      builder: (context, constraints) {
+                        return HoverConnectionArrow(bodyHeight: constraints.maxHeight);
+                      },
+                    );
+                  },
+                ),
               if (_isWaitingForTurnStart && !_isLoading) _buildReadyScreen(formattedName),
             ],
           ),
@@ -1180,5 +1195,132 @@ class _TimelineHoverScaleWrapperState extends State<_TimelineHoverScaleWrapper> 
         child: widget.child,
       ),
     );
+  }
+}
+
+class HoverConnectionArrow extends StatefulWidget {
+  final double bodyHeight;
+  const HoverConnectionArrow({super.key, required this.bodyHeight});
+
+  @override
+  State<HoverConnectionArrow> createState() => _HoverConnectionArrowState();
+}
+
+class _HoverConnectionArrowState extends State<HoverConnectionArrow> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final double flex3Height = widget.bodyHeight * 3 / 5;
+    final double flex2Height = widget.bodyHeight * 2 / 5;
+
+    // Timeline card vertical center is in the middle of flex3, bottom of card is center + 90
+    final double timelineCardBottom = flex3Height / 2 + 90;
+    
+    // Mystery card top is centered in flex2, top of card is center - 90
+    final double mysteryCardTop = flex3Height + (flex2Height / 2) - 90;
+
+    if (mysteryCardTop <= timelineCardBottom) return const SizedBox.shrink();
+
+    return Positioned(
+      left: 0,
+      right: 0,
+      top: timelineCardBottom,
+      height: mysteryCardTop - timelineCardBottom,
+      child: AnimatedBuilder(
+        animation: _controller,
+        builder: (context, child) {
+          return CustomPaint(
+            painter: _ArrowPainter(
+              progress: _controller.value,
+              color: Theme.of(context).primaryColor,
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _ArrowPainter extends CustomPainter {
+  final double progress;
+  final Color color;
+
+  _ArrowPainter({required this.progress, required this.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final double centerX = size.width / 2;
+    
+    // Draw glowing vertical line
+    final linePaint = Paint()
+      ..color = color.withOpacity(0.3)
+      ..strokeWidth = 3
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    final glowPaint = Paint()
+      ..color = color.withOpacity(0.1)
+      ..strokeWidth = 8
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    canvas.drawLine(Offset(centerX, size.height - 10), Offset(centerX, 20), glowPaint);
+    canvas.drawLine(Offset(centerX, size.height - 10), Offset(centerX, 20), linePaint);
+
+    // Draw animated chevrons moving upwards (from bottom to top)
+    final chevronPaint = Paint()
+      ..color = color
+      ..strokeWidth = 3
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
+    const int numChevrons = 3;
+    final double pathLength = size.height - 30;
+    
+    for (int i = 0; i < numChevrons; i++) {
+      double t = (progress + (i / numChevrons)) % 1.0;
+      double y = (size.height - 15) - (t * pathLength);
+      
+      final path = Path()
+        ..moveTo(centerX - 8, y + 6)
+        ..lineTo(centerX, y)
+        ..lineTo(centerX + 8, y + 6);
+      
+      canvas.drawPath(path, chevronPaint);
+    }
+
+    // Draw prominent arrowhead pointing UP at the top of the path
+    final headPaint = Paint()
+      ..color = color
+      ..style = PaintingStyle.fill;
+
+    final headPath = Path()
+      ..moveTo(centerX - 12, 20)
+      ..lineTo(centerX, 8)
+      ..lineTo(centerX + 12, 20)
+      ..close();
+
+    canvas.drawPath(headPath, headPaint);
+  }
+
+  @override
+  bool shouldRepaint(covariant _ArrowPainter oldDelegate) {
+    return oldDelegate.progress != progress || oldDelegate.color != color;
   }
 }
