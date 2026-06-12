@@ -78,6 +78,33 @@ class _TsGameScreenState extends State<TsGameScreen> {
   Timer? _showcaseTimer;
 
   late final SongRepository _repository;
+  List<String> _activePlayerNames = [];
+
+  void _kickPlayer(String name) async {
+    setState(() {
+      _activePlayerNames.remove(name);
+      _submittedGuesses.remove(name);
+      _platformGuesses.remove(name);
+      _playerScores.remove(name);
+      
+      if (_currentGuesserIndex >= _activePlayerNames.length) {
+        _currentGuesserIndex = _activePlayerNames.isEmpty ? 0 : _activePlayerNames.length - 1;
+      }
+      
+      _allPlayersGuessed = _activePlayerNames.isNotEmpty && _submittedGuesses.length >= _activePlayerNames.length;
+    });
+
+    if (widget.roomCode != null) {
+      await FirebaseService().removePlayerTsGuess(widget.roomCode!, name);
+      await FirebaseService().removePlayerFromRoom(widget.roomCode!, name);
+      
+      await FirebaseService().updateTsRoomState(
+        widget.roomCode!,
+        playerNames: _activePlayerNames,
+        scores: _playerScores,
+      );
+    }
+  }
   
   @override
   void initState() {
@@ -88,7 +115,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
   Future<void> _initializeGame() async {
     _repository = SongRepository();
     await MediaCacheService().init();
-    for (var name in widget.playerNames) {
+    _activePlayerNames = List.from(widget.playerNames);
+    for (var name in _activePlayerNames) {
       _playerScores[name] = widget.startingPoints;
     }
     if (_repository.allSongs.isEmpty) await _repository.loadSongs();
@@ -112,7 +140,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
               final guessData = Map<String, dynamic>.from(val as Map);
               _submittedGuesses[player] = int.tryParse(guessData['year'].toString()) ?? _startYear;
             });
-            _allPlayersGuessed = _submittedGuesses.length >= widget.playerNames.length;
+            _allPlayersGuessed = _submittedGuesses.length >= _activePlayerNames.length;
           });
         } else {
           setState(() {
@@ -135,46 +163,40 @@ class _TsGameScreenState extends State<TsGameScreen> {
     super.dispose();
   }
 
-  void _startNewRound() async {
-    if (_deck.isEmpty) return;
+  Future<void> _startNewRound() async {
+    if (_deck.isEmpty) {
+      setState(() => _isGameOver = true);
+      return;
+    }
+    _currentSong = _deck.removeLast();
+    
+    // Select one random fact for the round safely
+    if (_currentSong != null && _currentSong!.facts.isNotEmpty) {
+      final random = Random();
+      _currentRoundFact = _currentSong!.facts[random.nextInt(_currentSong!.facts.length)];
+    } else {
+      _currentRoundFact = null;
+    }
+    
     setState(() {
-      _currentSong = _deck.removeLast();
-      _platformGuesses.clear();
-      _currentGuesserIndex = 0;
       _isRoundActive = true;
       _isRoundResultShowing = false;
-      _isReadyOverlayVisible = widget.roomCode == null; // Skip sequential ready overlays in mobile mode
-      _showScoreOverlay = false;
-      _isPlaying = false;
-      _roundLoserName = null;
+      _platformGuesses.clear();
       _selectedYear = null;
-      _hoveredDetailedYear = null;
-      _hoveredPlayerName = null;
-      _focusYear = 1995;
-      _showFacts = false;
+      _currentGuesserIndex = 0;
+      _isReadyOverlayVisible = widget.roomCode == null; // Skip sequential ready overlays in mobile mode
+      _roundLoserName = null;
       _showcasedPlayerIndex = -1;
-      _showcaseTimer?.cancel();
-      
-      _submittedGuesses.clear();
-      _allPlayersGuessed = false;
-      _isRevealMode = false;
-      _revealedPlayers.clear();
       _revealIndex = 0;
-
-      // Select one random fact for the round safely
-      if (_currentSong != null && _currentSong!.facts.isNotEmpty) {
-        final random = Random();
-        _currentRoundFact = _currentSong!.facts[random.nextInt(_currentSong!.facts.length)];
-      } else {
-        _currentRoundFact = null;
-      }
+      _isRevealMode = false;
+      _submittedGuesses.clear();
     });
 
     if (widget.roomCode != null) {
       await FirebaseService().clearTsGuesses(widget.roomCode!);
       await FirebaseService().updateTsRoomState(
         widget.roomCode!,
-        playerNames: widget.playerNames,
+        playerNames: _activePlayerNames,
         scores: _playerScores,
         currentSong: {
           'title': _currentSong!.title,
@@ -221,7 +243,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
   void _startRevealSequence() {
     setState(() {
       _isRevealMode = true;
-      _revealedPlayers = List.from(widget.playerNames);
+      _revealedPlayers = List.from(_activePlayerNames);
       _revealIndex = 0;
     });
     _revealNextPlayerGuess();
@@ -280,7 +302,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
     if (widget.roomCode != null) {
       FirebaseService().updateTsRoomState(
         widget.roomCode!,
-        playerNames: widget.playerNames,
+        playerNames: _activePlayerNames,
         scores: _playerScores,
         status: 'results',
         isRoundResultShowing: true,
@@ -293,9 +315,9 @@ class _TsGameScreenState extends State<TsGameScreen> {
 
   void _submitGuess() {
     if (!_isRoundActive || _isRoundResultShowing || _selectedYear == null) return;
-    final currentPlayerName = widget.playerNames[_currentGuesserIndex];
+    final currentPlayerName = _activePlayerNames[_currentGuesserIndex];
     setState(() { _platformGuesses[currentPlayerName] = _selectedYear!; _selectedYear = null; });
-    if (_currentGuesserIndex < widget.playerNames.length - 1) { 
+    if (_currentGuesserIndex < _activePlayerNames.length - 1) { 
       setState(() {
         _currentGuesserIndex++; 
         _isReadyOverlayVisible = true; // Show next player ready
@@ -330,7 +352,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
     _showcaseTimer?.cancel();
     _showcasedPlayerIndex = 0;
     
-    final players = widget.playerNames;
+    final players = _activePlayerNames;
     if (players.isEmpty) return;
 
     // Focus on the first player immediately
@@ -362,7 +384,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
        if (widget.roomCode != null) {
          FirebaseService().updateTsRoomState(
            widget.roomCode!,
-           playerNames: widget.playerNames,
+           playerNames: _activePlayerNames,
            scores: _playerScores,
            status: 'gameover',
          );
@@ -410,7 +432,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
   @override
   Widget build(BuildContext context) {
     Color currentPlayerColor = Colors.grey;
-    if (widget.playerNames.isNotEmpty && _currentGuesserIndex < widget.playerNames.length) currentPlayerColor = widget.playerColors[widget.playerNames[_currentGuesserIndex]] ?? Colors.blueAccent;
+    if (_activePlayerNames.isNotEmpty && _currentGuesserIndex < _activePlayerNames.length) currentPlayerColor = widget.playerColors[_activePlayerNames[_currentGuesserIndex]] ?? Colors.blueAccent;
     
     final isAr = widget.uiLanguage == 'ar';
     return Scaffold(
@@ -474,6 +496,17 @@ class _TsGameScreenState extends State<TsGameScreen> {
   }
 
   Widget _buildOverviewTimeline(Color color) {
+    Color activeColor = color;
+    if (widget.roomCode != null) {
+      if (_isRevealMode && _revealIndex >= 0 && _revealIndex < _revealedPlayers.length) {
+        final currentRevealedPlayer = _revealedPlayers[_revealIndex];
+        activeColor = widget.playerColors[currentRevealedPlayer] ?? color;
+      } else if (_isRoundResultShowing && _showcasedPlayerIndex >= 0 && _showcasedPlayerIndex < _activePlayerNames.length) {
+        final currentShowcasedPlayer = _activePlayerNames[_showcasedPlayerIndex];
+        activeColor = widget.playerColors[currentShowcasedPlayer] ?? color;
+      }
+    }
+
     return LayoutBuilder(builder: (context, constraints) {
       final double width = constraints.maxWidth;
       final int totalYears = _endYear - _startYear + 1;
@@ -571,11 +604,11 @@ class _TsGameScreenState extends State<TsGameScreen> {
                         gradient: LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: [color, color.withOpacity(0)],
+                          colors: [activeColor, activeColor.withOpacity(0)],
                         ),
                         borderRadius: const BorderRadius.vertical(top: Radius.circular(3)),
                         boxShadow: [
-                          BoxShadow(color: color.withOpacity(0.5), blurRadius: 10, spreadRadius: 1)
+                          BoxShadow(color: activeColor.withOpacity(0.5), blurRadius: 10, spreadRadius: 1)
                         ],
                       ),
                     ),
@@ -592,9 +625,9 @@ class _TsGameScreenState extends State<TsGameScreen> {
                     width: 3,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: color,
+                        color: activeColor,
                         boxShadow: [
-                          BoxShadow(color: color.withOpacity(0.5), blurRadius: 4, spreadRadius: 1)
+                          BoxShadow(color: activeColor.withOpacity(0.5), blurRadius: 4, spreadRadius: 1)
                         ]
                       ),
                     ),
@@ -613,10 +646,10 @@ class _TsGameScreenState extends State<TsGameScreen> {
                       child: Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: color,
+                          color: activeColor,
                           borderRadius: BorderRadius.circular(8),
                           boxShadow: [
-                            BoxShadow(color: color.withOpacity(0.4), blurRadius: 12, spreadRadius: 2)
+                            BoxShadow(color: activeColor.withOpacity(0.4), blurRadius: 12, spreadRadius: 2)
                           ],
                           border: Border.all(color: Colors.white.withOpacity(0.3), width: 1),
                         ),
@@ -701,7 +734,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
                 // 4. Sequential Showcase Banner (Individual Player Focus)
                 if (_isRoundResultShowing && _showcasedPlayerIndex >= 0 && _currentSong != null)
                   () {
-                    final playerName = widget.playerNames[_showcasedPlayerIndex];
+                    final playerName = _activePlayerNames[_showcasedPlayerIndex];
                     final playerColor = widget.playerColors[playerName] ?? Colors.white;
                     final guessYear = _platformGuesses[playerName] ?? _startYear;
                     final actualYear = int.parse(_currentSong!.year);
@@ -786,7 +819,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
   }
 
   Widget _buildReadyOverlay() {
-    final playerName = widget.playerNames[_currentGuesserIndex];
+    final playerName = _activePlayerNames[_currentGuesserIndex];
     final playerColor = widget.playerColors[playerName] ?? const Color(0xFF6C63FF);
 
     return Positioned.fill(
@@ -958,8 +991,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
                         ))
                   : Text(
                       widget.uiLanguage == 'ar'
-                          ? 'في انتظار تخمينات اللاعبين (${_submittedGuesses.length}/${widget.playerNames.length})...'
-                          : 'Waiting for player guesses (${_submittedGuesses.length}/${widget.playerNames.length})...',
+                          ? 'في انتظار تخمينات اللاعبين (${_submittedGuesses.length}/${_activePlayerNames.length})...'
+                          : 'Waiting for player guesses (${_submittedGuesses.length}/${_activePlayerNames.length})...',
                       style: const TextStyle(color: Colors.white38, fontSize: 16),
                     ))
               : (_selectedYear != null 
@@ -1008,8 +1041,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: widget.playerNames.map((name) {
-                      final isCurrent = widget.roomCode == null && widget.playerNames[_currentGuesserIndex] == name && !_isRoundResultShowing;
+                    children: _activePlayerNames.map((name) {
+                      final isCurrent = widget.roomCode == null && _activePlayerNames[_currentGuesserIndex] == name && !_isRoundResultShowing;
                       final isHovered = _hoveredPlayerName == name;
                       final hasGuessed = widget.roomCode != null ? _submittedGuesses.containsKey(name) : _platformGuesses.containsKey(name);
                       final color = widget.playerColors[name] ?? Colors.blueAccent;
@@ -1025,17 +1058,21 @@ class _TsGameScreenState extends State<TsGameScreen> {
                             margin: const EdgeInsets.symmetric(horizontal: 4),
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                             decoration: BoxDecoration(
-                              color: isHovered 
-                                ? color.withOpacity(0.3) 
-                                : (isCurrent ? color.withOpacity(0.1) : Colors.white.withOpacity(0.05)),
+                              color: hasGuessed
+                                ? color
+                                : (isHovered 
+                                    ? color.withOpacity(0.3) 
+                                    : (isCurrent ? color.withOpacity(0.1) : Colors.white.withOpacity(0.05))),
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(
-                                color: isHovered 
-                                  ? color 
-                                  : (isCurrent ? color.withOpacity(0.5) : (hasGuessed ? Colors.white38 : Colors.transparent)), 
-                                width: isHovered ? 2 : 1.5
+                                color: hasGuessed
+                                  ? color
+                                  : (isHovered 
+                                      ? color 
+                                      : (isCurrent ? color.withOpacity(0.5) : Colors.transparent)), 
+                                width: (isHovered || hasGuessed) ? 2 : 1.5
                               ),
-                              boxShadow: (isCurrent || isHovered) 
+                              boxShadow: (isCurrent || isHovered || hasGuessed) 
                                 ? [BoxShadow(color: color.withOpacity(0.4), blurRadius: isHovered ? 12 : 8)] 
                                 : null,
                             ),
@@ -1043,10 +1080,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Visibility(
-                                  visible: hasGuessed,
-                                  maintainSize: true, 
-                                  maintainAnimation: true, 
-                                  maintainState: true,
+                                  visible: hasGuessed && widget.roomCode == null,
+                                  maintainSize: false, 
                                   child: Padding(
                                     padding: const EdgeInsets.only(right: 4),
                                     child: Icon(Icons.check_circle, color: color, size: 12),
@@ -1055,12 +1090,23 @@ class _TsGameScreenState extends State<TsGameScreen> {
                                 Text(
                                   name.toUpperCase(),
                                   style: GoogleFonts.outfit(
-                                    color: (isCurrent || isHovered) ? Colors.white : (hasGuessed ? Colors.white70 : Colors.white54),
+                                    color: (isCurrent || isHovered || hasGuessed) ? Colors.white : Colors.white54,
                                     fontWeight: (isCurrent || isHovered) ? FontWeight.bold : FontWeight.w500,
                                     fontSize: 11.5,
                                     height: 1.0,
                                   )
                                 ),
+                                if (widget.roomCode != null) ...[
+                                  const SizedBox(width: 6),
+                                  GestureDetector(
+                                    onTap: () => _kickPlayer(name),
+                                    child: const Icon(
+                                      Icons.cancel,
+                                      color: Colors.white70,
+                                      size: 14,
+                                    ),
+                                  ),
+                                ],
                               ],
                             ),
                           ),
@@ -1097,7 +1143,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: (widget.playerColors[widget.playerNames[_currentGuesserIndex]] ?? Colors.blueAccent).withOpacity(0.5),
+                color: (widget.playerColors[_activePlayerNames[_currentGuesserIndex]] ?? Colors.blueAccent).withOpacity(0.5),
                 blurRadius: 20,
                 spreadRadius: 2
               )
@@ -1158,7 +1204,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
 }
 
   Widget _buildFactsPopup() {
-    final color = widget.playerColors[widget.playerNames[_currentGuesserIndex]] ?? Colors.blueAccent;
+    final color = widget.playerColors[_activePlayerNames[_currentGuesserIndex]] ?? Colors.blueAccent;
     return Center(
       child: FadeIn(
         duration: const Duration(milliseconds: 500),

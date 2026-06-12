@@ -649,6 +649,51 @@ import 'dart:math';class FirebaseService {
     }
   }
 
+  Future<void> removePlayerTsGuess(String roomCode, String playerName) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/tsGuesses/$playerName').remove();
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/tsGuesses/$playerName.json");
+        await http.delete(url);
+      } catch (e) {}
+    }
+  }
+
+  Future<void> removePlayerFromRoom(String roomCode, String playerName) async {
+    if (kIsWeb) {
+      try {
+        final snapshot = await _db.child('gts_rooms/$roomCode/players').get();
+        if (snapshot.exists && snapshot.value != null) {
+          final data = Map<dynamic, dynamic>.from(snapshot.value as Map);
+          data.forEach((key, val) async {
+            final playerVal = Map<dynamic, dynamic>.from(val as Map);
+            if (playerVal['name'] == playerName) {
+              await _db.child('gts_rooms/$roomCode/players/$key').remove();
+            }
+          });
+        }
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/players.json");
+        final response = await http.get(url);
+        if (response.statusCode == 200 && response.body != 'null') {
+          final data = jsonDecode(response.body) as Map<String, dynamic>;
+          data.forEach((key, val) async {
+            final playerVal = Map<String, dynamic>.from(val as Map);
+            if (playerVal['name'] == playerName) {
+              final deleteUrl = Uri.parse("$_baseUrl/gts_rooms/$roomCode/players/$key.json");
+              await http.delete(deleteUrl);
+            }
+          });
+        }
+      } catch (e) {}
+    }
+  }
+
   Future<void> updateTsRoomState(String roomCode, {
     required List<String> playerNames,
     required Map<String, int> scores,
