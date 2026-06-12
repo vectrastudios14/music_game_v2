@@ -41,7 +41,7 @@ void main() {
         
         // Add a slight delay before triggering fullscreen to prevent native initialization crashes
         await Future.delayed(const Duration(milliseconds: 150));
-        await windowManager.setFullScreen(true);
+        // await windowManager.setFullScreen(true);
       });
     }
 

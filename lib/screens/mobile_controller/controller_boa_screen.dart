@@ -163,8 +163,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
               ],
             ),
 
-            // Feedback Overlay
-            if (_placementResult != null && isMyTurn) _buildResultOverlay(),
+            // Results are integrated inline in _buildBody
           ],
         ),
       ),
@@ -390,6 +389,7 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     // Slidable Gaps Carousel
     return Column(
       children: [
+        _buildResultBanner(),
         Expanded(
           child: _buildTimelineCarousel(),
         ),
@@ -714,6 +714,52 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
   }
 
   Widget _buildDropButton() {
+    final bool isShowingResult = _placementResult != null;
+
+    if (isShowingResult) {
+      final isCorrect = _placementResult == 'correct';
+      final buttonColor = isCorrect ? Colors.green[700]! : Colors.red[700]!;
+
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 40),
+        child: Container(
+          width: double.infinity,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                color: buttonColor.withOpacity(0.2),
+                blurRadius: 15,
+                offset: const Offset(0, 5),
+              )
+            ],
+          ),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: buttonColor,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              elevation: 0,
+            ),
+            onPressed: () {
+              FirebaseService().requestNextRound(widget.roomCode);
+            },
+            child: Text(
+              "CONTINUE",
+              style: GoogleFonts.outfit(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 1.2,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
     final int slotsCount = _timelineSongs.length + 1;
     String buttonText = "PLACE BETWEEN";
     Color buttonColor = Colors.teal;
@@ -764,80 +810,39 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
     );
   }
 
-  Widget _buildResultOverlay() {
+  Widget _buildResultBanner() {
+    if (_placementResult == null) return const SizedBox.shrink();
+
     final isCorrect = _placementResult == 'correct';
-    final color = isCorrect ? Colors.green : Colors.redAccent;
+    final bannerColor = isCorrect ? Colors.green[50] : Colors.red[50];
+    final borderColor = isCorrect ? Colors.green[300]! : Colors.red[300]!;
+    final textColor = isCorrect ? Colors.green[800]! : Colors.red[800]!;
     final icon = isCorrect ? Icons.check_circle_outline : Icons.error_outline;
-    final message = isCorrect ? "CORRECT PLACE!" : "WRONG PLACE!";
+    final text = isCorrect ? "Correct answer! Scroll to show others." : "Incorrect answer! Scroll to show correct slot.";
 
     return Container(
-      color: Colors.black.withOpacity(0.85),
-      width: double.infinity,
-      height: double.infinity,
-      child: ScaleTransition(
-        scale: _resultScale,
-        child: Center(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-            margin: const EdgeInsets.symmetric(horizontal: 30),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: color.withOpacity(0.5), width: 2),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(icon, color: color, size: 80),
-                const SizedBox(height: 20),
-                Text(
-                  message,
-                  style: GoogleFonts.outfit(
-                    color: Colors.black87,
-                    fontSize: 26,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  isCorrect
-                      ? "Keep it up! Your timeline is growing."
-                      : "Oops! Better luck next song.",
-                  style: GoogleFonts.outfit(
-                    color: Colors.grey[700],
-                    fontSize: 14,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 30),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: color,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                    ),
-                    onPressed: () {
-                      FirebaseService().requestNextRound(widget.roomCode);
-                    },
-                    child: Text(
-                      "CONTINUE",
-                      style: GoogleFonts.outfit(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: bannerColor,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: borderColor, width: 1.5),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, color: textColor, size: 28),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              text,
+              style: GoogleFonts.outfit(
+                color: textColor,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

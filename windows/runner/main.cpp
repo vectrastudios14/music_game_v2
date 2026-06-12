@@ -29,6 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   if (!window.Create(L"Musica", origin, size)) {
     return EXIT_FAILURE;
   }
+  window.Show();
   window.SetQuitOnClose(true);
 
   ::MSG msg;
