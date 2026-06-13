@@ -511,7 +511,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
             quarterTurns: 3,
             child: ListWheelScrollView.useDelegate(
               controller: _scrollController,
-              itemExtent: 80,
+              itemExtent: 100,
               physics: const FixedExtentScrollPhysics(),
               onSelectedItemChanged: (index) {
                 setState(() {
@@ -532,6 +532,8 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
                         duration: const Duration(milliseconds: 150),
                         child: Text(
                           year.toString(),
+                          maxLines: 1,
+                          softWrap: false,
                           style: GoogleFonts.outfit(
                             color: isSelected ? Colors.purple[800] : Colors.grey[400],
                             fontSize: 32,
