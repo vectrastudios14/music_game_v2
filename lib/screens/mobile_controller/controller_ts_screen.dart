@@ -29,7 +29,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   int? _actualYear;
 
   late StreamSubscription _firebaseSubscription;
-  late PageController _pageController;
+  late FixedExtentScrollController _scrollController;
   int _selectedYear = 1995; // Default middle year
   bool _hasSubmittedGuess = false;
   bool _isReadyClicked = false;
@@ -40,9 +40,8 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   @override
   void initState() {
     super.initState();
-    _pageController = PageController(
-      initialPage: _selectedYear - _startYear,
-      viewportFraction: 0.35,
+    _scrollController = FixedExtentScrollController(
+      initialItem: _selectedYear - _startYear,
     );
 
     _firebaseSubscription = FirebaseService().listenToRoomCustom(widget.roomCode).listen((data) {
@@ -88,8 +87,8 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
           _isReadyClicked = false;
           _hasSubmittedGuess = false;
         });
-        if (_pageController.hasClients) {
-          _pageController.jumpToPage(_selectedYear - _startYear);
+        if (_scrollController.hasClients) {
+          _scrollController.jumpToItem(_selectedYear - _startYear);
         }
       }
     });
@@ -98,7 +97,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   @override
   void dispose() {
     _firebaseSubscription.cancel();
-    _pageController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -391,33 +390,43 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
         const SizedBox(height: 30),
         SizedBox(
           height: 120,
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: _endYear - _startYear + 1,
-            onPageChanged: (index) {
-              setState(() {
-                _selectedYear = _startYear + index;
-              });
-            },
-            itemBuilder: (context, index) {
-              final year = _startYear + index;
-              final bool isSelected = year == _selectedYear;
+          child: RotatedBox(
+            quarterTurns: 3,
+            child: ListWheelScrollView.useDelegate(
+              controller: _scrollController,
+              itemExtent: 80,
+              physics: const FixedExtentScrollPhysics(),
+              onSelectedItemChanged: (index) {
+                setState(() {
+                  _selectedYear = _startYear + index;
+                });
+              },
+              childDelegate: ListWheelChildBuilderDelegate(
+                childCount: _endYear - _startYear + 1,
+                builder: (context, index) {
+                  final year = _startYear + index;
+                  final bool isSelected = year == _selectedYear;
 
-              return Center(
-                child: AnimatedScale(
-                  scale: isSelected ? 1.4 : 0.8,
-                  duration: const Duration(milliseconds: 150),
-                  child: Text(
-                    year.toString(),
-                    style: GoogleFonts.outfit(
-                      color: isSelected ? Colors.purple[800] : Colors.grey[400],
-                      fontSize: 32,
-                      fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
+                  return RotatedBox(
+                    quarterTurns: 1,
+                    child: Center(
+                      child: AnimatedScale(
+                        scale: isSelected ? 1.4 : 0.8,
+                        duration: const Duration(milliseconds: 150),
+                        child: Text(
+                          year.toString(),
+                          style: GoogleFonts.outfit(
+                            color: isSelected ? Colors.purple[800] : Colors.grey[400],
+                            fontSize: 32,
+                            fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              );
-            },
+                  );
+                },
+              ),
+            ),
           ),
         ),
         const SizedBox(height: 10),
