@@ -226,6 +226,9 @@ class _TsGameScreenState extends State<TsGameScreen> {
 
     if (widget.roomCode != null) {
       await FirebaseService().clearTsGuesses(widget.roomCode!);
+      await FirebaseService().resetTsRevealTrigger(widget.roomCode!);
+      await FirebaseService().resetTsShowResultsTrigger(widget.roomCode!);
+      await FirebaseService().resetNextRoundRequest(widget.roomCode!);
       await FirebaseService().updateTsRoomState(
         widget.roomCode!,
         playerNames: _activePlayerNames,

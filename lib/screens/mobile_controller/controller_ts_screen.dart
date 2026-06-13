@@ -165,6 +165,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             _buildHeader(),
+            _buildSongBanner(),
             Expanded(
               child: _buildBody(),
             ),
@@ -683,6 +684,89 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
               ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildSongBanner() {
+    if (_currentSong == null || _status == 'waiting') {
+      return const SizedBox.shrink();
+    }
+
+    final title = _currentSong!['title'] ?? 'Unknown Title';
+    final artist = _currentSong!['artist'] ?? 'Unknown Artist';
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF6A1B9A), Color(0xFF8E24AA)], // Purple to magenta-violet
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF8E24AA).withOpacity(0.3),
+            blurRadius: 8,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.15),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              Icons.music_note,
+              color: Colors.white,
+              size: 20,
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "NOW PLAYING",
+                  style: GoogleFonts.outfit(
+                    color: Colors.white.withOpacity(0.7),
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  title,
+                  style: GoogleFonts.outfit(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Text(
+                  artist,
+                  style: GoogleFonts.outfit(
+                    color: Colors.purple[100],
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
