@@ -329,6 +329,58 @@ import 'dart:math';class FirebaseService {
     }
   }
 
+  Future<void> triggerTsReveal(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/triggerReveal').set(true);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/triggerReveal.json");
+        await http.put(url, body: jsonEncode(true));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> resetTsRevealTrigger(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/triggerReveal').remove();
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/triggerReveal.json");
+        await http.delete(url);
+      } catch (e) {}
+    }
+  }
+
+  Future<void> triggerTsShowResults(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/triggerShowResults').set(true);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/triggerShowResults.json");
+        await http.put(url, body: jsonEncode(true));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> resetTsShowResultsTrigger(String roomCode) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/triggerShowResults').remove();
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/triggerShowResults.json");
+        await http.delete(url);
+      } catch (e) {}
+    }
+  }
+
   Future<void> setPauseState(String roomCode, bool isPaused, String playerName) async {
     final data = {
       'isPaused': isPaused,
@@ -714,6 +766,7 @@ import 'dart:math';class FirebaseService {
     bool? isWaitingForReady,
     String? roundLoserName,
     int? actualYear,
+    bool? showScoreOverlay,
   }) async {
     final data = {
       'playerNames': playerNames,
@@ -724,6 +777,7 @@ import 'dart:math';class FirebaseService {
       if (isWaitingForReady != null) 'isWaitingForReady': isWaitingForReady,
       if (roundLoserName != null) 'roundLoserName': roundLoserName,
       if (actualYear != null) 'actualYear': actualYear,
+      if (showScoreOverlay != null) 'showScoreOverlay': showScoreOverlay,
     };
     if (kIsWeb) {
       try {

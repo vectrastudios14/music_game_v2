@@ -34,6 +34,9 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   bool _hasSubmittedGuess = false;
   bool _isReadyClicked = false;
   int _startingPointsSetting = 100;
+  bool _allPlayersGuessed = false;
+  bool _showScoreOverlay = false;
+  bool _isRevealTriggered = false;
 
   final int _startYear = 1970;
   final int _endYear = 2026;
@@ -76,12 +79,13 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
         }
 
         // Guesses list check
-        if (data['tsGuesses'] != null) {
-          final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
-          _hasSubmittedGuess = rawGuesses.containsKey(widget.playerName);
-        } else {
-          _hasSubmittedGuess = false;
-        }
+        final tsGuessesMap = data['tsGuesses'] != null ? Map<String, dynamic>.from(data['tsGuesses'] as Map) : {};
+        _hasSubmittedGuess = tsGuessesMap.containsKey(widget.playerName);
+
+        final playerNamesList = data['playerNames'] != null ? List<String>.from(data['playerNames'] as List) : [];
+        _allPlayersGuessed = tsGuessesMap.isNotEmpty && tsGuessesMap.length >= playerNamesList.length;
+        _showScoreOverlay = data['showScoreOverlay'] == true;
+        _isRevealTriggered = data['triggerReveal'] == true;
       });
 
       // Reset PageView when a new song starts
@@ -340,6 +344,114 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
     }
 
     if (_hasSubmittedGuess) {
+      if (_allPlayersGuessed) {
+        if (_isRevealTriggered) {
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: Colors.purple[50],
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.purple[200]!, width: 2),
+                  ),
+                  child: const CircularProgressIndicator(color: Colors.purple),
+                ),
+                const SizedBox(height: 32),
+                Text(
+                  "REVEALING GUESSES...",
+                  style: GoogleFonts.outfit(
+                    color: Colors.purple[800],
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  "Watch the TV screen to see everyone's guess!",
+                  style: GoogleFonts.outfit(
+                    color: Colors.grey[600],
+                    fontSize: 14,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          );
+        }
+
+        return Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: Colors.green[50],
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.green[200]!, width: 2),
+                  ),
+                  child: const Icon(
+                    Icons.check,
+                    color: Colors.green,
+                    size: 60,
+                  ),
+                ),
+                const SizedBox(height: 32),
+                Text(
+                  "ALL GUESSES IN!",
+                  style: GoogleFonts.outfit(
+                    color: Colors.green[800],
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  "Everyone has submitted their guess. Tap below to reveal them on the TV!",
+                  style: GoogleFonts.outfit(
+                    color: Colors.grey[600],
+                    fontSize: 14,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 40),
+                SizedBox(
+                  width: double.infinity,
+                  height: 60,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    onPressed: () {
+                      FirebaseService().triggerTsReveal(widget.roomCode);
+                    },
+                    child: Text(
+                      "REVEAL GUESSES",
+                      style: GoogleFonts.outfit(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+
       return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -514,14 +626,56 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 40),
-            Text(
-              "Wait for the host to start the next round.",
-              style: GoogleFonts.outfit(
-                color: Colors.grey[500],
-                fontSize: 14,
-                fontStyle: FontStyle.italic,
+            if (!_showScoreOverlay)
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28),
+                    ),
+                  ),
+                  onPressed: () {
+                    FirebaseService().triggerTsShowResults(widget.roomCode);
+                  },
+                  child: Text(
+                    "VIEW SCOREBOARD",
+                    style: GoogleFonts.outfit(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
+              )
+            else
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF2E7D32),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(28),
+                    ),
+                  ),
+                  onPressed: () {
+                    FirebaseService().requestNextRound(widget.roomCode);
+                  },
+                  child: Text(
+                    "START NEXT ROUND",
+                    style: GoogleFonts.outfit(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2,
+                    ),
+                  ),
+                ),
               ),
-            ),
           ],
         ),
       ),

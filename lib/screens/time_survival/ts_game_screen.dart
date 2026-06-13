@@ -132,6 +132,25 @@ class _TsGameScreenState extends State<TsGameScreen> {
           _continueToNextRound();
         }
 
+        if (data['triggerReveal'] == true && _allPlayersGuessed && !_isRevealMode && !_isRoundResultShowing) {
+          FirebaseService().resetTsRevealTrigger(widget.roomCode!);
+          _startRevealSequence();
+        }
+
+        if (data['triggerShowResults'] == true && _isRoundResultShowing && !_showScoreOverlay) {
+          FirebaseService().resetTsShowResultsTrigger(widget.roomCode!);
+          setState(() => _showScoreOverlay = true);
+          _audioPlayer.stop();
+          _showcaseTimer?.cancel();
+          _showcasedPlayerIndex = -1;
+          FirebaseService().updateTsRoomState(
+            widget.roomCode!,
+            playerNames: _activePlayerNames,
+            scores: _playerScores,
+            showScoreOverlay: true,
+          );
+        }
+
         if (data['tsGuesses'] != null) {
           final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
           setState(() {
@@ -208,6 +227,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
         isWaitingForReady: false,
         roundLoserName: null,
         actualYear: int.tryParse(_currentSong!.year) ?? _startYear,
+        showScoreOverlay: false,
       );
     }
     if (_currentSong!.artworkUrl == null) {
@@ -241,10 +261,32 @@ class _TsGameScreenState extends State<TsGameScreen> {
   }
 
   void _startRevealSequence() {
+    _previousScores = Map.from(_playerScores);
+    final actualYear = int.tryParse(_currentSong!.year) ?? _startYear;
+
+    // Pre-calculate scores and round loser immediately
+    bool someoneDied = false;
+    int maxLoss = -1;
+    String? maxLoser;
+
+    _submittedGuesses.forEach((player, guess) {
+      int diff = (guess - actualYear).abs();
+      if (diff > maxLoss) { maxLoss = diff; maxLoser = player; }
+      int newScore = _playerScores[player]! - diff;
+      _playerScores[player] = newScore;
+      if (newScore <= 0) someoneDied = true;
+    });
+
+    if (maxLoss > 0) setState(() => _roundLoserName = maxLoser);
+    if (someoneDied) setState(() => _isGameOver = true);
+
     setState(() {
+      _isRoundActive = false;
+      _isRoundResultShowing = true;
       _isRevealMode = true;
       _revealedPlayers = List.from(_activePlayerNames);
       _revealIndex = 0;
+      _showcasedPlayerIndex = 0;
     });
     _revealNextPlayerGuess();
   }
@@ -257,11 +299,12 @@ class _TsGameScreenState extends State<TsGameScreen> {
       setState(() {
         _platformGuesses[playerName] = playerGuess;
         _focusYear = playerGuess; // smooth scroll to their guess
+        _showcasedPlayerIndex = _revealIndex;
       });
       
       BackgroundMusicService.instance.playSfx('tick.mp3');
       
-      Future.delayed(const Duration(seconds: 2), () {
+      Future.delayed(const Duration(seconds: 3), () {
         if (mounted) {
           setState(() {
             _revealIndex++;
@@ -275,29 +318,14 @@ class _TsGameScreenState extends State<TsGameScreen> {
   }
 
   void _revealFinalResults() {
-    _previousScores = Map.from(_playerScores);
     final actualYear = int.tryParse(_currentSong!.year) ?? _startYear;
     
     setState(() {
-      _isRoundActive = false;
-      _isRoundResultShowing = true;
       _focusYear = actualYear;
     });
 
-    bool someoneDied = false;
-    int maxLoss = -1;
-    String? maxLoser;
-    
-    _platformGuesses.forEach((player, guess) {
-      int diff = (guess - actualYear).abs();
-      if (diff > maxLoss) { maxLoss = diff; maxLoser = player; }
-      int newScore = _playerScores[player]! - diff;
-      _playerScores[player] = newScore;
-      if (newScore <= 0) someoneDied = true;
-    });
-
-    if (maxLoss > 0) setState(() => _roundLoserName = maxLoser);
-    if (someoneDied) setState(() => _isGameOver = true);
+    // Start Sequential Showcase loop
+    _startShowcase();
     
     if (widget.roomCode != null) {
       FirebaseService().updateTsRoomState(
@@ -309,6 +337,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
         isWaitingForReady: false,
         roundLoserName: _roundLoserName,
         actualYear: actualYear,
+        showScoreOverlay: false,
       );
     }
   }
@@ -379,17 +408,18 @@ class _TsGameScreenState extends State<TsGameScreen> {
 
 
   void _continueToNextRound() {
-     if (_isGameOver) {
-       setState(() => _showScoreOverlay = false);
-       if (widget.roomCode != null) {
-         FirebaseService().updateTsRoomState(
-           widget.roomCode!,
-           playerNames: _activePlayerNames,
-           scores: _playerScores,
-           status: 'gameover',
-         );
-       }
-     } else {
+      if (_isGameOver) {
+        setState(() => _showScoreOverlay = false);
+        if (widget.roomCode != null) {
+          FirebaseService().updateTsRoomState(
+            widget.roomCode!,
+            playerNames: _activePlayerNames,
+            scores: _playerScores,
+            status: 'gameover',
+            showScoreOverlay: false,
+          );
+        }
+      } else {
        _startNewRound();
      }
   }
@@ -963,6 +993,14 @@ class _TsGameScreenState extends State<TsGameScreen> {
                     _audioPlayer.stop(); // Stop song only when viewing final scores
                     _showcaseTimer?.cancel();
                     _showcasedPlayerIndex = -1;
+                    if (widget.roomCode != null) {
+                      FirebaseService().updateTsRoomState(
+                        widget.roomCode!,
+                        playerNames: _activePlayerNames,
+                        scores: _playerScores,
+                        showScoreOverlay: true,
+                      );
+                    }
                   }, 
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.white10),
                   child: Text(_t('viewResults'))
@@ -1307,7 +1345,17 @@ class _TsGameScreenState extends State<TsGameScreen> {
   Widget _buildResultModal() {
     return TsRoundResultModal(
       scores: _playerScores, previousScores: _previousScores, playerColors: widget.playerColors, maxScore: widget.startingPoints,
-      loserName: _roundLoserName ?? "", onContinue: _continueToNextRound, onHide: () => setState(() => _showScoreOverlay = false),
+      loserName: _roundLoserName ?? "", onContinue: _continueToNextRound, onHide: () {
+        setState(() => _showScoreOverlay = false);
+        if (widget.roomCode != null) {
+          FirebaseService().updateTsRoomState(
+            widget.roomCode!,
+            playerNames: _activePlayerNames,
+            scores: _playerScores,
+            showScoreOverlay: false,
+          );
+        }
+      },
       platformGuesses: _platformGuesses, isGameOver: _isGameOver, actualYear: int.tryParse(_currentSong?.year ?? "") ?? 0,
       uiLanguage: widget.uiLanguage,
     );
