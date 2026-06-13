@@ -511,7 +511,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
             quarterTurns: 3,
             child: ListWheelScrollView.useDelegate(
               controller: _scrollController,
-              itemExtent: 100,
+              itemExtent: 120,
               physics: const FixedExtentScrollPhysics(),
               onSelectedItemChanged: (index) {
                 setState(() {
@@ -530,14 +530,17 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
                       child: AnimatedScale(
                         scale: isSelected ? 1.4 : 0.8,
                         duration: const Duration(milliseconds: 150),
-                        child: Text(
-                          year.toString(),
-                          maxLines: 1,
-                          softWrap: false,
-                          style: GoogleFonts.outfit(
-                            color: isSelected ? Colors.purple[800] : Colors.grey[400],
-                            fontSize: 32,
-                            fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            year.toString(),
+                            maxLines: 1,
+                            softWrap: false,
+                            style: GoogleFonts.outfit(
+                              color: isSelected ? Colors.purple[800] : Colors.grey[400],
+                              fontSize: 32,
+                              fontWeight: isSelected ? FontWeight.w900 : FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
