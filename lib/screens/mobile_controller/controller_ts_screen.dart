@@ -33,6 +33,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   int _selectedYear = 1995; // Default middle year
   bool _hasSubmittedGuess = false;
   bool _isReadyClicked = false;
+  int _startingPointsSetting = 100;
 
   final int _startYear = 1970;
   final int _endYear = 2026;
@@ -56,6 +57,10 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
         _isWaitingForReady = data['isWaitingForReady'] == true;
         _roundLoserName = data['roundLoserName'];
         _actualYear = data['actualYear'] != null ? int.tryParse(data['actualYear'].toString()) : null;
+
+        if (data['startingPoints'] != null) {
+          _startingPointsSetting = int.tryParse(data['startingPoints'].toString()) ?? 100;
+        }
 
         // Sync Scores
         if (data['scores'] != null) {
@@ -166,7 +171,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
   }
 
   Widget _buildHeader() {
-    final myScore = _playerScores[widget.playerName] ?? 100;
+    final myScore = _playerScores[widget.playerName] ?? _startingPointsSetting;
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Row(

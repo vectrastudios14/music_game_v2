@@ -237,7 +237,18 @@ import 'dart:math';class FirebaseService {
     }
   }
 
-  // --- CONTROLLER METHODS ---
+  Future<void> setRoomStartingPoints(String roomCode, int points) async {
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode/startingPoints').set(points);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode/startingPoints.json");
+        await http.put(url, body: jsonEncode(points));
+      } catch (e) {}
+    }
+  }
 
   Future<void> joinRoom(String roomCode, String playerName, String teamName) async {
     // Just a placeholder if we want to track players later

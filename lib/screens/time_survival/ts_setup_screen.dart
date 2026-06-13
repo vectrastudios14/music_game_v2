@@ -185,6 +185,7 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                                   await FirebaseService().createRoom(_roomCode!);
                                   await FirebaseService().setGameType(_roomCode!, 'ts');
                                   await FirebaseService().setRoomMode(_roomCode!, 'individual');
+                                  await FirebaseService().setRoomStartingPoints(_roomCode!, _startingPoints);
 
                                   _playerPool.clear();
                                   FirebaseService().listenForJoins(_roomCode!, (name, team) {
@@ -249,7 +250,12 @@ class _TsSetupScreenState extends State<TsSetupScreen> {
                                     min: 100, max: 200, divisions: 10,
                                     label: _startingPoints.toString(),
                                     activeColor: const Color(0xFF00E676),
-                                    onChanged: (value) => setState(() => _startingPoints = value.round()),
+                                    onChanged: (value) {
+                                      setState(() => _startingPoints = value.round());
+                                      if (_roomCode != null) {
+                                        FirebaseService().setRoomStartingPoints(_roomCode!, _startingPoints);
+                                      }
+                                    },
                                   ),
                                 ],
                               ),
