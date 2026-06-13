@@ -10209,7 +10209,7 @@ for(r=0;q=b.length,r<q;++r){p=b[r]
 o=A.aMT(r,q)
 q=A.aMU(o)
 n=A.aMR(o)
-s.push(new A.NU(A.aG(A.at0(a,p),m,m,m,m,m,m,m),p.a,new A.d5(q,0,n,0),B.iA,m))}return s
+s.push(new A.NU(A.aG(A.at0(a,p),m,m,m,m,m,m,m,m),p.a,new A.d5(q,0,n,0),B.iA,m))}return s
 case 3:case 5:return new A.a7(b,new A.Y7(a),A.V(b).i("a7<1,f>"))
 case 4:return new A.a7(b,new A.Y8(a),A.V(b).i("a7<1,f>"))}},
 Hg:function Hg(a,b,c){this.c=a
@@ -11462,7 +11462,7 @@ IJ:function IJ(a,b,c){this.c=a
 this.d=b
 this.a=c},
 aHE(a,b,c){var s=null
-return new A.rW(b,A.aG(c,s,s,B.ax,s,B.zt.d4(A.a8(a).ax.a===B.aa?B.j:B.x),s,s),s)},
+return new A.rW(b,A.aG(c,s,s,B.ax,s,s,B.zt.d4(A.a8(a).ax.a===B.aa?B.j:B.x),s,s),s)},
 rW:function rW(a,b,c){this.c=a
 this.d=b
 this.a=c},
@@ -24408,9 +24408,9 @@ _.a=i},
 rV(a,b,c,d,e,f,g,h,i){return new A.rU(f,g,e,d,c,i,h,a,b)},
 a_m(a){a.aB(t.XP)
 return null},
-aG(a,b,c,d,e,f,g,h){return new A.fl(a,null,f,g,h,d,c,e,b)},
+aG(a,b,c,d,e,f,g,h,i){return new A.fl(a,null,g,h,i,f,d,c,e,b)},
 aMB(a,b,c){var s=null
-return new A.fl(s,a,b,c,s,s,s,s,s)},
+return new A.fl(s,a,b,c,s,s,s,s,s,s)},
 aOd(a,b){var s=A.dq(a.aH(null),B.b.ga6(a.gkS())),r=A.dq(b.aH(null),B.b.ga6(b.gkS())),q=A.aOe(s,r)
 if(q!==0)return q
 return A.aOc(s,r)},
@@ -24436,16 +24436,17 @@ _.at=g
 _.b=h
 _.a=i},
 Si:function Si(a){this.a=a},
-fl:function fl(a,b,c,d,e,f,g,h,i){var _=this
+fl:function fl(a,b,c,d,e,f,g,h,i,j){var _=this
 _.c=a
 _.d=b
 _.e=c
 _.r=d
 _.w=e
-_.z=f
-_.at=g
-_.ax=h
-_.a=i},
+_.y=f
+_.z=g
+_.at=h
+_.ax=i
+_.a=j},
 Fg:function Fg(a,b,c,d,e,f,g,h,i,j,k,l,m){var _=this
 _.c=a
 _.d=b
@@ -43516,7 +43517,7 @@ ak(){return new A.D6()}}
 A.D6.prototype={
 acR(a){this.af(new A.ajN(this))},
 acT(a){this.af(new A.ajO(this))},
-N(a){var s=this,r=null,q=s.a.f,p=A.aG(q,r,r,B.ax,r,B.zt.d4(s.d?A.rT(a).giO():B.h1.cv(a)),r,r)
+N(a){var s=this,r=null,q=s.a.f,p=A.aG(q,r,r,B.ax,r,r,B.zt.d4(s.d?A.rT(a).giO():B.h1.cv(a)),r,r)
 q=s.d?A.rT(a).ge1():r
 return A.fR(A.kW(A.axb(B.lH,B.iG,p,q,B.Eu,0,s.a.c,B.FF,0.7),B.bA,r,s.gacQ(),s.gacS(),r),r,1/0)}}
 A.ajN.prototype={
@@ -44379,7 +44380,7 @@ p=q.f
 if(p==null){q=q.e
 q.toString
 q=A.axf(a,q)}else q=p
-s=A.aG(q,r,r,B.ax,r,B.SF.d4(this.a.d!=null?B.h1.cv(a):B.eE),r,r)
+s=A.aG(q,r,r,B.ax,r,r,B.SF.d4(this.a.d!=null?B.h1.cv(a):B.eE),r,r)
 q=this.a.e
 switch(q==null?r:q.b){case B.fU:case B.fV:case B.fW:case B.fX:case B.mO:case B.j9:case B.ja:case B.fY:case B.jc:case null:case void 0:return s
 case B.jb:q=B.h1.cv(a)
@@ -49338,7 +49339,7 @@ r=s.e
 r.toString
 q=s.f
 p=s.c
-p=A.aG(r,o,s.r,B.ax,o,q,p,o)
+p=A.aG(r,o,s.r,B.ax,o,o,q,p,o)
 return A.cm(o,o,new A.dC(new A.an(m,new A.as(1,0,n),n.i("an<aj.T>")),!1,p,o),!0,o,o,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o,o)},
 rB(){var s={},r=this.a,q=r.x
 s.a=r.w
@@ -49374,7 +49375,7 @@ p.toString
 s=s.a
 o=s.y
 n=s.c
-n=A.aG(p,m,s.z,B.ax,m,o,n,m)
+n=A.aG(p,m,s.z,B.ax,m,m,o,n,m)
 s=n}else s=p
 return A.cm(m,m,new A.dC(r,!1,A.axP(s,!0,q),m),!0,m,m,!1,m,m,m,m,m,m,m,l!==!0,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m)},
 $S:222}
@@ -50100,7 +50101,7 @@ l=c9.gal()
 e=h.fy
 e=c9.gal().ax==null?d0:B.ax
 d=c9.a.e
-f=A.aG(g,d0,c9.gal().ax,e,d0,h,d,l.at)
+f=A.aG(g,d0,c9.gal().ax,e,d0,d0,h,d,l.at)
 c=c9.a.y&&!c9.gOS()
 l=c?1:0
 c9.gal()
@@ -50136,7 +50137,7 @@ k=k.aZ(c9.a.d).aZ(a5).aZ(m).U2(1)}else k=j
 c9.gal()
 a4=c9.gal().d
 a4.toString
-a4=A.aG(a4,d0,d0,B.ax,d0,d0,c9.a.e,d0)
+a4=A.aG(a4,d0,d0,B.ax,d0,d0,d0,c9.a.e,d0)
 a6=new A.zy(new A.am3(),B.O,d0,A.awA(A.awz(a4,B.az,B.cl,k),B.az,B.cl,a3),a2,d0)}else a6=d0
 c9.gal()
 c9.gal()
@@ -50171,7 +50172,7 @@ else if(c9.gal().rx!=null&&c9.gal().rx!==""){b6=c9.a.r
 b7=c9.gal().rx
 b7.toString
 n=c9.NU(d1,r).aZ(A.du(c9.gal().to,c9.geP(),n))
-b5=A.cm(d0,d0,A.aG(b7,d0,d0,B.ax,c9.gal().S,n,d0,d0),!0,d0,d0,!1,d0,d0,d0,d0,d0,d0,d0,b6,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0)}else b5=d0
+b5=A.cm(d0,d0,A.aG(b7,d0,d0,B.ax,c9.gal().S,d0,n,d0,d0),!0,d0,d0,!1,d0,d0,d0,d0,d0,d0,d0,b6,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0,d0)}else b5=d0
 b8=d2.aB(t.I).w
 switch(b8.a){case 1:n=!1
 break
@@ -81398,56 +81399,60 @@ return A.rV(b,null,s.Q,s.z,s.y,s.w,s.x,s.at,s.as)}}
 A.Si.prototype={
 N(a){throw A.i(A.hG("A DefaultTextStyle constructed with DefaultTextStyle.fallback cannot be incorporated into the widget tree, it is meant only to provide a fallback value returned by DefaultTextStyle.of() when no enclosing default text style is present in a BuildContext."))}}
 A.fl.prototype={
-N(a){var s,r,q,p,o,n,m,l,k,j,i,h,g=this,f=null,e=a.aB(t.yS)
-if(e==null)e=B.EF
-s=g.e
-if(s==null||s.a)s=e.w.aZ(s)
+N(a){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=this,e=null,d=a.aB(t.yS)
+if(d==null)d=B.EF
+s=f.e
+if(s==null||s.a)s=d.w.aZ(s)
 r=A.bT(a,B.ls)
-r=r==null?f:r.ay
+r=r==null?e:r.ay
 if(r===!0)s=s.aZ(B.ld)
 q=A.B7(a)
 $label0$0:{r=A.bT(a,B.bN)
-r=r==null?f:r.gcI()
+r=r==null?e:r.gcI()
 if(r==null)r=B.aN
 break $label0$0}p=A.bC()
 if(q!=null){o=t.Uf
 n=a.aB(o)
 n=(n==null?B.dt:n).y
 if(n==null)n=B.z8
-m=g.r
-if(m==null)m=e.x
+m=f.r
+if(m==null)m=d.x
 if(m==null)m=B.b5
-l=g.w
-k=g.z
-if(k==null)k=s.fy
-if(k==null)k=e.z
-j=g.at
-if(j==null)j=e.Q
-i=A.a_m(a)
+l=f.w
+k=f.y
+if(k==null)k=d.y
+j=f.z
+if(j==null)j=s.fy
+if(j==null)j=d.z
+i=f.at
+if(i==null)i=d.Q
+h=A.a_m(a)
 o=a.aB(o)
 o=(o==null?B.dt:o).x
 if(o==null)o=B.mq
-h=g.d
-h=h!=null?A.c([h],t.VO):f
-p.b=A.kW(new A.Fg(A.cR(h,f,s,g.c),m,l,e.y,k,r,j,f,f,e.as,i,o,f),n,f,f,f,f)
-r=l}else{o=g.r
-if(o==null)o=e.x
+g=f.d
+g=g!=null?A.c([g],t.VO):e
+p.b=A.kW(new A.Fg(A.cR(g,e,s,f.c),m,l,k,j,r,i,e,e,d.as,h,o,e),n,e,e,e,e)
+r=l}else{o=f.r
+if(o==null)o=d.x
 if(o==null)o=B.b5
-n=g.w
-m=g.z
-if(m==null)m=s.fy
-if(m==null)m=e.z
-l=g.at
-if(l==null)l=e.Q
-k=A.a_m(a)
-j=a.aB(t.Uf)
-j=(j==null?B.dt:j).x
-if(j==null)j=B.mq
-i=g.d
-i=i!=null?A.c([i],t.VO):f
-p.b=A.auh(f,f,l,m,j,f,e.y,f,A.cR(i,f,s,g.c),o,n,k,r,e.as)
-r=n}o=g.ax
-if(o!=null)p.b=A.cm(f,f,new A.mm(!0,p.aJ(),f),!1,f,f,!1,f,f,f,f,f,f,o,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,r,f,f,f)
+n=f.w
+m=f.y
+if(m==null)m=d.y
+l=f.z
+if(l==null)l=s.fy
+if(l==null)l=d.z
+k=f.at
+if(k==null)k=d.Q
+j=A.a_m(a)
+i=a.aB(t.Uf)
+i=(i==null?B.dt:i).x
+if(i==null)i=B.mq
+h=f.d
+h=h!=null?A.c([h],t.VO):e
+p.b=A.auh(e,e,k,l,i,e,m,e,A.cR(h,e,s,f.c),o,n,j,r,d.as)
+r=n}o=f.ax
+if(o!=null)p.b=A.cm(e,e,new A.mm(!0,p.aJ(),e),!1,e,e,!1,e,e,e,e,e,e,o,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,r,e,e,e)
 return p.aJ()}}
 A.Fg.prototype={
 ak(){return new A.Uk(new A.bz(null,t.T))}}
@@ -84440,7 +84445,7 @@ A.a8E.prototype={
 $1(a){return new A.oF(this.a,null)},
 $S:547}
 A.a8F.prototype={
-$1(a){return B.NO},
+$1(a){return B.NP},
 $S:548}
 A.nr.prototype={}
 A.mb.prototype={
@@ -84486,22 +84491,22 @@ return A.E(p.vX(o.c,a,o.d),$async$xL)
 case 2:return A.H(null,r)}})
 return A.I($async$xL,r)},
 N(a){var s,r,q=this,p=null
-if(q.d==="kicked")return A.AY(p,B.l,A.dd(A.bX(A.c([B.Gv,B.fg,A.aG("You have been removed",p,p,p,p,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),p,p),B.c6,A.hF(!1,B.zx,p,p,p,p,p,p,new A.aiD(q,a),p,p)],t.p),B.B,B.a_,B.E),p,p),!1)
+if(q.d==="kicked")return A.AY(p,B.l,A.dd(A.bX(A.c([B.Gv,B.fg,A.aG("You have been removed",p,p,p,p,p,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),p,p),B.c6,A.hF(!1,B.zy,p,p,p,p,p,p,new A.aiD(q,a),p,p)],t.p),B.B,B.a_,B.E),p,p),!1)
 s=q.e===q.a.d
 r=t.p
 return A.AY(p,B.mj,A.Mr(!0,A.nm(B.cA,A.c([A.bX(A.c([q.a60(s),A.iq(q.a6_(s),1)],r),B.bV,B.ac,B.E)],r),B.Z,B.e8),B.b0,!0),!1)},
-a60(a){var s=null,r=A.aG(this.a.d,s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.x,22,B.t),s,s),q=a?B.cM:B.iY,p=A.c2(12),o=A.fy(a?B.f0:B.fL,B.r,1),n=a?"YOUR TURN":"WAITING",m=t.p
-return new A.bL(B.jo,A.lg(A.c([A.bX(A.c([r,B.z2,A.d3(s,A.aG(n,s,s,s,s,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(a?B.cL:B.aZ,12,B.t,1),s,s),B.u,s,s,new A.c6(q,s,o,p,s,s,B.al),s,s,s,s,B.n2,s,s,s)],m),B.bU,B.ac,B.E),A.atR(s,s,B.nP,s,s,new A.aiw(this),s,s,s)],m),B.B,B.dN,B.E,0),s)},
+a60(a){var s=null,r=A.aG(this.a.d,s,s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.x,22,B.t),s,s),q=a?B.cM:B.iY,p=A.c2(12),o=A.fy(a?B.f0:B.fL,B.r,1),n=a?"YOUR TURN":"WAITING",m=t.p
+return new A.bL(B.jo,A.lg(A.c([A.bX(A.c([r,B.z2,A.d3(s,A.aG(n,s,s,s,s,s,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(a?B.cL:B.aZ,12,B.t,1),s,s),B.u,s,s,new A.c6(q,s,o,p,s,s,B.al),s,s,s,s,B.n2,s,s,s)],m),B.bU,B.ac,B.E),A.atR(s,s,B.nP,s,s,new A.aiw(this),s,s,s)],m),B.B,B.dN,B.E,0),s)},
 a6_(a){var s,r,q,p,o=this,n=null
-if(o.d==="waiting")return A.dd(A.bX(A.c([B.iN,B.e7,A.aG("Lobby Ready",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,20,B.t),n,n),B.i5,A.aG("Wait for host to start the timeline...",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),n,n)],t.p),B.B,B.a_,B.E),n,n)
+if(o.d==="waiting")return A.dd(A.bX(A.c([B.iN,B.e7,A.aG("Lobby Ready",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,20,B.t),n,n),B.i5,A.aG("Wait for host to start the timeline...",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),n,n)],t.p),B.B,B.a_,B.E),n,n)
 if(!a){s=A.d3(n,B.Gs,B.u,n,n,new A.c6(A.al(13,B.aQ.u()>>>16&255,B.aQ.u()>>>8&255,B.aQ.u()&255),n,A.fy(A.al(51,B.aQ.u()>>>16&255,B.aQ.u()>>>8&255,B.aQ.u()&255),B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n)
 r=o.e
 if(r==null)r="Someone"
-return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,A.aG(r+"'s Turn",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,24,B.t),B.at,n),B.c6,A.aG("Watch the host screen to see their timeline placement!",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.x){s=A.d3(n,B.Gx,B.u,n,n,new A.c6(B.cM,n,A.fy(B.ez,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n)
-r=A.aG("It's Your Turn!",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,26,B.t),B.at,n)
-q=A.aG("Are you ready? Tap 'START NOW' to reveal your mystery song and timeline.",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
+return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,A.aG(r+"'s Turn",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,24,B.t),B.at,n),B.c6,A.aG("Watch the host screen to see their timeline placement!",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.x){s=A.d3(n,B.Gx,B.u,n,n,new A.c6(B.cM,n,A.fy(B.ez,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n)
+r=A.aG("It's Your Turn!",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,26,B.t),B.at,n)
+q=A.aG("Are you ready? Tap 'START NOW' to reveal your mystery song and timeline.",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
 p=A.eK(n,n,B.f0,n,n,n,n,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("START NOW",n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.aip(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.f==null)return B.C6
+return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("START NOW",n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.aip(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.f==null)return B.C6
 return A.bX(A.c([o.a4W(),A.iq(o.a4Z(),1),B.fg,o.a4H(),B.fg],t.p),B.B,B.ac,B.E)},
 a4Z(){var s=this,r=s.r.length,q=s.z
 q===$&&A.a()
@@ -84511,22 +84516,22 @@ if(i==null)i="Title"
 s=a.h(0,"year")
 r=s==null?k:J.cq(s)
 if(r==null)r="????"
-s=A.aG(r,k,k,k,k,A.aQ().$3$color$fontSize$fontWeight(B.mG,22,B.t),k,k)
+s=A.aG(r,k,k,k,k,k,A.aQ().$3$color$fontSize$fontWeight(B.mG,22,B.t),k,k)
 q=A.c2(16)
 p=A.fy(B.iY,B.r,1)
 o=A.c([new A.d2(0,B.bP,A.al(13,B.l.u()>>>16&255,B.l.u()>>>8&255,B.l.u()&255),B.up,10)],t.sq)
 n=A.c2(16)
 m=j!=null&&j.length!==0?A.ay1(j,new A.aix(),B.lR):A.d3(k,k,B.u,B.fH,k,k,k,k,k,k,k,k,k,k)
 l=t.p
-return A.bX(A.c([s,B.e6,A.d3(k,A.atg(n,A.nm(B.cA,A.c([m,A.d3(k,k,B.u,k,k,B.AE,k,k,k,k,k,k,k,k),new A.bL(B.n5,A.bX(A.c([A.aG(i,k,1,B.ax,k,A.aQ().$3$color$fontSize$fontWeight(B.j,12,B.t),k,k)],l),B.bU,B.hy,B.E),k)],l),B.Z,B.z4)),B.u,k,k,new A.c6(B.j,k,p,q,o,k,B.al),k,200,k,k,k,k,k,k)],l),B.B,B.ac,B.cq)},
-Mc(a){var s=null,r=A.aG("",s,s,s,s,A.aQ().$1$fontSize(22),s,s),q=A.c2(16),p=A.fy(B.fL,B.r,1),o=a?"START":"END"
-return A.bX(A.c([r,B.e6,A.d3(s,A.dd(A.aG(o,s,s,s,s,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.iQ,16,B.t,2),s,s),s,s),B.u,s,s,new A.c6(B.mC,s,p,q,s,s,B.al),s,200,s,s,s,s,s,s)],t.p),B.B,B.ac,B.cq)},
+return A.bX(A.c([s,B.e6,A.d3(k,A.atg(n,A.nm(B.cA,A.c([m,A.d3(k,k,B.u,k,k,B.AE,k,k,k,k,k,k,k,k),new A.bL(B.n5,A.bX(A.c([A.aG(i,k,1,B.ax,k,k,A.aQ().$3$color$fontSize$fontWeight(B.j,12,B.t),k,k)],l),B.bU,B.hy,B.E),k)],l),B.Z,B.z4)),B.u,k,k,new A.c6(B.j,k,p,q,o,k,B.al),k,200,k,k,k,k,k,k)],l),B.B,B.ac,B.cq)},
+Mc(a){var s=null,r=A.aG("",s,s,s,s,s,A.aQ().$1$fontSize(22),s,s),q=A.c2(16),p=A.fy(B.fL,B.r,1),o=a?"START":"END"
+return A.bX(A.c([r,B.e6,A.d3(s,A.dd(A.aG(o,s,s,s,s,s,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.iQ,16,B.t,2),s,s),s,s),B.u,s,s,new A.c6(B.mC,s,p,q,s,s,B.al),s,200,s,s,s,s,s,s)],t.p),B.B,B.ac,B.cq)},
 a4H(){var s,r,q,p,o=this,n=null,m=o.w
 if(m!=null){s=m==="correct"?B.md:B.fG
 m=A.c2(30)
 r=A.c([new A.d2(0,B.bP,A.al(51,s.u()>>>16&255,s.u()>>>8&255,s.u()&255),B.uq,15)],t.sq)
 q=A.eK(n,n,s,n,n,n,0,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return new A.bL(B.cO,A.d3(n,A.hF(!1,A.aG("CONTINUE",n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.aiq(o),n,q),B.u,n,n,new A.c6(n,n,n,m,r,n,B.al),n,60,n,n,n,n,n,1/0),n)}m=o.r.length
+return new A.bL(B.cO,A.d3(n,A.hF(!1,A.aG("CONTINUE",n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.aiq(o),n,q),B.u,n,n,new A.c6(n,n,n,m,r,n,B.al),n,60,n,n,n,n,n,1/0),n)}m=o.r.length
 r=o.Q
 if(r===0){p="PLACE BEFORE"
 s=B.aQ}else if(r===m+1-1){p="PLACE AFTER"
@@ -84534,7 +84539,7 @@ s=B.L4}else{p="PLACE BETWEEN"
 s=B.c1}m=A.c2(30)
 r=A.c([new A.d2(0,B.bP,A.al(51,s.u()>>>16&255,s.u()>>>8&255,s.u()&255),B.uq,15)],t.sq)
 q=A.eK(n,n,s,n,n,n,0,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return new A.bL(B.cO,A.d3(n,A.hF(!1,A.aG(p,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.air(o),n,q),B.u,n,n,new A.c6(n,n,n,m,r,n,B.al),n,60,n,n,n,n,n,1/0),n)},
+return new A.bL(B.cO,A.d3(n,A.hF(!1,A.aG(p,n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.air(o),n,q),B.u,n,n,new A.c6(n,n,n,m,r,n,B.al),n,60,n,n,n,n,n,1/0),n)},
 a4W(){var s,r,q,p,o,n,m,l=null,k=this.w
 if(k==null)return B.ai
 s=k==="correct"
@@ -84545,7 +84550,7 @@ o=s?B.nK:B.Ga
 n=s?"CORRECT!":"WRONG!"
 k=A.c2(12)
 m=A.fy(q,B.r,1.5)
-return A.d3(l,A.lg(A.c([A.ti(o,p,l,28),B.PE,A.aG(n,l,l,l,l,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(p,16,B.bD,1.5),l,l)],t.p),B.B,B.a_,B.E,0),B.u,l,l,new A.c6(r,l,m,k,l,l,B.al),l,l,l,B.Fv,B.Fp,l,l,l)}}
+return A.d3(l,A.lg(A.c([A.ti(o,p,l,28),B.PE,A.aG(n,l,l,l,l,l,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(p,16,B.bD,1.5),l,l)],t.p),B.B,B.a_,B.E,0),B.u,l,l,new A.c6(r,l,m,k,l,l,B.al),l,l,l,B.Fv,B.Fp,l,l,l)}}
 A.aiG.prototype={
 $1(a){var s,r,q,p=this.a
 if(p.c==null)return
@@ -84593,7 +84598,7 @@ A.aD1(!0,new A.aiv(s),r,t.z)},
 $S:0}
 A.aiv.prototype={
 $1(a){var s=null
-return A.awx(A.c([A.af7(!1,B.zw,s,s,s,s,s,s,new A.ait(a),s,s),A.hF(!1,B.zy,s,s,s,s,s,s,new A.aiu(this.a,a),s,A.eK(s,s,B.cr,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.j,B.zu,B.zv)},
+return A.awx(A.c([A.af7(!1,B.zv,s,s,s,s,s,s,new A.ait(a),s,s),A.hF(!1,B.zw,s,s,s,s,s,s,new A.aiu(this.a,a),s,A.eK(s,s,B.cr,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.j,B.zx,B.zu)},
 $S:201}
 A.ait.prototype={
 $0(){A.hf(this.a,!1).v0(null)
@@ -84634,7 +84639,7 @@ q=j.Mf(r,!0)}else q=j.Mc(!0)
 q=A.iq(q,1)
 n=A.al(13,B.c1.u()>>>16&255,B.c1.u()>>>8&255,B.c1.u()&255)
 m=A.c2(10)
-m=A.d3(k,B.C4,B.u,k,k,new A.c6(n,k,A.fy(A.al(B.d.au(76.5),B.c1.u()>>>16&255,B.c1.u()>>>8&255,B.c1.u()&255),B.r,2),m,k,k,B.al),k,200,k,B.Fm,k,k,k,50)
+m=A.d3(k,B.C5,B.u,k,k,new A.c6(n,k,A.fy(A.al(B.d.au(76.5),B.c1.u()>>>16&255,B.c1.u()>>>8&255,B.c1.u()&255),B.r,2),m,k,k,B.al),k,200,k,B.Fm,k,k,k,50)
 if(p){o.toString
 n=j.Mf(o,!1)}else n=j.Mc(!1)
 l=t.p
@@ -84713,13 +84718,13 @@ return A.E(p.AA(o.c,o.d,o.e),$async$xj)
 case 4:case 3:return A.H(null,r)}})
 return A.I($async$xj,r)},
 a4M(a){var s,r=this,q=null,p=r.d
-if(p==="kicked")return A.aG("YOU WERE KICKED!",q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.cr,32,B.t),q,q)
-if(p==="waiting")return A.aG("Waiting for host to start...",q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),q,q)
-if(a){if(r.at!=null)return A.bX(A.c([B.Gr,B.fg,A.aG("Answer Submitted!",q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.b3,24,B.t),q,q),B.e6,A.aG("Waiting for host...",q,q,q,q,A.aQ().$2$color$fontSize(B.mI,16),q,q)],t.p),B.B,B.a_,B.E)
+if(p==="kicked")return A.aG("YOU WERE KICKED!",q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.cr,32,B.t),q,q)
+if(p==="waiting")return A.aG("Waiting for host to start...",q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),q,q)
+if(a){if(r.at!=null)return A.bX(A.c([B.Gr,B.fg,A.aG("Answer Submitted!",q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.b3,24,B.t),q,q),B.e6,A.aG("Waiting for host...",q,q,q,q,q,A.aQ().$2$color$fontSize(B.mI,16),q,q)],t.p),B.B,B.a_,B.E)
 if(r.dx)return r.a4L()
-return A.bX(A.c([B.Ca,B.e7,A.aG("Your Turn! Look at your screen...",q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.b3,24,B.t),q,q)],t.p),B.B,B.a_,B.E)}else{s=r.z
+return A.bX(A.c([B.Ca,B.e7,A.aG("Your Turn! Look at your screen...",q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.b3,24,B.t),q,q)],t.p),B.B,B.a_,B.E)}else{s=r.z
 if(s==null)s="Active Player"
-return A.bX(A.c([B.Gy,B.e7,A.aG("Waiting for "+s+"...",q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),B.at,q),B.i5,A.aG("They are selecting their answer.",q,q,q,q,A.aQ().$2$color$fontSize(B.dr,16),q,q)],t.p),B.B,B.a_,B.E)}},
+return A.bX(A.c([B.Gy,B.e7,A.aG("Waiting for "+s+"...",q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),B.at,q),B.i5,A.aG("They are selecting their answer.",q,q,q,q,q,A.aQ().$2$color$fontSize(B.dr,16),q,q)],t.p),B.B,B.a_,B.E)}},
 N(a7){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a=this,a0=null,a1="Waiting for host to start...",a2=a.y==="individual",a3=a2&&a.z===a.a.d,a4=a2&&a.Q===a.a.d,a5=a.a.e,a6=a5==="team2"
 if(a6)s=1
 else if(a5==="team3")s=2
@@ -84752,14 +84757,14 @@ k="TOO LATE!"}else{k="Please wait..."
 j=B.l}if(a.ax)a5=m||l
 else a5=!1
 if(a5)j=B.l}a5=t.p
-a6=A.lg(A.c([A.aG(a.a.d,a0,a0,a0,a0,B.zs,a0,a0),A.aG(o,a0,a0,a0,a0,A.iS(a0,a0,r,a0,a0,a0,a0,a0,a0,a0,a0,18,a0,a0,B.t,a0,a0,!0,a0,a0,a0,a0,a0,a0,a0,a0),a0,a0)],a5),B.B,B.dN,B.E,0)
+a6=A.lg(A.c([A.aG(a.a.d,a0,a0,a0,a0,a0,B.zs,a0,a0),A.aG(o,a0,a0,a0,a0,a0,A.iS(a0,a0,r,a0,a0,a0,a0,a0,a0,a0,a0,18,a0,a0,B.t,a0,a0,!0,a0,a0,a0,a0,a0,a0,a0,a0),a0,a0)],a5),B.B,B.dN,B.E,0)
 if(a2)i=a3&&a.as.length!==0&&a.ax
 else i=m&&a.as.length!==0&&a.ax
 if(i)i=a.a4S()
 else if(a2)if(a.d==="round_finished")if(a4)i=a.a4K(r)
 else{h=a.Q
 if(h==null)h="next player"
-i=A.bX(A.c([B.GB,B.e7,A.aG("Waiting for "+h+"...",a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),B.at,a0),B.i5,A.aG("They need to press NEXT TURN to start.",a0,a0,a0,a0,A.aQ().$2$color$fontSize(B.dr,16),B.at,a0)],a5),B.B,B.a_,B.E)}else i=a.a4M(a3)
+i=A.bX(A.c([B.GB,B.e7,A.aG("Waiting for "+h+"...",a0,a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(B.I,24,B.t),B.at,a0),B.i5,A.aG("They need to press NEXT TURN to start.",a0,a0,a0,a0,a0,A.aQ().$2$color$fontSize(B.dr,16),B.at,a0)],a5),B.B,B.a_,B.E)}else i=a.a4M(a3)
 else if(a.d==="round_finished")i=a.a4V(r)
 else{i=a.go
 i===$&&A.a()
@@ -84771,34 +84776,34 @@ d=n?A.c([new A.d2(6,B.bP,A.al(102,r.u()>>>16&255,r.u()>>>8&255,r.u()&255),B.h,25
 if(n)c="BUZZ"
 else c=a.d==="kicked"?"KICKED":"WAIT"
 b=a.d==="kicked"?36:48
-i=A.Mv(B.O,A.p2(a0,A.awy(A.dd(A.aG(c,a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(n?B.j:B.Dc,b,B.bD),a0,a0),a0,a0),a0,new A.c6(e,a0,a0,a0,d,a0,B.bz),B.cN,f,a0,a0,a0,g),B.an,!1,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a.gaet(),a0,a0,a0,a0,a0,a0),a0,i)}a5=A.c([new A.bL(B.Fq,a6,a0),A.iq(A.dd(i,a0,a0),1)],a5)
+i=A.Mv(B.O,A.p2(a0,A.awy(A.dd(A.aG(c,a0,a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(n?B.j:B.Dc,b,B.bD),a0,a0),a0,a0),a0,new A.c6(e,a0,a0,a0,d,a0,B.bz),B.cN,f,a0,a0,a0,g),B.an,!1,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a0,a.gaet(),a0,a0,a0,a0,a0,a0),a0,i)}a5=A.c([new A.bL(B.Fq,a6,a0),A.iq(A.dd(i,a0,a0),1)],a5)
 if(p&&n&&a.cy>=20){a6=a.db
 p=a6?a0:new A.aiS(a)
 i=A.ti(a6?B.nJ:B.nM,a0,a0,24)
 a6=a6?"Waiting for other team...":"Skip this song"
-a6=A.aG(a6,a0,a0,a0,a0,A.aQ().$2$fontSize$fontWeight(20,B.t),a0,a0)
+a6=A.aG(a6,a0,a0,a0,a0,a0,A.aQ().$2$fontSize$fontWeight(20,B.t),a0,a0)
 g=a.db?B.d1:B.L5
 a5.push(new A.bL(B.Fi,A.J2(i,a6,p,A.eK(a0,a0,g,a0,a0,a0,a0,a0,a0,B.j,a0,a0,B.Fw,a0,new A.bI(A.c2(30),B.q),a0,a0,a0,a0,a0)),a0))}if(a2)a6=!(a.z===a.a.d&&a.as.length!==0&&a.ax)
 else a6=!(m&&a.as.length!==0&&a.ax)&&a.d!=="round_finished"
-if(a6)a5.push(new A.bL(B.Fj,A.aG(k,a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(l?B.cr:B.j,24,B.t),a0,a0),a0))
+if(a6)a5.push(new A.bL(B.Fj,A.aG(k,a0,a0,a0,a0,a0,A.aQ().$3$color$fontSize$fontWeight(l?B.cr:B.j,24,B.t),a0,a0),a0))
 return A.AY(a0,j,A.Mr(!0,A.bX(a5,B.B,B.ac,B.E),B.b0,!0),!1)},
-a4V(a){var s=null,r=A.aG("ROUND FINISHED!",s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.j,32,B.t),s,s),q=A.aQ().$2$fontSize$fontWeight(22,B.t)
-return A.bX(A.c([r,B.d9,A.J2(B.GA,B.V_,new A.aiQ(this),A.eK(s,s,a,s,s,s,8,s,s,s,s,s,B.Fz,s,new A.bI(A.c2(30),B.q),s,s,s,q,s))],t.p),B.B,B.a_,B.E)},
-a4K(a){var s=null,r=A.aG("YOUR TURN IS NEXT!",s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.b3,28,B.t),s,s),q=A.aG("Are you ready?",s,s,s,s,A.aQ().$2$color$fontSize(B.I,16),s,s),p=A.aQ().$2$fontSize$fontWeight(22,B.t)
-return A.bX(A.c([r,B.e6,q,B.z1,A.J2(B.GC,B.UZ,new A.aiH(this),A.eK(s,s,B.b3,s,s,s,8,s,s,B.l,s,s,B.n4,s,new A.bI(A.c2(30),B.q),s,s,s,p,s))],t.p),B.B,B.a_,B.E)},
-a4L(){var s,r=null,q=A.aG("YOUR TURN!",r,r,r,r,A.aQ().$3$color$fontSize$fontWeight(B.b3,28,B.t),r,r),p=A.aG("Tap START when you are ready to listen",r,r,r,r,A.aQ().$2$color$fontSize(B.I,16),r,r),o=this.go
+a4V(a){var s=null,r=A.aG("ROUND FINISHED!",s,s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.j,32,B.t),s,s),q=A.aQ().$2$fontSize$fontWeight(22,B.t)
+return A.bX(A.c([r,B.d9,A.J2(B.GA,B.UY,new A.aiQ(this),A.eK(s,s,a,s,s,s,8,s,s,s,s,s,B.Fz,s,new A.bI(A.c2(30),B.q),s,s,s,q,s))],t.p),B.B,B.a_,B.E)},
+a4K(a){var s=null,r=A.aG("YOUR TURN IS NEXT!",s,s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(B.b3,28,B.t),s,s),q=A.aG("Are you ready?",s,s,s,s,s,A.aQ().$2$color$fontSize(B.I,16),s,s),p=A.aQ().$2$fontSize$fontWeight(22,B.t)
+return A.bX(A.c([r,B.e6,q,B.z1,A.J2(B.GC,B.V_,new A.aiH(this),A.eK(s,s,B.b3,s,s,s,8,s,s,B.l,s,s,B.n4,s,new A.bI(A.c2(30),B.q),s,s,s,p,s))],t.p),B.B,B.a_,B.E)},
+a4L(){var s,r=null,q=A.aG("YOUR TURN!",r,r,r,r,r,A.aQ().$3$color$fontSize$fontWeight(B.b3,28,B.t),r,r),p=A.aG("Tap START when you are ready to listen",r,r,r,r,r,A.aQ().$2$color$fontSize(B.I,16),r,r),o=this.go
 o===$&&A.a()
 s=A.aQ().$2$fontSize$fontWeight(22,B.t)
-return A.bX(A.c([q,B.e6,p,B.z1,A.Mv(B.O,A.J2(B.Gq,B.UW,new A.aiI(this),A.eK(r,r,B.b3,r,r,r,8,r,r,B.l,r,r,B.n4,r,new A.bI(A.c2(30),B.q),r,r,r,s,r)),r,o)],t.p),B.B,B.a_,B.E)},
+return A.bX(A.c([q,B.e6,p,B.z1,A.Mv(B.O,A.J2(B.Gq,B.UX,new A.aiI(this),A.eK(r,r,B.b3,r,r,r,8,r,r,B.l,r,r,B.n4,r,new A.bI(A.c2(30),B.q),r,r,r,s,r)),r,o)],t.p),B.B,B.a_,B.E)},
 a4S(){var s,r,q,p,o,n,m,l,k=this,j=null
-if(k.at!=null)return A.dd(A.aG("Waiting for Host...",j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),j,j),j,j)
+if(k.at!=null)return A.dd(A.aG("Waiting for Host...",j,j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),j,j),j,j)
 s=t.p
 r=A.c([],s)
 if(k.y!=="individual"){q=k.ch
 p=q<0
 o=A.ti(B.Gn,p?B.cr:B.L2,j,28)
 n=q>0?"+":""
-r.push(new A.bL(B.n1,A.lg(A.c([o,B.PF,A.aG(n+q,j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(p?B.cr:B.j,26,B.bD),j,j)],s),B.B,B.a_,B.E,0),j))}else{q=A.aG("Your Turn! / \u062f\u0648\u0631\u0643!",j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(B.b3,16,B.t),j,j)
+r.push(new A.bL(B.n1,A.lg(A.c([o,B.PF,A.aG(n+q,j,j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(p?B.cr:B.j,26,B.bD),j,j)],s),B.B,B.a_,B.E,0),j))}else{q=A.aG("Your Turn! / \u062f\u0648\u0631\u0643!",j,j,j,j,j,A.aQ().$3$color$fontSize$fontWeight(B.b3,16,B.t),j,j)
 p=k.dy
 o=p>=2
 n=!o
@@ -84806,7 +84811,7 @@ m=!n||k.fr?j:new A.aiO(k)
 l=A.ti(B.Gc,!n||k.fr?B.dr:B.x,j,18)
 if(o)p="No Hints"
 else p=k.fr?"Wait...":"Hint / \u062a\u0644\u0645\u064a\u062d ("+(2-p)+")"
-p=A.aG(p,j,j,j,j,A.iS(j,j,!n||k.fr?B.dr:B.x,j,j,j,j,j,j,j,j,14,j,j,B.t,j,j,!0,j,j,j,j,j,j,j,j),j,j)
+p=A.aG(p,j,j,j,j,j,A.iS(j,j,!n||k.fr?B.dr:B.x,j,j,j,j,j,j,j,j,14,j,j,B.t,j,j,!0,j,j,j,j,j,j,j,j),j,j)
 o=k.dy>=2||k.fr?A.al(B.d.au(76.5),B.d1.u()>>>16&255,B.d1.u()>>>8&255,B.d1.u()&255):B.b3
 r.push(new A.bL(B.n1,A.lg(A.c([q,A.J2(l,p,m,A.eK(j,j,o,j,j,j,j,j,j,j,j,j,B.Fn,j,new A.bI(A.c2(20),B.q),j,j,j,j,j))],s),B.B,B.dN,B.E,0),j))}r.push(A.iq(A.ayu(new A.aiP(k)),1))
 return new A.bL(B.n3,A.bX(r,B.B,B.ac,B.E),j)}}
@@ -84927,7 +84932,7 @@ p=i.h(0,k)!=null&&J.cq(i.h(0,k)).length!==0?A.ay1("https://images.weserv.nl/?url
 o=A.c([A.al(242,B.l.u()>>>16&255,B.l.u()>>>8&255,B.l.u()&255),A.al(0,B.l.u()>>>16&255,B.l.u()>>>8&255,B.l.u()&255)],t.t_)
 n=t.kO
 m=t.p
-return A.aNk(A.p2(l,A.d3(l,A.atg(q,A.nm(B.cA,A.c([p,A.a9V(0,A.d3(l,A.bX(A.c([A.aG(i.h(0,"artist"),l,1,B.ax,l,A.aQ().$4$color$fontSize$fontWeight$shadows(B.j,14,B.bD,A.c([B.yD],n)),B.at,l),B.PI,A.aG(i.h(0,"title"),l,1,B.ax,l,A.aQ().$3$color$fontSize$shadows(B.I,11,A.c([B.yD],n)),B.at,l)],m),B.B,B.ac,B.cq),B.u,l,l,new A.c6(l,l,l,l,l,new A.pm(B.iB,B.lG,B.dd,o,l,l),B.al),l,l,l,l,B.FE,l,l,l),l,l,0,0,l,l)],m),B.Z,B.z4)),B.u,l,l,new A.c6(l,l,r,s,l,l,B.al),l,l,l,l,l,l,l,l),B.an,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,j,l,l,l,l,l,l),!0,!0,!0,!h)},
+return A.aNk(A.p2(l,A.d3(l,A.atg(q,A.nm(B.cA,A.c([p,A.a9V(0,A.d3(l,A.bX(A.c([A.aG(i.h(0,"artist"),l,1,B.ax,l,l,A.aQ().$4$color$fontSize$fontWeight$shadows(B.j,14,B.bD,A.c([B.yD],n)),B.at,l),B.PI,A.aG(i.h(0,"title"),l,1,B.ax,l,l,A.aQ().$3$color$fontSize$shadows(B.I,11,A.c([B.yD],n)),B.at,l)],m),B.B,B.ac,B.cq),B.u,l,l,new A.c6(l,l,l,l,l,new A.pm(B.iB,B.lG,B.dd,o,l,l),B.al),l,l,l,l,B.FE,l,l,l),l,l,0,0,l,l)],m),B.Z,B.z4)),B.u,l,l,new A.c6(l,l,r,s,l,l,B.al),l,l,l,l,l,l,l,l),B.an,!1,l,l,l,l,l,l,l,l,l,l,l,l,l,l,j,l,l,l,l,l,l),!0,!0,!0,!h)},
 $S:557}
 A.aiK.prototype={
 $0(){var s=this.a,r=this.b
@@ -85026,7 +85031,7 @@ else A.zY(f,A.mO(new A.aj6(m,l),null,h))}}case 1:return A.H(q,r)
 case 2:return A.G(o.at(-1),r)}})
 return A.I($async$lU,r)},
 N(a){var s,r,q,p,o,n,m=this,l=null
-if(m.z==null)return B.NP
+if(m.z==null)return B.NO
 s=m.Q
 if(s==="boa")r="assets/Before_or_after_logo.png"
 else r=s==="ts"?"assets/TimeSurvival_logo.png":"assets/Guess_that_song_logo.png"
@@ -85045,10 +85050,10 @@ p=A.c([A.iq(new A.r0(p,B.b3,m.e==="team3",new A.ajd(m),l),1)],s)
 if(m.y>=4){n=m.x
 n=n!=null&&n.length!==0?n:"Team 4"
 B.b.R(p,A.c([B.l5,A.iq(new A.r0(n,B.ud,m.e==="team4",new A.aje(m),l),1)],s))}else B.b.R(p,A.c([B.l5,B.PU],s))
-B.b.R(o,A.c([B.z0,A.lg(p,B.B,B.ac,B.E,0)],s))}B.b.R(q,A.c([B.e7,B.UY,B.c6,A.bX(o,B.bV,B.ac,B.E)],s))}q.push(B.d9)
+B.b.R(o,A.c([B.z0,A.lg(p,B.B,B.ac,B.E,0)],s))}B.b.R(q,A.c([B.e7,B.UZ,B.c6,A.bX(o,B.bV,B.ac,B.E)],s))}q.push(B.d9)
 s=m.as?l:m.gabP()
 p=A.eK(l,l,l,l,l,l,l,l,l,l,l,l,B.Fk,l,new A.bI(A.c2(12),B.q),l,l,l,l,l)
-q.push(A.hF(!1,m.as?B.PH:A.aG("JOIN GAME",l,l,l,l,A.aQ().$2$fontSize$fontWeight(20,B.t),l,l),l,l,l,l,l,l,s,l,p))
+q.push(A.hF(!1,m.as?B.PH:A.aG("JOIN GAME",l,l,l,l,l,A.aQ().$2$fontSize$fontWeight(20,B.t),l,l),l,l,l,l,l,l,s,l,p))
 return A.AY(l,l,A.Mr(!0,new A.bL(B.cn,A.bX(q,B.bV,B.a_,B.E),l),B.b0,!0),!1)}}
 A.ajg.prototype={
 $1(a){var s=this.a
@@ -85135,7 +85140,7 @@ $0(){return this.a.e="team4"},
 $S:0}
 A.r0.prototype={
 N(a){var s=this,r=null,q=s.e,p=s.d,o=q?A.al(B.d.au(76.5),p.u()>>>16&255,p.u()>>>8&255,p.u()&255):A.al(13,p.u()>>>16&255,p.u()>>>8&255,p.u()&255),n=A.fy(q?p:A.al(B.d.au(127.5),p.u()>>>16&255,p.u()>>>8&255,p.u()&255),B.r,2),m=A.c2(16)
-return A.p2(r,A.awy(A.dd(A.aG(s.c,r,r,r,r,A.aQ().$3$color$fontSize$fontWeight(p,20,B.t),r,r),r,r),r,new A.c6(o,r,n,m,r,r,B.al),B.ao,r,r,B.Fl,r,r),B.an,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,s.f,r,r,r,r,r,r)}}
+return A.p2(r,A.awy(A.dd(A.aG(s.c,r,r,r,r,r,A.aQ().$3$color$fontSize$fontWeight(p,20,B.t),r,r),r,r),r,new A.c6(o,r,n,m,r,r,B.al),B.ao,r,r,B.Fl,r,r),B.an,!1,r,r,r,r,r,r,r,r,r,r,r,r,r,r,s.f,r,r,r,r,r,r)}}
 A.md.prototype={
 ak(){return new A.D2(A.r(t.N,t.S))}}
 A.D2.prototype={
@@ -85178,32 +85183,32 @@ if(p==="kicked"||p==="gameover"){p=p==="gameover"
 s=p?B.G9:B.nL
 s=A.ti(s,p?B.b3:B.cr,q,80)
 p=p?"GAME OVER!":"You have been removed"
-return A.AY(q,B.l,A.dd(A.bX(A.c([s,B.fg,A.aG(p,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),q,q),B.c6,A.hF(!1,B.zx,q,q,q,q,q,q,new A.ajw(r,a),q,q)],t.p),B.B,B.a_,B.E),q,q),!1)}return A.AY(q,B.mj,A.Mr(!0,A.bX(A.c([r.a4J(),A.iq(r.a4G(),1)],t.p),B.bV,B.ac,B.E),B.b0,!0),!1)},
+return A.AY(q,B.l,A.dd(A.bX(A.c([s,B.fg,A.aG(p,q,q,q,q,q,A.aQ().$3$color$fontSize$fontWeight(B.j,24,B.t),q,q),B.c6,A.hF(!1,B.zy,q,q,q,q,q,q,new A.ajw(r,a),q,q)],t.p),B.B,B.a_,B.E),q,q),!1)}return A.AY(q,B.mj,A.Mr(!0,A.bX(A.c([r.a4J(),A.iq(r.a4G(),1)],t.p),B.bV,B.ac,B.E),B.b0,!0),!1)},
 a4J(){var s,r,q,p,o=this,n=null,m=o.e.h(0,o.a.d)
 if(m==null)m=o.ay
-s=A.aG(o.a.d,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,22,B.t),n,n)
+s=A.aG(o.a.d,n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,22,B.t),n,n)
 r=A.c2(12)
 q=A.fy(B.j7,B.r,1)
 p=t.p
-return new A.bL(B.jo,A.lg(A.c([A.bX(A.c([s,B.z2,A.d3(n,A.aG("HEALTH: "+m+" HP",n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.fG,12,B.t,1),n,n),B.u,n,n,new A.c6(B.fN,n,q,r,n,n,B.al),n,n,n,n,B.n2,n,n,n)],p),B.bU,B.ac,B.E),A.atR(n,n,B.nP,n,n,new A.ajr(o),n,n,n)],p),B.B,B.dN,B.E,0),n)},
+return new A.bL(B.jo,A.lg(A.c([A.bX(A.c([s,B.z2,A.d3(n,A.aG("HEALTH: "+m+" HP",n,n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.fG,12,B.t,1),n,n),B.u,n,n,new A.c6(B.fN,n,q,r,n,n,B.al),n,n,n,n,B.n2,n,n,n)],p),B.bU,B.ac,B.E),A.atR(n,n,B.nP,n,n,new A.ajr(o),n,n,n)],p),B.B,B.dN,B.E,0),n)},
 a4G(){var s,r,q,p,o=this,n=null
-if(o.d==="waiting")return A.dd(A.bX(A.c([B.iN,B.e7,A.aG("Lobby Ready",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,20,B.t),n,n),B.i5,A.aG("Wait for host to start...",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),n,n)],t.p),B.B,B.a_,B.E),n,n)
+if(o.d==="waiting")return A.dd(A.bX(A.c([B.iN,B.e7,A.aG("Lobby Ready",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,20,B.t),n,n),B.i5,A.aG("Wait for host to start...",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),n,n)],t.p),B.B,B.a_,B.E),n,n)
 if(o.r)return o.a4X()
 if(!o.ax){s=A.d3(n,B.Gt,B.u,n,n,new A.c6(B.iZ,n,A.fy(B.iR,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n)
-r=A.aG("Secret Guessing",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,26,B.t),B.at,n)
-q=A.aG("Tap below to unlock the timeline and enter your guess secretly.",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
+r=A.aG("Secret Guessing",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,26,B.t),B.at,n)
+q=A.aG("Tap below to unlock the timeline and enter your guess secretly.",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
 p=A.eK(n,n,B.aQ,n,n,n,n,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("UNLOCK TIMELINE",n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.ajj(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.at){if(o.ch){if(o.cx)return A.dd(A.bX(A.c([A.d3(n,B.iN,B.u,n,n,new A.c6(B.iZ,n,A.fy(B.iR,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n),B.d8,A.aG("REVEALING GUESSES...",n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.j8,24,B.t,1.2),n,n),B.c6,A.aG("Watch the TV screen to see everyone's guess!",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n,n)
+return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("UNLOCK TIMELINE",n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.ajj(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}if(o.at){if(o.ch){if(o.cx)return A.dd(A.bX(A.c([A.d3(n,B.iN,B.u,n,n,new A.c6(B.iZ,n,A.fy(B.iR,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n),B.d8,A.aG("REVEALING GUESSES...",n,n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.j8,24,B.t,1.2),n,n),B.c6,A.aG("Watch the TV screen to see everyone's guess!",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n,n)
 s=A.d3(n,B.nO,B.u,n,n,new A.c6(B.cM,n,A.fy(B.ez,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n)
-r=A.aG("ALL GUESSES IN!",n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.cL,24,B.t,1.2),n,n)
-q=A.aG("Everyone has submitted their guess. Tap below to reveal them on the TV!",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
+r=A.aG("ALL GUESSES IN!",n,n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.cL,24,B.t,1.2),n,n)
+q=A.aG("Everyone has submitted their guess. Tap below to reveal them on the TV!",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)
 p=A.eK(n,n,B.aQ,n,n,n,n,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("REVEAL GUESSES",n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.ajk(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}return A.dd(A.bX(A.c([A.d3(n,B.nO,B.u,n,n,new A.c6(B.cM,n,A.fy(B.ez,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n),B.d8,A.aG("GUESS SUBMITTED!",n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.cL,24,B.t,1.2),n,n),B.c6,A.aG("Your guess is locked at "+o.as+".\nWaiting for other players to submit...",n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n,n)}s=A.aG("Select Song Year",n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,24,B.t),n,n)
+return A.dd(new A.bL(B.cO,A.bX(A.c([s,B.d8,r,B.c6,q,B.d9,A.fR(A.hF(!1,A.aG("REVEAL GUESSES",n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,new A.ajk(o),n,p),60,1/0)],t.p),B.B,B.a_,B.E),n),n,n)}return A.dd(A.bX(A.c([A.d3(n,B.nO,B.u,n,n,new A.c6(B.cM,n,A.fy(B.ez,B.r,2),n,n,n,B.bz),n,n,n,n,B.cn,n,n,n),B.d8,A.aG("GUESS SUBMITTED!",n,n,n,n,n,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(B.cL,24,B.t,1.2),n,n),B.c6,A.aG("Your guess is locked at "+o.as+".\nWaiting for other players to submit...",n,n,n,n,n,A.aQ().$2$color$fontSize(B.aZ,14),B.at,n)],t.p),B.B,B.a_,B.E),n,n)}s=A.aG("Select Song Year",n,n,n,n,n,A.aQ().$3$color$fontSize$fontWeight(B.x,24,B.t),n,n)
 r=o.Q
 r===$&&A.a()
-r=A.fR(new A.q4(3,new A.zh(r,B.FR,80,new A.ajl(o),new A.a4X(new A.ajm(o),57),n),n),120,n)
+r=A.fR(new A.q4(3,new A.zh(r,B.FR,100,new A.ajl(o),new A.a4X(new A.ajm(o),57),n),n),120,n)
 q=A.eK(n,n,B.aQ,n,n,n,n,n,n,B.j,n,n,n,n,new A.bI(A.c2(30),B.q),n,n,n,n,n)
-return A.bX(A.c([s,B.PJ,r,B.e6,B.Gw,B.PK,new A.bL(B.cO,A.fR(A.hF(!1,A.aG("SUBMIT SECRET GUESS",n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,o.gagt(),n,q),60,1/0),n)],t.p),B.B,B.a_,B.E)},
+return A.bX(A.c([s,B.PJ,r,B.e6,B.Gw,B.PK,new A.bL(B.cO,A.fR(A.hF(!1,A.aG("SUBMIT SECRET GUESS",n,n,n,n,n,A.aQ().$3$fontSize$fontWeight$letterSpacing(18,B.t,1.2),n,n),n,n,n,n,n,n,o.gagt(),n,q),60,1/0),n)],t.p),B.B,B.a_,B.E)},
 a4X(){var s,r,q,p,o,n=this,m=null,l=n.y
 if(l==null)return B.m8
 s=n.as
@@ -85214,10 +85219,10 @@ o=r?B.Gi:B.Gj
 q=A.d3(m,A.ti(o,r?B.bJ:B.f0,m,60),B.u,m,m,new A.c6(q,m,p,m,m,m,B.bz),m,m,m,m,B.cn,m,m,m)
 p=r?"BIGGEST LOSS!":"SURVIVED"
 l=""+Math.abs(s-l)
-l=A.c([q,B.d8,A.aG(p,m,m,m,m,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(r?B.j2:B.cL,26,B.t,1.5),m,m),B.z0,A.aG("Actual Year: "+A.k(n.y)+"\nYour Guess: "+n.as+"\nDifference: "+l+" years (-"+l+" HP)",m,m,m,m,A.aQ().$3$color$fontSize$height(B.cK,16,1.5),B.at,m),B.d9],t.p)
+l=A.c([q,B.d8,A.aG(p,m,m,m,m,m,A.aQ().$4$color$fontSize$fontWeight$letterSpacing(r?B.j2:B.cL,26,B.t,1.5),m,m),B.z0,A.aG("Actual Year: "+A.k(n.y)+"\nYour Guess: "+n.as+"\nDifference: "+l+" years (-"+l+" HP)",m,m,m,m,m,A.aQ().$3$color$fontSize$height(B.cK,16,1.5),B.at,m),B.d9],t.p)
 if(!n.CW){s=A.eK(m,m,B.aQ,m,m,m,m,m,m,B.j,m,m,m,m,new A.bI(A.c2(28),B.q),m,m,m,m,m)
-l.push(A.fR(A.hF(!1,A.aG("VIEW SCOREBOARD",m,m,m,m,A.aQ().$3$fontSize$fontWeight$letterSpacing(16,B.t,1.2),m,m),m,m,m,m,m,m,new A.ajs(n),m,s),55,1/0))}else{s=A.eK(m,m,B.cL,m,m,m,m,m,m,B.j,m,m,m,m,new A.bI(A.c2(28),B.q),m,m,m,m,m)
-l.push(A.fR(A.hF(!1,A.aG("START NEXT ROUND",m,m,m,m,A.aQ().$3$fontSize$fontWeight$letterSpacing(16,B.t,1.2),m,m),m,m,m,m,m,m,new A.ajt(n),m,s),55,1/0))}return A.dd(new A.bL(B.Fx,A.bX(l,B.B,B.a_,B.E),m),m,m)}}
+l.push(A.fR(A.hF(!1,A.aG("VIEW SCOREBOARD",m,m,m,m,m,A.aQ().$3$fontSize$fontWeight$letterSpacing(16,B.t,1.2),m,m),m,m,m,m,m,m,new A.ajs(n),m,s),55,1/0))}else{s=A.eK(m,m,B.cL,m,m,m,m,m,m,B.j,m,m,m,m,new A.bI(A.c2(28),B.q),m,m,m,m,m)
+l.push(A.fR(A.hF(!1,A.aG("START NEXT ROUND",m,m,m,m,m,A.aQ().$3$fontSize$fontWeight$letterSpacing(16,B.t,1.2),m,m),m,m,m,m,m,m,new A.ajt(n),m,s),55,1/0))}return A.dd(new A.bL(B.Fx,A.bX(l,B.B,B.a_,B.E),m),m,m)}}
 A.ajA.prototype={
 $1(a){var s,r,q,p=this.a
 if(p.c==null)return
@@ -85279,7 +85284,7 @@ A.aD1(!0,new A.ajq(s),r,t.z)},
 $S:0}
 A.ajq.prototype={
 $1(a){var s=null
-return A.awx(A.c([A.af7(!1,B.zw,s,s,s,s,s,s,new A.ajo(a),s,s),A.hF(!1,B.zy,s,s,s,s,s,s,new A.ajp(this.a,a),s,A.eK(s,s,B.cr,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.j,B.zu,B.zv)},
+return A.awx(A.c([A.af7(!1,B.zv,s,s,s,s,s,s,new A.ajo(a),s,s),A.hF(!1,B.zw,s,s,s,s,s,s,new A.ajp(this.a,a),s,A.eK(s,s,B.cr,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s))],t.p),B.j,B.zx,B.zu)},
 $S:201}
 A.ajo.prototype={
 $0(){A.hf(this.a,!1).v0(null)
@@ -85313,7 +85318,7 @@ $0(){this.a.as=1970+this.b},
 $S:0}
 A.ajm.prototype={
 $2(a,b){var s=null,r=1970+b,q=r===this.a.as,p=q?1.4:0.8,o=B.i.k(r),n=q?B.j8:B.iQ
-return new A.q4(1,A.dd(A.aGp(A.aG(o,s,s,s,s,A.aQ().$3$color$fontSize$fontWeight(n,32,q?B.bD:B.t),s,s),B.ag,B.cN,p),s,s),s)},
+return new A.q4(1,A.dd(A.aGp(A.aG(o,s,1,s,s,!1,A.aQ().$3$color$fontSize$fontWeight(n,32,q?B.bD:B.t),s,s),B.ag,B.cN,p),s,s),s)},
 $S:562}
 A.ajs.prototype={
 $0(){$.dW().B_(this.a.a.c)},
@@ -89267,7 +89272,7 @@ B.CZ=new A.l(1,0,0.30196078431372547,0.25098039215686274,B.e)
 B.KT=new A.bZ([50,B.CF,100,B.CH,200,B.CT,300,B.Cx,400,B.CI,500,B.Cw,600,B.CM,700,B.CG,800,B.mG,900,B.CZ],t.C)
 B.c1=new A.ha(B.KT,1,0,0.5882352941176471,0.5333333333333333,B.e)
 B.Gz=new A.e1(B.G6,24,B.c1,null,null)
-B.C4=new A.hz(B.O,null,null,B.Gz,null)
+B.C5=new A.hz(B.O,null,null,B.Gz,null)
 B.Yl=new A.agJ(0,"material")
 B.Cc=new A.ko(null,null,null,null)
 B.m8=new A.hz(B.O,null,null,B.Cc,null)
@@ -91154,11 +91159,11 @@ B.ya=new A.hi(null,null)
 B.NM=new A.AX(1333)
 B.kA=new A.AX(2222)
 B.NN=new A.Ms(null,null)
+B.NO=new A.lh(!1,null,B.m8,null,null)
 B.RW=new A.m(!0,B.j,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.UX=new A.fl("Invalid Room Link",null,B.RW,null,null,null,null,null,null)
-B.C5=new A.hz(B.O,null,null,B.UX,null)
-B.NO=new A.lh(!1,null,B.C5,B.l,null)
-B.NP=new A.lh(!1,null,B.m8,null,null)
+B.UW=new A.fl("Invalid Room Link",null,B.RW,null,null,null,null,null,null,null)
+B.C4=new A.hz(B.O,null,null,B.UW,null)
+B.NP=new A.lh(!1,null,B.C4,B.l,null)
 B.d7=new A.q6(0,"idle")
 B.yb=new A.q6(1,"transientCallbacks")
 B.yc=new A.q6(2,"midFrameMicrotasks")
@@ -91755,17 +91760,17 @@ B.TE=new A.m(!0,B.x,null,".AppleSystemUIFont",null,null,null,null,null,null,null
 B.TZ=new A.m(!0,B.l,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.f,null,null,null,"blackRedwoodCity labelMedium",null,null,null,null)
 B.R0=new A.m(!0,B.l,null,".AppleSystemUIFont",null,null,null,null,null,null,null,null,null,null,null,null,null,B.f,null,null,null,"blackRedwoodCity labelSmall",null,null,null,null)
 B.UV=new A.dF(B.SL,B.RN,B.SM,B.Tf,B.Rq,B.Rx,B.S5,B.T5,B.Sh,B.TK,B.QT,B.R8,B.TE,B.TZ,B.R0)
-B.SG=new A.m(!0,B.N,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.zu=new A.fl("Are you sure you want to disconnect?",null,B.SG,null,null,null,null,null,null)
-B.UW=new A.fl("START TURN",null,null,null,null,null,null,null,null)
 B.Tl=new A.m(!0,B.x,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.zv=new A.fl("Leave Lobby?",null,B.Tl,null,null,null,null,null,null)
-B.zw=new A.fl("Cancel",null,null,null,null,null,null,null,null)
-B.UY=new A.fl("Select Team:",null,B.zs,null,null,null,null,null,null)
-B.UZ=new A.fl("NEXT TURN",null,null,null,null,null,null,null,null)
-B.V_=new A.fl("NEXT ROUND",null,null,null,null,null,null,null,null)
-B.zx=new A.fl("Back to Home",null,null,null,null,null,null,null,null)
-B.zy=new A.fl("Leave",null,null,null,null,null,null,null,null)
+B.zu=new A.fl("Leave Lobby?",null,B.Tl,null,null,null,null,null,null,null)
+B.zv=new A.fl("Cancel",null,null,null,null,null,null,null,null,null)
+B.zw=new A.fl("Leave",null,null,null,null,null,null,null,null,null)
+B.SG=new A.m(!0,B.N,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.zx=new A.fl("Are you sure you want to disconnect?",null,B.SG,null,null,null,null,null,null,null)
+B.UX=new A.fl("START TURN",null,null,null,null,null,null,null,null,null)
+B.UY=new A.fl("NEXT ROUND",null,null,null,null,null,null,null,null,null)
+B.UZ=new A.fl("Select Team:",null,B.zs,null,null,null,null,null,null,null)
+B.zy=new A.fl("Back to Home",null,null,null,null,null,null,null,null,null)
+B.V_=new A.fl("NEXT TURN",null,null,null,null,null,null,null,null,null)
 B.Yk=new A.afO(0,"system")
 B.LQ=new A.h(0.056,0.024)
 B.M4=new A.h(0.108,0.3085)
