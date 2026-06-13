@@ -211,6 +211,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
     setState(() {
       _isRoundActive = true;
       _isRoundResultShowing = false;
+      _showScoreOverlay = false;
       _platformGuesses.clear();
       _selectedYear = null;
       _currentGuesserIndex = 0;
