@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:flutter/services.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:lottie/lottie.dart';
@@ -924,6 +926,27 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                  ),
                ),
              ),
+
+             // Fullscreen Button on top of everything (aligned to end/right)
+             if (!kIsWeb)
+               Positioned.directional(
+                 textDirection: widget.uiLanguage == 'ar' ? TextDirection.rtl : TextDirection.ltr,
+                 end: 20,
+                 top: 20, 
+                 child: IconButton(
+                   onPressed: () async { 
+                     final isFull = await windowManager.isFullScreen();
+                     await windowManager.setFullScreen(!isFull);
+                   },
+                   icon: const Icon(Icons.fullscreen_rounded, color: Colors.white70, size: 20),
+                   tooltip: widget.uiLanguage == 'ar' ? 'شاشة كاملة' : 'Fullscreen',
+                   style: IconButton.styleFrom(
+                     backgroundColor: Colors.white.withOpacity(0.05),
+                     padding: const EdgeInsets.all(12),
+                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                   ),
+                 ),
+               ),
           ],
         ),
       ),

@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -579,6 +581,15 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         ),
         centerTitle: true,
         actions: [
+          if (!kIsWeb)
+            IconButton(
+              icon: const Icon(Icons.fullscreen_rounded, color: Colors.black54),
+              onPressed: () async {
+                final isFull = await windowManager.isFullScreen();
+                await windowManager.setFullScreen(!isFull);
+              },
+              tooltip: 'Fullscreen',
+            ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: TextButton(

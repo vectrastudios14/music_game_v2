@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:ui';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:window_manager/window_manager.dart';
 import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -1086,6 +1088,15 @@ class _TsGameScreenState extends State<TsGameScreen> {
               icon: const Icon(Icons.close, color: Colors.white70),
               onPressed: () => Navigator.pop(context),
             ),
+            if (!kIsWeb)
+              IconButton(
+                icon: const Icon(Icons.fullscreen_rounded, color: Colors.white70),
+                onPressed: () async {
+                  final isFull = await windowManager.isFullScreen();
+                  await windowManager.setFullScreen(!isFull);
+                },
+                tooltip: 'Fullscreen',
+              ),
             
             const SizedBox(width: 10),
             
