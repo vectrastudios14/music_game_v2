@@ -76,6 +76,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
   Timer? _popupCloseTimer; 
   int _showcasedPlayerIndex = -1;
   Timer? _showcaseTimer;
+  bool _isClearingGuesses = false;
 
   late final SongRepository _repository;
   List<String> _activePlayerNames = [];
@@ -151,21 +152,31 @@ class _TsGameScreenState extends State<TsGameScreen> {
           );
         }
 
-        if (data['tsGuesses'] != null) {
-          final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
-          setState(() {
-            _submittedGuesses.clear();
-            rawGuesses.forEach((player, val) {
-              final guessData = Map<String, dynamic>.from(val as Map);
-              _submittedGuesses[player] = int.tryParse(guessData['year'].toString()) ?? _startYear;
+        if (_isClearingGuesses) {
+          if (data['tsGuesses'] == null) {
+            setState(() {
+              _isClearingGuesses = false;
+              _submittedGuesses.clear();
+              _allPlayersGuessed = false;
             });
-            _allPlayersGuessed = _submittedGuesses.length >= _activePlayerNames.length;
-          });
+          }
         } else {
-          setState(() {
-            _submittedGuesses.clear();
-            _allPlayersGuessed = false;
-          });
+          if (data['tsGuesses'] != null) {
+            final rawGuesses = Map<String, dynamic>.from(data['tsGuesses'] as Map);
+            setState(() {
+              _submittedGuesses.clear();
+              rawGuesses.forEach((player, val) {
+                final guessData = Map<String, dynamic>.from(val as Map);
+                _submittedGuesses[player] = int.tryParse(guessData['year'].toString()) ?? _startYear;
+              });
+              _allPlayersGuessed = _submittedGuesses.length >= _activePlayerNames.length;
+            });
+          } else {
+            setState(() {
+              _submittedGuesses.clear();
+              _allPlayersGuessed = false;
+            });
+          }
         }
       });
     }
@@ -209,6 +220,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
       _revealIndex = 0;
       _isRevealMode = false;
       _submittedGuesses.clear();
+      _allPlayersGuessed = false;
+      _isClearingGuesses = widget.roomCode != null;
     });
 
     if (widget.roomCode != null) {
@@ -768,8 +781,8 @@ class _TsGameScreenState extends State<TsGameScreen> {
                     final playerColor = widget.playerColors[playerName] ?? Colors.white;
                     final guessYear = _platformGuesses[playerName] ?? _startYear;
                     final actualYear = int.parse(_currentSong!.year);
-                    final diff = guessYear - actualYear;
-                    final diffSign = diff > 0 ? "+" : "";
+                    final absDiff = (guessYear - actualYear).abs();
+                    final diffText = absDiff == 0 ? "0" : "-$absDiff";
 
                     return AnimatedPositioned(
                       duration: const Duration(milliseconds: 800),
@@ -817,11 +830,11 @@ class _TsGameScreenState extends State<TsGameScreen> {
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                       decoration: BoxDecoration(
-                                        color: diff == 0 ? Colors.greenAccent : (diff.abs() <= 2 ? Colors.orangeAccent : Colors.redAccent),
+                                        color: absDiff == 0 ? Colors.greenAccent : (absDiff <= 2 ? Colors.orangeAccent : Colors.redAccent),
                                         borderRadius: BorderRadius.circular(4),
                                       ),
                                       child: Text(
-                                        "$diffSign$diff",
+                                        diffText,
                                         style: GoogleFonts.robotoMono(
                                           color: Colors.black,
                                           fontSize: 14,
