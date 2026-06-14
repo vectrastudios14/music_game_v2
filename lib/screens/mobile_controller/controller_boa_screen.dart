@@ -69,10 +69,28 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
           _mysterySong = null;
         }
 
-        // Timeline Songs mapping
         if (data['timelineSongs'] != null) {
-          final rawTimeline = data['timelineSongs'] as List;
-          _timelineSongs = rawTimeline.map((item) => Map<String, dynamic>.from(item as Map)).toList();
+          try {
+            if (data['timelineSongs'] is List) {
+              final rawTimeline = data['timelineSongs'] as List;
+              _timelineSongs = rawTimeline.map((item) => Map<String, dynamic>.from(item as Map)).toList();
+            } else if (data['timelineSongs'] is Map) {
+              final Map rawMap = data['timelineSongs'] as Map;
+              final List<Map<String, dynamic>> parsedList = [];
+              final keys = rawMap.keys.toList()..sort((a, b) => a.toString().compareTo(b.toString()));
+              for (var key in keys) {
+                if (rawMap[key] != null) {
+                  parsedList.add(Map<String, dynamic>.from(rawMap[key] as Map));
+                }
+              }
+              _timelineSongs = parsedList;
+            } else {
+              _timelineSongs = [];
+            }
+          } catch (e) {
+            debugPrint("BOA: Error parsing timelineSongs: $e");
+            _timelineSongs = [];
+          }
         } else {
           _timelineSongs = [];
         }

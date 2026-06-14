@@ -136,8 +136,27 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
         _choicesVisible = newChoicesVisible;
 
         if (data['options'] != null) {
-          _options = List<Map<String, dynamic>>.from(
-              (data['options'] as List).map((e) => Map<String, dynamic>.from(e as Map)));
+          try {
+            if (data['options'] is List) {
+              _options = List<Map<String, dynamic>>.from(
+                  (data['options'] as List).map((e) => Map<String, dynamic>.from(e as Map)));
+            } else if (data['options'] is Map) {
+              final Map rawMap = data['options'] as Map;
+              final List<Map<String, dynamic>> parsedList = [];
+              final keys = rawMap.keys.toList()..sort((a, b) => a.toString().compareTo(b.toString()));
+              for (var key in keys) {
+                if (rawMap[key] != null) {
+                  parsedList.add(Map<String, dynamic>.from(rawMap[key] as Map));
+                }
+              }
+              _options = parsedList;
+            } else {
+              _options = [];
+            }
+          } catch (e) {
+            debugPrint("GTS: Error parsing options: $e");
+            _options = [];
+          }
         } else {
           _options = [];
         }
