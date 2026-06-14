@@ -160,7 +160,7 @@ class _ControllerTsScreenState extends State<ControllerTsScreen> {
       );
     }
 
-    if (_status == 'gameover') {
+    if (_status == 'gameover' || _status == 'game_over') {
       return Scaffold(
         body: Container(
           decoration: const BoxDecoration(
