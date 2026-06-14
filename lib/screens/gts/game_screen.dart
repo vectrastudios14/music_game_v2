@@ -674,6 +674,12 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
 
   void _finishGame() {
     _player.stop(); 
+    if (widget.roomCode != null) {
+      final sortedEntries = _scores.entries.toList()
+        ..sort((a, b) => b.value.compareTo(a.value));
+      final winner = sortedEntries.isNotEmpty ? sortedEntries.first.key : "";
+      FirebaseService().setGameOver(widget.roomCode!, winner);
+    }
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
@@ -1851,11 +1857,49 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
                               ),
                             ]
                           : [
+                              // Fancy Neon Round Badge
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+                                decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [Color(0xFFFF007F), Color(0xFF7F00FF)], // Neon Magenta to Purple
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(
+                                    color: Colors.white.withOpacity(0.4),
+                                    width: 1.5,
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xFFFF007F).withOpacity(0.6),
+                                      blurRadius: 10,
+                                      spreadRadius: 1,
+                                    ),
+                                    BoxShadow(
+                                      color: const Color(0xFF7F00FF).withOpacity(0.4),
+                                      blurRadius: 10,
+                                      spreadRadius: 1,
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  "${widget.uiLanguage == 'ar' ? 'الجولة' : 'ROUND'} $_currentRound".toUpperCase(),
+                                  style: GoogleFonts.outfit(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w900,
+                                    color: Colors.white,
+                                    letterSpacing: 2.5,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 12),
                               Pulse(
                                 infinite: true,
                                 child: Image.asset(
                                   'assets/Guess_that_song_logo.png',
-                                  height: 85,
+                                  height: 65,
                                   fit: BoxFit.contain,
                                 ),
                               ),

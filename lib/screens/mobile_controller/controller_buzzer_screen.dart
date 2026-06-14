@@ -32,6 +32,7 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
   String? _roomMode; // 'team' or 'individual'
   String? _activePlayer;
   String? _nextPlayer;
+  String? _winner;
   List<Map<String, dynamic>> _options = [];
   String? _selectedOptionId;
   bool _choicesVisible = false;
@@ -67,6 +68,7 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
         _roomMode = data['mode'] ?? 'team';
         _activePlayer = data['activePlayer'];
         _nextPlayer = data['nextPlayer'];
+        _winner = data['winner'];
 
         if (data['kicked_players'] != null && data['kicked_players'][widget.playerName] == true) {
           _status = 'kicked';
@@ -374,6 +376,115 @@ class _ControllerBuzzerScreenState extends State<ControllerBuzzerScreen> with Si
       if (_choicesVisible && (didWeBuzz || didTheyBuzz)) {
         bgColor = Colors.black;
       }
+    }
+
+    if (_status == 'game_over' || _status == 'gameover') {
+      return Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF0F0C1B), Color(0xFF150E28), Color(0xFF0A0515)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.05),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(color: Colors.amber.withOpacity(0.3), width: 2),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.amber.withOpacity(0.1),
+                          blurRadius: 20,
+                          spreadRadius: 5,
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      children: [
+                        const Icon(
+                          Icons.emoji_events,
+                          color: Colors.amber,
+                          size: 100,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'GAME OVER',
+                          style: GoogleFonts.outfit(
+                            color: Colors.white,
+                            fontSize: 32,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 2,
+                          ),
+                        ),
+                        if (_winner != null && _winner!.isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          Container(
+                            height: 1,
+                            width: 150,
+                            color: Colors.white24,
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            '🏆 WINNER 🏆',
+                            style: GoogleFonts.outfit(
+                              color: Colors.amberAccent,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 4,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            _winner!,
+                            style: GoogleFonts.outfit(
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 40),
+                  ElevatedButton(
+                    onPressed: () {
+                      _clearSession();
+                      Navigator.of(context).popUntil((route) => route.isFirst);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.amber,
+                      foregroundColor: Colors.black,
+                      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      elevation: 5,
+                    ),
+                    child: Text(
+                      'Back to Home',
+                      style: GoogleFonts.outfit(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
     }
 
     return Scaffold(

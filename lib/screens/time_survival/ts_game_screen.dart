@@ -430,12 +430,22 @@ class _TsGameScreenState extends State<TsGameScreen> {
       if (_isGameOver) {
         setState(() => _showScoreOverlay = false);
         if (widget.roomCode != null) {
+          final sortedEntries = _playerScores.entries.toList()
+            ..sort((a, b) => b.value.compareTo(a.value));
+          final highestScore = _playerScores.values.isEmpty ? 0 : _playerScores.values.fold(0, max);
+          final winners = sortedEntries
+              .where((entry) => entry.value == highestScore && entry.value > 0)
+              .map((entry) => entry.key)
+              .toList();
+          final winnerName = winners.isNotEmpty ? winners.join(", ") : "No Winner";
+
           FirebaseService().updateTsRoomState(
             widget.roomCode!,
             playerNames: _activePlayerNames,
             scores: _playerScores,
             status: 'gameover',
             showScoreOverlay: false,
+            winner: winnerName,
           );
         }
       } else {

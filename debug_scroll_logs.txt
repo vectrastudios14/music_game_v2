@@ -417,3 +417,1694 @@
 2026-06-12T15:27:50.682313: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
 2026-06-12T15:27:51.161349: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
 2026-06-12T15:27:51.682073: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:15.042224: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:15.661419: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:16.131070: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:17.115769: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:17.577182: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:18.066225: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:18.067228: Animate to scrollTarget: -40.0, maxScrollExtent: 96.0
+2026-06-13T20:48:18.547738: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:18.548752: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-13T20:48:19.118370: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:19.119874: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-13T20:48:19.532170: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:19.533185: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-13T20:48:20.092851: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:20.092851: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-13T20:48:20.799337: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:20.800376: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-13T20:48:22.676862: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:22.676862: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:23.001278: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:23.002278: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:23.129095: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:23.129095: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:23.575277: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:23.576255: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:24.105407: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:24.105407: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:24.657973: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:24.658983: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-13T20:48:25.149641: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:25.150638: Animate to scrollTarget: 256.0, maxScrollExtent: 176.0
+2026-06-13T20:48:25.531797: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:25.532804: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:26.106334: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:26.106334: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:26.584896: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:26.585889: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:27.026231: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:27.027236: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:27.526546: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:27.528055: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:28.036224: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:28.037218: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:28.388353: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:28.388353: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:28.615248: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:28.615248: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:29.039222: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:29.040223: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:29.570839: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:29.571847: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:30.199676: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:30.200675: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:30.623055: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-13T20:48:30.623926: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-13T20:48:31.614953: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:32.105252: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:32.551880: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:33.118030: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:33.714284: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-13T20:48:34.057900: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:14.693796: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:15.124457: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:15.646036: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:16.187347: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:16.682586: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:17.191523: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:17.192542: Animate to scrollTarget: -40.0, maxScrollExtent: 96.0
+2026-06-14T13:28:17.667068: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:17.668097: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:18.185810: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:18.186934: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:18.679975: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:18.680973: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:19.180865: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:19.180865: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:19.665839: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:19.666839: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:20.155287: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:20.155287: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:20.682893: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:20.682893: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:21.182510: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:21.183508: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:21.671731: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:21.672733: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:22.203090: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:22.204092: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:28:22.677724: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:22.679231: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:23.149006: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:23.150197: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:23.681207: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:23.681207: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:24.215046: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:24.216155: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:24.685033: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:24.685033: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:25.178121: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:25.179115: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:25.681866: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:25.682861: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:26.169070: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:26.169579: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:28:26.660166: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:26.661166: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:28:27.189453: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:27.189986: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:28:27.667954: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:27.667954: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:28:28.187676: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:28.187676: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:28:28.659289: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:28.660299: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:28:29.166318: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:29.654989: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:30.176344: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:30.675666: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:31.176434: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:31.661382: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:32.192468: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:32.678489: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:33.163092: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:33.681623: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:34.175411: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:34.683110: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:34.683110: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:28:35.163797: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:35.163797: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:28:35.677878: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:35.678876: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:36.176140: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:36.177140: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:36.679881: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:36.679881: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:37.170964: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:37.172472: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:37.662940: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:37.664091: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:38.151868: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:38.152869: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:38.677036: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:38.677036: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:39.179266: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:39.180261: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:39.634533: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:39.662148: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:28:40.183259: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:40.184396: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:28:40.659493: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:40.661928: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:28:41.169454: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:41.169454: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:41.694998: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:41.696170: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:42.183915: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:42.185337: Animate to scrollTarget: 0.0, maxScrollExtent: 352.0
+2026-06-14T13:28:42.681090: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:42.682090: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:43.177682: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:43.179679: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:43.680366: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:43.680366: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:44.200644: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:44.201703: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:44.675101: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:44.676106: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:45.170048: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:45.171047: Animate to scrollTarget: 0.0, maxScrollExtent: 432.0
+2026-06-14T13:28:45.689539: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:46.186774: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:46.678193: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:28:47.180300: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:47.181303: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:47.662823: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:47.673063: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:48.185667: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:48.186669: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:48.666723: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:48.667752: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:49.150463: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:49.151473: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:49.683107: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:49.684110: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:50.179016: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:50.180029: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:50.661818: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:50.662818: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:51.200799: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:51.201809: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:51.862751: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:51.863752: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:52.141481: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:52.143510: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:52.687156: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:52.688167: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:53.181512: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:53.182513: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:53.694376: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:53.695374: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:28:54.194340: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:28:54.195362: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:29:53.952902: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:29:54.469129: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:29:54.937905: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:29:55.443672: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:29:55.967235: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:29:56.454858: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:56.455855: Animate to scrollTarget: -40.0, maxScrollExtent: 96.0
+2026-06-14T13:29:56.985243: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:56.986242: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:57.477045: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:57.478043: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:57.969340: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:57.970345: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:58.465203: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:58.466202: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:58.936715: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:58.937821: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:59.494146: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:59.495157: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:29:59.992152: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:29:59.992152: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:00.471549: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:00.472580: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:00.954370: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:00.955361: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:01.480768: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:01.481768: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:01.974027: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:01.974027: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:02.472005: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:02.474006: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:03.009735: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:03.010741: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:03.495520: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:03.496521: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:03.965605: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:03.965605: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:04.489709: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:04.489709: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:04.971376: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:04.972489: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:05.466485: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:05.466485: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:05.975562: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:05.975562: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:06.439320: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:06.440361: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:06.972020: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:06.973018: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:07.472308: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:07.473306: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:07.950517: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:07.951525: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:08.446630: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:08.449170: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:08.969912: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:08.999670: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:09.460086: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:09.461110: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:09.972666: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:09.973665: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:10.468377: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:10.468377: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:10.963804: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:10.964803: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:30:11.508534: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:11.977964: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:12.457464: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:13.154073: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:13.464502: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:13.956653: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:14.494841: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:14.955740: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:14.956783: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:15.475609: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:15.476607: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:15.980704: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:15.982700: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:16.462529: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:16.463509: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:16.967037: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:16.968039: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:17.467562: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:17.469539: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:17.965069: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:17.965577: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:18.471393: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:18.472391: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:18.990769: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:18.991836: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:19.489035: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:19.490059: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:19.969176: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:19.970176: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:20.479364: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:20.480363: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:20.948953: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:20.949948: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:21.476044: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:21.477055: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:21.979496: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:21.980493: Animate to scrollTarget: 256.0, maxScrollExtent: 176.0
+2026-06-14T13:30:22.467743: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:22.467743: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:22.991410: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:22.992454: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:23.491438: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:23.491438: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:23.942022: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:23.942022: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:24.474191: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:24.474191: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:24.960453: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:24.963042: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:25.461615: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:25.462614: Animate to scrollTarget: 256.0, maxScrollExtent: 256.0
+2026-06-14T13:30:25.993081: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:26.471824: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:26.971292: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:27.471527: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:27.949253: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:28.445645: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:28.967775: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:29.471150: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:29.984728: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:29.986726: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:30.463193: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:30.464198: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:30.999100: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:31.000122: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:30:31.495653: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:31.497665: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:30:31.957235: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:31.958264: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:30:32.461201: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:32.462249: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:30:32.953842: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:32.954859: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:30:33.476296: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:33.476296: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:33.973880: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:33.975597: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:34.465869: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:34.466866: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:34.963823: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:34.963823: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:30:35.484875: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:35.486857: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:30:35.977417: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:35.979375: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:30:36.480308: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:36.482667: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:30:36.957614: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:36.958613: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:30:37.459635: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:37.459635: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:37.983473: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:37.984491: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:38.447592: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:38.448597: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:38.977960: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:38.988602: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:39.487419: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:39.487928: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:39.978503: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:39.979648: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:40.455860: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:40.467398: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:40.975097: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:40.976103: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:41.476782: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:41.477787: Animate to scrollTarget: 136.0, maxScrollExtent: 448.0
+2026-06-14T13:30:41.964216: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:41.965221: Animate to scrollTarget: 136.0, maxScrollExtent: 448.0
+2026-06-14T13:30:42.474200: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:42.475203: Animate to scrollTarget: -40.0, maxScrollExtent: 448.0
+2026-06-14T13:30:42.947583: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:42.948584: Animate to scrollTarget: -40.0, maxScrollExtent: 448.0
+2026-06-14T13:30:43.468716: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:43.468716: Animate to scrollTarget: -40.0, maxScrollExtent: 448.0
+2026-06-14T13:30:43.959303: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:43.960241: Animate to scrollTarget: 136.0, maxScrollExtent: 448.0
+2026-06-14T13:30:44.471504: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:44.473034: Animate to scrollTarget: 136.0, maxScrollExtent: 448.0
+2026-06-14T13:30:44.968675: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:44.969663: Animate to scrollTarget: 136.0, maxScrollExtent: 448.0
+2026-06-14T13:30:45.491475: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:45.492485: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:45.974761: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:45.975762: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:46.482246: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:46.483254: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:30:46.955389: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:46.956384: Animate to scrollTarget: 488.0, maxScrollExtent: 448.0
+2026-06-14T13:30:47.474524: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:47.476033: Animate to scrollTarget: 488.0, maxScrollExtent: 448.0
+2026-06-14T13:30:47.943862: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:47.944873: Animate to scrollTarget: 488.0, maxScrollExtent: 448.0
+2026-06-14T13:30:48.462775: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:48.463769: Animate to scrollTarget: 488.0, maxScrollExtent: 448.0
+2026-06-14T13:30:48.946639: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:48.947641: Animate to scrollTarget: 488.0, maxScrollExtent: 448.0
+2026-06-14T13:30:49.477464: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:49.945116: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:50.478263: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:50.945759: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:51.460342: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:51.975966: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:52.481389: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:52.960500: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:53.472266: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:30:53.970483: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:53.982645: Animate to scrollTarget: 216.0, maxScrollExtent: 96.0
+2026-06-14T13:30:54.465544: Host listener: currentSlotIndex = 3, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:54.466542: Animate to scrollTarget: 216.0, maxScrollExtent: 96.0
+2026-06-14T13:30:54.962940: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:54.963937: Animate to scrollTarget: -40.0, maxScrollExtent: 96.0
+2026-06-14T13:30:55.494648: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:55.495680: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:55.975292: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:55.976297: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:56.438320: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:56.439319: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:56.967680: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:56.968683: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:57.499693: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:57.501483: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:30:57.930925: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:57.931925: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:58.483435: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:58.484429: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:58.978070: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:58.979067: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:30:59.478720: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:30:59.479689: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:31:00.002092: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:00.003089: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:00.462873: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:00.463873: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:00.977820: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:00.978816: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:01.473055: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:01.475607: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:01.966131: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:01.967695: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:02.473132: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:02.473132: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:31:02.970784: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:03.460620: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:03.974796: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:04.498042: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:04.962058: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:05.463206: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:05.969693: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:06.461222: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:06.983517: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:07.474622: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:07.991277: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:08.496071: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:08.497075: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:08.992828: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:08.994836: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:09.501473: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:09.502468: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:09.936082: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:09.938109: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:10.490186: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:10.490186: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:10.994674: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:10.995693: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:11.490379: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:11.491432: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:11.941641: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:11.942656: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:31:12.438408: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:12.439409: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:12.949887: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:12.950891: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:13.477171: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:13.479781: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:13.958686: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:13.958686: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:14.455141: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:14.457175: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:14.972253: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:14.973264: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:31:15.457489: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:15.457489: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:31:15.947233: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:15.948248: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:31:16.479174: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:16.481700: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:31:16.982916: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:16.982916: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:31:17.498308: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:17.499270: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:17.968883: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:17.968883: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:18.460122: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:18.461650: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:19.001211: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:19.002223: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:19.457184: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:19.459178: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:19.971441: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:19.973471: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:20.491170: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:20.492191: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:20.992491: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:20.993527: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:31:21.451740: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:21.964861: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:22.485640: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:22.974989: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:23.492104: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:23.971207: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:24.466817: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:24.961172: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:25.468350: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:25.469358: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:25.997823: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:25.997823: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:26.442926: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:26.444893: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:31:26.960697: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:26.961699: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:31:27.479838: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:27.481861: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:31:27.964466: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:27.965439: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:31:28.490686: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:28.492196: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:28.966348: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:28.967543: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:29.475737: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:29.476728: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:29.970769: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:29.972277: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:30.457543: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:30.457543: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:30.952951: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:30.953956: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:31.509924: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:31.509924: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:31.944208: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:31.946201: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:32.471484: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:32.472995: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:32.975433: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:32.976431: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:33.483206: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:33.484188: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:33.943851: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:33.944951: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:34.480318: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:34.481530: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:31:34.965196: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:34.967195: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:35.477438: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:35.478437: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:31:35.971156: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:35.972671: Animate to scrollTarget: 256.0, maxScrollExtent: 352.0
+2026-06-14T13:31:36.468219: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:36.468219: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:36.989042: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:36.989042: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:37.472508: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:37.473517: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:37.988397: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:37.990420: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:38.485160: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:38.486190: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:38.960008: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:38.969135: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:39.450731: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:39.453294: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:31:39.938680: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:40.506328: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:40.973667: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:41.481030: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:42.037517: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:42.455164: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:42.969969: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:43.462330: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:31:43.973597: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:43.974597: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:44.503593: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:44.503593: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:45.004311: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:45.005312: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:45.437494: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:45.438494: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:45.957392: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:45.958422: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:46.449776: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:46.451449: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:46.957762: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:46.959763: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:47.461416: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:47.462499: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:47.976566: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:47.977647: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:31:48.478087: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:48.479121: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:48.992688: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:48.993816: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:49.467157: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:49.468162: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:49.996419: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:49.997427: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:50.476400: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:50.477375: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:50.971792: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:50.972798: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:51.442345: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:51.443361: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:31:51.974196: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:51.975207: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:31:52.480701: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:52.482712: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:31:52.977936: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:52.978937: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:31:53.446704: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:53.447679: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:31:53.981784: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:53.982894: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:54.444761: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:54.445741: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:54.974049: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:54.974049: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:55.472348: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:55.472348: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:55.958414: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:55.959423: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:56.479196: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:56.479196: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:56.966858: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:56.967858: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:57.483554: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:57.483554: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:58.009318: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:58.009318: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:58.449171: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:58.449171: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:58.961658: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:58.962656: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:59.464111: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:59.465110: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:31:59.978419: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:31:59.979420: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:00.467514: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:00.468513: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:00.944822: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:00.946386: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:01.511423: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:01.511983: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:01.978714: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:01.978714: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:02.455647: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:02.457103: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:02.959529: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:02.961047: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:03.454234: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:03.455239: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:03.944865: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:03.946064: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:04.451254: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:04.452628: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:04.973708: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:04.974719: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:05.475886: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:05.477887: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:05.973488: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:05.974507: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:06.494810: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:06.495812: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:06.956664: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:06.957826: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:07.474672: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:07.475674: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:07.972872: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:07.974096: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:08.468287: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:08.469288: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:08.948035: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:08.963086: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:09.473464: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:09.473464: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:09.979111: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:09.980109: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:10.501598: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:10.502610: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:10.980244: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:10.981780: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:11.492213: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:11.493222: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:11.981877: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:11.982909: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:12.464811: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:12.467808: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:12.959127: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:12.960138: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:13.487011: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:13.487011: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:13.978785: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:13.979785: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:14.456742: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:14.458295: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:14.991804: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:14.991804: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:15.458564: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:15.459568: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:15.986763: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:15.988787: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:16.507275: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:16.508266: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:17.053941: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:17.053941: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:17.484755: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:17.484755: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:18.098328: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:18.099331: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:32:18.541810: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:19.069234: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:19.635565: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:20.176507: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:20.468465: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:21.082011: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:21.448975: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:22.006690: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:22.008684: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:32:22.497681: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:22.498678: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:32:22.971193: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:23.107328: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:23.449276: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:23.450286: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:23.947832: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:23.949920: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:24.449007: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:24.450057: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:24.957981: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:24.959493: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:25.477454: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:25.478450: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:25.974152: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:25.975153: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:26.485649: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:26.486648: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:26.970268: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:26.970777: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:27.483121: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:27.485120: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:27.962822: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:27.963819: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:28.455597: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:28.456597: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:32:28.978050: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:28.978050: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:32:29.469123: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:29.470633: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:32:29.993953: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:29.995501: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:32:30.473456: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:30.474615: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:32:30.960475: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:30.961484: Animate to scrollTarget: 176.0, maxScrollExtent: 352.0
+2026-06-14T13:32:31.478684: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:31.479680: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:31.947514: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:31.949515: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:32.473602: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:32.474582: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:32.963497: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:32.965500: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:33.484538: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:33.501361: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:33.970743: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:33.971251: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:34.474882: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:34.475882: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:34.936908: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:34.937925: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:35.494676: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:35.495695: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:35.978120: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:35.979132: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:36.479300: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:36.479300: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:36.961544: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:32:36.961544: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:32:37.489354: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:37.940109: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:38.477068: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:38.980340: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:39.469344: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:39.975746: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:40.482060: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:40.965316: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:41.457905: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:41.972890: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:42.481322: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:42.949925: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:43.481763: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:44.004452: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:44.481277: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:44.986579: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:45.483194: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:45.955121: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:46.489250: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:46.976229: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:47.480034: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:47.961094: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:48.457790: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:48.970081: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:49.456834: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:49.992714: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:50.491874: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:50.957618: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:51.499072: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:51.981151: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:52.480648: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:52.943600: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:53.460190: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:53.977691: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:54.460042: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:54.961064: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:55.448: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:55.959482: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:56.489534: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:56.942410: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:57.465089: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:57.980049: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:58.465739: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:58.938578: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:59.491401: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:32:59.962219: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:00.447274: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:00.980922: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:01.465156: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:01.961351: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:02.461185: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:02.956749: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:03.440618: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:03.950690: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:04.463052: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:04.955917: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:05.443377: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:05.971451: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:06.473369: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:06.985491: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:07.436556: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:07.970038: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:08.463628: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:09.045661: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:09.485460: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:09.970608: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:10.475467: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:10.978922: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:11.472685: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:11.971649: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:12.465820: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:12.935573: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:13.470577: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:13.957104: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:14.456869: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:14.996208: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:15.474543: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:15.971611: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:16.477032: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:16.983577: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:17.481508: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:17.972554: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:18.462838: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:18.973649: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:19.472061: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:19.958298: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:20.433966: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:20.991057: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:21.489637: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:21.959344: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:21.960346: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:22.494452: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:22.495452: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:22.967316: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:22.969325: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:33:23.481361: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:23.482544: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:33:23.995332: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:23.995332: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:33:24.469186: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:24.470209: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:33:24.951850: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:24.953357: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:25.490598: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:25.490598: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:25.952112: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:25.952112: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:26.468221: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:26.469222: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:26.948133: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:26.950116: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:27.497490: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:27.498495: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:33:27.962843: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:27.963843: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:28.466721: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:28.468685: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:28.966792: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:28.967792: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:29.495434: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:29.506193: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:29.978765: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:29.979791: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:30.493894: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:30.495074: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:30.972195: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:30.973208: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:31.479786: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:31.480788: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:31.971842: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:31.972852: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:32.451895: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:32.452891: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:32.970653: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:32.971690: Animate to scrollTarget: 136.0, maxScrollExtent: 976.0
+2026-06-14T13:33:33.498208: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:33.972182: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:34.466714: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:34.984533: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:35.454679: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:35.957140: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:36.503767: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:36.953610: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:37.469534: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:37.972060: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:38.465766: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:38.978235: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:39.437950: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:39.986727: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:33:40.492489: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:40.493489: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:33:41.095717: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:41.096758: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:33:41.497662: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:41.498681: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:33:41.939651: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:41.940647: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:33:42.487237: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:42.488235: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:33:42.977497: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:42.978668: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:33:43.452925: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:43.453933: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:33:43.974297: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:43.975297: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:33:44.457426: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:44.459206: Animate to scrollTarget: 256.0, maxScrollExtent: 352.0
+2026-06-14T13:33:44.960494: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:44.961558: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:45.521056: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:45.521564: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:45.973789: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:45.975845: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:46.471456: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:46.473575: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:46.946535: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:46.948054: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:47.484716: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:47.485737: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:48.203972: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:48.204981: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:48.480216: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:48.480216: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:48.990728: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:48.991725: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:49.454851: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:49.454851: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:49.952902: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:49.954913: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:50.458745: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:50.459726: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:50.961542: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:50.962542: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:51.476677: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:51.477688: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:51.976545: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:51.977512: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:52.473454: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:52.474457: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:52.966969: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:52.967969: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:53.453191: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:53.453191: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:53.974338: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:53.975363: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:54.472657: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:54.473650: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:54.952940: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:54.953942: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:55.468229: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:55.469816: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:55.955245: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:55.956203: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:56.466732: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:56.467728: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:56.949428: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:56.950440: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:57.442696: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:57.442696: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:57.974698: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:57.975667: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:58.482211: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:58.483215: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:58.987789: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:58.988789: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:59.437410: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:59.438389: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:33:59.971788: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:33:59.972907: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:34:00.450848: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:34:00.452014: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:34:00.970560: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:34:00.971562: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:34:01.467097: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:34:01.468102: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:34:01.971950: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:34:01.973462: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:34:02.491833: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:34:02.491833: Animate to scrollTarget: 256.0, maxScrollExtent: 432.0
+2026-06-14T13:35:27.551473: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:28.045887: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:28.554327: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:29.072965: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:29.073967: Animate to scrollTarget: -40.0, maxScrollExtent: 96.0
+2026-06-14T13:35:29.543422: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:29.545418: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:30.041558: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:30.043144: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:30.552641: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:30.565525: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:31.026962: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:31.027957: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:31.562154: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:31.563162: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:32.060106: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:32.073360: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:32.515276: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:32.516276: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:33.050102: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:33.051099: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:33.576759: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:33.578084: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:34.078341: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:34.080355: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:34.550675: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:34.550675: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:35:35.249779: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:35.249779: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:35:35.550771: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:35.550771: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:35:36.056002: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:36.057003: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:36.572844: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:36.573844: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:37.051268: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:37.053268: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:37.548373: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:37.548373: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:38.048194: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:38.048194: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:38.541512: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:38.542516: Animate to scrollTarget: 136.0, maxScrollExtent: 272.0
+2026-06-14T13:35:39.039813: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:39.523405: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:40.049084: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:40.549782: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:41.029602: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:41.549034: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:42.048981: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:42.544892: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:42.545908: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:35:43.054634: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:43.055615: Animate to scrollTarget: 136.0, maxScrollExtent: 176.0
+2026-06-14T13:35:43.543696: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:43.544713: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:44.042515: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:44.043517: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:44.567281: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:44.569861: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:45.055272: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:45.056441: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:45.545791: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:45.546898: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:46.053223: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:46.054224: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:46.559857: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:46.561856: Animate to scrollTarget: -40.0, maxScrollExtent: 176.0
+2026-06-14T13:35:47.058631: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:47.064885: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:35:47.543227: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:47.543227: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:35:48.046206: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:48.047217: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:35:48.557133: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:48.557746: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:35:49.040641: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:49.041643: Animate to scrollTarget: -40.0, maxScrollExtent: 272.0
+2026-06-14T13:35:49.516436: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:50.024221: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:50.542803: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:51.071245: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:51.559916: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:52.059514: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:35:52.531593: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:52.532589: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:35:53.016180: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:53.017195: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:35:53.560791: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:53.562795: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:35:54.049408: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:54.050417: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:35:54.561293: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:54.562271: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:35:55.043441: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:55.044440: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:35:55.547538: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:55.548540: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:35:56.100010: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:56.101034: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:35:56.537079: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:56.538065: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:35:57.031577: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:57.032588: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:35:57.561456: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:57.562457: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:35:58.082957: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:58.083957: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:35:58.534272: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:58.535265: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:35:59.061354: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:35:59.062343: Animate to scrollTarget: 312.0, maxScrollExtent: 448.0
+2026-06-14T13:35:59.540364: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:00.085982: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:00.537967: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:01.013002: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:01.547537: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:02.053858: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:02.545273: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:02.546276: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:03.050789: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:03.051791: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:03.579087: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:03.581086: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:04.059734: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:04.060746: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:04.536378: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:04.537385: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:05.052153: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:05.054692: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:36:05.531795: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:05.532798: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:36:06.050625: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:06.051624: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:06.588081: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:06.589212: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:07.038358: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:07.039873: Animate to scrollTarget: 432.0, maxScrollExtent: 352.0
+2026-06-14T13:36:07.560795: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:07.562795: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:08.052080: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:08.053089: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:08.559566: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:08.559566: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:09.057715: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:09.058910: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:09.555173: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:09.555701: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:10.051750: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:10.052746: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:10.555459: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:10.556470: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:36:11.061940: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:11.560667: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:12.067389: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:12.521178: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:13.072195: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:13.560185: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:14.053377: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:14.549594: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:15.055730: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:15.558037: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:15.559012: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:16.053845: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:16.054842: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:16.572945: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:16.580763: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:17.058340: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:17.059343: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:17.554232: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:17.556264: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:18.033993: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:18.034527: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:18.547242: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:18.548244: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:19.049878: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:19.050869: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:19.530199: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:19.531197: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:20.024090: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:20.025597: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:20.567407: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:20.569405: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:21.048419: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:21.049929: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:21.540273: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:21.541281: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:22.009569: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:22.010571: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:22.546373: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:22.547461: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:23.053591: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:23.054568: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:23.548961: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:23.549981: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:24.034371: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:24.035876: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:24.524272: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:24.525780: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:25.048937: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:25.049936: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:25.540981: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:25.540981: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:26.046429: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:26.047437: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:26.585147: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:26.595993: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:27.030331: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:27.031332: Animate to scrollTarget: -40.0, maxScrollExtent: 528.0
+2026-06-14T13:36:27.582199: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:27.583236: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:36:28.050057: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:28.051061: Animate to scrollTarget: 136.0, maxScrollExtent: 528.0
+2026-06-14T13:36:28.552394: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:28.554391: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:29.054647: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:29.057161: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:29.543624: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:29.545148: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:30.029575: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:30.029575: Animate to scrollTarget: 312.0, maxScrollExtent: 528.0
+2026-06-14T13:36:30.553705: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:30.555213: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:31.062413: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:31.063414: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:31.549121: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:31.550153: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:32.285081: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:32.288601: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:32.617347: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:32.618382: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:33.044328: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:33.045324: Animate to scrollTarget: 312.0, maxScrollExtent: 624.0
+2026-06-14T13:36:33.554431: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:34.046891: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:34.525653: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:35.072810: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:35.544074: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:36.038264: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:36.557501: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:37.045732: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:37.527268: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:38.019927: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:38.020921: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:38.538734: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:38.540736: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:39.064588: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:39.066582: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:39.586744: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:39.587770: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:40.059329: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:40.060344: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:40.580036: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:40.581063: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:41.043640: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:41.044641: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:41.562946: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:41.595867: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:42.074325: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:42.075318: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:42.519503: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:42.521500: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:43.069284: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:43.070818: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:43.539600: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:43.541287: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:44.057454: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:44.058472: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:44.523894: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:44.524903: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:45.058555: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:45.058555: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:45.531097: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:45.532604: Animate to scrollTarget: -40.0, maxScrollExtent: 704.0
+2026-06-14T13:36:46.053459: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:46.054464: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:36:46.561069: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:46.562579: Animate to scrollTarget: 136.0, maxScrollExtent: 704.0
+2026-06-14T13:36:47.054494: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:47.057485: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:47.560775: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:47.560775: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:48.059639: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:48.061644: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:48.559049: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:48.561046: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:49.023534: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:49.024559: Animate to scrollTarget: 312.0, maxScrollExtent: 704.0
+2026-06-14T13:36:49.561903: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:49.562927: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:36:50.035149: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:50.036246: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:36:50.569081: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:50.569081: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:36:51.028088: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:51.029108: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:36:51.551709: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:51.552721: Animate to scrollTarget: 312.0, maxScrollExtent: 800.0
+2026-06-14T13:36:52.063680: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:52.539999: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:53.035008: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:53.551490: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:54.033624: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:54.536640: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:55.025711: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:55.544953: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:56.036431: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:56.541545: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:36:57.074057: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:57.075058: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:57.541575: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:57.542577: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:36:58.008679: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:58.009672: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:58.567059: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:58.568056: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:59.024372: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:59.025381: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:36:59.531439: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:36:59.532989: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:00.043076: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:00.044078: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:00.531901: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:00.533126: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:01.010617: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:01.010617: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:01.525696: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:01.526706: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:02.003325: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:02.032556: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:02.507254: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:02.508247: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:03.035344: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:03.036342: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:03.519991: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:03.520995: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:04.047749: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:04.048750: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:04.525812: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:04.525812: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:05.033790: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:05.033790: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:05.527529: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:05.528508: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:06.024825: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:06.025826: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:06.544095: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:06.545107: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:07.017874: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:07.018875: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:07.543341: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:07.544353: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:08.013960: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:08.014957: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:08.537853: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:08.537853: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:09.044122: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:09.045133: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:09.539860: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:09.540859: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:10.039546: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:10.039546: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:10.548465: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:10.549467: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:11.036601: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:11.037613: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:11.499728: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:11.500714: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:12.004029: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:12.004029: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:12.547309: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:12.548306: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:13.048397: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:13.049396: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:13.523234: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:13.524242: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:14.013924: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:14.014962: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:14.546999: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:14.548565: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:15.032418: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:15.032418: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:15.506843: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:15.507842: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:16.002506: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:16.004025: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:16.533636: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:16.534152: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:17.023909: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:17.028948: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:17.545128: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:17.546142: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:18.043640: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:18.044727: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:18.538396: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:18.539393: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:19.040842: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:19.040842: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:19.526587: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:19.527591: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:20.043585: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:20.045188: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:20.512724: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:20.513725: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:21.027288: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:21.028295: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:21.594674: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:21.595674: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:22.210570: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:22.211564: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:22.660460: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:22.661471: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:37:23.099807: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:23.100828: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:37:23.705794: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:23.706798: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:37:24.148971: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:24.149966: Animate to scrollTarget: 176.0, maxScrollExtent: 352.0
+2026-06-14T13:37:24.581215: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:24.583731: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:25.032560: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:25.032560: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:25.743234: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:25.743747: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:26.027294: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:26.028287: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:26.541494: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:26.542494: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:27.050422: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:27.050422: Animate to scrollTarget: 176.0, maxScrollExtent: 432.0
+2026-06-14T13:37:27.537502: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:28.023873: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:28.535257: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:29.074693: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:29.544003: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:30.052744: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:30.508606: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:31.025712: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:31.501325: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:32.058100: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:32.589423: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:33.035123: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:33.529166: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:34.003442: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:34.521602: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:35.026476: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:35.027478: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:37:35.540161: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:35.541162: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:37:36.015950: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:36.016954: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:36.497712: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:36.498713: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:37.042636: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:37.042636: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:37.533475: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:37.534496: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:38.034731: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:38.036267: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:38.532575: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:38.535574: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:39.054100: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:39.056624: Animate to scrollTarget: -40.0, maxScrollExtent: 880.0
+2026-06-14T13:37:39.571539: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:39.572546: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:37:40.041097: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:40.042092: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:37:40.542979: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:40.543982: Animate to scrollTarget: 136.0, maxScrollExtent: 880.0
+2026-06-14T13:37:41.032488: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:41.033493: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:41.540441: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:41.565011: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:42.011422: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:42.012437: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:42.558913: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:42.559914: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:43.039428: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:43.040428: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:43.542984: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:43.542984: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:44.004840: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:44.005838: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:44.548788: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:44.550795: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:45.046220: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:45.047318: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:45.527844: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:45.528862: Animate to scrollTarget: 312.0, maxScrollExtent: 880.0
+2026-06-14T13:37:46.019861: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:46.020869: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:46.538543: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:46.539678: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:47.015761: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:47.020281: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:47.512959: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:47.512959: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:48.044971: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:48.044971: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:48.528758: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:48.529761: Animate to scrollTarget: 312.0, maxScrollExtent: 976.0
+2026-06-14T13:37:49.035521: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:49.523107: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:50.034488: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:50.527127: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:51.032769: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:51.551101: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:52.029450: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:52.515696: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:53.024950: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:53.533909: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:54.039822: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:54.534131: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:55.046181: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:55.530754: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:56.014554: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:56.557118: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = true, _currentMysteryCard = false
+2026-06-14T13:37:57.045945: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:57.046943: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:37:57.515718: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:57.515718: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:37:58.069211: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:58.070212: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:58.528521: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:58.528521: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:59.002777: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:59.003784: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:37:59.531190: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:37:59.532191: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:38:00.050943: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:00.052955: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:38:00.505049: Host listener: currentSlotIndex = 0, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:00.505908: Animate to scrollTarget: -40.0, maxScrollExtent: 352.0
+2026-06-14T13:38:01.068575: Host listener: currentSlotIndex = 1, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:01.069585: Animate to scrollTarget: 136.0, maxScrollExtent: 352.0
+2026-06-14T13:38:01.527633: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:01.528630: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:38:02.008616: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:02.010170: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:38:02.531446: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:02.532450: Animate to scrollTarget: 312.0, maxScrollExtent: 352.0
+2026-06-14T13:38:03.057886: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:03.058886: Animate to scrollTarget: 432.0, maxScrollExtent: 352.0
+2026-06-14T13:38:03.512288: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:03.512288: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:04.022615: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:04.023662: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:04.548876: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:04.549926: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:05.041558: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:05.042556: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:05.557253: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:05.557253: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:06.052564: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:06.053566: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:06.554600: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:06.555600: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:07.052316: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:07.053338: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:07.504957: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:07.505956: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:08.051270: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:08.052256: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:08.543270: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:08.544294: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:09.019760: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:09.020774: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:09.554630: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:09.555628: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:10.031586: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:10.031586: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:10.541283: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:10.542283: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:11.032820: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:11.032820: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:11.553419: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:11.564503: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:12.030921: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:12.031899: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:12.517461: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:12.517461: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:13.078497: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:13.079553: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:13.536021: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:13.537020: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:14.032885: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:14.032885: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:14.537945: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:14.538946: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:15.024453: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:15.024453: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:15.499219: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:15.500215: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:16.023159: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:16.024156: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:16.547216: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:16.547216: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:17.024266: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:17.025265: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:17.529211: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:17.529211: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:18.032023: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:18.033006: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:18.524085: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:18.525084: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:19.009306: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:19.010290: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:19.710417: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:19.711501: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:20.095517: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:20.096509: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:20.498097: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:20.499095: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:21.042478: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:21.043477: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:21.525684: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:21.526682: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:22.035406: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:22.035406: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:22.540099: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:22.542110: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:23.037705: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:23.038705: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:23.536927: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:23.537928: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:24.035474: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:24.036470: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:24.564264: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:24.565259: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:25.075366: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:25.075366: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:25.514611: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:25.515649: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:26.028622: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:26.029621: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:26.551675: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:26.667184: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:27.048028: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:27.049056: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:27.541839: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:27.542840: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:28.028988: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:28.029934: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:28.532881: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:28.532881: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:29.049444: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:29.050600: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:29.542937: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:29.543934: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:30.066057: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:30.067060: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:30.537713: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:30.538708: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:31.048432: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:31.049413: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:31.561683: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:31.562685: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0
+2026-06-14T13:38:32.037587: Host listener: currentSlotIndex = 2, _isWaitingForTurnStart = false, _currentMysteryCard = true
+2026-06-14T13:38:32.037587: Animate to scrollTarget: 432.0, maxScrollExtent: 432.0

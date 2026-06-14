@@ -767,6 +767,7 @@ import 'dart:math';class FirebaseService {
     String? roundLoserName,
     int? actualYear,
     bool? showScoreOverlay,
+    String? winner,
   }) async {
     final data = {
       'playerNames': playerNames,
@@ -778,6 +779,24 @@ import 'dart:math';class FirebaseService {
       if (roundLoserName != null) 'roundLoserName': roundLoserName,
       if (actualYear != null) 'actualYear': actualYear,
       if (showScoreOverlay != null) 'showScoreOverlay': showScoreOverlay,
+      if (winner != null) 'winner': winner,
+    };
+    if (kIsWeb) {
+      try {
+        await _db.child('gts_rooms/$roomCode').update(data);
+      } catch (e) {}
+    } else {
+      try {
+        final url = Uri.parse("$_baseUrl/gts_rooms/$roomCode.json");
+        await http.patch(url, body: jsonEncode(data));
+      } catch (e) {}
+    }
+  }
+
+  Future<void> setGameOver(String roomCode, String winner) async {
+    final data = {
+      'status': 'game_over',
+      'winner': winner,
     };
     if (kIsWeb) {
       try {

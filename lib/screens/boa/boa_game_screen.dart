@@ -438,6 +438,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
        else if (timeline.length == highScore) isTie = true;
     });
     final displayWinnerName = isTie ? (widget.uiLanguage == 'ar' ? 'تعادل!' : "IT'S A TIE!") : winnerName;
+    if (widget.roomCode != null) {
+      FirebaseService().setGameOver(widget.roomCode!, displayWinnerName);
+    }
     showDialog(
       context: context, barrierDismissible: false,
       builder: (context) => BoaGameOverModal(
