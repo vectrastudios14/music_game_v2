@@ -531,6 +531,51 @@ class _TsGameScreenState extends State<TsGameScreen> {
                         children: [
                           _buildOverviewTimeline(currentPlayerColor),
                           const SizedBox(height: 40),
+                          if (widget.roomCode != null && _isRoundActive && !_allPlayersGuessed && !_isRoundResultShowing)
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20.0),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 18),
+                                decoration: BoxDecoration(
+                                  color: Colors.amber.withOpacity(0.05),
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: Colors.amber.withOpacity(0.3), width: 1.5),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.amber.withOpacity(0.02),
+                                      blurRadius: 15,
+                                      spreadRadius: 2,
+                                    )
+                                  ],
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      isAr ? "الرجاء تخمين سنة إصدار الأغنية من جوالك!" : "PLEASE GUESS THE RELEASE YEAR ON YOUR MOBILE!",
+                                      style: GoogleFonts.outfit(
+                                        color: Colors.amberAccent,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        letterSpacing: isAr ? 0 : 1.2,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      isAr 
+                                        ? "تم إرسال التخمينات (${_submittedGuesses.length} من ${_activePlayerNames.length})" 
+                                        : "Guesses submitted: (${_submittedGuesses.length} of ${_activePlayerNames.length})",
+                                      style: GoogleFonts.outfit(
+                                        color: Colors.white70,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                         ],
                       ),
                     ),
