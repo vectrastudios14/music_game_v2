@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:window_manager/window_manager.dart';
 
 import 'gts/setup_screen.dart';
 import 'boa/boa_setup_screen.dart';
@@ -163,23 +164,51 @@ class _GameHubScreenState extends State<GameHubScreen> with TickerProviderStateM
                   const SizedBox(height: 30),
                   FadeInUp(
                     delay: const Duration(milliseconds: 700),
-                    child: OutlinedButton.icon(
-                      onPressed: () => exit(0),
-                      icon: const Icon(Icons.exit_to_app, color: Colors.redAccent),
-                      label: const Text(
-                        'QUIT GAME',
-                        style: TextStyle(
-                          color: Colors.redAccent,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.5,
-                          fontSize: 16,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: () async {
+                            final isFull = await windowManager.isFullScreen();
+                            await windowManager.setFullScreen(!isFull);
+                            setState(() {});
+                          },
+                          icon: const Icon(Icons.fullscreen, color: Color(0xFF6C63FF)),
+                          label: const Text(
+                            'FULLSCREEN',
+                            style: TextStyle(
+                              color: Color(0xFF6C63FF),
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.5,
+                              fontSize: 16,
+                            ),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFF6C63FF), width: 2),
+                            padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                          ),
                         ),
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: Colors.redAccent, width: 2),
-                        padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                      ),
+                        const SizedBox(width: 20),
+                        OutlinedButton.icon(
+                          onPressed: () => exit(0),
+                          icon: const Icon(Icons.exit_to_app, color: Colors.redAccent),
+                          label: const Text(
+                            'QUIT GAME',
+                            style: TextStyle(
+                              color: Colors.redAccent,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1.5,
+                              fontSize: 16,
+                            ),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Colors.redAccent, width: 2),
+                            padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
