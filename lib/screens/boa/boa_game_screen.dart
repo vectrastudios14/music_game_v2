@@ -426,7 +426,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     }
   }
 
-  void _handleGameOver() {
+  Future<void> _handleGameOver() async {
     _audioPlayer.stop();
     setState(() => _isGameOver = true);
     BackgroundMusicService.instance.playSfx('correct.mp3');
@@ -439,11 +439,12 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     });
     final displayWinnerName = isTie ? (widget.uiLanguage == 'ar' ? 'تعادل!' : "IT'S A TIE!") : winnerName;
     if (widget.roomCode != null) {
-      FirebaseService().setGameOver(widget.roomCode!, displayWinnerName);
+      await FirebaseService().setGameOver(widget.roomCode!, displayWinnerName);
     }
-    showDialog(
-      context: context, barrierDismissible: false,
-      builder: (context) => BoaGameOverModal(
+    if (mounted) {
+      showDialog(
+        context: context, barrierDismissible: false,
+        builder: (context) => BoaGameOverModal(
         winnerName: displayWinnerName,
         winnerScore: highScore,
         uiLanguage: widget.uiLanguage,
@@ -451,6 +452,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         onContinue: () { Navigator.pop(context); setState(() { _isRoundResultShowing = true; _roundFeedbackText = _t('gameOver'); }); },
       ),
     );
+    }
   }
 
   void _navigateToResults() {

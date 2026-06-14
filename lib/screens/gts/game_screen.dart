@@ -672,23 +672,25 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
     }
   }
 
-  void _finishGame() {
+  Future<void> _finishGame() async {
     _player.stop(); 
     if (widget.roomCode != null) {
       final sortedEntries = _scores.entries.toList()
         ..sort((a, b) => b.value.compareTo(a.value));
       final winner = sortedEntries.isNotEmpty ? sortedEntries.first.key : "";
-      FirebaseService().setGameOver(widget.roomCode!, winner);
+      await FirebaseService().setGameOver(widget.roomCode!, winner);
     }
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (_) => GtsResultScreen(
-          scores: _scores,
-          totalRounds: widget.totalRounds,
+    if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => GtsResultScreen(
+            scores: _scores,
+            totalRounds: widget.totalRounds,
+          ),
         ),
-      ),
-    );
+      );
+    }
   }
 
   void _showRoundSummary(int roundNum) {
