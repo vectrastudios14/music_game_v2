@@ -85398,7 +85398,7 @@ case 1:return A.H(q,r)}})
 return A.I($async$xR,r)},
 N(a){var s,r,q,p,o,n,m,l,k=this,j=null,i=k.d
 if(i==="kicked")return A.ne(j,B.l,A.cQ(A.by(A.b([B.o_,B.cw,A.ap("You have been removed",j,j,j,j,j,A.ay().$3$color$fontSize$fontWeight(B.h,24,B.o),j,j),B.c8,A.f9(!1,B.zL,j,j,j,j,j,j,new A.ajH(k,a),j,j)],t.p),B.v,B.Y,B.w),j,j),!1)
-if(i==="gameover"){i=A.a7(13,B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255)
+if(i==="gameover"||i==="game_over"){i=A.a7(13,B.h.q()>>>16&255,B.h.q()>>>8&255,B.h.q()&255)
 s=A.bC(24)
 r=A.ev(A.a7(B.c.aj(76.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),B.u,2)
 q=A.b([new A.cA(5,B.b7,A.a7(B.c.aj(25.5),B.M.q()>>>16&255,B.M.q()>>>8&255,B.M.q()&255),B.i,20)],t.T)
