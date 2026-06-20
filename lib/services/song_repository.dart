@@ -177,31 +177,42 @@ class SongRepository {
     var difficultPool = scoredDistractors.take(poolSize).toList();
     difficultPool.shuffle();
 
+    String normalizeArtistName(String name) {
+      String text = name.trim().toLowerCase();
+      text = text
+          .replaceAll(RegExp(r'[أإآ]'), 'ا')
+          .replaceAll('ة', 'ه')
+          .replaceAll('ى', 'ي')
+          .replaceAll(RegExp(r'[\u064B-\u0652]'), '');
+      return text;
+    }
+
     List<Song> selectedDistractors = [];
-    final String resolvedCorrectArtist = (currentLibraryType == 'arabic'
+    final String resolvedCorrectArtist = normalizeArtistName(currentLibraryType == 'arabic'
         ? (correctSong.artistAr ?? correctSong.artist)
-        : correctSong.artist).trim().toLowerCase();
+        : correctSong.artist);
 
     final Set<String> selectedTitles = {correctSong.title.trim().toLowerCase()};
     final Set<String> usedArtists = {
-      correctSong.artist.trim().toLowerCase(),
+      normalizeArtistName(correctSong.artist),
       resolvedCorrectArtist,
-      if (correctSong.artistAr != null) correctSong.artistAr!.trim().toLowerCase()
+      if (correctSong.artistAr != null) normalizeArtistName(correctSong.artistAr!)
     };
 
     for (var entry in difficultPool) {
        final s = entry['song'] as Song;
        final normTitle = s.title.trim().toLowerCase();
-       final normArtist = s.artist.trim().toLowerCase();
-       final resolvedArtist = (currentLibraryType == 'arabic'
+       final normArtist = normalizeArtistName(s.artist);
+       final resolvedArtist = normalizeArtistName(currentLibraryType == 'arabic'
            ? (s.artistAr ?? s.artist)
-           : s.artist).trim().toLowerCase();
+           : s.artist);
+       final normArtistAr = s.artistAr != null ? normalizeArtistName(s.artistAr!) : null;
        
        if (selectedTitles.contains(normTitle)) continue; 
        if (forceUniqueArtists && 
            (usedArtists.contains(normArtist) || 
             usedArtists.contains(resolvedArtist) || 
-            (s.artistAr != null && usedArtists.contains(s.artistAr!.trim().toLowerCase())))) {
+            (normArtistAr != null && usedArtists.contains(normArtistAr)))) {
          continue;
        }
        
@@ -209,8 +220,8 @@ class SongRepository {
        selectedTitles.add(normTitle);
        usedArtists.add(normArtist);
        usedArtists.add(resolvedArtist);
-       if (s.artistAr != null) {
-         usedArtists.add(s.artistAr!.trim().toLowerCase());
+       if (normArtistAr != null) {
+         usedArtists.add(normArtistAr);
        }
        
        if (selectedDistractors.length >= distractorCount) break;
@@ -222,16 +233,17 @@ class SongRepository {
        for (var entry in backupPool) {
           final s = entry['song'] as Song;
           final normTitle = s.title.trim().toLowerCase();
-          final normArtist = s.artist.trim().toLowerCase();
-          final resolvedArtist = (currentLibraryType == 'arabic'
+          final normArtist = normalizeArtistName(s.artist);
+          final resolvedArtist = normalizeArtistName(currentLibraryType == 'arabic'
               ? (s.artistAr ?? s.artist)
-              : s.artist).trim().toLowerCase();
+              : s.artist);
+          final normArtistAr = s.artistAr != null ? normalizeArtistName(s.artistAr!) : null;
           
           if (selectedTitles.contains(normTitle)) continue;
           if (forceUniqueArtists && 
               (usedArtists.contains(normArtist) || 
                usedArtists.contains(resolvedArtist) || 
-               (s.artistAr != null && usedArtists.contains(s.artistAr!.trim().toLowerCase())))) {
+               (normArtistAr != null && usedArtists.contains(normArtistAr)))) {
             continue;
           }
           
@@ -239,8 +251,8 @@ class SongRepository {
           selectedTitles.add(normTitle);
           usedArtists.add(normArtist);
           usedArtists.add(resolvedArtist);
-          if (s.artistAr != null) {
-            usedArtists.add(s.artistAr!.trim().toLowerCase());
+          if (normArtistAr != null) {
+            usedArtists.add(normArtistAr);
           }
           if (selectedDistractors.length >= distractorCount) break;
        }

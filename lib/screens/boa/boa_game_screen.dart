@@ -71,8 +71,9 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
   late final SongRepository _repository;
   StreamSubscription? _firebaseSubscription;
   DateTime? _lastTurnTransitionTime;
+  List<String> _activePlayerNames = [];
   
-  String get formattedName => widget.playerNames[_currentPlayerIndex];
+  String get formattedName => _activePlayerNames.isNotEmpty ? _activePlayerNames[_currentPlayerIndex] : '';
   final ScrollController _scrollController = ScrollController();
   Timer? _scrollTimer;
 
@@ -82,7 +83,8 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     try {
       _repository = SongRepository();
       MediaCacheService().init();
-      for (var name in widget.playerNames) {
+      _activePlayerNames = List.from(widget.playerNames);
+      for (var name in _activePlayerNames) {
         _timelines[name] = [];
       }
     _scrollController.addListener(_updateScrollIndicators);
@@ -187,7 +189,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
       _deck = _repository.getValidSongs()..shuffle();
       if (_deck.isEmpty) { setState(() => _errorMessage = "DECK EMPTY!"); return; }
 
-      for (var name in widget.playerNames) {
+      for (var name in _activePlayerNames) {
         if (_deck.isNotEmpty) {
            final song = _deck.removeLast();
            _timelines[name]!.add(song);
@@ -202,7 +204,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
       if (widget.roomCode != null) {
         await FirebaseService().updateBoaState(
           widget.roomCode!,
-          activePlayer: widget.playerNames[_currentPlayerIndex],
+          activePlayer: _activePlayerNames[_currentPlayerIndex],
           mysterySong: {},
           timelineSongs: [],
           status: 'playing',
@@ -337,7 +339,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
   double _getScrollOffsetForSlot(int index) {
     double offset = 0.0;
-    final timelineLen = _timelines[widget.playerNames[_currentPlayerIndex]]?.length ?? 0;
+    final timelineLen = _timelines[_activePlayerNames[_currentPlayerIndex]]?.length ?? 0;
     for (int i = 0; i < index; i++) {
       double dzWidth = 40.0;
       if (_isRoundResultShowing && !_lastPlacementCorrect) {
@@ -355,7 +357,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
 
   void _handleCardDrop(int dropIndex) async {
     if (_currentMysteryCard == null) return;
-    final currentPlayerName = widget.playerNames[_currentPlayerIndex];
+    final currentPlayerName = _activePlayerNames[_currentPlayerIndex];
     final timeline = _timelines[currentPlayerName]!;
     final mysteryYear = int.tryParse(_currentMysteryCard!.year) ?? 0;
     
@@ -469,6 +471,98 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     );
   }
 
+  void _kickPlayer(String name) async {
+    if (_activePlayerNames.length <= 1) return;
+    
+    final wasActivePlayer = (name == formattedName);
+    
+    setState(() {
+      _activePlayerNames.remove(name);
+      _timelines.remove(name);
+      
+      if (_currentPlayerIndex >= _activePlayerNames.length) {
+        _currentPlayerIndex = 0;
+      }
+    });
+
+    if (widget.roomCode != null) {
+      await FirebaseService().kickPlayer(widget.roomCode!, name);
+      await FirebaseService().removePlayerFromRoom(widget.roomCode!, name);
+      
+      if (wasActivePlayer) {
+        _nextPlayer();
+      } else {
+        await FirebaseService().updateBoaState(
+          widget.roomCode!,
+          activePlayer: formattedName,
+          mysterySong: _currentMysteryCard != null ? {
+            'title': _currentMysteryCard!.title,
+            'artist': _currentMysteryCard!.artist,
+            'artworkUrl': _currentMysteryCard!.artworkUrl ?? '',
+          } : {},
+          timelineSongs: _timelines[formattedName]?.map((s) => {
+            'title': s.title,
+            'artist': s.artist,
+            'year': s.year,
+            'artworkUrl': s.artworkUrl ?? '',
+          }).toList() ?? [],
+        );
+      }
+    }
+  }
+
+  void _showPlayersDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: Colors.white,
+        title: Text(
+          widget.uiLanguage == 'ar' ? 'اللاعبين المتصلين' : 'Connected Players',
+          style: GoogleFonts.outfit(color: Colors.black87, fontWeight: FontWeight.bold),
+        ),
+        content: SizedBox(
+          width: 300,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: _activePlayerNames.length,
+            itemBuilder: (context, index) {
+              final name = _activePlayerNames[index];
+              final isActive = name == formattedName;
+              return ListTile(
+                title: Text(
+                  name,
+                  style: GoogleFonts.outfit(
+                    fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+                    color: isActive ? Theme.of(context).primaryColor : Colors.black87,
+                  ),
+                ),
+                trailing: _activePlayerNames.length > 1
+                    ? IconButton(
+                        icon: const Icon(Icons.gavel_rounded, color: Colors.redAccent),
+                        onPressed: () {
+                          Navigator.pop(context);
+                          _kickPlayer(name);
+                        },
+                        tooltip: widget.uiLanguage == 'ar' ? 'طرد' : 'Kick',
+                      )
+                    : null,
+              );
+            },
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              widget.uiLanguage == 'ar' ? 'إغلاق' : 'Close',
+              style: GoogleFonts.outfit(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
    void _nextPlayer() async {
      if (_isGameOver) return;
      final now = DateTime.now();
@@ -477,14 +571,14 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
      }
      _lastTurnTransitionTime = now;
      _audioPlayer.stop(); 
-     bool isLastPlayerOfRound = _currentPlayerIndex == widget.playerNames.length - 1;
+     bool isLastPlayerOfRound = _currentPlayerIndex == _activePlayerNames.length - 1;
      if (_isTargetReached && isLastPlayerOfRound) { _handleGameOver(); return; }
      
      if (widget.roomCode != null) {
        await FirebaseService().clearBoaChoice(widget.roomCode!);
        await FirebaseService().updateBoaState(
          widget.roomCode!,
-         activePlayer: widget.playerNames[(_currentPlayerIndex + 1) % widget.playerNames.length],
+         activePlayer: _activePlayerNames[(_currentPlayerIndex + 1) % _activePlayerNames.length],
          mysterySong: {},
          timelineSongs: [],
          placementResult: null,
@@ -493,7 +587,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
      }
 
      setState(() {
-        _currentPlayerIndex = (_currentPlayerIndex + 1) % widget.playerNames.length;
+        _currentPlayerIndex = (_currentPlayerIndex + 1) % _activePlayerNames.length;
         _isWaitingForTurnStart = true;
         _isRoundResultShowing = false;
         _currentMysteryCard = null; 
@@ -592,7 +686,16 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         ),
         centerTitle: true,
         actions: [
-          if (widget.roomCode != null && !_isGameOver)
+          if (widget.roomCode != null && !_isGameOver) ...[
+            TextButton.icon(
+              onPressed: _showPlayersDialog,
+              icon: const Icon(Icons.people_alt_rounded, color: Colors.blueAccent),
+              label: Text(
+                isAr ? "اللاعبين" : "PLAYERS",
+                style: GoogleFonts.outfit(color: Colors.blueAccent, fontWeight: FontWeight.bold, fontSize: 14),
+              ),
+            ),
+            const SizedBox(width: 8),
             TextButton.icon(
               onPressed: _nextPlayer,
               icon: const Icon(Icons.skip_next_rounded, color: Colors.orangeAccent),
@@ -601,6 +704,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
                 style: GoogleFonts.outfit(color: Colors.orangeAccent, fontWeight: FontWeight.bold, fontSize: 14),
               ),
             ),
+          ],
           if (!kIsWeb)
             IconButton(
               icon: const Icon(Icons.fullscreen_rounded, color: Colors.black54),
