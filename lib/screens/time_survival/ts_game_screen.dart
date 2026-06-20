@@ -79,6 +79,7 @@ class _TsGameScreenState extends State<TsGameScreen> {
   int _showcasedPlayerIndex = -1;
   Timer? _showcaseTimer;
   bool _isClearingGuesses = false;
+  DateTime? _lastRoundTransitionTime;
 
   late final SongRepository _repository;
   List<String> _activePlayerNames = [];
@@ -427,8 +428,13 @@ class _TsGameScreenState extends State<TsGameScreen> {
 
 
   void _continueToNextRound() {
-      if (_isGameOver) {
-        setState(() => _showScoreOverlay = false);
+    final now = DateTime.now();
+    if (_lastRoundTransitionTime != null && now.difference(_lastRoundTransitionTime!) < const Duration(milliseconds: 1500)) {
+      return;
+    }
+    _lastRoundTransitionTime = now;
+    if (_isGameOver) {
+      setState(() => _showScoreOverlay = false);
         if (widget.roomCode != null) {
           final sortedEntries = _playerScores.entries.toList()
             ..sort((a, b) => b.value.compareTo(a.value));

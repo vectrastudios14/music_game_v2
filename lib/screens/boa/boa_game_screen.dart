@@ -70,6 +70,7 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
   String? _errorMessage;
   late final SongRepository _repository;
   StreamSubscription? _firebaseSubscription;
+  DateTime? _lastTurnTransitionTime;
   
   String get formattedName => widget.playerNames[_currentPlayerIndex];
   final ScrollController _scrollController = ScrollController();
@@ -468,8 +469,13 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
     );
   }
 
-  void _nextPlayer() async {
+   void _nextPlayer() async {
      if (_isGameOver) return;
+     final now = DateTime.now();
+     if (_lastTurnTransitionTime != null && now.difference(_lastTurnTransitionTime!) < const Duration(milliseconds: 1500)) {
+       return;
+     }
+     _lastTurnTransitionTime = now;
      _audioPlayer.stop(); 
      bool isLastPlayerOfRound = _currentPlayerIndex == widget.playerNames.length - 1;
      if (_isTargetReached && isLastPlayerOfRound) { _handleGameOver(); return; }
@@ -586,6 +592,15 @@ class _BoaGameScreenState extends State<BoaGameScreen> with SingleTickerProvider
         ),
         centerTitle: true,
         actions: [
+          if (widget.roomCode != null && !_isGameOver)
+            TextButton.icon(
+              onPressed: _nextPlayer,
+              icon: const Icon(Icons.skip_next_rounded, color: Colors.orangeAccent),
+              label: Text(
+                isAr ? "تجاوز" : "SKIP",
+                style: GoogleFonts.outfit(color: Colors.orangeAccent, fontWeight: FontWeight.bold, fontSize: 14),
+              ),
+            ),
           if (!kIsWeb)
             IconButton(
               icon: const Icon(Icons.fullscreen_rounded, color: Colors.black54),

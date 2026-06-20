@@ -178,20 +178,40 @@ class SongRepository {
     difficultPool.shuffle();
 
     List<Song> selectedDistractors = [];
+    final String resolvedCorrectArtist = (currentLibraryType == 'arabic'
+        ? (correctSong.artistAr ?? correctSong.artist)
+        : correctSong.artist).trim().toLowerCase();
+
     final Set<String> selectedTitles = {correctSong.title.trim().toLowerCase()};
-    final Set<String> usedArtists = {correctSong.artist.trim().toLowerCase()};
+    final Set<String> usedArtists = {
+      correctSong.artist.trim().toLowerCase(),
+      resolvedCorrectArtist,
+      if (correctSong.artistAr != null) correctSong.artistAr!.trim().toLowerCase()
+    };
 
     for (var entry in difficultPool) {
        final s = entry['song'] as Song;
        final normTitle = s.title.trim().toLowerCase();
        final normArtist = s.artist.trim().toLowerCase();
+       final resolvedArtist = (currentLibraryType == 'arabic'
+           ? (s.artistAr ?? s.artist)
+           : s.artist).trim().toLowerCase();
        
        if (selectedTitles.contains(normTitle)) continue; 
-       if (forceUniqueArtists && usedArtists.contains(normArtist)) continue;
+       if (forceUniqueArtists && 
+           (usedArtists.contains(normArtist) || 
+            usedArtists.contains(resolvedArtist) || 
+            (s.artistAr != null && usedArtists.contains(s.artistAr!.trim().toLowerCase())))) {
+         continue;
+       }
        
        selectedDistractors.add(s);
        selectedTitles.add(normTitle);
        usedArtists.add(normArtist);
+       usedArtists.add(resolvedArtist);
+       if (s.artistAr != null) {
+         usedArtists.add(s.artistAr!.trim().toLowerCase());
+       }
        
        if (selectedDistractors.length >= distractorCount) break;
     }
@@ -203,13 +223,25 @@ class SongRepository {
           final s = entry['song'] as Song;
           final normTitle = s.title.trim().toLowerCase();
           final normArtist = s.artist.trim().toLowerCase();
+          final resolvedArtist = (currentLibraryType == 'arabic'
+              ? (s.artistAr ?? s.artist)
+              : s.artist).trim().toLowerCase();
           
           if (selectedTitles.contains(normTitle)) continue;
-          if (forceUniqueArtists && usedArtists.contains(normArtist)) continue;
+          if (forceUniqueArtists && 
+              (usedArtists.contains(normArtist) || 
+               usedArtists.contains(resolvedArtist) || 
+               (s.artistAr != null && usedArtists.contains(s.artistAr!.trim().toLowerCase())))) {
+            continue;
+          }
           
           selectedDistractors.add(s);
           selectedTitles.add(normTitle);
           usedArtists.add(normArtist);
+          usedArtists.add(resolvedArtist);
+          if (s.artistAr != null) {
+            usedArtists.add(s.artistAr!.trim().toLowerCase());
+          }
           if (selectedDistractors.length >= distractorCount) break;
        }
     }

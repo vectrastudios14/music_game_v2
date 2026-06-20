@@ -100,9 +100,11 @@ class _ControllerBoaScreenState extends State<ControllerBoaScreen> with TickerPr
       final newMysteryTitle = _mysterySong?['title'];
       if (newMysteryTitle != null && newMysteryTitle != oldMysteryTitle) {
         _currentSlotIndex = 0;
-        if (_pageController.hasClients) {
-          _pageController.jumpToPage(0);
-        }
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (_pageController.hasClients) {
+            _pageController.jumpToPage(0);
+          }
+        });
       }
 
       // Handle placement result animations

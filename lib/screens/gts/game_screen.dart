@@ -76,6 +76,7 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   bool _isPaused = false;
   String? _pausedBy;
   StreamSubscription? _firebaseSubscription; // NEW
+  DateTime? _lastTurnTransitionTime;
   
   bool _isWaitingForReady = true; // NEW: Manual start phase
   bool _isAudioLoading = true;
@@ -642,6 +643,11 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
   }
 
   void _nextTurn() {
+    final now = DateTime.now();
+    if (_lastTurnTransitionTime != null && now.difference(_lastTurnTransitionTime!) < const Duration(milliseconds: 1500)) {
+      return;
+    }
+    _lastTurnTransitionTime = now;
     if (widget.isTeamMode) {
       if (_currentRound >= widget.totalRounds) {
         _finishGame();
@@ -1728,11 +1734,10 @@ class _GtsGameScreenState extends State<GtsGameScreen> {
             LogicalKeyboardKey.backspace, LogicalKeyboardKey.backslash, LogicalKeyboardKey.enter, LogicalKeyboardKey.shiftRight,
           ];
           
-          final isAr = widget.uiLanguage == 'ar';
           if (leftKeys.contains(event.logicalKey)) {
-            _handleBuzz(isAr ? 0 : 1); 
+            _handleBuzz(1); 
           } else if (rightKeys.contains(event.logicalKey)) {
-            _handleBuzz(isAr ? 1 : 0);
+            _handleBuzz(0);
           }
         }
       },
